@@ -114,7 +114,7 @@ async def stream_chat(
         )
 
     async with client.messages.stream(
-        model="claude-sonnet-4-5-20250514",
+        model="claude-opus-4-6",
         max_tokens=4096,
         system=SYSTEM_PROMPT,
         messages=api_messages,
@@ -124,7 +124,7 @@ async def stream_chat(
                 delta = event.delta
                 if hasattr(delta, "text"):
                     text_val: str = delta.text
-                    yield _sse_data({"type": "text", "content": text_val})
+                    yield json.dumps({"type": "text", "content": text_val})
                 elif hasattr(delta, "citation"):
                     citation: Any = delta.citation
                     cited_text = ""
@@ -133,7 +133,7 @@ async def stream_chat(
                         cited_text = str(getattr(citation, "cited_text", ""))
                     if hasattr(citation, "document_title"):
                         article = str(getattr(citation, "document_title", ""))
-                    yield _sse_data(
+                    yield json.dumps(
                         {
                             "type": "citation",
                             "text": cited_text,
@@ -141,9 +141,4 @@ async def stream_chat(
                         }
                     )
 
-    yield _sse_data({"type": "done"})
-
-
-def _sse_data(data: dict[str, str]) -> str:
-    """Format data as SSE event."""
-    return f"data: {json.dumps(data)}\n\n"
+    yield json.dumps({"type": "done"})

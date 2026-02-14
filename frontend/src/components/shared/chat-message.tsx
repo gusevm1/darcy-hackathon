@@ -1,3 +1,5 @@
+import Markdown from 'react-markdown'
+
 import { Bot, User } from 'lucide-react'
 
 import { CitationBadge } from '@/components/shared/citation-badge'
@@ -29,12 +31,17 @@ export function ChatMessage({ message }: ChatMessageProps) {
           isUser ? 'bg-primary text-primary-foreground' : 'bg-muted',
         )}
       >
-        <p className="whitespace-pre-wrap text-sm leading-relaxed">
-          {message.content}
-          {!message.content && message.role === 'assistant' && (
-            <span className="animate-pulse">Thinking...</span>
-          )}
-        </p>
+        {!message.content && message.role === 'assistant' ? (
+          <span className="animate-pulse text-sm">Thinking...</span>
+        ) : isUser ? (
+          <p className="whitespace-pre-wrap text-sm leading-relaxed">
+            {message.content}
+          </p>
+        ) : (
+          <div className="prose prose-sm dark:prose-invert max-w-none [&>*:first-child]:mt-0 [&>*:last-child]:mb-0">
+            <Markdown>{message.content}</Markdown>
+          </div>
+        )}
         {message.citations && message.citations.length > 0 && (
           <div className="mt-2 flex flex-wrap gap-1">
             {message.citations.map((citation, i) => (
