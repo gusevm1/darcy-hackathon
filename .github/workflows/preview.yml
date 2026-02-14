@@ -3,6 +3,7 @@ name: Preview Deployment
 on:
   pull_request:
     branches: [main, develop]
+    paths: ['frontend/**']
     types: [opened, synchronize, reopened]
 
 concurrency:
@@ -12,6 +13,10 @@ concurrency:
 env:
   VERCEL_ORG_ID: ${{ secrets.VERCEL_ORG_ID }}
   VERCEL_PROJECT_ID: ${{ secrets.VERCEL_PROJECT_ID }}
+
+defaults:
+  run:
+    working-directory: frontend
 
 jobs:
   deploy-preview:
@@ -35,6 +40,7 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
+          cache-dependency-path: frontend/pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile

@@ -1,14 +1,20 @@
-name: CI
+name: CI — Frontend
 
 on:
   pull_request:
     branches: [main, develop]
+    paths: ['frontend/**']
   push:
     branches: [develop]
+    paths: ['frontend/**']
 
 concurrency:
-  group: ci-${{ github.ref }}
+  group: ci-frontend-${{ github.ref }}
   cancel-in-progress: true
+
+defaults:
+  run:
+    working-directory: frontend
 
 jobs:
   lint-typecheck-test:
@@ -30,6 +36,7 @@ jobs:
         with:
           node-version: 22
           cache: "pnpm"
+          cache-dependency-path: frontend/pnpm-lock.yaml
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
