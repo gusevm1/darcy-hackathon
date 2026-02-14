@@ -1,0 +1,554 @@
+POLYREG MEMBERSHIP RULES AND REQUIREMENTS
+PolyReg General Self-Regulatory Organisation
+Comprehensive Guide to PolyReg Affiliation for Financial Intermediaries
+
+================================================================================
+1. POLYREG BACKGROUND
+================================================================================
+
+1.1 Overview
+
+PolyReg (PolyReg General Self-Regulatory Organisation, also known as PolyReg
+Allg. Selbstregulierungsorganisation) is a FINMA-recognized self-regulatory
+organization (SRO) under Art. 24 of the Anti-Money Laundering Act (AMLA,
+SR 955.0). Established in 2000, PolyReg has positioned itself as a forward-
+looking SRO with a particular focus on fintech, innovation, and technology-
+driven financial services.
+
+Key facts:
+- Headquarters: Zurich, Switzerland
+- FINMA recognition: Since 2000
+- Focus areas: Fintech, crypto/blockchain, payment services, digital assets
+- Languages: German, English, French
+- Governance: Board, Management, Admission Committee, Disciplinary Committee
+- Member base: Smaller than VQF, more specialized and curated
+
+1.2 Fintech and Crypto Specialization
+
+PolyReg has cultivated a reputation as the SRO of choice for fintech startups,
+blockchain companies, and innovative financial service providers. Key
+distinguishing features:
+
+- Deep understanding of crypto/blockchain business models
+- Willingness to engage with novel structures and technologies
+- Practical, solution-oriented approach to compliance challenges
+- Faster, more personalized admission process for well-prepared applicants
+- Direct engagement between PolyReg leadership and applicants
+- Active participation in Swiss fintech and crypto industry discussions
+
+1.3 Regulatory Framework
+
+PolyReg's regulatory documents include:
+- PolyReg Regulations (Reglement): The primary rulebook implementing AMLA
+  due diligence obligations
+- PolyReg Statutes: Governance and organizational rules
+- PolyReg Directives: Supplementary guidance documents
+- PolyReg Circulars: Periodic updates and guidance letters
+
+All PolyReg regulations are subject to FINMA approval and must be consistent
+with AMLA, AMLO, and AMLO-FINMA.
+
+================================================================================
+2. MEMBERSHIP ELIGIBILITY
+================================================================================
+
+2.1 Who Can Join PolyReg
+
+PolyReg admits financial intermediaries under Art. 2 para. 3 AMLA, including:
+
+- Crypto and virtual asset businesses:
+  - Crypto exchanges (fiat-to-crypto, crypto-to-fiat, crypto-to-crypto)
+  - Crypto brokers and OTC trading desks
+  - Crypto custody/wallet providers (within regulatory thresholds)
+  - Token issuers (where the issuance constitutes financial intermediation)
+  - Crypto payment processors
+  - Staking and yield service providers
+  - NFT platforms (where AML obligations apply)
+
+- Traditional financial intermediaries:
+  - Payment service providers
+  - Money transmitters
+  - Currency exchange operators
+  - Asset managers (non-CISA)
+  - Trust and fiduciary service providers
+  - Investment advisors with disposition powers
+  - Lending platforms (peer-to-peer, crowdlending)
+
+- Fintech companies:
+  - Digital payment platforms
+  - Robo-advisors
+  - Crowdfunding platforms
+  - RegTech and compliance technology providers (where they handle client assets)
+
+2.2 Who Cannot Join
+
+PolyReg cannot admit entities that require a FINMA prudential license:
+- Banks and savings institutions (Banking Act)
+- Securities firms (FinIA)
+- DLT trading facilities (FMIA)
+- FinTech license holders (Art. 1b Banking Act)
+- Fund management companies (CISA)
+
+These entities are directly supervised by FINMA for AML purposes.
+
+2.3 Swiss Nexus Requirement
+
+Applicants must have a genuine connection to Switzerland:
+- Swiss-incorporated legal entity, or
+- Swiss branch of a foreign entity registered in the commercial register
+- Genuine Swiss substance (office, staff, operational activities)
+- At least one Swiss-resident member of management
+
+================================================================================
+3. APPLICATION PROCESS
+================================================================================
+
+3.1 Phase 1: Initial Engagement (Week 1–2)
+
+(a) Contact PolyReg to discuss the planned application
+    - PolyReg is accessible and typically responds within a few business days
+    - An initial call or meeting is arranged to discuss the business model
+    - PolyReg provides guidance on eligibility, documentation requirements,
+      and expected timeline
+
+(b) Preliminary Assessment
+    - PolyReg may provide a preliminary view on whether the business model
+      falls within AMLA scope and is suitable for SRO membership
+    - This is not a binding opinion but helps applicants prepare
+
+3.2 Phase 2: Application Preparation (Weeks 2–6)
+
+(a) Prepare all required documentation (see Section 4)
+(b) Develop or finalize the AML compliance framework
+(c) Complete the PolyReg application form
+(d) Internal review and quality check of submission materials
+
+Tip: PolyReg appreciates well-prepared applications. Investing time in this
+phase significantly reduces the review period.
+
+3.3 Phase 3: Formal Submission (Week 6)
+
+(a) Submit the complete application package to PolyReg
+(b) Pay the application processing fee
+(c) PolyReg acknowledges receipt and confirms completeness
+
+3.4 Phase 4: Review (Weeks 6–12)
+
+(a) PolyReg conducts a thorough review of the application:
+    - Corporate structure and beneficial ownership
+    - Fit and proper assessment of key personnel
+    - Business model and risk analysis
+    - AML compliance framework adequacy
+    - Technical infrastructure (particularly for crypto businesses)
+    - Financial viability
+
+(b) Queries and dialogue:
+    - PolyReg will raise questions and request clarifications
+    - Applicants should respond promptly to avoid delays
+    - PolyReg may suggest modifications to the AML framework
+
+(c) Interview or on-site visit:
+    - For crypto businesses, PolyReg typically conducts an interview with
+      management and the compliance officer
+    - On-site visits may be conducted for more complex applications
+
+3.5 Phase 5: Decision (Weeks 10–14)
+
+(a) The Admission Committee reviews the application and issues a decision:
+    - Approval: Membership is granted
+    - Conditional approval: Specific conditions must be met within a deadline
+    - Rejection: Detailed reasons provided
+
+(b) Typical timeline: 2–4 months from complete submission to decision
+    - Well-prepared applications: 2–3 months
+    - Applications requiring significant remediation: 3–6 months
+
+3.6 Phase 6: Activation
+
+(a) Sign the membership agreement
+(b) Pay admission fee and annual membership fee
+(c) PolyReg registers the member with FINMA
+(d) Member may commence operations as a registered financial intermediary
+
+================================================================================
+4. REQUIRED DOCUMENTATION
+================================================================================
+
+4.1 Corporate and Legal Documents
+
+- Completed PolyReg application form
+- Articles of incorporation or partnership agreement
+- Commercial register extract (not older than 3 months)
+- Organizational chart
+- Shareholder register
+- Beneficial ownership structure and declaration
+- Board resolution authorizing the application
+- Sample contracts / terms of service for clients
+
+4.2 Key Personnel Documents
+
+For all directors, management members, AML compliance officer, and beneficial
+owners (25%+):
+- Curriculum vitae
+- Copy of valid passport or identity card
+- Swiss criminal record extract (Strafregisterauszug), not older than 3 months
+- Debt enforcement register extract (Betreibungsregisterauszug), not older
+  than 3 months
+- Professional certifications and qualifications
+- Self-declaration / fit and proper questionnaire
+- For foreign nationals: criminal record extract from country of residence
+
+4.3 Business Documentation
+
+- Business plan including:
+  - Detailed description of services and products
+  - Target market and client types
+  - Geographic scope of operations
+  - Revenue model and financial projections (3 years)
+  - Competitive positioning
+  - Marketing and distribution channels
+  - For crypto: technical architecture, blockchain(s) used, token types
+    supported, custody solution details
+- IT security concept (particularly important for crypto businesses)
+- Business continuity plan
+- Insurance policies (professional liability, cyber insurance where applicable)
+- Bank account confirmation (Swiss bank)
+
+4.4 AML Compliance Framework
+
+- AML/CFT policy manual tailored to the specific business
+- Client onboarding and KYC procedures
+- Risk classification methodology
+- Enhanced due diligence procedures
+- Transaction monitoring procedures and systems
+- SAR filing procedures
+- Sanctions screening procedures
+- Travel rule compliance procedures (for VASPs)
+- Record-keeping procedures
+- Compliance officer appointment and job description
+- Training plan and schedule
+- Internal audit framework
+
+================================================================================
+5. FEES
+================================================================================
+
+5.1 Application Processing Fee
+- Approximately CHF 2,000 – 4,000 (non-refundable)
+- Covers the review process
+
+5.2 Admission Fee (One-Time)
+- Approximately CHF 2,000 – 8,000
+- Depends on the complexity and size of the business
+- Payable upon approval of membership
+
+5.3 Annual Membership Fee
+- Base component: approximately CHF 1,500 – 3,000
+- Variable component based on business volume, number of clients, or risk level
+- Typical total: CHF 2,000 – 10,000 per year
+- Invoiced annually
+
+5.4 External Audit Costs (Separate)
+- CHF 5,000 – 25,000+ per year
+- Paid directly to the PolyReg-approved audit firm
+- Depends on the size and complexity of the business
+
+5.5 Other Costs
+- Training events: nominal fees
+- Late payment surcharges per PolyReg fee schedule
+- Extraordinary audit costs (if triggered by compliance issues)
+
+Note: PolyReg's fee structure is generally competitive, particularly for
+smaller fintech and crypto startups.
+
+================================================================================
+6. ONGOING OBLIGATIONS
+================================================================================
+
+6.1 AML Compliance
+
+Members must maintain full compliance with PolyReg's Regulations, which
+implement the AMLA due diligence obligations:
+- Client identification and verification (KYC)
+- Beneficial ownership determination
+- Risk-based client classification
+- Enhanced due diligence for high-risk relationships
+- Ongoing monitoring of business relationships and transactions
+- Transaction monitoring (manual and/or automated)
+- SAR filing with MROS
+- Sanctions screening
+- Travel rule compliance (for VASPs)
+- Record-keeping (10 years minimum)
+
+6.2 Annual Reporting
+
+Members must submit annual reports to PolyReg covering:
+- Business activities during the year
+- Number of clients and transactions
+- Compliance activities (SARs filed, sanctions hits, EDD cases)
+- Changes to the business model, personnel, or structure
+- Training conducted
+- Compliance officer's assessment
+
+6.3 External AML Audit
+
+- Frequency: annually for higher-risk members, biennially for lower-risk members
+- Audit firm: must be approved by PolyReg
+- Scope: comprehensive review of AML compliance
+- Audit report: submitted to PolyReg within the prescribed deadline
+- Remediation: members must address findings within deadlines
+
+6.4 Notification of Material Changes
+
+Members must promptly notify PolyReg of:
+- Changes to directors, management, or compliance officer
+- Changes in beneficial ownership
+- Material changes to business model or product offerings
+- Criminal proceedings against key personnel
+- Regulatory actions or investigations
+- Cybersecurity incidents or significant operational disruptions
+- Planned mergers, acquisitions, or liquidation
+
+6.5 Training
+
+- AML compliance officer: ongoing professional development
+- All relevant staff: AML training at least annually
+- Records of all training must be maintained
+
+================================================================================
+7. AML REQUIREMENTS — DETAILED
+================================================================================
+
+7.1 Client Identification
+
+PolyReg's regulations require identification of the contracting party in
+accordance with AMLA Art. 3:
+
+Natural persons:
+- Full name, date of birth, nationality, residential address
+- Verification by valid identity document
+- Methods: face-to-face, video identification, online identification,
+  certified copy
+
+Legal entities:
+- Company name, registered office, commercial register number
+- Commercial register extract
+- Identification of authorized representatives
+- Beneficial ownership structure
+
+7.2 Beneficial Ownership
+
+- Written BO declaration required for all business relationships
+- BO = natural person(s) with ultimate control (typically 25%+ ownership)
+- For complex structures: trace through to ultimate beneficial owners
+- Verification of plausibility required
+
+7.3 Risk Assessment
+
+PolyReg requires a documented risk assessment methodology covering:
+- Client risk factors (PEPs, geographic risk, industry risk, etc.)
+- Product/service risk factors
+- Delivery channel risk factors (non-face-to-face, online)
+- Geographic risk factors
+- Transaction risk factors
+
+Risk levels: low, medium, high, unacceptable (decline relationship)
+
+7.4 Transaction Monitoring
+
+- Proportionate to the size and complexity of the business
+- Smaller businesses: manual monitoring may be acceptable
+- Larger businesses: automated monitoring systems required
+- For crypto businesses: blockchain analytics tools required
+- Red flags specific to crypto: mixing services, privacy coin transactions,
+  rapid movement through multiple wallets, disproportionate transactions
+
+7.5 Sanctions Screening
+
+- Screen against SECO sanctions lists (Swiss implementation of UN sanctions)
+- Additional screening against EU, OFAC, and other relevant lists
+- Real-time screening for new clients
+- Ongoing screening upon list updates
+- For crypto: wallet address screening against known sanctioned addresses
+
+================================================================================
+8. SPECIFIC PROVISIONS FOR CRYPTO/BLOCKCHAIN COMPANIES
+================================================================================
+
+8.1 Crypto Business Categories
+
+PolyReg has developed specific guidance for different crypto business types:
+
+(a) Crypto Exchanges: Must implement full AML compliance including blockchain
+    analytics, travel rule, and robust client verification.
+
+(b) Crypto Brokers/OTC: Similar to exchanges but may have additional
+    requirements for large-value transactions.
+
+(c) Custody Providers: Must demonstrate secure key management, segregation of
+    client assets, backup procedures, and operational resilience.
+
+(d) Token Issuers: Must classify tokens, apply appropriate due diligence to
+    investors, and ensure ongoing compliance for secondary market activities.
+
+(e) Payment Processors: Must comply with travel rule and implement transaction
+    monitoring appropriate for payment flows.
+
+8.2 Technical Requirements for Crypto Members
+
+- Blockchain analytics: Must use at least one recognized blockchain analytics
+  tool (e.g., Chainalysis, Elliptic, Crystal, Scorechain)
+- Wallet management: Documented procedures for hot/cold wallets, key management,
+  and access controls
+- Travel rule: Technical implementation using TRISA, OpenVASP, or equivalent
+- Cybersecurity: Documented IT security concept, incident response plan,
+  penetration testing
+- Business continuity: Disaster recovery plan covering key loss scenarios
+
+8.3 Supported Token Types
+
+PolyReg members may deal in various token types, subject to risk assessment:
+- Bitcoin (BTC) and major cryptocurrencies: Standard risk
+- Stablecoins (USDT, USDC, etc.): Standard risk with issuer assessment
+- Privacy coins (Monero, Zcash): Enhanced due diligence required; some
+  members restrict or prohibit
+- DeFi tokens: Case-by-case risk assessment
+- NFTs: Assessment of AML applicability required
+
+================================================================================
+9. COMPARISON WITH VQF
+================================================================================
+
+Feature                 | PolyReg                | VQF
+------------------------|------------------------|--------------------------
+Size                    | Smaller, more          | Largest Swiss SRO
+                        | specialized            | (4,000+ members)
+Focus                   | Fintech, crypto,       | Generalist, broad
+                        | innovation             | financial intermediaries
+Admission speed         | Often faster for       | Thorough, may take longer
+                        | well-prepared cases    | for complex cases
+Personalization         | High — direct access   | Structured, committee-driven
+                        | to leadership          |
+Crypto expertise        | Deep, specialized      | Strong, extensive
+                        |                        | track record
+Fee level               | Generally competitive  | Generally moderate
+Geographic coverage     | Zurich-based, national | Zug + Lausanne, national
+Language                | German, English,       | German, French, Italian,
+                        | French                 | English
+Regulatory reputation   | Good, innovative       | Excellent, well-established
+Suitable for            | Startups, fintech,     | All types, particularly
+                        | crypto-first businesses| established businesses
+
+9.1 When to Choose PolyReg Over VQF
+
+Choose PolyReg if:
+- You are a fintech startup seeking a streamlined admission process
+- Your business model is innovative and may require flexible regulatory dialogue
+- You value direct access to SRO leadership
+- You want a crypto-specialized SRO
+- You are a smaller operation and want personalized service
+
+Choose VQF if:
+- You want the most established and largest SRO
+- You need multi-language support (especially French and Italian)
+- You have a more traditional financial intermediary business
+- You want the broadest network of member firms
+- Brand recognition of SRO membership is important
+
+================================================================================
+10. ADVANTAGES FOR FINTECH STARTUPS
+================================================================================
+
+10.1 Practical Benefits
+
+(a) Speed: PolyReg can often process well-prepared applications faster than
+    larger SROs, which is critical for startups with time pressure.
+
+(b) Flexibility: PolyReg is willing to engage with novel business models and
+    work collaboratively with applicants to find compliant solutions.
+
+(c) Cost efficiency: PolyReg's fee structure is competitive, which is important
+    for early-stage companies with limited budgets.
+
+(d) Knowledge sharing: PolyReg's concentration of fintech and crypto members
+    creates a knowledge network that benefits all members.
+
+(e) Regulatory bridge: For startups planning to eventually obtain a FINMA
+    license, PolyReg membership provides a compliant starting point while the
+    business scales.
+
+10.2 Common Startup Scenarios
+
+Scenario 1: Crypto exchange startup
+- Start with PolyReg SRO membership
+- Operate within FINMA sandbox thresholds (< 20 clients, < CHF 1M deposits)
+- Scale up and apply for FinTech license when thresholds are exceeded
+
+Scenario 2: Blockchain payment processor
+- PolyReg SRO membership for AML compliance
+- Implement travel rule from day one
+- Maintain robust transaction monitoring
+
+Scenario 3: Tokenization platform
+- PolyReg SRO membership for the intermediary function
+- Token classification analysis with PolyReg input
+- Potential additional FINMA licensing if tokens qualify as securities
+
+================================================================================
+11. DISCIPLINARY PROCEEDINGS
+================================================================================
+
+11.1 Grounds
+
+PolyReg may initiate disciplinary proceedings for:
+- Violation of PolyReg Regulations, AMLA, or AMLO
+- Failure to remediate audit findings
+- Failure to file SARs
+- Providing false information
+- Non-payment of fees
+- Non-cooperation with PolyReg
+- Reputational risk to PolyReg or the SRO system
+
+11.2 Sanctions
+
+- Written warning
+- Reprimand
+- Fine (up to CHF 500,000)
+- Conditions or restrictions on membership
+- Suspension
+- Expulsion
+
+11.3 Procedure
+
+- Investigation by PolyReg
+- Notification of charges
+- Right to be heard
+- Decision by Disciplinary Committee
+- Right of appeal
+- Serious violations reported to FINMA
+
+================================================================================
+12. CONTACT INFORMATION
+================================================================================
+
+PolyReg General Self-Regulatory Organisation
+Zurich, Switzerland
+
+Website: www.polyreg.ch
+Email: info@polyreg.ch
+
+================================================================================
+13. REFERENCES
+================================================================================
+
+- PolyReg Regulations (current version)
+- PolyReg Statutes (current version)
+- AMLA (SR 955.0)
+- AMLO (SR 955.01)
+- AMLO-FINMA (SR 955.033.0)
+- FINMA Circular 2023/1 "Self-regulatory organizations"
+- FINMA ICO Guidelines
+
+================================================================================
+END OF DOCUMENT
+================================================================================

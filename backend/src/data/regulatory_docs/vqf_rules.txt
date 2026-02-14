@@ -1,0 +1,532 @@
+VQF MEMBERSHIP RULES AND REQUIREMENTS
+Verein zur Qualitaetssicherung von Finanzdienstleistungen (VQF)
+Comprehensive Guide to VQF Affiliation for Financial Intermediaries
+
+================================================================================
+1. VQF BACKGROUND
+================================================================================
+
+1.1 Overview
+
+The VQF (Verein zur Qualitaetssicherung von Finanzdienstleistungen — Association
+for Quality Assurance of Financial Services) is the largest and most established
+self-regulatory organization (SRO) in Switzerland. Founded in 1998, it is
+recognized by FINMA under Art. 24 AMLA to supervise financial intermediaries'
+compliance with anti-money laundering and counter-terrorist financing (AML/CFT)
+obligations.
+
+Key facts:
+- Headquarters: Zug, Switzerland (with offices in Lausanne)
+- Members: Over 4,000 financial intermediaries
+- Languages: German, French, Italian, English
+- Founded: 1998
+- FINMA recognition: Continuous since inception
+- Governance: Board of Directors, Management, Admission Committee, Appeals
+  Committee, Supervisory Commission
+
+1.2 Crypto-Friendly Reputation
+
+VQF was among the first SROs globally to develop specific rules and guidance for
+crypto and blockchain businesses. Its Rules of Organization (Reglement) include
+explicit provisions for virtual asset service providers, and it has admitted
+numerous crypto exchanges, custody providers, token issuers, and blockchain-
+related financial intermediaries. VQF actively engages with the crypto industry
+and regularly updates its rules to reflect evolving regulatory expectations and
+technological developments.
+
+1.3 VQF Regulations
+
+VQF's primary regulatory documents are:
+- VQF Regulations (Reglement): The main rulebook implementing AMLA due diligence
+  obligations for VQF members
+- VQF Statutes (Statuten): Governance and membership rules
+- VQF Directives: Supplementary guidance on specific topics
+- VQF Circulars: Periodic communications on regulatory updates
+
+All VQF rules are subject to FINMA approval and must be consistent with AMLA,
+AMLO, and AMLO-FINMA.
+
+================================================================================
+2. MEMBERSHIP CATEGORIES
+================================================================================
+
+2.1 Standard Membership
+
+For financial intermediaries operating under Art. 2 para. 3 AMLA. This is the
+most common membership category and covers:
+- Money transmission and payment services
+- Currency exchange (including crypto exchange)
+- Asset management
+- Trust services
+- Fiduciary services
+- Investment advisory services with disposition powers
+- Lending (outside banking regulation)
+- Crypto brokerage and OTC trading
+- Crypto custody (within regulatory thresholds)
+
+2.2 Dealer Membership
+
+For persons who trade in goods on a professional basis and accept cash payments
+exceeding CHF 100,000 (Art. 2 para. 1bis AMLA). Simplified obligations apply
+under this category.
+
+2.3 Associate Membership
+
+Some SROs offer associate or observer status for entities in the pre-application
+phase or entities that do not yet meet full membership requirements. VQF does
+not formally offer this, but provides pre-application consultations.
+
+================================================================================
+3. ADMISSION REQUIREMENTS
+================================================================================
+
+3.1 Legal Entity Requirements
+
+To be admitted as a VQF member, the applicant must:
+(a) Be a legal entity organized under Swiss law or a branch of a foreign
+    legal entity registered in Switzerland
+    - Acceptable forms: AG (corporation), GmbH (LLC), sole proprietorship
+      (Einzelfirma), partnership, cooperative, foundation, association
+    - Foreign branches must have a Swiss commercial register entry
+
+(b) Have a registered office and genuine place of business in Switzerland
+    - The applicant must have genuine Swiss substance: real office, staff,
+      and operational activities
+    - Virtual offices or mailbox companies are not acceptable
+    - For crypto businesses, the key management and compliance functions must
+      be conducted from Switzerland
+
+3.2 Good Standing (Fit and Proper)
+
+(a) Directors, officers, and beneficial owners must be of good repute:
+    - No criminal convictions for financial crimes, fraud, or dishonesty
+    - No ongoing criminal proceedings for such offences
+    - No history of insolvency or personal bankruptcy (within the last 5 years)
+    - No prior regulatory sanctions or bans
+    - No membership in or association with criminal organizations
+
+(b) Each person's fit and proper status is verified through:
+    - Criminal record extract (Strafregisterauszug) — Swiss and foreign
+    - Debt enforcement register extract (Betreibungsregisterauszug)
+    - Self-declarations
+    - Reference checks (at VQF's discretion)
+
+3.3 Qualified Personnel
+
+(a) AML Compliance Officer (MLRO / Geldwaeschereibeauftragter):
+    - The applicant must designate a qualified AML compliance officer
+    - Requirements: relevant professional experience (minimum 2–3 years in
+      AML compliance, financial regulation, or related field), knowledge of
+      Swiss AML framework, understanding of the specific risks of the
+      applicant's business
+    - Must have completed an AML training program recognized by VQF or
+      equivalent
+    - Must have decision-making authority within the organization
+    - Must report directly to senior management or the board
+
+(b) Management:
+    - At least one member of management must be Swiss-resident
+    - Management must collectively possess the expertise needed to oversee
+      the business (including technical expertise for crypto businesses)
+
+3.4 Capital Requirements
+
+VQF does not impose a fixed minimum capital requirement beyond what is required
+by Swiss company law (CHF 100,000 for an AG, CHF 20,000 for a GmbH). However:
+- The applicant must demonstrate adequate financial resources to sustain
+  operations and compliance obligations
+- VQF may require additional capital or reserves based on risk assessment
+- For crypto businesses, VQF may consider operational risks (e.g., custody
+  of digital assets) when assessing capital adequacy
+
+Note: This is separate from FINMA license capital requirements. If the business
+also requires a FINMA license (FinTech, banking, etc.), those capital requirements
+apply in addition.
+
+3.5 AML Compliance Framework
+
+The applicant must have a comprehensive AML compliance framework in place before
+admission, including:
+- Written AML policy manual (Organisationsreglement zur Bekaempfung von
+  Geldwaescherei und Terrorismusfinanzierung)
+- Client identification and verification procedures (KYC)
+- Beneficial ownership determination procedures
+- Risk-based client classification methodology
+- Enhanced due diligence procedures for high-risk clients
+- Ongoing monitoring procedures
+- Transaction monitoring procedures (including automated monitoring for
+  higher-volume businesses)
+- SAR filing procedures
+- Sanctions screening procedures
+- Travel rule compliance procedures (for VASPs)
+- Record-keeping procedures
+- Training plan and materials
+- Internal audit and quality assurance framework
+
+================================================================================
+4. APPLICATION PROCEDURE
+================================================================================
+
+4.1 Step 1: Pre-Application Consultation
+
+- Contact VQF for an initial consultation (can be done via email, phone, or
+  in-person meeting)
+- Describe your business model, planned activities, and compliance readiness
+- VQF will provide guidance on membership category, required documentation,
+  and expected timeline
+- Pre-application consultations are generally free or subject to a nominal fee
+
+4.2 Step 2: Formal Application Submission
+
+- Complete the VQF application form (available from VQF upon request)
+- Submit the complete application package including all required documents
+  (see Section 5 below)
+- Pay the non-refundable application processing fee
+
+4.3 Step 3: Completeness Check
+
+- VQF staff conduct an initial completeness check (typically within 1–2 weeks)
+- If documents are missing, VQF will request supplementary information
+- The application clock starts when the application is deemed complete
+
+4.4 Step 4: Substantive Review
+
+- VQF's Admission Committee reviews the application
+- The review covers:
+  - Fit and proper assessment of key personnel
+  - Adequacy of the AML compliance framework
+  - Business model risk assessment
+  - Organizational adequacy
+  - Financial viability
+- VQF may request additional information, modifications to the AML framework,
+  or interviews with key personnel
+- For crypto businesses, VQF pays particular attention to:
+  - Wallet management and custody procedures
+  - Blockchain analytics capabilities
+  - Travel rule implementation
+  - Token classification analysis
+
+4.5 Step 5: On-Site Visit (If Required)
+
+- For more complex applications, VQF may conduct an on-site visit
+- The visit assesses the physical presence, IT infrastructure, and operational
+  readiness
+- The compliance officer and management should be available for the visit
+
+4.6 Step 6: Decision
+
+- The Admission Committee issues its decision:
+  - Admission: Membership agreement is offered
+  - Conditional admission: Conditions must be met within a specified period
+  - Deferral: Application is returned for remediation
+  - Rejection: Reasons are provided; applicant may reapply
+
+4.7 Step 7: Membership Activation
+
+- Sign the VQF membership agreement
+- Pay the admission fee and first annual membership fee
+- VQF registers the member with FINMA
+- The member can begin operating as a registered financial intermediary
+
+================================================================================
+5. REQUIRED DOCUMENTS
+================================================================================
+
+5.1 Corporate Documents
+- Completed VQF application form
+- Articles of incorporation (Statuten / Gesellschaftsvertrag)
+- Commercial register extract (not older than 3 months)
+- Organizational regulations (Organisationsreglement)
+- Organizational chart
+- Shareholder register and beneficial ownership declaration
+- Board of directors resolution authorizing the application
+
+5.2 Personnel Documents (for all directors, management, compliance officer,
+    and beneficial owners)
+- Curriculum vitae (CV)
+- Copy of valid identity document (passport or ID card)
+- Swiss criminal record extract (not older than 3 months)
+- Debt enforcement register extract (not older than 3 months)
+- Professional qualifications and certifications
+- Fit and proper declaration / self-declaration form
+- For foreign nationals: equivalent criminal record extract from country of
+  residence/nationality
+
+5.3 Business Documentation
+- Detailed business plan covering:
+  - Description of activities and services
+  - Target client base and geographic scope
+  - Revenue model
+  - Marketing strategy
+  - IT infrastructure and security
+  - For crypto: blockchain technology, token types, wallet architecture
+- Financial projections (3 years)
+- Most recent financial statements (if existing entity)
+- Proof of adequate capitalization (bank statement, shareholder commitment)
+- Professional liability insurance policy (if applicable)
+
+5.4 AML Compliance Framework
+- AML policy manual (Organisationsreglement GwG)
+- Client onboarding procedures
+- Risk assessment methodology and risk matrix
+- Compliance officer appointment letter and job description
+- Training plan and materials
+- Audit plan
+- Sanctions screening setup
+- Transaction monitoring system description
+- For VASPs: travel rule implementation documentation, blockchain analytics
+  tool description, wallet management procedures
+
+================================================================================
+6. MEMBERSHIP FEES
+================================================================================
+
+6.1 Application Processing Fee
+- Approximately CHF 2,500 – 5,000 (non-refundable)
+- Covers the cost of reviewing the application
+- Higher for complex applications
+
+6.2 Admission Fee (One-Time)
+- CHF 3,000 – 10,000 depending on the complexity and size of the business
+- Payable upon admission
+
+6.3 Annual Membership Fee
+- Base fee: approximately CHF 1,500 – 3,000
+- Variable component: based on revenue, number of clients, or transaction volume
+- Total annual fee: typically CHF 2,000 – 15,000 for most members
+- Larger members with higher risk profiles may pay more
+
+6.4 Audit Costs (Separate)
+- External AML audit: CHF 5,000 – 30,000+ per year
+- Paid directly to the VQF-approved audit firm
+- Cost depends on the size, complexity, and risk profile of the member
+
+6.5 Other Costs
+- Training event fees: CHF 200 – 500 per event
+- Late payment penalties: Per VQF fee schedule
+- Special audit costs (if triggered by compliance issues)
+
+================================================================================
+7. ONGOING OBLIGATIONS
+================================================================================
+
+7.1 Compliance with VQF Regulations
+
+Members must comply with the VQF Regulations at all times. Key ongoing obligations:
+
+(a) AML Due Diligence
+- Apply KYC/CDD to all clients
+- Verify beneficial ownership
+- Conduct risk-based client classification
+- Apply enhanced due diligence where required
+- Monitor business relationships and transactions on an ongoing basis
+
+(b) Reporting
+- File SARs with MROS as required
+- Report material changes to VQF within 30 days (changes to management,
+  beneficial owners, business model, registered office, etc.)
+- Submit annual self-assessment report to VQF
+- Submit external audit report to VQF
+
+(c) Annual Reporting
+- Complete and submit VQF's annual questionnaire
+- Provide updated financial information
+- Report on compliance activities, training conducted, SARs filed, and
+  any regulatory interactions
+
+7.2 External AML Audit
+
+Members must undergo an external AML audit:
+- Frequency: annually for higher-risk members; biennially for lower-risk members
+- Audit firm: Must be approved by VQF
+- Scope: Full review of AML compliance including client files, transaction
+  monitoring, policies, training, organizational measures
+- Audit report: Submitted to VQF within 6 months of the audit period end
+- Remediation: Members must address audit findings within deadlines set by VQF
+
+7.3 Training
+
+- The AML compliance officer must undergo continuous professional development
+- All relevant staff must receive AML training at least annually
+- VQF organizes training events that members are encouraged to attend
+- Training records must be maintained and available for audit
+
+7.4 Notification Obligations
+
+Members must promptly notify VQF of:
+- Changes to the board of directors, management, or AML compliance officer
+- Changes to beneficial ownership (25% or more)
+- Material changes to the business model or activities
+- Criminal proceedings against key personnel
+- Regulatory actions by FINMA or foreign regulators
+- Significant operational incidents (including cybersecurity breaches)
+- Liquidation, merger, or other corporate restructuring
+
+================================================================================
+8. VQF SPECIFIC RULES FOR CRYPTO BUSINESSES
+================================================================================
+
+8.1 Token Classification
+
+VQF requires crypto members to classify tokens according to the FINMA ICO
+Guidelines:
+- Payment tokens: Full AML due diligence applies
+- Utility tokens: May be exempt depending on functionality
+- Asset tokens: Full AML due diligence plus securities regulation
+
+8.2 Crypto-Specific Due Diligence
+
+VQF's regulations include specific provisions for crypto businesses:
+
+(a) Wallet management:
+- Clear policies for hot wallet vs. cold wallet management
+- Multi-signature requirements for significant holdings
+- Key management procedures
+- Backup and recovery procedures
+
+(b) Blockchain analytics:
+- Members dealing in virtual assets must use blockchain analytics tools
+  to assess transaction risk
+- Analytics must cover: transaction tracing, sanctions screening of wallet
+  addresses, identification of high-risk patterns (mixing, tumbling, darknet
+  exposure)
+
+(c) Travel rule:
+- Virtual asset transfers above CHF 1,000 must comply with the travel rule
+- VQF members must implement a technical solution for travel rule compliance
+- Unhosted wallet transfers require enhanced verification
+
+(d) Token-specific risks:
+- Privacy coins (e.g., Monero, Zcash): VQF expects enhanced due diligence;
+  some members choose not to support these tokens
+- DeFi tokens: Risk assessment required before supporting
+- NFTs: Case-by-case assessment of AML applicability
+
+8.3 Crypto Client Onboarding
+
+VQF allows electronic and video identification for crypto clients, subject to:
+- Compliance with FINMA Circular 2016/7
+- Liveness detection
+- Document authenticity verification
+- Cross-referencing with databases
+- Enhanced verification for higher-risk clients
+
+================================================================================
+9. DISCIPLINARY PROCEEDINGS
+================================================================================
+
+9.1 Grounds for Disciplinary Action
+
+VQF may initiate disciplinary proceedings against a member for:
+- Violation of AMLA, AMLO, or VQF Regulations
+- Failure to implement audit findings
+- Failure to file SARs when required
+- Providing false or misleading information to VQF
+- Non-payment of fees
+- Failure to cooperate with VQF inquiries or audits
+- Serious operational deficiencies
+- Conduct bringing the SRO into disrepute
+
+9.2 Disciplinary Sanctions
+
+VQF may impose the following sanctions:
+- Warning (Verwarnung)
+- Reprimand (Verweis)
+- Fine (Busse): Up to CHF 500,000
+- Conditional or unconditional suspension of membership
+- Conditions or restrictions on activities
+- Requirement for additional audits at the member's expense
+- Expulsion from VQF
+
+9.3 Procedure
+
+- Investigation by VQF's Supervisory Commission
+- Notice of charges to the member
+- Right to be heard (written submissions and/or oral hearing)
+- Decision by the Supervisory Commission
+- Right of appeal to VQF's Appeals Committee
+- Further appeal to FINMA and ultimately to the Federal Administrative Court
+
+9.4 Reporting to FINMA
+
+VQF must report serious violations to FINMA. FINMA may take its own enforcement
+action in addition to VQF's disciplinary proceedings. Expulsion from VQF is
+reported to FINMA and effectively means the member can no longer operate as a
+financial intermediary (unless it obtains SRO membership elsewhere or FINMA
+direct supervision).
+
+================================================================================
+10. RECENT UPDATES FOR DeFi AND CRYPTO BUSINESSES
+================================================================================
+
+10.1 DeFi Guidance (2024)
+
+VQF has issued guidance clarifying that operators of DeFi protocols who exercise
+meaningful control may be classified as financial intermediaries. VQF members
+that provide access to DeFi protocols must:
+- Assess whether the protocol operator is a financial intermediary
+- Apply appropriate due diligence to DeFi-related transactions
+- Monitor for risks specific to DeFi (smart contract exploits, governance
+  attacks, etc.)
+
+10.2 Staking and Yield Services
+
+VQF has clarified that members offering staking services must:
+- Classify staking as either a custody service or an asset management service
+- Apply appropriate AML controls
+- Disclose risks to clients
+- Maintain adequate operational controls
+
+10.3 NFT Guidance
+
+VQF treats NFTs on a case-by-case basis:
+- Collectible NFTs without payment or investment function: generally outside
+  AMLA scope
+- NFTs with payment function or used as a store of value: within AMLA scope
+- NFTs representing financial assets: within AMLA and potentially securities
+  regulation scope
+
+10.4 Ongoing Regulatory Dialogue
+
+VQF actively participates in regulatory consultations and maintains dialogue
+with FINMA on emerging topics including:
+- Central Bank Digital Currencies (CBDCs)
+- Tokenized real-world assets
+- AI in compliance
+- Cross-border crypto regulation
+
+================================================================================
+11. CONTACT INFORMATION
+================================================================================
+
+VQF — Verein zur Qualitaetssicherung von Finanzdienstleistungen
+Bahnhofstrasse 3
+6300 Zug
+Switzerland
+
+Tel: +41 41 763 28 20
+Email: info@vqf.ch
+Website: www.vqf.ch
+
+Lausanne Office:
+VQF
+Rue du Grand-Pont 12
+1003 Lausanne
+Switzerland
+
+================================================================================
+12. REFERENCES
+================================================================================
+
+- VQF Regulations (Reglement), current version
+- VQF Statutes (Statuten), current version
+- Federal Act on Combating Money Laundering and Terrorist Financing (AMLA),
+  SR 955.0
+- Anti-Money Laundering Ordinance (AMLO), SR 955.01
+- Anti-Money Laundering Ordinance FINMA (AMLO-FINMA), SR 955.033.0
+- FINMA ICO Guidelines (February 2018, updated)
+- FINMA Circular 2016/7 "Video and Online Identification"
+
+================================================================================
+END OF DOCUMENT
+================================================================================

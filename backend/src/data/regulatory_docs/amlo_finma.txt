@@ -1,0 +1,497 @@
+ANTI-MONEY LAUNDERING ORDINANCE FINMA (AMLO-FINMA)
+Ordinance of the Swiss Financial Market Supervisory Authority on
+Combating Money Laundering and Terrorist Financing in the Financial Sector
+(Geldwaeschereiverordnung-FINMA, GwV-FINMA) — SR 955.033.0
+
+Comprehensive overview incorporating amendments through 2025
+
+================================================================================
+1. SCOPE AND APPLICABILITY
+================================================================================
+
+1.1 Overview
+
+The AMLO-FINMA (Anti-Money Laundering Ordinance of FINMA) implements the due
+diligence obligations set out in the Anti-Money Laundering Act (AMLA, SR 955.0)
+for financial intermediaries that are directly supervised by FINMA. It applies to:
+
+- Banks and securities firms
+- Fund management companies and asset managers of collective investment schemes
+- DLT trading facilities
+- FinTech license holders under Art. 1b Banking Act
+- Financial intermediaries directly supervised by FINMA (DSFI) under Art. 14a AMLA
+- Insurance companies in the life insurance sector
+
+AMLO-FINMA does not directly apply to SRO-supervised financial intermediaries,
+who are instead governed by their respective SRO regulations. However, SRO
+regulations must be consistent with AMLO-FINMA and are subject to FINMA approval.
+
+1.2 Relationship with Other Norms
+
+AMLO-FINMA sits below AMLA in the regulatory hierarchy:
+- AMLA (federal statute) sets the general framework
+- AMLO (Federal Council ordinance, SR 955.01) provides implementing provisions
+- AMLO-FINMA provides detailed requirements for FINMA-supervised entities
+- SRO regulations provide equivalent requirements for SRO-supervised entities
+- The CDB (Agreement on Due Diligence of Banks) provides additional standards
+  for banks
+
+1.3 Crypto-Specific Applicability
+
+AMLO-FINMA applies to all FINMA-supervised entities regardless of the technology
+used to provide services. This explicitly includes entities that:
+- Exchange virtual assets (crypto-to-fiat, fiat-to-crypto, crypto-to-crypto)
+- Provide custody of virtual assets (holding private keys)
+- Operate DLT trading facilities
+- Issue or distribute tokens that qualify as financial instruments
+- Provide transfer services for virtual assets
+
+================================================================================
+2. IDENTIFICATION OF THE CONTRACTING PARTY (Articles 3–10)
+================================================================================
+
+2.1 General Identification Requirements (Art. 3)
+
+When establishing a business relationship, the financial intermediary must
+identify the contracting party by collecting and verifying:
+
+For natural persons:
+- Full name (first name and surname)
+- Date of birth
+- Nationality
+- Residential address
+- Identification based on a valid official identity document (passport or
+  identity card) — a copy must be retained
+
+For legal entities:
+- Company name
+- Registered office
+- Identification based on an extract from the commercial register or equivalent
+  document proving the entity's existence
+- Identification of authorized signatories
+
+2.2 Methods of Identification
+
+(a) Face-to-face identification (Art. 4): The financial intermediary verifies
+the identity document in the physical presence of the contracting party. This
+is the standard method.
+
+(b) Identification by correspondence (Art. 5): Where a physical meeting is not
+possible, the financial intermediary may identify the contracting party through
+certified copies of identity documents. The certification must be by a notary,
+an official authority, or a regulated financial intermediary.
+
+(c) Online identification (Art. 6): Financial intermediaries may use video and
+online identification procedures that meet the requirements of FINMA Circular
+2016/7. This includes:
+- Video identification (live video call with trained staff)
+- Automated identification using biometric verification
+- Electronic identity verification using qualified electronic signatures
+
+For crypto businesses, online identification is the predominant method and must
+meet heightened security standards, including liveness detection, document
+authenticity verification, and cross-referencing with available databases.
+
+(d) Identification via third parties (Art. 7): The financial intermediary may
+delegate identification to another FINMA-supervised financial intermediary or
+a regulated foreign financial intermediary, subject to specific conditions
+including a written delegation agreement, equivalent standards, and access to
+the underlying identification documents.
+
+2.3 Threshold-Based Identification for Virtual Assets
+
+For virtual asset transactions, identification thresholds are:
+- CHF 0 (from the first franc) for establishing a business relationship
+- CHF 1,000 for occasional virtual asset transfers (travel rule threshold)
+- CHF 5,000 for occasional money exchange transactions
+- CHF 25,000 for other occasional transactions
+
+These lower thresholds for virtual assets reflect the heightened ML/TF risk
+associated with pseudo-anonymous digital assets.
+
+================================================================================
+3. CUSTOMER DUE DILIGENCE (CDD) — RISK-BASED APPROACH
+================================================================================
+
+3.1 Risk Classification (Art. 12–15)
+
+Financial intermediaries must classify business relationships and transactions
+according to their money laundering and terrorist financing risk. The risk
+classification drives the intensity of due diligence measures:
+
+(a) Standard risk: Normal due diligence applies (identification, BO verification,
+purpose of business relationship, ongoing monitoring).
+
+(b) Increased risk: Enhanced due diligence (EDD) applies. Increased-risk
+criteria include:
+- Politically exposed persons (PEPs) — domestic or foreign
+- Clients domiciled in or connected to high-risk countries
+- Complex structures or multi-layered corporate chains
+- Unusual transaction patterns
+- Cash-intensive businesses
+- Activities involving virtual assets (depending on the specific risk assessment)
+- Correspondent banking relationships
+- Non-face-to-face business relationships (unless robust online identification
+  is used)
+
+(c) Reduced risk: Simplified due diligence (SDD) may apply in limited
+circumstances (see below).
+
+3.2 Enhanced Due Diligence (EDD) Triggers and Measures (Art. 13–15)
+
+When EDD is triggered, the financial intermediary must, in addition to standard
+CDD:
+
+- Obtain additional information about the client's background, source of wealth,
+  source of funds, and purpose of the transaction or business relationship
+- Conduct enhanced ongoing monitoring with more frequent reviews
+- Escalate the business relationship to senior management for approval
+- Document the EDD measures taken and the rationale for maintaining or
+  terminating the relationship
+
+Specific EDD triggers:
+
+(a) PEPs (Art. 13): Persons entrusted with prominent public functions, their
+family members, and close associates. EDD includes:
+- Determination of whether the person is a PEP (using databases, self-declaration,
+  and public sources)
+- Identification of the source of wealth and source of funds
+- Senior management approval for establishing or continuing the relationship
+- Enhanced ongoing monitoring
+
+(b) High-risk countries (Art. 14): Countries identified by FATF as having
+strategic AML/CFT deficiencies, or countries that FINMA or the financial
+intermediary itself has identified as presenting elevated risk. EDD includes:
+- Enhanced scrutiny of the purpose and background of transactions
+- Additional documentation requirements
+- More frequent monitoring and reviews
+
+(c) Complex structures (Art. 15): Business relationships involving complex
+corporate structures, trusts, foundations, or arrangements that lack a clear
+economic rationale. EDD includes:
+- Identification of all relevant parties in the structure
+- Understanding the purpose of the structure
+- Verification that the structure is not being used to obscure beneficial
+  ownership
+
+3.3 Simplified Due Diligence (SDD) (Art. 11)
+
+SDD may be applied when the ML/TF risk is demonstrably low. Eligible situations
+include:
+- Contracting parties that are themselves FINMA-supervised financial
+  intermediaries
+- Publicly listed companies subject to disclosure requirements
+- Swiss public-law entities
+- Low-value products with limited functionality (e.g., prepaid cards with low
+  limits)
+
+Even with SDD, the financial intermediary must still identify the contracting
+party and remains obligated to conduct due diligence if suspicion arises.
+
+================================================================================
+4. BUSINESS RELATIONSHIP MONITORING (Articles 16–20)
+================================================================================
+
+4.1 Ongoing Monitoring (Art. 16)
+
+Financial intermediaries must monitor business relationships on an ongoing basis
+to ensure that:
+- Transactions are consistent with the known purpose and background of the
+  business relationship
+- The client's risk profile remains accurate
+- Documents, data, and information collected during CDD are kept up to date
+
+The intensity and frequency of monitoring must be commensurate with the risk
+classification. High-risk relationships require more frequent and detailed reviews.
+
+4.2 Transaction Monitoring (Art. 17)
+
+Financial intermediaries must implement systems and procedures to detect unusual
+or suspicious transactions, including:
+
+- Transactions inconsistent with the client's known profile or the purpose of
+  the business relationship
+- Transactions without apparent economic or lawful purpose
+- Transactions involving high-risk jurisdictions
+- Unusually large or complex transactions
+- Patterns suggesting structuring (splitting transactions to avoid thresholds)
+
+For virtual asset businesses, transaction monitoring must include:
+- Blockchain analytics tools to trace transaction origins and destinations
+- Detection of transactions involving sanctioned or flagged wallet addresses
+- Identification of mixing, tumbling, or obfuscation techniques
+- Monitoring of transaction patterns indicative of illicit activity
+
+4.3 Periodic Reviews (Art. 18)
+
+Standard-risk relationships: Review at least annually or when triggered by events.
+Increased-risk relationships: Review at least semi-annually.
+PEP relationships: Review at least annually with senior management sign-off.
+
+Reviews must include an update of the client risk assessment, verification that
+CDD information remains current, and assessment of transaction patterns.
+
+================================================================================
+5. SUSPICIOUS ACTIVITY REPORTING TO MROS (Articles 21–23)
+================================================================================
+
+5.1 Duty to Report (Art. 21)
+
+Reflecting Art. 9 AMLA, the financial intermediary must file a Suspicious Activity
+Report (SAR) with MROS when it knows or has reasonable grounds to suspect that:
+- Assets involved in the business relationship are connected to money laundering,
+  a predicate offence, terrorist financing, or a criminal organization
+- Assets are subject to the power of disposal of a criminal organization
+- Negotiations for a business relationship have been broken off because the
+  client refused to provide required identification or BO information
+
+5.2 SAR Content and Format (Art. 22)
+
+SARs must be filed electronically through the goAML platform and must include:
+- Identification of the reporting financial intermediary
+- Identification of the client and relevant parties
+- Description of the business relationship and relevant transactions
+- Nature and basis of the suspicion
+- Actions taken by the financial intermediary (e.g., asset freeze)
+- All supporting documentation
+
+5.3 Post-Reporting Obligations (Art. 23)
+
+After filing a SAR:
+- The financial intermediary must freeze the relevant assets immediately
+- The financial intermediary must not tip off the client or third parties
+- The financial intermediary must comply with all MROS instructions
+- The freeze lasts 5 business days unless MROS extends it through prosecution
+  referral
+- The financial intermediary must cooperate fully with MROS and any subsequent
+  criminal investigation
+
+================================================================================
+6. RECORD-KEEPING REQUIREMENTS (Articles 24–26)
+================================================================================
+
+6.1 Scope of Records (Art. 24)
+
+Financial intermediaries must maintain complete records of:
+- All CDD documents (identification documents, BO declarations, risk
+  classifications, EDD records)
+- Transaction records sufficient to reconstruct all transactions
+- Correspondence with clients relevant to AML compliance
+- Internal reports, escalation records, and decision memos
+- Training records
+- SAR filings and related documentation
+
+6.2 Retention Period (Art. 25)
+
+All records must be retained for a minimum of 10 years from:
+- The end of the business relationship, or
+- The completion of the transaction (for occasional transactions)
+
+6.3 Format and Accessibility (Art. 26)
+
+Records may be maintained in physical or electronic form. They must be:
+- Stored in Switzerland or in a location accessible to Swiss authorities
+- Organized in a manner that allows prompt retrieval
+- Protected against unauthorized access, loss, or destruction
+- Available for inspection by FINMA, auditors, and law enforcement upon request
+
+================================================================================
+7. TRAVEL RULE OBLIGATIONS (Article 10 AMLO-FINMA)
+================================================================================
+
+7.1 Overview
+
+Article 10 AMLO-FINMA implements the FATF Recommendation 16 (travel rule) for
+electronic transfers, including virtual asset transfers. It requires that
+originator and beneficiary information accompany all qualifying transfers.
+
+7.2 Requirements for Virtual Asset Transfers
+
+For all virtual asset transfers of CHF 1,000 or more, the ordering financial
+intermediary must transmit:
+- Full name of the originator
+- Account number or wallet address of the originator
+- Address, date of birth, or identification number of the originator
+- Full name of the beneficiary
+- Account number or wallet address of the beneficiary
+
+The beneficiary's financial intermediary must:
+- Verify that originator information is complete
+- Request missing information if incomplete
+- Reject or return the transfer if information cannot be obtained
+
+7.3 Transfers Below CHF 1,000
+
+For virtual asset transfers below CHF 1,000, the ordering financial intermediary
+must still record originator and beneficiary information internally but is not
+required to transmit it with the transfer unless there is suspicion of ML/TF.
+
+7.4 Unhosted Wallet Transfers
+
+Transfers to or from unhosted (non-custodial) wallets present particular
+challenges because there is no counterparty financial intermediary. In such cases:
+- The financial intermediary must collect the identity of the wallet holder
+- The financial intermediary must verify ownership of the unhosted wallet
+  (e.g., through a signed message or micro-transfer)
+- Enhanced due diligence applies for significant or repeated transfers to
+  unhosted wallets
+- The financial intermediary must document its risk assessment
+
+7.5 Technical Implementation
+
+Financial intermediaries may use recognized travel rule protocols such as:
+- TRISA (Travel Rule Information Sharing Architecture)
+- OpenVASP
+- Sygna Bridge
+- Other interoperable solutions
+
+The choice of protocol is left to the financial intermediary, but it must
+ensure that the solution reliably transmits required information and that
+counterparty VASPs are appropriately verified.
+
+================================================================================
+8. CRYPTO-SPECIFIC PROVISIONS
+================================================================================
+
+8.1 Classification of Tokens
+
+AMLO-FINMA applies differently depending on the FINMA token classification:
+
+(a) Payment tokens (e.g., Bitcoin, Ether): Full AMLA due diligence applies to
+all services involving payment tokens, including exchange, custody, and transfer.
+
+(b) Utility tokens: Generally not subject to AMLA unless they also function as
+payment tokens or are traded on secondary markets in a way that constitutes
+financial intermediation.
+
+(c) Asset tokens (security tokens): Subject to AMLA when services constitute
+securities dealing or custody. Additionally subject to securities regulation.
+
+(d) Stablecoins: Treated as payment tokens with additional scrutiny due to
+their potential for large-scale payment use and associated ML/TF risks.
+
+8.2 ICO/ITO/STO Due Diligence
+
+Token issuers that qualify as financial intermediaries must apply AMLA due
+diligence to all token purchasers. This includes:
+- Identification of all investors before tokens are distributed
+- Beneficial ownership verification
+- Source of funds verification for significant investments
+- Sanctions screening of all investors
+
+8.3 DeFi Considerations
+
+For entities operating DeFi protocols that fall within AMLA scope:
+- The operator must implement CDD to the extent technically feasible
+- Risk-based measures must be proportionate to the level of control
+- FINMA expects ongoing development of compliance solutions for DeFi
+
+8.4 Staking and Lending
+
+Crypto staking and lending platforms that accept client assets are generally
+considered financial intermediaries and must:
+- Apply full AMLA due diligence
+- Implement transaction monitoring
+- Comply with travel rule requirements for asset transfers
+- Maintain segregated client asset records
+
+================================================================================
+9. ORGANIZATIONAL REQUIREMENTS
+================================================================================
+
+9.1 AML Compliance Function (Art. 27)
+
+Every FINMA-supervised financial intermediary must designate an AML compliance
+officer (or function) responsible for:
+- Overseeing the implementation of AML policies and procedures
+- Advising business units on AML matters
+- Reviewing and approving high-risk business relationships
+- Filing SARs with MROS
+- Coordinating with FINMA and auditors
+- Conducting or overseeing AML training
+
+The compliance officer must have appropriate qualifications, experience, and
+authority, and must report directly to senior management or the board.
+
+9.2 Training (Art. 28)
+
+Financial intermediaries must provide regular AML training to all relevant staff:
+- Initial training for new employees
+- Refresher training at least annually
+- Specialized training for staff in high-risk areas
+- Training records must be maintained
+
+Training must cover:
+- Legal framework (AMLA, AMLO-FINMA, relevant SRO rules)
+- Internal policies and procedures
+- Red flags and suspicious activity indicators
+- Reporting obligations and procedures
+- Sanctions compliance
+- Specific risks relevant to the financial intermediary's business (including
+  crypto-specific risks where applicable)
+
+9.3 Internal Controls and Audit (Art. 29)
+
+Financial intermediaries must maintain:
+- A documented AML compliance program
+- Internal controls to ensure adherence to AML procedures
+- An independent internal audit function (or outsourced equivalent) that
+  regularly reviews AML compliance
+- An external audit by a FINMA-recognized audit firm
+
+================================================================================
+10. SANCTIONS SCREENING
+================================================================================
+
+10.1 Swiss Sanctions Framework
+
+Financial intermediaries must comply with Swiss sanctions, which implement:
+- UN Security Council sanctions
+- Swiss-specific sanctions adopted by the Federal Council under the Embargo Act
+- SECO (State Secretariat for Economic Affairs) administers the sanctions regime
+
+10.2 Screening Requirements
+
+Financial intermediaries must screen:
+- All new clients at onboarding
+- All existing clients on an ongoing basis (at least upon sanctions list updates)
+- All counterparties in transactions
+- All beneficiaries
+
+For crypto businesses, screening must include:
+- Wallet address screening against known sanctioned addresses
+- Blockchain analytics to detect indirect sanctions exposure
+- Screening of counterparty VASPs
+
+================================================================================
+11. ENFORCEMENT AND PENALTIES
+================================================================================
+
+FINMA has broad enforcement powers for AMLO-FINMA violations:
+- Orders to remedy deficiencies with deadlines
+- Appointment of investigating agents or supervisory agents
+- License revocation
+- Publication of enforcement decisions
+- Industry bans for responsible individuals
+- Criminal referrals to prosecution authorities
+
+FINMA has been active in enforcing AML requirements against crypto businesses
+and has issued several enforcement actions in this area since 2018.
+
+================================================================================
+12. REFERENCES
+================================================================================
+
+- Anti-Money Laundering Ordinance FINMA (AMLO-FINMA), SR 955.033.0
+- Anti-Money Laundering Act (AMLA), SR 955.0
+- Anti-Money Laundering Ordinance (AMLO), SR 955.01
+- FINMA Circular 2016/7 "Video and Online Identification"
+- FINMA Guidance 02/2019 "Payments on the Blockchain"
+- FATF Recommendation 15 "New Technologies"
+- FATF Recommendation 16 "Wire Transfers"
+- FATF Updated Guidance for a Risk-Based Approach to Virtual Assets and VASPs
+  (October 2021)
+
+================================================================================
+END OF DOCUMENT
+================================================================================
