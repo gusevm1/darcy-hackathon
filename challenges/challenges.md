@@ -181,21 +181,13 @@ Hack the Law 2026: Projected Challenge Themes
 
   ---
   Summary: 2025 vs 2026 Evolution
-  ┌───────────────────┬──────────────────────────────────────────┬─────────────────────────────────────────────────┐
-  │     Dimension     │             2025 Challenges              │            2026 Projected Challenges            │
-  ├───────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────┤
-  │ Core task         │ Retrieve, summarize, extract             │ Reason, decide, verify, govern                  │
-  ├───────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────┤
-  │ Interaction model │ Single query → single answer             │ Multi-step workflows, simulations, negotiations │
-  ├───────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────┤
-  │ Modality          │ Text only                                │ Text + audio + structured data                  │
-  ├───────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────┤
-  │ Trust model       │ Implicit (assume AI is useful)           │ Explicit (audit, calibrate, verify)             │
-  ├───────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────┤
-  │ Scope             │ Single jurisdiction, single document set │ Cross-jurisdictional, cross-temporal            │
-  ├───────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────┤
-  │ AI role           │ Assistant                                │ Agent, counterparty, auditor                    │
-  ├───────────────────┼──────────────────────────────────────────┼─────────────────────────────────────────────────┤
-  │ Central concern   │ "Can AI do this?"                        │ "Can we trust AI doing this?"                   │
-  └───────────────────┴──────────────────────────────────────────┴─────────────────────────────────────────────────┘
+  | Dimension | 2025 Challenges | 2026 Projected Challenges |
+  |---|---|---|
+  | Core task | Retrieve, summarize, extract | Reason, decide, verify, govern |
+  | Interaction model | Single query → single answer | Multi-step workflows, simulations, negotiations |
+  | Modality | Text only | Text + audio + structured data |
+  | Trust model | Implicit (assume AI is useful) | Explicit (audit, calibrate, verify) |
+  | Scope | Single jurisdiction, single document set | Cross-jurisdictional, cross-temporal |
+  | AI role | Assistant | Agent, counterparty, auditor |
+  | Central concern | "Can AI do this?" | "Can we trust AI doing this?" |
   The through-line: 2025 proved AI can process legal information. 2026 asks whether AI can participate in legal processes — and whether we can govern it when it does.
