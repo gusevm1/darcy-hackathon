@@ -1,0 +1,10 @@
+# Default owners for everything in the repo
+* @gusevm1
+
+# Frontend
+# /src/components/ @gusevm1
+# /src/app/ @gusevm1
+
+# Infrastructure & CI
+# /.github/ @gusevm1
+# /infrastructure/ @gusevm1
