@@ -1,0 +1,388 @@
+REGULATION (EU) 2023/1114 OF THE EUROPEAN PARLIAMENT AND OF THE COUNCIL
+of 31 May 2023
+on markets in crypto-assets (MiCAR)
+
+========================================================================
+TITLE I — SUBJECT MATTER, SCOPE AND DEFINITIONS
+========================================================================
+
+Article 1 — Subject matter
+This Regulation lays down uniform rules for the following:
+(a) transparency and disclosure requirements for the issuance, offer to the public and admission to trading of crypto-assets;
+(b) the requirements for the authorisation and supervision of crypto-asset service providers, issuers of asset-referenced tokens and issuers of e-money tokens, as well as for their operation, organisation and governance;
+(c) requirements for the protection of holders of crypto-assets in the issuance, offer to the public and admission to trading of crypto-assets;
+(d) requirements for the protection of clients of crypto-asset service providers;
+(e) measures to prevent insider dealing, unlawful disclosure of inside information and market manipulation related to crypto-assets.
+
+Article 2 — Scope
+1. This Regulation applies to natural and legal persons and certain other undertakings that are engaged in the issuance, offer to the public and admission to trading of crypto-assets or that provide services related to crypto-assets in the Union.
+2. This Regulation does not apply to:
+(a) crypto-assets that qualify as financial instruments as defined in MiFID II;
+(b) crypto-assets that qualify as deposits, including structured deposits;
+(c) crypto-assets that qualify as funds, except if they qualify as e-money tokens;
+(d) crypto-assets that qualify as securitisation positions;
+(e) crypto-assets that qualify as insurance or pension products.
+
+Article 3 — Definitions
+For the purposes of this Regulation, the following definitions apply:
+(1) 'distributed ledger technology' or 'DLT' means a technology that enables the operation and use of distributed ledgers;
+(2) 'distributed ledger' means an information repository that keeps records of transactions and that is shared across, and synchronised between, a set of DLT network nodes using a consensus mechanism;
+(3) 'consensus mechanism' means the rules and procedures by which an agreement is reached, among DLT network nodes, that a transaction is validated;
+(4) 'DLT network node' means a device or process that is part of a network and that holds a complete or partial replica of records of all transactions on a distributed ledger;
+(5) 'crypto-asset' means a digital representation of a value or of a right that is able to be transferred and stored electronically, using distributed ledger technology or similar technology;
+(6) 'asset-referenced token' means a type of crypto-asset that is not an electronic money token and that purports to maintain a stable value by referencing another value or right or a combination thereof, including one or more official currencies;
+(7) 'e-money token' or 'electronic money token' means a type of crypto-asset that purports to maintain a stable value by referencing the value of one official currency;
+(8) 'utility token' means a type of crypto-asset that is only intended to provide access to a good or a service supplied by its issuer;
+(9) 'issuer' means a natural or legal person, or other undertaking, who issues the crypto-assets;
+(10) 'applicant issuer' means an issuer of asset-referenced tokens or e-money tokens who applies for authorisation to offer those crypto-assets to the public or seeks their admission to trading;
+(11) 'offer to the public' means a communication to persons in any form and by any means, presenting sufficient information on the terms of the offer and the crypto-assets to be offered so as to enable prospective holders to decide whether to purchase those crypto-assets;
+(12) 'offeror' means a natural or legal person, or other undertaking, or the issuer, who offers crypto-assets to the public;
+(13) 'crypto-asset service' means any of the services and activities listed below relating to any crypto-asset:
+    (a) providing custody and administration of crypto-assets on behalf of clients;
+    (b) operation of a trading platform for crypto-assets;
+    (c) exchange of crypto-assets for funds;
+    (d) exchange of crypto-assets for other crypto-assets;
+    (e) execution of orders for crypto-assets on behalf of clients;
+    (f) placing of crypto-assets;
+    (g) reception and transmission of orders for crypto-assets on behalf of clients;
+    (h) providing advice on crypto-assets;
+    (i) providing portfolio management on crypto-assets;
+    (j) providing transfer services for crypto-assets on behalf of clients;
+(14) 'crypto-asset service provider' or 'CASP' means a legal person or other undertaking whose occupation or business is the provision of one or more crypto-asset services to clients on a professional basis, and that is allowed to provide crypto-asset services in accordance with Article 59;
+(15) 'crypto-asset white paper' means a document containing essential information about an offer to the public of crypto-assets or the admission of crypto-assets to trading;
+
+========================================================================
+TITLE II — CRYPTO-ASSETS OTHER THAN ASSET-REFERENCED TOKENS OR E-MONEY TOKENS
+========================================================================
+
+Article 4 — Offers to the public of crypto-assets other than asset-referenced tokens or e-money tokens
+1. A person shall not make an offer to the public of a crypto-asset other than an asset-referenced token or e-money token in the Union unless that person:
+(a) is a legal entity;
+(b) has drawn up a crypto-asset white paper in respect of that crypto-asset in accordance with Article 6;
+(c) has notified the crypto-asset white paper in accordance with Article 8;
+(d) has published the crypto-asset white paper in accordance with Article 9;
+(e) has complied with the requirements set out in Article 14 (marketing communications) and Article 16 (conduct requirements).
+
+Article 5 — Exemptions from the obligation to publish a crypto-asset white paper
+1. Article 4(1) does not apply where:
+(a) the crypto-asset is offered for free;
+(b) the crypto-asset is automatically created as a reward for the maintenance of the distributed ledger or the validation of transactions;
+(c) the offer concerns a utility token providing access to a good or service that exists or is in operation;
+(d) the holder of the crypto-asset has the right to use it only in exchange for goods and services in a limited network of merchants with contractual arrangements with the offeror.
+
+Article 6 — Content and form of the crypto-asset white paper
+1. A crypto-asset white paper shall contain all of the following information:
+(a) information about the offeror or the person seeking admission to trading;
+(b) information about the issuer, if different from the offeror or the person seeking admission to trading;
+(c) information about the operator of the trading platform where admission to trading of the crypto-asset is sought;
+(d) information about the crypto-asset project;
+(e) information about the offer to the public of the crypto-asset or its admission to trading;
+(f) information about the rights and obligations attached to the crypto-asset;
+(g) information on the underlying technology;
+(h) information on the risks;
+(i) information on the principal adverse impacts on the climate and other environment-related adverse impacts of the consensus mechanism used to issue the crypto-asset.
+
+Article 7 — Liability of issuers for the crypto-asset white paper
+The issuer of a crypto-asset shall be liable to the holder of that crypto-asset for any loss resulting from a white paper that does not comply with Article 6, or that is misleading, inaccurate, or inconsistent with other relevant parts of the offer.
+
+========================================================================
+TITLE III — ASSET-REFERENCED TOKENS
+========================================================================
+
+Article 16 — Obligation to act honestly, fairly and professionally
+Issuers of asset-referenced tokens shall act honestly, fairly and professionally and in the best interest of the holders of asset-referenced tokens. Issuers of asset-referenced tokens shall communicate with the holders of asset-referenced tokens in a fair, clear and not misleading manner.
+
+Article 17 — Publication of the crypto-asset white paper for asset-referenced tokens
+1. No person shall offer to the public in the Union asset-referenced tokens or seek admission of such tokens to trading on a trading platform for crypto-assets, unless that person is the issuer of such asset-referenced tokens and:
+(a) is a legal person or other undertaking that is established in the Union and that has been authorised in accordance with Article 21 by the competent authority of its home Member State;
+(b) has drawn up a crypto-asset white paper in respect of the asset-referenced token in accordance with Article 19;
+(c) has notified the crypto-asset white paper in accordance with Article 20.
+
+Article 21 — Authorisation
+1. A person shall not offer to the public asset-referenced tokens in the Union or seek their admission to trading on a trading platform for crypto-assets unless that person has been authorised as an issuer of asset-referenced tokens pursuant to this Article.
+
+Article 25 — Obligation to have a reserve of assets
+1. An issuer of asset-referenced tokens shall constitute and at all times maintain a reserve of assets.
+2. The reserve of assets shall be composed so that the risks associated with the assets referenced by the asset-referenced tokens are covered and that liquidity risks associated with the permanent redemption rights of the holders are mitigated.
+3. The reserve of assets shall be legally segregated from the issuer's own estate and from the reserve of assets of other token issuers in the interest of the holders of asset-referenced tokens.
+
+Article 31 — Assessment by the EBA for classification as significant
+The EBA shall classify asset-referenced tokens as significant asset-referenced tokens where at least three of the following criteria are met:
+(a) the number of holders exceeds 10 million;
+(b) the value of the asset-referenced tokens issued or their market capitalisation exceeds EUR 5,000,000,000;
+(c) the number and value of transactions per day during the relevant period exceeds 2.5 million transactions and EUR 500,000,000 respectively;
+(d) the issuer is classified as a gatekeeper under the Digital Markets Act;
+(e) the significance of the activities of the issuer on an international scale;
+(f) the interconnectedness with the financial system.
+
+========================================================================
+TITLE IV — E-MONEY TOKENS
+========================================================================
+
+Article 48 — Issuance of e-money tokens and redemption
+1. No person shall offer to the public e-money tokens in the Union, or seek admission of such tokens to trading on a trading platform for crypto-assets, unless that person is the issuer of such e-money tokens and is either:
+(a) authorised as a credit institution; or
+(b) authorised as an electronic money institution under Directive 2009/110/EC.
+
+Article 49 — Crypto-asset white paper for e-money tokens
+1. An issuer of e-money tokens shall draw up a crypto-asset white paper and notify the crypto-asset white paper to its competent authority. A crypto-asset white paper for e-money tokens shall contain all the information described in Annex III.
+
+Article 50 — Liability of issuers of e-money tokens
+The issuer of an e-money token shall be liable to the holder of that e-money token for any loss resulting from a white paper that does not comply with Article 51, or that is misleading, inaccurate or inconsistent.
+
+Article 54 — Classification of e-money tokens as significant
+1. The EBA shall classify e-money tokens as significant e-money tokens where at least three of the following criteria are met during the relevant period:
+(a) the number of holders exceeds 10 million;
+(b) the value of e-money tokens issued or their market capitalisation exceeds EUR 5,000,000,000;
+(c) the number and value of transactions exceeds 2.5 million and EUR 500,000,000 per day respectively;
+(d) the issuer is classified as a gatekeeper.
+
+========================================================================
+TITLE V — AUTHORISATION AND OPERATING CONDITIONS FOR CRYPTO-ASSET SERVICE PROVIDERS
+========================================================================
+
+Chapter 1 — Authorisation of crypto-asset service providers
+
+Article 59 — Authorisation
+1. A person shall not provide crypto-asset services in the Union unless that person is:
+(a) a legal person or other undertaking that has been authorised as a crypto-asset service provider in accordance with Article 63; or
+(b) a credit institution, central securities depository, investment firm, market operator, electronic money institution, UCITS management company, or alternative investment fund manager and that has notified the competent authority in accordance with Article 60.
+
+2. Crypto-asset service providers authorised under paragraph 1 may provide crypto-asset services throughout the Union, either through the right of establishment, including through a branch, or through the freedom to provide services.
+
+3. An authorisation as a crypto-asset service provider shall be effective for the entire Union and shall allow a crypto-asset service provider to provide the services for which it has been authorised throughout the Union, either through the right of establishment or through the freedom to provide services.
+
+Article 60 — Provision of crypto-asset services by certain financial entities
+1. Credit institutions, central securities depositories providing services listed under Sections B and C of the Annex to the CSDR, investment firms authorised to provide one or more investment services or activities under MiFID II, electronic money institutions, UCITS management companies, and alternative investment fund managers may provide crypto-asset services if they notify the competent authority at least 40 working days before providing those services for the first time.
+2. The notification shall include a programme of operations, a description of the arrangements for internal controls and risk management, and a description of the procedures for safeguarding clients' crypto-assets and funds.
+
+Article 62 — Application for authorisation
+1. Legal persons or other undertakings that intend to provide crypto-asset services shall apply to the competent authority of their home Member State for an authorisation as a crypto-asset service provider.
+2. The application shall contain all of the following:
+(a) the name, including the legal name and any other commercial name to be used, the legal entity identifier, the website of the applicant and its physical address;
+(b) the legal form of the applicant;
+(c) the articles of association of the applicant;
+(d) a programme of operations setting out the types of crypto-asset services the applicant wishes to provide, including where and how those services are to be marketed;
+(e) evidence that the applicant meets the prudential safeguards referred to in Article 67;
+(f) a description of the governance arrangements and internal control mechanisms of the applicant;
+(g) a description of the ICT systems and security arrangements of the applicant;
+(h) evidence that persons who effectively manage the applicant are of sufficiently good repute and possess appropriate knowledge, skills and experience;
+(i) the identity of shareholders or members that have qualifying holdings, and evidence of their suitability;
+(j) a description of the arrangements to comply with Article 68 (safeguarding of clients' crypto-assets and funds);
+(k) evidence that the applicant has appropriate insurance cover or comparable guarantee.
+
+Article 63 — Assessment of the application and granting or refusing authorisation
+1. Competent authorities shall acknowledge receipt of an application within 5 working days.
+2. Within 25 working days of the acknowledgement of receipt, the competent authority shall assess whether the application is complete.
+3. Competent authorities shall assess the application within 40 working days of the date on which they acknowledge receipt of a complete application, and shall inform the applicant of the granting or refusal of the authorisation.
+4. The total period from acknowledgement of receipt to the decision shall not exceed 3 months.
+
+Article 64 — Withdrawal of the authorisation
+A competent authority shall withdraw the authorisation of a crypto-asset service provider where the crypto-asset service provider:
+(a) has not used the authorisation within 12 months of the date on which the authorisation was granted;
+(b) has expressly renounced the authorisation;
+(c) has not provided crypto-asset services for a period of 9 consecutive months;
+(d) has obtained the authorisation by irregular means, including making false statements in its application.
+
+Article 65 — Cross-border provision of crypto-asset services (Passporting)
+1. A crypto-asset service provider that intends to provide crypto-asset services in a Member State other than its home Member State for the first time, either through the right of establishment, including through a branch, or through the freedom to provide services, shall communicate the following information to the competent authority of its home Member State:
+(a) the Member State in which the crypto-asset service provider intends to operate;
+(b) a programme of operations identifying, in particular, the crypto-asset services that the crypto-asset service provider intends to provide;
+(c) where establishment of a branch is intended, the organisational structure of the branch and the names of those responsible for the management of the branch.
+
+2. The competent authority of the home Member State shall, within 10 working days of receiving the information referred to in paragraph 1, communicate that information to the competent authority of the host Member State and inform ESMA.
+
+3. The crypto-asset service provider may start providing crypto-asset services in the host Member State from the date of receipt of the communication referred to in paragraph 2, or at the latest 15 working days after submitting the information.
+
+Chapter 2 — Obligations for all crypto-asset service providers
+
+Article 66 — Obligation to act honestly, fairly and professionally
+Crypto-asset service providers shall act honestly, fairly and professionally in the best interest of their clients. They shall provide their clients with fair, clear and not misleading information, including in marketing communications.
+
+Article 67 — Prudential safeguards (Capital Requirements)
+1. Crypto-asset service providers shall have in place, at all times, prudential safeguards equal to at least the higher of the following:
+(a) the minimum capital requirements set out below for each class of service:
+    — Class 1: Providing advice on crypto-assets; reception and transmission of orders on behalf of clients — EUR 50,000;
+    — Class 2: Placing of crypto-assets; execution of orders on behalf of clients; providing transfer services on behalf of clients — EUR 125,000;
+    — Class 3: Custody and administration of crypto-assets on behalf of clients; exchange of crypto-assets for funds; exchange of crypto-assets for other crypto-assets; operation of a trading platform for crypto-assets; providing portfolio management on crypto-assets — EUR 150,000;
+(b) one quarter of the fixed overheads of the preceding year, reviewed annually.
+
+2. The prudential safeguards referred to in paragraph 1 shall take any of the following forms:
+(a) own funds, consisting of Common Equity Tier 1 items as referred to in the CRR;
+(b) an insurance policy covering the territories of the Union where crypto-asset services are actively provided; or
+(c) a comparable guarantee.
+
+Article 68 — Safeguarding of clients' crypto-assets and funds
+1. Crypto-asset service providers that hold clients' crypto-assets or the means of access to such crypto-assets shall make adequate arrangements to safeguard the ownership rights of clients.
+2. A crypto-asset service provider holding clients' crypto-assets shall not use those crypto-assets on its own account.
+3. Crypto-asset service providers that hold clients' funds shall place those funds with a credit institution or a central bank by the end of the next business day.
+
+Article 69 — Complaints-handling procedures
+Crypto-asset service providers shall establish and maintain effective and transparent procedures for the prompt, fair and consistent handling of complaints received from clients.
+
+Article 70 — Identification, prevention, management and disclosure of conflicts of interest
+1. Crypto-asset service providers shall maintain and operate effective organisational and administrative arrangements with a view to taking all reasonable steps designed to identify, prevent, manage and disclose conflicts of interest.
+
+Article 71 — Outsourcing
+1. Where crypto-asset service providers rely on a third party for the performance of operational functions, they shall take all reasonable steps to avoid additional operational risk.
+
+Chapter 3 — Obligations for specific crypto-asset services
+
+Article 72 — Operation of a trading platform for crypto-assets
+1. Crypto-asset service providers that operate a trading platform for crypto-assets shall establish operating rules for the trading platform.
+2. The operating rules shall specify:
+(a) the types of crypto-assets that are admitted to trading;
+(b) the criteria for admitting crypto-assets to trading;
+(c) the conditions that must be met by market participants before gaining access to the trading platform;
+(d) the fees and charges applied;
+(e) the measures to ensure fair and orderly trading;
+(f) the conditions for suspension of trading.
+
+Article 73 — Exchange of crypto-assets for funds or for other crypto-assets
+Crypto-asset service providers that exchange crypto-assets for funds or for other crypto-assets shall establish a non-discriminatory commercial policy that indicates the types of crypto-assets available for exchange, and shall publish a firm price or a method for determining the price.
+
+Article 74 — Execution of orders for crypto-assets on behalf of clients
+1. Crypto-asset service providers that execute orders for crypto-assets on behalf of clients shall establish and implement an order execution policy.
+2. The order execution policy shall include at least information on the factors of price, costs, speed, likelihood of execution and settlement, and any other relevant consideration.
+
+Article 75 — Providing custody and administration of crypto-assets on behalf of clients
+1. Crypto-asset service providers providing custody and administration of crypto-assets on behalf of clients shall:
+(a) keep a register of positions, opened in the name of each client, corresponding to each client's rights to the crypto-assets;
+(b) keep records of any movements of crypto-assets.
+
+Article 76 — Placing of crypto-assets
+Crypto-asset service providers that provide the service of placing of crypto-assets shall communicate information to their clients about the terms and conditions for the placing before concluding an agreement, including information on potential conflicts of interest.
+
+Article 77 — Reception and transmission of orders for crypto-assets on behalf of clients
+Crypto-asset service providers receiving and transmitting orders on behalf of clients shall establish procedures and arrangements to ensure the prompt and proper sending of orders to other crypto-asset service providers or trading platforms for crypto-assets.
+
+Article 78 — Providing advice on crypto-assets
+1. Crypto-asset service providers providing advice on crypto-assets shall assess the compatibility of the crypto-assets with the needs of the clients and recommend crypto-assets only when this is in the interest of the client.
+2. Crypto-asset service providers providing advice shall ensure that the natural persons giving the advice have the knowledge and competence necessary.
+
+Article 79 — Providing portfolio management on crypto-assets
+1. Crypto-asset service providers providing portfolio management shall act in the best interest of their clients and shall ensure a suitable level of diversification.
+
+========================================================================
+TITLE VI — PREVENTION OF MARKET ABUSE INVOLVING CRYPTO-ASSETS
+========================================================================
+
+Article 86 — Insider dealing
+1. A person shall not engage or attempt to engage in insider dealing in crypto-assets.
+2. Insider dealing arises where a person possesses inside information and uses that information by acquiring or disposing of, for its own account or for the account of a third party, directly or indirectly, crypto-assets to which that information relates.
+
+Article 88 — Market manipulation
+1. A person shall not engage in or attempt to engage in market manipulation.
+2. Market manipulation shall comprise the following activities:
+(a) entering into a transaction, placing an order to trade or any other behaviour which gives false or misleading signals as to the supply of, demand for, or price of a crypto-asset;
+(b) disseminating information through the media which gives false or misleading signals.
+
+========================================================================
+TITLE VII — COMPETENT AUTHORITIES, THE EBA AND ESMA
+========================================================================
+
+Article 93 — Designation of competent authorities
+1. Each Member State shall designate one or more competent authorities for the purposes of this Regulation.
+2. Where a Member State designates more than one competent authority, it shall determine the respective roles of those competent authorities.
+
+Article 94 — Powers of competent authorities
+1. Competent authorities shall have at least the following supervisory and investigatory powers:
+(a) the power to require CASPs and issuers to provide information and documents;
+(b) the power to suspend or prohibit an offer to the public or admission to trading;
+(c) the power to suspend or prohibit the provision of crypto-asset services;
+(d) the power to carry out on-site inspections;
+(e) the power to require the temporary cessation of any practice that the competent authority considers contrary to this Regulation.
+
+========================================================================
+TITLE VIII — DELEGATED ACTS AND IMPLEMENTING ACTS
+========================================================================
+
+Article 139 — Delegated acts
+The Commission shall be empowered to adopt delegated acts to supplement or amend this Regulation concerning:
+(a) the content, methodologies and presentation of information in the crypto-asset white paper;
+(b) the criteria for the classification of crypto-assets;
+(c) the prudential safeguards requirements for crypto-asset service providers;
+(d) the criteria for assessing applications for authorisation.
+
+========================================================================
+TITLE IX — TRANSITIONAL AND FINAL PROVISIONS
+========================================================================
+
+Article 143 — Transitional measures for crypto-assets other than asset-referenced tokens or e-money tokens
+Crypto-assets that were offered to the public in the Union, or that were admitted to trading on a trading platform for crypto-assets in the Union, before 30 December 2024 may continue to be offered or remain admitted to trading without the obligation to publish a crypto-asset white paper as referred to in Article 4.
+
+Article 144 — Transitional measures for crypto-asset service providers
+1. Crypto-asset services that are provided by undertakings in accordance with applicable law before 30 December 2024 may continue to be provided in the same Member State until 1 July 2026, or until the undertaking is granted or refused an authorisation in accordance with Article 63, whichever is earlier.
+2. Member States may decide not to apply the transitional period referred to in paragraph 1, or to reduce it.
+
+Article 145 — Transitional measures for asset-referenced tokens
+Asset-referenced tokens that were issued before 30 June 2024 may continue to be offered to the public or admitted to trading without being required to apply for authorisation under Article 21, provided that the issuer applies for authorisation before 30 July 2024.
+
+Article 146 — Grandfathering provisions for existing financial entities
+Credit institutions, electronic money institutions, investment firms, and other authorised financial entities may provide crypto-asset services from 30 December 2024 by notifying their competent authority in accordance with Article 60, without requiring a separate CASP authorisation under Article 63.
+
+Article 149 — Entry into force and application
+1. This Regulation shall enter into force on the twentieth day following that of its publication in the Official Journal of the European Union.
+2. It shall apply from 30 December 2024, except for:
+(a) Title III (asset-referenced tokens) and Title IV (e-money tokens), which shall apply from 30 June 2024;
+(b) Article 144 (transitional measures for CASPs), which shall apply from 30 December 2024.
+
+========================================================================
+ANNEX I — MINIMUM CONTENTS OF A CRYPTO-ASSET WHITE PAPER (FOR CRYPTO-ASSETS OTHER THAN ARTs OR EMTs)
+========================================================================
+
+Part A — Information about the offeror or person seeking admission to trading
+1. Name, legal form, registered office, date of registration
+2. A business plan
+3. Identity of the members of the management body
+4. Where applicable, financial statements
+
+Part B — Information about the crypto-asset
+1. Type of crypto-asset and the functionalities it provides
+2. Description of the rights and obligations attached to the crypto-asset
+3. Description of the underlying technology and protocols used
+4. Details of any planned burning mechanism
+5. Description of the consensus mechanism, where applicable
+
+Part C — Information about the offer to the public or admission to trading
+1. Whether the offer concerns an initial offer to the public
+2. Total number of units to be offered and issue price
+3. Any application period for the offer
+4. Description of the target group of prospective holders
+
+Part D — Information about the risks
+1. Description of the risks associated with the crypto-asset
+2. Description of the risks relating to the issuer
+3. Description of technology risks
+
+========================================================================
+KEY CAPITAL REQUIREMENTS SUMMARY (Article 67)
+========================================================================
+
+Class 1 services (minimum EUR 50,000):
+- Providing advice on crypto-assets (Article 78)
+- Reception and transmission of orders on behalf of clients (Article 77)
+
+Class 2 services (minimum EUR 125,000):
+- Placing of crypto-assets (Article 76)
+- Execution of orders on behalf of clients (Article 74)
+- Providing transfer services on behalf of clients
+
+Class 3 services (minimum EUR 150,000):
+- Custody and administration of crypto-assets on behalf of clients (Article 75)
+- Exchange of crypto-assets for funds (Article 73)
+- Exchange of crypto-assets for other crypto-assets (Article 73)
+- Operation of a trading platform for crypto-assets (Article 72)
+- Providing portfolio management on crypto-assets (Article 79)
+
+========================================================================
+AML/CFT REQUIREMENTS UNDER MiCAR
+========================================================================
+
+All CASPs are obliged entities under the EU Anti-Money Laundering framework:
+- CASPs must comply with Directive (EU) 2015/849 (AMLD) as amended by Directive (EU) 2024/1640
+- Customer Due Diligence (CDD) requirements apply to all crypto-asset transfers
+- The Transfer of Funds Regulation (TFR, Regulation (EU) 2023/1113) requires that information on the originator and beneficiary accompanies transfers of crypto-assets (the "travel rule")
+- CASPs must implement Know Your Customer (KYC) procedures
+- Suspicious transaction reporting obligations apply
+- CASPs must maintain records of all transactions for at least 5 years

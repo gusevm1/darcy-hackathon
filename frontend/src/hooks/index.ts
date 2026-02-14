@@ -1,2 +1,2 @@
-// Custom React hooks
-// Example: export { useMediaQuery } from './use-media-query'
+export { useChat } from './use-chat'
+export { useWizard } from './use-wizard'

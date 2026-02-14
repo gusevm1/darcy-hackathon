@@ -1,6 +1,10 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
+import { SiteHeader } from '@/components/shared/site-header'
+import { TooltipProvider } from '@/components/ui/tooltip'
+import { siteConfig } from '@/config'
+
 import '@/app/globals.css'
 
 const geistSans = Geist({
@@ -15,11 +19,11 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: 'darcy-hackathon',
-    template: `%s | darcy-hackathon`,
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`,
   },
-  description: 'Built with Next.js, TypeScript, Tailwind CSS, and shadcn/ui',
-  metadataBase: new URL(process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'),
+  description: siteConfig.description,
+  metadataBase: new URL(siteConfig.url),
 }
 
 export default function RootLayout({
@@ -29,8 +33,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}>
-        {children}
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
+      >
+        <TooltipProvider>
+          <SiteHeader />
+          <main className="min-h-[calc(100vh-3.5rem)]">{children}</main>
+        </TooltipProvider>
       </body>
     </html>
   )
