@@ -7,14 +7,17 @@ import type { ClientDocumentState, LicenseStage } from '@/types'
 interface StageDetailProps {
   stage: LicenseStage
   documentStates: ClientDocumentState[]
-  onUpload: (docId: string, fileName: string) => void
+  onUpload: (docId: string, file: File) => void
   onReset: (docId: string) => void
+  uploading?: Set<string>
 }
 
-export function StageDetail({ stage, documentStates, onUpload, onReset }: StageDetailProps) {
+export function StageDetail({ stage, documentStates, onUpload, onReset, uploading }: StageDetailProps) {
   const stageDocIds = new Set(stage.documents.map((d) => d.id))
   const stageStates = documentStates.filter((s) => stageDocIds.has(s.documentId))
-  const completedCount = stageStates.filter((s) => s.status === 'approved').length
+  const completedCount = stageStates.filter(
+    (s) => s.status === 'approved' || s.status === 'verified'
+  ).length
   const totalCount = stage.documents.length
   const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0
 
@@ -48,6 +51,7 @@ export function StageDetail({ stage, documentStates, onUpload, onReset }: StageD
                   state={documentStates.find((s) => s.documentId === doc.id)}
                   onUpload={onUpload}
                   onReset={onReset}
+                  isUploading={uploading?.has(doc.id)}
                 />
               ))}
             </div>

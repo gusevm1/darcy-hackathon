@@ -18,8 +18,9 @@ interface RoadmapVisualizationProps {
   selectedStageIndex: number
   onSelectStage: (index: number) => void
   documentStates: ClientDocumentState[]
-  onUpload: (docId: string, fileName: string) => void
+  onUpload: (docId: string, file: File) => void
   onReset: (docId: string) => void
+  uploading?: Set<string>
   showClientSelector?: boolean
   clients?: Client[]
   selectedClientId?: string
@@ -34,6 +35,7 @@ export function RoadmapVisualization({
   documentStates,
   onUpload,
   onReset,
+  uploading,
   showClientSelector,
   clients,
   selectedClientId,
@@ -80,6 +82,7 @@ export function RoadmapVisualization({
             documentStates={documentStates}
             onUpload={onUpload}
             onReset={onReset}
+            uploading={uploading}
           />
         )}
       </ScrollArea>

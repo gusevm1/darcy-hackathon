@@ -19,6 +19,7 @@ export default function RoadmapPage() {
           documentStates={state.documentStates}
           onUpload={state.uploadDocument}
           onReset={state.resetDocument}
+          uploading={state.uploading}
           showClientSelector
           clients={state.clients}
           selectedClientId={state.selectedClientId}

@@ -194,10 +194,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
                 Gap(
                     category="capital",
                     field_or_item="existing_capital_chf",
-                    description=(
-                        f"{label}."
-                        f" Shortfall: CHF {shortfall:,}"
-                    ),
+                    description=(f"{label}. Shortfall: CHF {shortfall:,}"),
                     severity="missing",
                 )
             )

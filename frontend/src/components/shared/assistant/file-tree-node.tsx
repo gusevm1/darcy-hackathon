@@ -11,9 +11,12 @@ import type { FileTreeClientFolder, FileTreeDocument, FileTreeStageFolder } from
 const statusColors: Record<DocumentStatus, string> = {
   'not-started': 'bg-gray-400',
   uploaded: 'bg-blue-500',
+  pending: 'bg-amber-500',
+  verified: 'bg-emerald-500',
   'under-review': 'bg-yellow-500',
   approved: 'bg-green-500',
   rejected: 'bg-red-500',
+  error: 'bg-red-500',
 }
 
 interface FileTreeNodeProps {

@@ -5,7 +5,7 @@ export type LicenseType =
   | 'fund-management'
   | 'insurance'
 
-export type DocumentStatus = 'not-started' | 'uploaded' | 'under-review' | 'approved' | 'rejected'
+export type DocumentStatus = 'not-started' | 'uploaded' | 'under-review' | 'approved' | 'rejected' | 'pending' | 'verified' | 'error'
 
 export type StageStatus = 'not-started' | 'in-progress' | 'completed'
 
@@ -14,6 +14,7 @@ export interface RequiredDocument {
   name: string
   description: string
   category: string
+  finmaReference?: string
 }
 
 export interface LicenseStage {

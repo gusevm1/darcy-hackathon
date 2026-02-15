@@ -31,7 +31,10 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
 
   const activeStageIndex = selectedStageIndex >= 0 ? selectedStageIndex : client.currentStageIndex
 
-  const { documentStates, uploadDocument, resetDocument } = useDocumentState(client.documentStates)
+  const { documentStates, uploadDocument, resetDocument, uploading } = useDocumentState(
+    client.documentStates,
+    client.id
+  )
 
   const clientContext = useMemo((): ClientContext => {
     const stageName = definition?.stages[client.currentStageIndex]?.name ?? 'Unknown'
@@ -100,6 +103,7 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
     documentStates,
     uploadDocument,
     resetDocument,
+    uploading,
     messages,
     chats,
     activeChatId,

@@ -118,3 +118,17 @@ class GapAnalysis(BaseModel):
     gaps: list[Gap]
     next_steps: list[NextStep]
     critical_blockers: list[str]
+
+
+class ClientDocument(BaseModel):
+    id: str
+    client_id: str
+    document_id: str  # matches frontend RequiredDocument.id
+    file_name: str
+    file_path: str
+    content_type: str = ""
+    file_size: int = 0
+    status: Literal["pending", "verified", "rejected", "error"] = "pending"
+    verification_result: str | None = None
+    uploaded_at: datetime = Field(default_factory=datetime.utcnow)
+    verified_at: datetime | None = None
