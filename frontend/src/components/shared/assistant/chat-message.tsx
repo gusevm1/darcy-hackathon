@@ -12,13 +12,13 @@ import { SourceList } from './source-list'
 
 interface ChatMessageProps {
   message: ChatMessageType
-  onCitationClick: (citation: Citation) => void
+  onCitationClick?: (citation: Citation) => void
 }
 
 function renderContent(
   content: string,
   citations: Citation[],
-  onCitationClick: (citation: Citation) => void,
+  onCitationClick?: (citation: Citation) => void,
 ) {
   const parts = content.split(/(\[\d+\])/)
   return parts.map((part, i) => {

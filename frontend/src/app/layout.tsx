@@ -1,7 +1,6 @@
 import type { Metadata } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 
-import { SiteHeader } from '@/components/shared/site-header'
 import { TooltipProvider } from '@/components/ui/tooltip'
 import { siteConfig } from '@/config'
 
@@ -36,10 +35,7 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} font-sans antialiased`}
       >
-        <TooltipProvider>
-          <SiteHeader />
-          <main className="min-h-[calc(100vh-3.5rem)]">{children}</main>
-        </TooltipProvider>
+        <TooltipProvider>{children}</TooltipProvider>
       </body>
     </html>
   )

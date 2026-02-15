@@ -16,7 +16,7 @@ export function SiteHeader() {
   return (
     <header className="bg-background/95 supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b backdrop-blur">
       <div className="container mx-auto flex h-14 items-center px-4">
-        <Link href="/clients" className="mr-6 flex items-center gap-2">
+        <Link href="/" className="mr-6 flex items-center gap-2">
           <Building2 className="h-5 w-5" />
           <span className="hidden font-semibold sm:inline-block">
             {siteConfig.shortName}
@@ -30,7 +30,7 @@ export function SiteHeader() {
               href={item.href}
               className={cn(
                 'text-muted-foreground hover:text-foreground rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                pathname === item.href && 'text-foreground bg-accent',
+                pathname.startsWith(item.href) && 'text-foreground bg-accent',
               )}
             >
               {item.label}
@@ -54,7 +54,7 @@ export function SiteHeader() {
                     href={item.href}
                     className={cn(
                       'text-muted-foreground hover:text-foreground rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                      pathname === item.href && 'text-foreground bg-accent',
+                      pathname.startsWith(item.href) && 'text-foreground bg-accent',
                     )}
                   >
                     {item.label}

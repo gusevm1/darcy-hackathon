@@ -5,7 +5,7 @@ import type { Citation } from '@/types/assistant'
 
 interface SourceListProps {
   citations: Citation[]
-  onCitationClick: (citation: Citation) => void
+  onCitationClick?: (citation: Citation) => void
 }
 
 export function SourceList({ citations, onCitationClick }: SourceListProps) {
@@ -21,7 +21,7 @@ export function SourceList({ citations, onCitationClick }: SourceListProps) {
             <button
               type="button"
               className="text-muted-foreground hover:text-foreground cursor-pointer text-left text-xs transition-colors"
-              onClick={() => onCitationClick(citation)}
+              onClick={() => onCitationClick?.(citation)}
             >
               [{citation.index}] {citation.documentName} —{' '}
               {citation.clientName} / {citation.stageName}

@@ -21,6 +21,7 @@ interface FileTreeProps {
   onToggle: (nodeId: string) => void
   onUploadFile: (file: File) => void
   onDocumentClick: (doc: FileTreeDocument) => void
+  showUpload?: boolean
 }
 
 export function FileTree({
@@ -30,6 +31,7 @@ export function FileTree({
   onToggle,
   onUploadFile,
   onDocumentClick,
+  showUpload = true,
 }: FileTreeProps) {
   const docRefs = useRef<Map<string, HTMLDivElement>>(new Map())
   const scrollAreaRef = useRef<HTMLDivElement>(null)
@@ -99,17 +101,21 @@ export function FileTree({
           <FolderTree className="text-muted-foreground h-4 w-4" />
           <h2 className="text-sm font-semibold">Documents</h2>
         </div>
-        <Button variant="ghost" size="icon" onClick={handleUploadClick}>
-          <Upload className="h-4 w-4" />
-          <span className="sr-only">Upload file</span>
-        </Button>
-        <input
-          ref={fileInputRef}
-          type="file"
-          className="hidden"
-          onChange={handleFileChange}
-          accept=".pdf,.doc,.docx,.txt"
-        />
+        {showUpload && (
+          <>
+            <Button variant="ghost" size="icon" onClick={handleUploadClick}>
+              <Upload className="h-4 w-4" />
+              <span className="sr-only">Upload file</span>
+            </Button>
+            <input
+              ref={fileInputRef}
+              type="file"
+              className="hidden"
+              onChange={handleFileChange}
+              accept=".pdf,.doc,.docx,.txt"
+            />
+          </>
+        )}
       </div>
 
       <ScrollArea ref={scrollAreaRef} className="flex-1">
