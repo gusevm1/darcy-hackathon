@@ -27,7 +27,7 @@ import { getCommentsForDocument, getUnresolvedCount } from '@/data/ehp-comments'
 import { downloadDocument } from '@/lib/api/client-documents'
 import { statusConfig } from '@/lib/constants/status'
 import { cn } from '@/lib/utils'
-import type { ClientDocumentState, RequiredDocument } from '@/types'
+import type { ClientDocumentState, DocumentStatus, RequiredDocument } from '@/types'
 
 interface DocumentItemProps {
   document: RequiredDocument
@@ -51,12 +51,19 @@ export function DocumentItem({
   const [viewerContent, setViewerContent] = useState<string | null>(null)
   const [viewerLoading, setViewerLoading] = useState(false)
   const [commentsOpen, setCommentsOpen] = useState(false)
-  const status = state?.status ?? 'not-started'
-  const config = statusConfig[status]
-
+  const rawStatus = state?.status ?? 'not-started'
   const comments = getCommentsForDocument(document.id)
   const unresolvedCount = getUnresolvedCount(document.id)
   const hasComments = comments.length > 0
+
+  // Derive display status from EHP comment feedback
+  const status: DocumentStatus =
+    hasComments && unresolvedCount === 0
+      ? 'approved'
+      : hasComments && unresolvedCount > 0
+        ? 'under-review'
+        : rawStatus
+  const config = statusConfig[status]
 
   const handleView = async () => {
     setViewerOpen(true)
