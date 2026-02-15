@@ -27,7 +27,7 @@ export function HeroSection() {
           </Link>
         </Button>
         <Button asChild variant="outline" size="lg">
-          <Link href="/roadmap/client">View Roadmap</Link>
+          <Link href="/roadmap">View Roadmap</Link>
         </Button>
       </div>
     </section>

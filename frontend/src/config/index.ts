@@ -8,7 +8,6 @@ export const siteConfig = {
 
 export const navItems = [
   { label: 'Onboarding', href: '/onboarding' },
-  { label: 'Client Roadmap', href: '/roadmap/client' },
-  { label: 'Consultant Roadmap', href: '/roadmap/consultant' },
+  { label: 'Roadmap', href: '/roadmap' },
   { label: 'Knowledge', href: '/knowledge' },
 ] as const

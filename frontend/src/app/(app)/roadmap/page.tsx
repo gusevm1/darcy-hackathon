@@ -5,7 +5,7 @@ import { RoadmapLayout } from '@/components/shared/roadmap/roadmap-layout'
 import { RoadmapVisualization } from '@/components/shared/roadmap/roadmap-visualization'
 import { useRoadmapState } from '@/hooks/use-roadmap-state'
 
-export default function ConsultantRoadmapPage() {
+export default function RoadmapPage() {
   const state = useRoadmapState({ role: 'consultant' })
 
   return (

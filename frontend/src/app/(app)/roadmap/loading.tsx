@@ -1,9 +1,10 @@
 import { Skeleton } from '@/components/ui/skeleton'
 
-export default function ClientRoadmapLoading() {
+export default function RoadmapLoading() {
   return (
     <div className="flex h-[calc(100vh-3.5rem)]">
       <div className="flex flex-1 flex-col gap-4 border-r p-6">
+        <Skeleton className="h-10 w-64" />
         <Skeleton className="h-6 w-48" />
         <Skeleton className="h-4 w-64" />
         <div className="flex gap-4 py-4">
