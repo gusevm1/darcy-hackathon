@@ -11,8 +11,23 @@ REGULATORY_DOCS_DIR = Path(__file__).parent.parent / "data" / "regulatory_docs"
 
 
 def _parse_file(path: Path) -> str:
-    """Read a text file. PDF support can be added later."""
+    """Read a text or PDF file and return its content as plain text."""
+    if path.suffix.lower() == ".pdf":
+        return _parse_pdf(path)
     return path.read_text(encoding="utf-8")
+
+
+def _parse_pdf(path: Path) -> str:
+    """Extract text from a PDF file using pypdf."""
+    from pypdf import PdfReader
+
+    reader = PdfReader(path)
+    pages: list[str] = []
+    for page in reader.pages:
+        text = page.extract_text()
+        if text:
+            pages.append(text.strip())
+    return "\n\n".join(pages)
 
 
 async def ingest_file(
@@ -37,7 +52,9 @@ async def seed_regulatory_docs() -> None:
     existing = await rag_service.list_documents()
     existing_ids = {d["doc_id"] for d in existing}
 
-    for path in sorted(REGULATORY_DOCS_DIR.glob("*.txt")):
+    for path in sorted(
+        [*REGULATORY_DOCS_DIR.glob("*.txt"), *REGULATORY_DOCS_DIR.glob("*.pdf")]
+    ):
         text = _parse_file(path)
         doc_id = rag_service.content_hash(text)
 

@@ -1,9 +1,13 @@
 """Knowledge base endpoints: search and document management."""
 
+import tempfile
+from pathlib import Path
+
 from fastapi import APIRouter, HTTPException, UploadFile
 from pydantic import BaseModel
 
 from src.services import rag_service
+from src.services.document_ingestion import _parse_pdf
 
 router = APIRouter(prefix="/api/kb", tags=["knowledge-base"])
 
@@ -53,7 +57,13 @@ async def upload_document(
     if not file.filename:
         raise HTTPException(status_code=400, detail="No filename")
     content = await file.read()
-    text = content.decode("utf-8")
+    if file.filename.lower().endswith(".pdf"):
+        with tempfile.NamedTemporaryFile(suffix=".pdf", delete=False) as tmp:
+            tmp.write(content)
+            tmp.flush()
+            text = _parse_pdf(Path(tmp.name))
+    else:
+        text = content.decode("utf-8")
     doc_id = rag_service.content_hash(text)
     if not title:
         title = file.filename.rsplit(".", 1)[0].replace("_", " ").title()

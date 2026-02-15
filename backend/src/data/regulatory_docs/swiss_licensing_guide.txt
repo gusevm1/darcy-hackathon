@@ -1,0 +1,357 @@
+Swiss Financial and Fintech Licensing Guide
+Current as of February 2026 — Based on official FINMA guidance and regulatory frameworks
+
+
+== EXECUTIVE SUMMARY ==
+
+This comprehensive guide provides detailed information on Swiss financial services licensing,
+covering Self-Regulatory Organisation (SRO) membership requirements, available FINMA licences,
+required documentation, and application processes.
+
+
+== 1. SRO LICENCE (MEMBERSHIP) REQUIREMENTS ==
+
+1.1 Overview
+
+SRO "licence" refers to membership with a Swiss self-regulatory organisation under the Anti-Money
+Laundering Act (AMLA). This is required for financial intermediaries who do not hold a direct FINMA
+licence but are subject to AML/KYC supervision.
+
+1.2 Core Corporate Documents
+
+The following corporate documentation is required for SRO membership applications:
+- Extract from the commercial register (Handelsregisterauszug) for the Swiss company
+- Articles of association/statutes and shareholder register
+- Organizational chart showing governance and reporting lines
+- Description of business activities and business model, typically via structured questionnaire
+
+1.3 Business and Compliance Documentation
+
+- Detailed business plan covering services, target clients, markets, projected volumes, and risk analysis
+- Internal regulations and policies for AML/KYC, including:
+  - Client onboarding procedures
+  - Transaction monitoring systems
+  - Risk classification frameworks
+  - Record keeping protocols
+  - PEP and sanctions checks
+  - Suspicious activity reporting procedures
+- Written internal control framework defining roles of board, management, and compliance
+- Outsourcing contracts or descriptions if key functions (e.g., AML officer, compliance) are delegated externally
+
+1.4 Key Persons and Fit-and-Proper Documents
+
+- CVs for directors, senior management, AML officer, and other key function holders, demonstrating
+  relevant qualifications and experience in financial services/compliance
+- Copies of ID/passport for directors, ultimate beneficial owners (UBOs), and AML officer
+- Recent criminal record extracts and debt collection/excerpt from enforcement register
+  (Betreibungsregisterauszug) for key persons to evidence good reputation
+- Evidence that the AML officer is resident in Switzerland or that an approved Swiss-based external
+  AML officer is mandated
+
+1.5 Ownership and Source-of-Funds Documents
+
+- Shareholder structure overview, including UBO declaration up to natural persons
+- Source of funds/source of wealth documentation (SoF/SoW) for any shareholder with 10% or more
+  or significant influence (bank statements, contracts, sale documents, etc., in line with SRO guidance)
+- Group structure chart if the entity is part of an international group, including description of
+  intra-group services and flows
+
+1.6 Financial and Infrastructure Evidence
+
+- Recent financial statements or opening balance sheet and proof of paid-in share capital meeting
+  the SRO's minimum capital expectations for your activity
+- Proof of Swiss office (lease agreement or office service contract) and local contact address
+- Proof of a Swiss bank account in the company's name or evidence of banking relationship in
+  progress, depending on SRO practice
+
+1.7 SRO-Specific Forms and Confirmations
+
+- Completed and signed SRO application/affiliation form (Beitrittsgesuch) including declarations
+  on AML responsibilities and business scope
+- Signed declaration of adherence to the SRO regulations and fee schedule, including agreement
+  to audits and ongoing supervision
+- In many cases: a legal opinion by a Swiss law firm on the regulatory qualification of your
+  business model (whether SRO membership is sufficient or a FINMA licence is required)
+
+1.8 Application Timeline
+
+The SRO membership process typically takes 1-3 months:
+1. Eligibility check (days): Review SRO regulations and download forms
+2. Preparation and submission (1-2 weeks): Complete application form with all documents; pay deposit
+   fee (approximately 5,000 CHF)
+3. Initial screening (2-4 weeks): SRO reviews completeness and requests supplements
+4. Assessment (3-6 weeks): Risk analysis, possible interview or site visit, AML officer verification
+5. Decision: Approval or denial; FINMA notified for registry; annual fees commence
+
+
+== 2. SWISS FINTECH AND FINANCE LICENCES ==
+
+2.1 Overview of Available Licences
+
+Switzerland offers a comprehensive range of FINMA-administered licences for financial and fintech
+activities, plus SRO memberships for lighter-touch AML/compliance supervision.
+
+2.2 Core FINMA Licences
+
+Banking Licence:
+- Main Activities: Accepting deposits (approx. 10M+ CHF)
+- Key Notes: Full banking supervision
+
+Securities Dealer Licence:
+- Main Activities: Trading securities, underwriting, brokerage
+- Key Notes: Broker-dealers, account-holding variants
+
+FinTech Licence:
+- Main Activities: Payment services, deposits up to CHF 100M (no interest/lending), e-money, some crypto
+- Key Notes: 5 active holders as of 2025; min. 100k CHF capital
+
+DLT Trading Systems:
+- Main Activities: Trading/settlement of DLT-based securities/tokens
+- Key Notes: BX Digital (only one licensed)
+
+Investment Fund Management:
+- Main Activities: Managing collective investment schemes, venture capital funds
+- Key Notes: AIFMs, Swiss fund managers
+
+Portfolio Management:
+- Main Activities: Discretionary asset management (FINMA-licensed, SRO-supervised AML)
+- Key Notes: Asset managers; requires FINMA approval
+
+2.3 Payment and Crypto-Specific Licences
+
+E-Money Institution:
+- Main Activities: Issuing electronic money, payment services
+- Key Notes: E-wallets, prepaid cards
+
+Payment Systems Operator:
+- Main Activities: Operating multilateral payment/settlement systems
+- Key Notes: Clearing houses
+
+Proposed Payment Instrument Institution:
+- Main Activities: Stablecoin issuance, deposits without interest (replaces FinTech Licence)
+- Key Notes: In consultation Oct 2025; stablecoin focus
+
+Proposed Crypto-Institution:
+- Main Activities: Crypto custody, trading, services beyond basic payments
+- Key Notes: For DeFi/blockchain providers
+
+
+== 3. REQUIRED DOCUMENTATION BY LICENCE TYPE ==
+
+3.1 E-Money Institution (EMI)
+
+Often pursued via FinTech Licence (covers EMI under Banking Act Art. 1b); minimum capital
+approximately 300k-1m CHF.
+
+Required Documents:
+- Company statutory documents (articles, commercial register extract)
+- Proof of paid-in minimum capital
+- 3-year business plan with financial forecasts and risk analysis
+- Shareholder/group structure and UBO details
+- CVs, qualifications, criminal/debt extracts for directors/shareholders/management
+- Internal policies: AML/KYC, compliance, risk management, IT security, dispute resolution
+- Description of IT infrastructure, processes, outsourcing contracts
+- Audit arrangements and proof of fees
+
+Additional EHP Forms:
+- EHP FinTech template: operational programme, capital proof form, 3-year P&L/capital forecast spreadsheet
+- Annex forms: outsourcing register, AML policy checklist, IT security self-assessment
+
+3.2 VASP (Virtual Asset Service Provider)
+
+Crypto exchanges/wallets/custody; often SRO + FINMA registration if not full banking; advanced AML required.
+
+Required Documents:
+- Incorporation/registration documents
+- Detailed business plan, financial models, crypto-specific risks (on-chain, DeFi)
+- Compliance/AML/KYC policies (EDD for VASPs, client asset segregation)
+- IT architecture description (DLT, security, custody model, insurance)
+- Dossiers on management/key functions: CVs, fit-and-proper (criminal records, experience)
+- Shareholder structure, SoF/SoW for UBOs
+- Outsourcing/IT/cloud contracts, incident response plans
+
+Additional EHP Forms:
+- EHP banking/FinTech/crypto annexes: token classification form (payment/security/utility), custody
+  model description template
+- AMLA-specific: VASP risk assessment form (via SRO if applicable), client asset segregation proof
+
+3.3 Payment Systems Operator (PSO)
+
+Under FMIA Art. 5; for multilateral clearing/settlement systems; high barriers.
+
+Required Documents:
+- Programme of operations (payment services types)
+- 3-year business plan/budget forecast
+- Proof of regulatory capital compliance (assumptions justified)
+- Group structure/organizational chart, qualifying holdings/UBOs
+- Governance/risk management policies (market, operational, liquidity)
+- IT/systems description, business continuity plans
+- Fit-and-proper for management, internal controls/audit setup
+
+Additional EHP Forms:
+- EHP PSO template: operations programme form (Art. 5 FMIA), liquidity/market risk model spreadsheet,
+  participant default waterfall simulation
+- Annexes: business continuity/disaster recovery plan template, settlement finality proof
+
+3.4 Securities Firm
+
+Under FinIA Art. 41; client dealers, own-account, market makers, issuing houses; minimum capital 1.5m CHF.
+
+Required Documents:
+- Business plan ensuring capital adequacy/risk diversification (Art. 63 FinIO)
+- Articles/partnership agreement specifying securities types, markets, clients
+- Proof of fully paid minimum capital (1.5m CHF)
+- Management/participant dossiers: irreproachable activity, qualifications
+- Risk management: market/credit/operational/legal limits, internal controls/audit
+- Organizational separation (trading, settlement, etc.), Swiss management
+- Group supervision proof if applicable, recognised audit firm appointment
+
+Additional EHP Forms:
+- EHP securities firm initial application template (main form + annexes)
+- Specific forms: business rules template (securities types/markets/clients), capital adequacy/risk
+  diversification calc (Art. 63 FinIO), participant fit-and-proper questionnaire
+
+
+== 4. APPLICATION PROCESSES AND TIMELINES ==
+
+4.1 Common Steps Across FINMA Licences
+
+All FINMA licence applications follow a standardised workflow via the Electronic Hub Platform (EHP),
+though timelines vary by complexity.
+
+1. Pre-Application (1-2 months): Email project outline to FINMA (e.g., authorisation@finma.ch or
+   fintech@finma.ch) for feedback; self-register on EHP portal
+2. Preparation (2-6 months): Gather documents/forms, conduct pre-audit with recognised auditor,
+   refine business model
+3. Submission: Upload complete EHP templates to FINMA
+4. Review (4-12 months): FINMA assesses application (may request audit report, additional information);
+   conditional approval often issued
+5. Implementation & Final: Meet conditions (e.g., capital deposit, IT go-live); full licence granted
+
+4.2 E-Money Institution (FinTech Licence)
+
+Total Timeline: 6-16 months (FINMA target: 6 months if complete; averages 9-12 months)
+
+1. Pre-submission (0.5-2 months): Email project outline (business model, capital, risks) to
+   fintech@finma.ch for preliminary feedback; self-register on FINMA portal for EHP access
+   (2FA verification takes days)
+2. Document preparation (2-4 months): Assemble EHP templates (business plan, policies, forecasts),
+   appoint auditor for pre-report if requested, refine based on feedback
+3. Formal submission: Upload full application to EHP; pay fees (per Fees Ordinance)
+4. Initial review (1-2 months): FINMA assigns case officer, requests clarifications/documents
+   (e.g., audit report)
+5. Substantive assessment (3-6 months): Evaluate capital, AML/IT risks, business viability;
+   possible on-site meetings/queries
+6. Conditional approval: Issue provisional licence with conditions (e.g., IT implementation)
+7. Finalisation (1-3 months): Meet conditions, submit auditor confirmation; full licence granted,
+   published in registry
+
+4.3 VASP (Crypto Providers)
+
+Total Timeline: 6-12 months (SRO route faster; full FINMA if custody)
+
+1. Project scoping (1 month): Email FINMA/fintech@finma.ch to classify (SRO vs FinTech/banking);
+   opt for SRO if eligible
+2. Preparation (2-3 months): Gather crypto-specific documents (token analysis, custody model), EHP templates
+3. Submission: EHP upload + SRO application if hybrid
+4. Review (3-6 months): FINMA assesses AML/DLT risks, auditor report; foreign authority checks
+   if international
+5. Dialogue and conditions (1-2 months): Respond to requests for information, implement fixes
+   (e.g., segregation)
+6. Approval: Licence issued; enter supervised registry
+
+4.4 SRO Membership
+
+Total Timeline: 1-3 months (non-FINMA, SRO-led)
+
+1. Eligibility check (days): Review SRO regulations (VQF/PolyReg), download forms
+2. Preparation and submission (1-2 weeks): Complete Beitrittsgesuch + documents; pay deposit fee
+   (approx. 5,000 CHF)
+3. Initial screening (2-4 weeks): SRO reviews completeness, requests supplements
+4. Assessment (3-6 weeks): Risk analysis, possible interview/site visit, AML officer check
+5. Decision: Approval/denial; FINMA notified for registry; annual fees start
+
+4.5 Payment Systems Operator
+
+Total Timeline: 9-18 months (systemic risk focus)
+
+1. Pre-notification (1 month): Email project to authorisation@finma.ch
+2. Preparation (3-6 months): Build operations programme, risk models, appoint auditor
+3. EHP submission: Full package upload
+4. Review phase 1 (2-4 months): Completeness check, requests for information on liquidity/settlement
+5. Deep analysis (4-8 months): Model simulations, stakeholder consultations
+6. Conditions and final (1-3 months): Implement safeguards; licence activation
+
+4.6 Securities Firm
+
+Total Timeline: 8-18 months (depends on foreign checks)
+
+1. Licensing project presentation (1-2 months): Email outline to authorisation@finma.ch
+   (no EHP needed yet); get feedback
+2. Self-register EHP (days): Portal access post-verification
+3. Preparation and submission (2-4 months): Complete initial application template + annexes
+   (business rules, risk calculations), appoint audit firm
+4. Ongoing dialogue and review (4-10 months): FINMA queries, foreign supervisor coordination,
+   substantive checks (capital, organization)
+5. Pre-approval audit: Auditor report submission
+6. Final approval: Licence granted if conditions met; registry publication
+
+
+== 5. KEY CONSIDERATIONS AND BEST PRACTICES ==
+
+5.1 Choosing Between SRO and FINMA Licence
+
+The decision between SRO membership and a full FINMA licence depends on several factors:
+
+- Business model: Limited payment services or advisory activities may qualify for SRO;
+  deposit-taking, lending, or complex investment services require FINMA licensing
+- Capital requirements: SRO membership has lower capital thresholds than FINMA licences
+- Timeline: SRO applications are significantly faster (1-3 months vs 6-18 months)
+- Regulatory burden: SRO supervision is lighter-touch, focused primarily on AML/KYC compliance
+- Market perception: FINMA licences generally carry greater regulatory credibility
+
+5.2 Role of Professional Advisors
+
+Given the complexity of Swiss financial regulation, most applicants engage:
+- Swiss law firms specialising in financial regulation (particularly Zuerich-based firms)
+- Compliance consultants for policy development and implementation
+- Recognised audit firms for pre-application and ongoing audits
+- IT security specialists for infrastructure assessments
+
+Professional fees typically range from 50,000-200,000 CHF for the application phase, plus ongoing costs.
+
+5.3 Common Pitfalls to Avoid
+
+- Incomplete or inconsistent documentation across application forms
+- Insufficient detail in business plans and risk assessments
+- Inadequate source of funds/source of wealth documentation for shareholders
+- Failure to demonstrate Swiss management presence and local infrastructure
+- Underestimating capital requirements and operational costs
+- Rushing the pre-application consultation phase with FINMA
+- Not engaging a recognised auditor early in the process
+
+5.4 Access to Official Resources
+
+Key official resources for applicants:
+- FINMA website (www.finma.ch): Authorisation pages by licence type
+- EHP platform: Self-registration at FINMA portal for access to application templates
+- FINMA authorised institutions register: To review existing licence holders
+- SRO websites: VQF (www.vqf.ch), PolyReg (www.polyreg.ch), SO-FIT for specific membership requirements
+- FINMA guidance documents and circulars: Available in Documents section
+
+
+== 6. CONCLUSION ==
+
+Swiss financial and fintech licensing offers a comprehensive regulatory framework that balances
+innovation with consumer protection and financial stability. The tiered approach — from SRO
+membership for lighter activities to full FINMA licences for complex financial services — allows
+firms to choose appropriate regulatory pathways based on their business models.
+
+Success in obtaining Swiss licences requires thorough preparation, complete documentation,
+professional advisory support, and realistic timeline expectations. The Electronic Hub Platform (EHP)
+has streamlined many aspects of the application process, but applicants should anticipate substantial
+engagement with FINMA case officers and auditors throughout the review period.
+
+For any licensing project, the recommended first step is to contact FINMA directly via the appropriate
+email address (authorisation@finma.ch, fintech@finma.ch) to discuss your specific business model
+and receive preliminary guidance on the most appropriate regulatory pathway.

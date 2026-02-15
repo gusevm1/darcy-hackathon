@@ -203,6 +203,43 @@ def analyze_gaps(client: Client) -> GapAnalysis:
             "Order book operation may require FINMA license upgrade"
         )
 
+    # Securities Firm specific capital check
+    if pathway == "finma_securities":
+        min_capital = 1_500_000
+        if (
+            client.existing_capital_chf is not None
+            and client.existing_capital_chf < min_capital
+        ):
+            shortfall = min_capital - client.existing_capital_chf
+            gaps.append(
+                Gap(
+                    category="capital",
+                    field_or_item="existing_capital_chf",
+                    description=(
+                        f"Securities Firm requires CHF 1.5M minimum."
+                        f" Shortfall: CHF {shortfall:,}"
+                    ),
+                    severity="missing",
+                )
+            )
+            critical_blockers.append(
+                f"Securities Firm capital shortfall of CHF {shortfall:,}"
+            )
+
+    # Payment Systems specific checks
+    if pathway == "finma_payment_systems":
+        gaps.append(
+            Gap(
+                category="governance",
+                field_or_item="systemic_importance",
+                description=(
+                    "Payment Systems Operator license only required"
+                    " for systemically important systems — confirm with FINMA/SNB"
+                ),
+                severity="needs_review",
+            )
+        )
+
     # Checklist gap analysis
     total_items = len(client.checklist)
     completed_items = sum(1 for item in client.checklist if item.status == "complete")

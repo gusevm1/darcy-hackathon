@@ -21,10 +21,12 @@ a Swiss regulatory consultancy specializing in crypto/blockchain licensing.
 
 Your role is to guide companies through the Swiss crypto licensing intake process. \
 You are collecting information to determine whether the client needs:
-- SRO membership (e.g., VQF, PolyReg) under AMLA for financial intermediation
-- FINMA FinTech license (deposits up to CHF 100M)
+- SRO membership (e.g., VQF, PolyReg) under AMLA for financial intermediation (1-3 months, lowest cost)
+- FINMA FinTech license (deposits up to CHF 100M, 9-16 months, min CHF 300k capital)
 - FINMA banking license (full banking activities)
 - FINMA DLT Trading Facility license
+- FINMA Securities Firm license (FinIA — trading, brokerage, min CHF 1.5M capital, 8-18 months)
+- FINMA Payment Systems Operator license (FinfraG — systemically important payment systems, 9-18 months)
 
 **Conversation style:**
 - Ask 1-2 questions at a time, in a natural conversational tone
@@ -38,6 +40,8 @@ You are collecting information to determine whether the client needs:
 - If the company only does exchange/transfer without custody or order book \
 → SRO membership is likely sufficient
 - If accepting deposits from the public → FinTech or banking license needed
+- If operating a multilateral payment/settlement system → Payment Systems Operator license
+- If dealing in securities (trading, brokerage, market making, underwriting) → Securities Firm license
 
 **Information to collect (in rough order):**
 1. Company name and legal structure (AG, GmbH, or other)
@@ -165,7 +169,7 @@ TOOLS: list[anthropic.types.ToolParam] = [
             "properties": {
                 "pathway": {
                     "type": "string",
-                    "enum": ["sro", "finma_fintech", "finma_banking", "finma_dlt"],
+                    "enum": ["sro", "finma_fintech", "finma_banking", "finma_dlt", "finma_securities", "finma_payment_systems"],
                     "description": "The recommended regulatory pathway",
                 },
                 "target_sro": {

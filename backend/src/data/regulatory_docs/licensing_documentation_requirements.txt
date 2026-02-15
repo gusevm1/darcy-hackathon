@@ -1,0 +1,529 @@
+Swiss Financial License Documentation Requirements
+Comprehensive Overview — February 2026
+
+This document provides an exhaustive overview of the documentation required to apply for key Swiss
+financial licenses regulated by FINMA (Swiss Financial Market Supervisory Authority) and Self-Regulatory
+Organizations (SROs). The five license types covered are:
+
+1. E-Money/FinTech License (Art. 1b Banking Act) — For accepting public deposits up to CHF 100 million
+2. VASP (Virtual Asset Service Provider) — For crypto/blockchain businesses
+3. SRO Membership — For financial intermediaries subject to AML requirements
+4. Payment Systems Operator (FinfraG) — For financial market infrastructure
+5. Securities Firm License (FinIA) — For securities dealing and trading activities
+
+
+== 1. E-MONEY / FINTECH LICENSE (Art. 1b Banking Act) ==
+
+Switzerland does not have a standalone e-money license. E-money activities are treated as
+deposit-taking and require either a full Banking License or the lighter FinTech License under Article 1b
+of the Banking Act. The FinTech license allows acceptance of public deposits up to CHF 100 million without
+engaging in lending or interest margin business.
+
+1.1 Key Requirements
+
+Legal Form: AG (stock corporation), Kommandit-AG, or GmbH
+Minimum Capital: CHF 300,000 or 3% of deposits (whichever is higher) — practically CHF 1,000,000+ recommended
+Location: Registered office and business activities must be in Switzerland
+Timeline: 9-16 months (Phase 0-3 process)
+Regulator: FINMA (direct supervision)
+
+1.2 Complete Documentation Checklist
+
+A. General Information (Items 1-5)
+
+Item 1 — Reasons for Application: Explanation of why applying for Art. 1b BA license and intended purpose
+Item 2 — Business Description: Proposed activity, organization, geographical scope, target clientele
+Item 3 — Commercial Register Extract: Certified extract from Swiss commercial register
+Item 4 — Infrastructure Details: Information about business premises, infrastructure, and personnel
+Item 5 — Group Structure: Details of group companies, participations, branches, representative offices
+
+B. Ownership & Participations (Items 6-10)
+
+Item 6 — Share Capital Structure: Structure, allocation, nominal value, subscription details
+Item 7 — Shareholder Register: Register of shareholders with voting and capital rights
+Item 8 — Qualified Participation Forms: Information on all persons with 10%+ participation
+Item 9 — Beneficial Ownership Declaration: Statement on beneficial ownership of participations
+Item 10 — Shareholder CVs: Curriculum vitae of each shareholder with qualified participation
+
+C. Governance & Personnel (Items 11-27)
+
+Item 11 — Board Composition: Details of board of directors including chairman, vice-chairman, committees
+Item 12 — Executive Board Structure: Composition, organization, and powers of executive management
+Item 13 — Personal Information Forms: FINMA personal questionnaires for all key persons
+Item 14 — ID Documents: Copies of valid identification for all directors and executives
+Item 15 — Residence Permits: For foreign nationals — copies of Swiss residence permits
+Item 16 — Signed CVs: Detailed curriculum vitae signed by each key person
+Item 17 — Criminal Record Certificates: Recent extracts (not older than 3 months)
+Item 18 — Debt Enforcement Extracts: Recent extracts from debt enforcement register
+Item 19 — Professional Qualifications: Certificates of education, training, professional experience
+Item 20 — Reference Letters: Professional references for key personnel
+Item 21 — Employment Contracts: For Swiss-resident management
+Item 22 — Job Descriptions: Detailed role descriptions for all key positions
+Item 23 — Fit & Proper Declarations: Declarations of proper business conduct (Gewaehrsformular)
+Item 24 — Conflicts of Interest Policy: Internal policy on identification and management of conflicts
+Item 25 — Signing Authority Matrix: Documentation of signatory rights and authorization levels
+Item 26 — Succession Planning: Plans for key person dependencies
+Item 27 — Training Records: Evidence of AML/compliance training for staff
+
+D. Organizational Structure (Items 28-33)
+
+Item 28 — Organizational Chart: Chart showing executive personnel and FTEs per organizational unit
+Item 29 — Risk & Compliance Framework: Policies relating to risk organization, compliance, internal control system, AMLA policies
+Item 30 — Outsourcing Documentation: Details of all outsourced activities including contracts
+Item 31 — Deposit Segregation: Description of how public deposits are held (separation from company funds)
+Item 32 — Client Information Documents: Information for customers pursuant to Art. 7a Banking Ordinance (bankruptcy/deposit protection disclaimers)
+Item 33 — Conflicts of Interest Measures: Description of conflicts of interest and measures per Art. 14g BO
+
+E. Financial Requirements (Items 34-35)
+
+Item 34 — Capital Adequacy Evidence: Proof of compliance with minimum capital requirements
+Item 35 — Business Plan & Projections: Anticipated capital trends, 3-year financial projections (worst/best/realistic scenarios), sources of financing, market analysis
+
+F. Audit Requirements (Items 36-37)
+
+Item 36 — Audit Mandate Acceptance: Written notice of acceptance from regulatory audit firm
+Item 37 — Auditor Questionnaire: Completed questionnaire regarding services of approved audit firms
+
+G. IT & Operations (Items 38-45)
+
+Item 38 — IT Security Policy: Information security framework and cybersecurity measures
+Item 39 — Business Continuity Plan: BCM/BCP documentation including disaster recovery
+Item 40 — Core Banking System: Description of IT infrastructure, core systems, data architecture
+Item 41 — Data Protection Policy: GDPR/Swiss DPA compliance documentation
+Item 42 — KYC/AML System Documentation: Technical specifications of compliance systems
+Item 43 — Transaction Monitoring: Description of transaction surveillance capabilities
+Item 44 — Operational Procedures: Standard operating procedures for key processes
+Item 45 — Vendor Due Diligence: Assessment documentation for critical service providers
+
+H. Group Requirements (Items 46-48) — If Applicable
+
+Item 46 — Group Organizational Structure: Organizational description with all significant participations
+Item 47 — Group Supervision Confirmation: Evidence of adequate consolidated supervision
+Item 48 — Intra-Group Agreements: Service level agreements, cost allocation, etc.
+
+
+== 2. VASP (Virtual Asset Service Provider) ==
+
+Switzerland does not formally use the term VASP. Crypto companies are regulated as financial
+intermediaries under the Anti-Money Laundering Act (AMLA). Most operate via SRO membership rather
+than direct FINMA licensing, unless activities trigger banking, securities, or other specific licenses.
+
+2.1 Key Requirements
+
+Legal Form: AG (CHF 100,000 capital, CHF 50,000 paid-in) or GmbH (CHF 20,000 fully paid)
+Local Presence: Swiss office, at least one Swiss-resident director with signing authority
+AML Officer: Mandatory, must be Swiss-resident (can be outsourced)
+Timeline: 2-6 months depending on SRO vs. FINMA route
+Regulatory Path: SRO Membership (most common) or direct FINMA authorization
+
+2.2 Complete Documentation Checklist
+
+A. Corporate Documentation (Items 1-5)
+
+Item 1 — Swiss Company Incorporation: Certificate of incorporation (AG or GmbH)
+Item 2 — Articles of Association: Current certified articles of association
+Item 3 — Commercial Register Extract: Recent extract from Swiss commercial register
+Item 4 — Shareholder Register: Complete register of all shareholders
+Item 5 — Board Resolutions: Relevant board resolutions for business activities
+
+B. Business Model & Operations (Items 6-13)
+
+Item 6 — Business Plan: Detailed description including 3-year projections
+Item 7 — Service Description: Comprehensive description of crypto services offered
+Item 8 — Token Classification Analysis: Legal analysis of token types handled (payment/utility/asset)
+Item 9 — Flow of Funds Documentation: Description of how funds/assets flow through the platform
+Item 10 — Wallet/Custody Arrangements: Hot/cold wallet policies, custody procedures, key management
+Item 11 — Client Types & Volumes: Target clientele, expected volumes, geographic scope
+Item 12 — Fee Structure: Complete fee and pricing documentation
+Item 13 — Partner Documentation: Information on banking partners, liquidity providers
+
+C. Ownership & Key Personnel (Items 14-22)
+
+Item 14 — Ownership Structure Diagram: Full organizational chart to ultimate beneficial owners
+Item 15 — Beneficial Owner ID Documents: Passport/ID copies for all UBOs
+Item 16 — Trust/Nominee Agreements: If applicable, all relevant agreements
+Item 17 — Source of Funds Declaration: Documentation proving legal origin of capital
+Item 18 — AML Officer Appointment: Appointment letter for Swiss-resident AML officer
+Item 19 — Deputy AML Officer: Appointment letter (if required by complexity)
+Item 20 — Key Personnel CVs: CVs and credentials for all key personnel
+Item 21 — Criminal Record Certificates: For all directors and key personnel
+Item 22 — Professional References: Letters of reference for key personnel
+
+D. Compliance Framework (Items 23-31)
+
+Item 23 — AML/KYC Policy: Comprehensive policy tailored to crypto risks
+Item 24 — Customer Due Diligence Procedures: CDD/EDD procedures documentation
+Item 25 — Travel Rule Compliance: Procedures for FATF Travel Rule compliance
+Item 26 — Blockchain Analytics Integration: Documentation of chain analysis tools
+Item 27 — Sanctions Screening Process: On-chain and off-chain screening procedures
+Item 28 — Suspicious Activity Reporting: SAR procedures and MROS reporting process
+Item 29 — Risk Assessment Framework: Business and client risk assessment methodology
+Item 30 — Record Keeping Policy: Document retention and audit trail procedures
+Item 31 — Whitelisted Address Mechanics: If applicable, address whitelist management
+
+E. Technical & Operational (Items 32-37)
+
+Item 32 — IT Security Policy: Cybersecurity framework documentation
+Item 33 — Hot/Cold Storage Split: Wallet management and key storage procedures
+Item 34 — Client Fund Segregation: Procedures for segregating client assets
+Item 35 — Incident Response Plan: Security incident and breach response procedures
+Item 36 — Disaster Recovery Plan: Business continuity and recovery documentation
+Item 37 — External Audit Mandate: Confirmation from approved AML auditor
+
+
+== 3. SRO (Self-Regulatory Organization) Membership ==
+
+SRO membership is mandatory for financial intermediaries pursuant to Art. 2 para. 3 AMLA who are not
+directly supervised by FINMA. Switzerland has 11 recognized SROs including VQF, SO-FIT, and PolyReg.
+
+3.1 Key Requirements
+
+Legal Form: AG (CHF 100,000 capital) or GmbH (CHF 20,000 capital)
+Capital Requirement: No regulatory capital buffer required (only corporate law minimums)
+Local Presence: Swiss office, at least one Swiss-resident director with individual signing authority
+AML Officer: Mandatory, Swiss-resident (can be outsourced to Swiss provider)
+Timeline: 1-3 months after complete submission
+Recognized SROs: VQF, SO-FIT, PolyReg, ARIF, SRO SAV/SNV, OAD FCT, SAAM, and others
+
+3.2 Complete Documentation Checklist (VQF Example)
+
+A. Application Forms (Items 1-5)
+
+Item 1 — VQF Membership Application Form: Main application with company details, services, banking relationships
+Item 2 — Activity Declaration Form: Detailed declaration of financial intermediary activities
+Item 3 — Declaration of Undertaking: Signed assurance that information is true and accurate
+Item 4 — AML Responsibility Assignment: Form confirming AML/CTF responsibilities are properly assigned
+Item 5 — Power of Attorney: If applicable, for representative handling application
+
+B. Corporate Documentation (Items 6-9)
+
+Item 6 — Articles of Association: Current certified articles of association
+Item 7 — Commercial Register Extract: Recent extract (not older than 3 months)
+Item 8 — Shareholder Register: Complete and current shareholder register
+Item 9 — Board Resolutions: Relevant resolutions authorizing application
+
+C. Business Description (Items 10-17)
+
+Item 10 — Business Model Description: Map of role in financial chain, how client funds are held/segregated
+Item 11 — Service Offering Details: Clear description of all services offered
+Item 12 — Client Type Classification: Target clientele (retail, professional, institutional)
+Item 13 — Geographic Scope: Markets and jurisdictions served
+Item 14 — Expected Transaction Volumes: Projected volumes and turnover
+Item 15 — Fee Structure: Complete pricing and fee documentation
+Item 16 — Banking Partners: Information on correspondent banking relationships
+Item 17 — Business Plan: Including financial projections
+
+D. Ownership & Structure (Items 18-22)
+
+Item 18 — Ownership Structure Diagram: Full diagram down to ultimate beneficial owners
+Item 19 — Beneficial Owner ID Documents: Passport/ID copies for all UBOs
+Item 20 — Trust/Nominee Agreements: If any shares held by trustees/nominees
+Item 21 — Group Structure Documentation: If part of a corporate group
+Item 22 — Source of Funds Documentation: Proof of legal origin of capital
+
+E. Governance & Key Personnel (Items 23-31)
+
+Item 23 — Board Composition Details: Names, roles, backgrounds of all board members
+Item 24 — Management Structure: Executive management organization
+Item 25 — Signatory Rights Documentation: Individual and collective signing authorities
+Item 26 — AML Officer Appointment Letter: Formal appointment of Swiss-resident AML officer
+Item 27 — Deputy AML Officer Appointment: If required by business complexity
+Item 28 — AML Officer CV & Credentials: Qualifications, experience, certifications
+Item 29 — Director CVs & ID Documents: For all directors and key personnel
+Item 30 — Criminal Record Certificates: Recent certificates for key persons
+Item 31 — Professional References: Letters of reference
+
+F. AML Framework (Items 32-41)
+
+Item 32 — AML/CTF Policy: Comprehensive policy aligned with Swiss AMLA and SRO regulations
+Item 33 — Internal AML Guidelines: Detailed operational procedures
+Item 34 — Risk Assessment Documentation: Business and client risk assessment methodology
+Item 35 — CDD/KYC Procedures: Customer due diligence procedures
+Item 36 — EDD Procedures: Enhanced due diligence for high-risk clients
+Item 37 — PEP Screening Policy: Politically exposed persons identification
+Item 38 — Sanctions Screening: SECO and international sanctions compliance
+Item 39 — Transaction Monitoring: Monitoring rules and procedures
+Item 40 — SAR Reporting Procedures: Suspicious activity reporting to MROS
+Item 41 — Record Keeping Policy: Document retention requirements (10 years minimum)
+
+G. Additional Requirements (Items 42-45)
+
+Item 42 — External AML Auditor Mandate: Confirmation from approved AML auditor
+Item 43 — Fee Payment Receipts: Proof of SRO application and membership fees
+Item 44 — Training Documentation: Evidence of AML training for staff
+Item 45 — IT Security Documentation: Information security measures
+
+H. VASP-Specific Additions (If Applicable) (Items 46-50)
+
+Item 46 — Token Type Analysis: Classification of crypto assets handled
+Item 47 — Wallet Management Policy: Hot/cold storage procedures
+Item 48 — Blockchain Analytics: Chain analysis tool integration documentation
+Item 49 — Travel Rule Compliance: FATF Travel Rule implementation
+Item 50 — On-Chain Sanctions Screening: Wallet address screening procedures
+
+
+== 4. PAYMENT SYSTEMS OPERATOR (FinfraG) ==
+
+Under the Financial Market Infrastructure Act (FinfraG), payment systems require FINMA authorization
+only if necessary to safeguard the proper functioning of the financial market or the protection of financial
+market participants (Art. 4 para. 2 FinMIA). Banks do not need separate authorization for payment
+operations. Most smaller payment service providers operate via SRO membership.
+
+4.1 Key Requirements
+
+Licensing Trigger: Only required for systemically important payment systems
+Dual Oversight: FINMA (prudential) and SNB (systemic oversight) for significant systems
+Alternative Path: Most PSPs operate via SRO membership under AMLA
+Legal Basis: Financial Market Infrastructure Act (FinMIA/FinfraG)
+
+4.2 Complete Documentation Checklist
+
+A. Corporate & Legal (Items 1-4)
+
+Item 1 — Swiss Legal Entity Documentation: Certificate of incorporation, articles of association
+Item 2 — Commercial Register Extract: Recent certified extract
+Item 3 — Ownership Structure: Full ownership documentation to beneficial owners
+Item 4 — Board & Management Details: Composition, qualifications, fit & proper declarations
+
+B. Business Plan & Model (Items 5-9)
+
+Item 5 — System Description: Comprehensive description of payment system functionality
+Item 6 — Business Plan: Including financial projections and growth strategy
+Item 7 — Market Analysis: Assessment of market position and systemic importance
+Item 8 — Risk Analysis: Identification and assessment of operational risks
+Item 9 — Participant Documentation: Rules and agreements for system participants
+
+C. Governance & Organization (Items 10-15)
+
+Item 10 — Organizational Structure: Complete organizational chart with reporting lines
+Item 11 — Board Composition: Details of board members, committees, independence
+Item 12 — Management Structure: Executive management organization and responsibilities
+Item 13 — Fit & Proper Documentation: Personal questionnaires, CVs, criminal records for key persons
+Item 14 — Proper Business Conduct Declarations: Signed declarations from all key persons
+Item 15 — Internal Control Framework: Three lines of defense, control functions
+
+D. Risk Management (Items 16-20)
+
+Item 16 — Risk Management Framework: Comprehensive risk management policies
+Item 17 — Operational Risk Management: IT risk, cyber risk, business continuity
+Item 18 — Credit & Liquidity Risk: If applicable, credit exposure and liquidity management
+Item 19 — Settlement Risk Controls: Controls for settlement finality and irrevocability
+Item 20 — Default Management Procedures: Participant default rules and procedures
+
+E. Technical Infrastructure (Items 21-26)
+
+Item 21 — System Architecture Documentation: Technical architecture and data flows
+Item 22 — Security Framework: Cybersecurity policies and controls
+Item 23 — Business Continuity Plan: BCP/DR documentation including RTOs/RPOs
+Item 24 — Operational Resilience: System availability, redundancy measures
+Item 25 — Access Control Procedures: Authentication and authorization controls
+Item 26 — Change Management: System change and release management procedures
+
+F. Financial Requirements (Items 27-30)
+
+Item 27 — Capital Adequacy Documentation: Proof of adequate capital and financial guarantees
+Item 28 — Financial Statements: Audited financial statements
+Item 29 — Liquidity Resources: Documentation of liquidity arrangements
+Item 30 — Insurance Coverage: Professional liability and other relevant insurance
+
+G. Compliance & Audit (Items 31-35)
+
+Item 31 — AML/KYC Procedures: If applicable, via SRO membership
+Item 32 — Regulatory Audit Firm Appointment: Mandate from FINMA-approved audit firm
+Item 33 — Internal Audit Function: Internal audit charter and procedures
+Item 34 — Compliance Function: Compliance organization and monitoring
+Item 35 — Reporting Procedures: Regulatory reporting capabilities
+
+
+== 5. SECURITIES FIRM LICENSE (FinIA) ==
+
+Securities firms (client dealers, own-account dealers, market makers, issuing houses) require direct
+FINMA licensing under the Financial Institutions Act (FinIA). This is the most comprehensive license
+category with stringent organizational, financial, and risk management requirements.
+
+5.1 Key Requirements
+
+Legal Form: Swiss AG, Kommandit-AG, or GmbH
+Minimum Capital: CHF 1.5 million fully paid-up
+Location: Registered office and business activities in Switzerland
+Supervision: Direct prudential supervision by FINMA
+Audit: Both licensing audit and ongoing regulatory audit required
+
+5.2 Complete Documentation Checklist
+
+A. Corporate & Legal Foundation (Items 1-5)
+
+Item 1 — Articles of Association: With precise factual and geographical description of business (types of securities traded, markets, client types)
+Item 2 — Partnership Agreement: If applicable, for Kommandit-AG
+Item 3 — Business Rules: Internal regulations governing operations
+Item 4 — Commercial Register Extract: Certified recent extract
+Item 5 — Board Resolutions: Authorizing license application and business activities
+
+B. Business Plan & Strategy (Items 6-11)
+
+Item 6 — Business Plan: Comprehensive plan showing scope compatible with finances/organization
+Item 7 — Financial Projections: 3-5 year projections with scenarios
+Item 8 — Capital Adequacy Projections: Demonstrating ongoing compliance with Art. 63 FinIO
+Item 9 — Risk Diversification Analysis: Compliance with concentration limits
+Item 10 — Market Analysis: Target markets, competitive positioning
+Item 11 — Product Documentation: Securities and derivatives to be traded
+
+C. Ownership & Qualified Participations (Items 12-16)
+
+Item 12 — Shareholder Structure: Complete ownership documentation
+Item 13 — Qualified Participation Forms: For all 10%+ shareholders
+Item 14 — Beneficial Ownership Declaration: Statement on ultimate beneficial ownership
+Item 15 — Foreign Control Documentation: If foreign-controlled, reciprocity guarantee from home country
+Item 16 — Group Structure: If part of financial group, structure and supervision documentation
+
+D. Governance & Management — Fit & Proper (Items 17-27)
+
+Item 17 — Board Composition: Details including chairman, vice-chairman, committees
+Item 18 — Executive Board Structure: Composition, organization, powers
+Item 19 — FINMA Personal Questionnaires: For all board members and executives
+Item 20 — ID Documents: Copies for all key persons
+Item 21 — Residence Permits: For foreign nationals
+Item 22 — Detailed CVs: Signed by each person
+Item 23 — Criminal Record Certificates: Recent extracts
+Item 24 — Debt Enforcement Extracts: Recent extracts
+Item 25 — Professional Qualifications: Education, certifications, experience evidence
+Item 26 — Reference Letters: Professional references
+Item 27 — Proper Business Conduct Declarations: Gewaehrsformular for all key persons
+
+E. Organizational Structure (Items 28-32)
+
+Item 28 — Organizational Chart: Complete chart with all functions and reporting lines
+Item 29 — Function Separation: Documentation of separation: trading, asset management, settlement
+Item 30 — Job Descriptions: For all key positions
+Item 31 — Staffing Plan: Current and projected headcount by function
+Item 32 — Outsourcing Documentation: All outsourced functions with contracts
+
+F. Risk Management Framework (Items 33-42)
+
+Item 33 — Risk Management Policy: Comprehensive risk management framework
+Item 34 — Market Risk Management: Identification, limitation, monitoring procedures
+Item 35 — Credit Risk Management: Counterparty risk policies and limits
+Item 36 — Default Risk Management: Default scenarios and procedures
+Item 37 — Settlement Risk Controls: DVP procedures, settlement finality
+Item 38 — Liquidity Risk Management: Liquidity buffers and stress testing
+Item 39 — Operational Risk Management: Including IT and cyber risk
+Item 40 — Legal Risk Management: Compliance with laws and contracts
+Item 41 — Reputation Risk Management: Reputational risk policies
+Item 42 — Risk Model Documentation: If using proprietary risk models for capital calculation
+
+G. Internal Control System (Items 43-47)
+
+Item 43 — Internal Control Framework: Three lines of defense model
+Item 44 — Internal Audit Charter: Independent audit function documentation
+Item 45 — Internal Audit Plan: Annual audit plan
+Item 46 — Compliance Function: Compliance organization and monitoring
+Item 47 — Control Testing Procedures: Control effectiveness assessment
+
+H. FinSA Conduct Requirements (Items 48-57)
+
+Item 48 — Client Classification Procedures: Retail/Professional/Institutional segmentation
+Item 49 — Suitability & Appropriateness: Testing procedures for investment advice
+Item 50 — Best Execution Policy: Order execution principles considering price, cost, speed, likelihood
+Item 51 — Conflicts of Interest Policy: Identification, prevention, management, disclosure
+Item 52 — Conflicts of Interest Register: Register of identified conflicts
+Item 53 — Compensation Disclosure: Third-party compensation/retrocession policies
+Item 54 — Client Information Documents: FinSA-required disclosure documents
+Item 55 — Key Information Documents (KIDs): For relevant financial instruments
+Item 56 — Order Handling Procedures: Fair treatment, timely execution
+Item 57 — Securities Lending Policy: If applicable, compliant procedures
+
+I. Trading & Operations (Items 58-63)
+
+Item 58 — Trading System Documentation: Technical specifications of trading infrastructure
+Item 59 — Trading Procedures: Standard operating procedures for trading
+Item 60 — Position Limits: Trading limits and controls
+Item 61 — Settlement Procedures: T+2 settlement processes
+Item 62 — Safekeeping Procedures: Client asset custody and segregation
+Item 63 — Reporting Capabilities: Transaction and position reporting
+
+J. Capital & Financial Requirements (Items 64-69)
+
+Item 64 — Capital Adequacy Calculation: Methodology per Art. 63 FinIO / Capital Adequacy Ordinance
+Item 65 — Risk-Weighted Assets: Calculation of market, credit, operational risk
+Item 66 — Minimum Capital Evidence: Proof of CHF 1.5 million minimum
+Item 67 — Capital Instruments: If AT1/T2 instruments, FINMA approval documentation
+Item 68 — Financial Statements: Audited accounts
+Item 69 — Liquidity Documentation: Liquidity resources and stress testing
+
+K. Compliance & AML (Items 70-75)
+
+Item 70 — AML/KYC Policy: Comprehensive anti-money laundering framework
+Item 71 — CDD Procedures: Customer due diligence procedures
+Item 72 — Sanctions Screening: SECO and international sanctions compliance
+Item 73 — Transaction Monitoring: Surveillance systems and procedures
+Item 74 — SAR Reporting: Suspicious activity reporting to MROS
+Item 75 — Market Abuse Prevention: Insider dealing and market manipulation controls
+
+L. Audit Requirements (Items 76-79)
+
+Item 76 — Licensing Audit Firm Appointment: Recognized audit firm for licensing process
+Item 77 — Regulatory Audit Firm Appointment: Recognized firm for ongoing supervision
+Item 78 — Audit Engagement Letter: Formal mandate documentation
+Item 79 — Initial Audit Report: If requested by FINMA during licensing
+
+M. IT & Security (Items 80-84)
+
+Item 80 — IT Security Policy: Information security framework
+Item 81 — Cybersecurity Controls: Technical and organizational measures
+Item 82 — Business Continuity Plan: BCM/BCP/DR documentation
+Item 83 — Incident Response Plan: Security incident procedures
+Item 84 — Data Protection Policy: Personal data handling procedures
+
+N. Group/Consolidated Requirements (Items 85-88) — If Applicable
+
+Item 85 — Consolidated Supervision Evidence: Proof of adequate group supervision by recognized authority
+Item 86 — Group Risk Management: Group-wide risk management framework
+Item 87 — Intra-Group Agreements: SLAs, cost sharing, service agreements
+Item 88 — Group Recovery Plan: If systemically important
+
+
+== 6. SUMMARY COMPARISON ==
+
+6.1 Quick Reference Table
+
+License Type       | Regulator  | Timeline      | Min. Capital     | Key Differentiator
+FinTech (Art. 1b)  | FINMA      | 9-16 months   | CHF 300k-1M+     | Public deposits up to CHF 100M, no lending
+VASP               | SRO/FINMA  | 2-6 months    | CHF 20k-100k     | Crypto-specific AML, Travel Rule
+SRO Membership     | VQF/SO-FIT | 1-3 months    | None (corp. only) | Financial intermediary AML compliance
+Payment Systems    | FINMA/SNB  | Varies        | Adequate          | Only if systemically important
+Securities Firm    | FINMA      | 6-12+ months  | CHF 1.5M+        | Full prudential supervision, FinSA conduct
+
+6.2 Document Count Summary
+
+License Type       | Approx. Count | Key Document Categories
+FinTech License    | 45-50 items   | Corporate, governance, personnel, compliance, IT, audit
+VASP               | 35-50 items   | Corporate, business model, ownership, compliance, technical
+SRO Membership     | 45-50 items   | Application forms, corporate, business, governance, AML framework
+Payment Systems    | 35 items      | Corporate, business, governance, risk, technical, compliance
+Securities Firm    | 85-90 items   | Most comprehensive: all above plus FinSA conduct, trading, capital
+
+6.3 Important Notes
+
+1. FINMA Portal (EHP): Most applications are submitted via FINMA's electronic platform (Erhebungs- und
+Gesuchsplattform). Self-registration is required before accessing application forms.
+
+2. Language: While English is accepted for many documents, German, French, or Italian may be required
+for official forms and communications with FINMA.
+
+3. Case-by-Case Variations: FINMA may request additional documents based on business model
+complexity, risk profile, foreign ownership, or group affiliations.
+
+4. Pre-Application: For FINMA licenses, presenting the licensing project to FINMA before formal
+submission is recommended (authorization@finma.ch).
+
+5. Ongoing Requirements: All licenses have ongoing compliance, reporting, and audit requirements after
+initial authorization.
+
+6. Professional Advice: Given the complexity, engaging Swiss regulatory lawyers and compliance
+consultants is strongly recommended.
+
+6.4 Key Contacts
+
+FINMA: Laupenstrasse 27, CH-3003 Bern | Hotline: +41 31 327 98 88 | authorization@finma.ch
+VQF: Talstrasse 20, CH-8001 Zuerich | +41 44 296 16 16 | info@vqf.ch
+SO-FIT: Route de Pre-Bois 29, CH-1215 Geneve | +41 22 710 04 40

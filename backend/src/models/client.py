@@ -46,12 +46,28 @@ class Client(BaseModel):
 
     # Regulatory Pathway
     pathway: (
-        Literal["sro", "finma_fintech", "finma_banking", "finma_dlt", "undetermined"]
+        Literal[
+            "sro",
+            "finma_fintech",
+            "finma_banking",
+            "finma_dlt",
+            "finma_securities",
+            "finma_payment_systems",
+            "undetermined",
+        ]
         | None
     ) = None
     target_sro: Literal["VQF", "PolyReg", "SO-FIT", "other"] | None = None
     finma_license_type: (
-        Literal["fintech", "banking", "securities_dealer", "dlt_facility"] | None
+        Literal[
+            "fintech",
+            "banking",
+            "securities_dealer",
+            "dlt_facility",
+            "securities_firm",
+            "payment_systems",
+        ]
+        | None
     ) = None
 
     # Services & Activities
