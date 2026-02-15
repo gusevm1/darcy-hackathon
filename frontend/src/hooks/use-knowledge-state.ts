@@ -8,7 +8,7 @@ import {
   downloadDocument,
   listDocuments as listClientDocuments,
 } from '@/lib/api/client-documents'
-import { listDocuments } from '@/lib/api/kb'
+import { listDocuments, searchKB } from '@/lib/api/kb'
 import type { KBDocument } from '@/lib/api/types'
 import { buildFileTree } from '@/lib/build-file-tree'
 import type { Client } from '@/types'
@@ -187,8 +187,59 @@ export function useKnowledgeState() {
       setPreviewDocument(preview)
       setPreviewOpen(true)
 
-      // Fetch actual content from backend
-      if (doc.clientId && doc.clientId !== 'internal-kb') {
+      // Fetch content based on document source
+      const isGeneralInfo = licenseDefinitions.some((d) => d.type === doc.clientId)
+
+      if (isGeneralInfo) {
+        // General Information tab: show description + FINMA reference, then search KB
+        const lines = [reqDoc?.description ?? doc.name]
+        if (reqDoc?.finmaReference) lines.push(`\nFINMA Reference: ${reqDoc.finmaReference}`)
+        lines.push(`\nCategory: ${reqDoc?.category ?? 'General'}`)
+        lines.push(`License Type: ${definition?.label ?? doc.clientName}`)
+        lines.push(`Stage: ${doc.stageName}`)
+        const baseContent = lines.join('\n')
+
+        // Search KB for relevant regulatory content
+        searchKB(doc.name, 3)
+          .then((results) => {
+            if (results.length === 0) {
+              setPreviewDocument((prev) =>
+                prev?.documentId === doc.documentId ? { ...prev, content: baseContent } : prev
+              )
+              return
+            }
+            const kbSection = results
+              .map((r) => `--- ${r.title} (${r.source}) ---\n${r.text}`)
+              .join('\n\n')
+            setPreviewDocument((prev) =>
+              prev?.documentId === doc.documentId
+                ? { ...prev, content: `${baseContent}\n\n════════════════════════════════\nRelated Knowledge Base Content:\n════════════════════════════════\n\n${kbSection}` }
+                : prev
+            )
+          })
+          .catch(() => {
+            setPreviewDocument((prev) =>
+              prev?.documentId === doc.documentId ? { ...prev, content: baseContent } : prev
+            )
+          })
+      } else if (doc.clientId === 'internal-kb') {
+        // Internal KB tab: search for the document content by title
+        searchKB(doc.name, 1)
+          .then((results) => {
+            const text = results.length > 0 ? results[0].text : 'No content available for this document.'
+            setPreviewDocument((prev) =>
+              prev?.documentId === doc.documentId ? { ...prev, content: text } : prev
+            )
+          })
+          .catch(() => {
+            setPreviewDocument((prev) =>
+              prev?.documentId === doc.documentId
+                ? { ...prev, content: 'Failed to load document content.' }
+                : prev
+            )
+          })
+      } else if (doc.clientId) {
+        // Client tab: download actual file
         downloadDocument(doc.clientId, doc.documentId)
           .then((blob) => blob.text())
           .then((text) => {
