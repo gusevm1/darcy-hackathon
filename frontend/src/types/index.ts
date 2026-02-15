@@ -1,18 +1,55 @@
-export type {
-  BusinessRole,
-  CapitalRequirement,
-  ClassificationResult,
-  EstablishmentLocation,
-  ExistingLicense,
-  Jurisdiction,
-  LicenseRequirement,
-  ServiceType,
-  TokenType,
-  WizardAnswers,
-} from './classification'
+export type LicenseType =
+  | 'banking'
+  | 'fintech'
+  | 'securities-firm'
+  | 'fund-management'
+  | 'insurance'
 
-export type { ChatMessage, Citation, StreamEvent, StreamEventType } from './chat'
+export type DocumentStatus =
+  | 'not-started'
+  | 'uploaded'
+  | 'under-review'
+  | 'approved'
+  | 'rejected'
 
-export type { JurisdictionInfo, JurisdictionsResponse } from './jurisdiction'
+export type StageStatus = 'not-started' | 'in-progress' | 'completed'
 
-export type { Checklist, ChecklistItem, ChecklistPhase } from './checklist'
+export interface RequiredDocument {
+  id: string
+  name: string
+  description: string
+  category: string
+}
+
+export interface LicenseStage {
+  id: string
+  name: string
+  shortName: string
+  description: string
+  documents: RequiredDocument[]
+}
+
+export interface LicenseDefinition {
+  type: LicenseType
+  label: string
+  legalBasis: string
+  stages: LicenseStage[]
+}
+
+export interface ClientDocumentState {
+  documentId: string
+  status: DocumentStatus
+  fileName?: string
+  uploadedAt?: string
+}
+
+export interface Client {
+  id: string
+  name: string
+  company: string
+  licenseType: LicenseType
+  currentStageIndex: number
+  documentStates: ClientDocumentState[]
+  startDate: string
+  contactEmail: string
+}

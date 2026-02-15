@@ -1,16 +1,12 @@
 export const siteConfig = {
-  name: 'European Crypto Licensing Navigator',
-  shortName: 'CryptoNav',
+  name: 'FINMA Comply',
+  shortName: 'FINMA Comply',
   description:
-    'Navigate European crypto licensing requirements across MiCAR, FCA, and FINMA regulatory frameworks.',
+    'Compliance project management for Swiss financial licence procurement.',
   url: process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000',
-  apiUrl: process.env.NEXT_PUBLIC_API_URL || 'http://localhost:8000',
 } as const
 
 export const navItems = [
-  { label: 'Home', href: '/' },
-  { label: 'Wizard', href: '/wizard' },
-  { label: 'Compare', href: '/compare' },
-  { label: 'Chat', href: '/chat' },
-  { label: 'Checklist', href: '/checklist' },
+  { label: 'Dashboard', href: '/clients' },
+  { label: 'Assistant', href: '/assistant' },
 ] as const
