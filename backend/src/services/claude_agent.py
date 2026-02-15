@@ -17,16 +17,15 @@ logger = logging.getLogger(__name__)
 
 SYSTEM_PROMPT = """\
 You are DarcyAI, an intake specialist for JayBee Consulting (jaybeeconsulting.ch), \
-a Swiss regulatory consultancy specializing in crypto/blockchain licensing.
+a Swiss regulatory consultancy specializing in financial licensing.
 
-Your role is to guide companies through the Swiss crypto licensing intake process. \
+Your role is to guide companies through the Swiss financial licensing intake process. \
 You are collecting information to determine whether the client needs:
-- SRO membership (e.g., VQF, PolyReg) under AMLA for financial intermediation (1-3 months, lowest cost)
-- FINMA FinTech license (deposits up to CHF 100M, 9-16 months, min CHF 300k capital)
-- FINMA banking license (full banking activities)
-- FINMA DLT Trading Facility license
-- FINMA Securities Firm license (FinIA — trading, brokerage, min CHF 1.5M capital, 8-18 months)
-- FINMA Payment Systems Operator license (FinfraG — systemically important payment systems, 9-18 months)
+- FINMA Banking license (BankA — full banking activities, deposit-taking, lending, min CHF 10M capital)
+- FinTech Sandbox license (Art. 1b BankA — accepts public deposits up to CHF 100M, simplified regime)
+- FINMA Securities Firm license (FinIA — securities dealing, underwriting, min CHF 1.5M capital, 8-18 months)
+- FINMA Fund Management license (CISA — collective investment schemes, min CHF 1M capital, 6-12 months)
+- FINMA Insurance license (ISA — insurance products, solvency requirements, 9-18 months)
 
 **Conversation style:**
 - Ask 1-2 questions at a time, in a natural conversational tone
@@ -35,22 +34,25 @@ You are collecting information to determine whether the client needs:
 - When you have enough information, determine the regulatory pathway
 
 **Key decision logic:**
-- If the company handles client assets long-term (custody) OR operates an order book \
-→ likely needs FINMA license (not just SRO)
-- If the company only does exchange/transfer without custody or order book \
-→ SRO membership is likely sufficient
-- If accepting deposits from the public → FinTech or banking license needed
-- If operating a multilateral payment/settlement system → Payment Systems Operator license
-- If dealing in securities (trading, brokerage, market making, underwriting) → Securities Firm license
+- If accepting public deposits and providing lending/credit services \
+→ Banking license (BankA)
+- If fintech business model with public deposits < CHF 100M and no lending \
+→ FinTech Sandbox (Art. 1b)
+- If dealing in securities (trading, brokerage, market making, underwriting) \
+→ Securities Firm license (FinIA)
+- If managing collective investment schemes (investment funds, asset pooling) \
+→ Fund Management license (CISA)
+- If offering insurance products (life, non-life, reinsurance) \
+→ Insurance license (ISA)
 
 **Information to collect (in rough order):**
 1. Company name and legal structure (AG, GmbH, or other)
 2. Business description — what do they do?
-3. Specific crypto services (custody, exchange, trading, transfer, advice, etc.)
-4. Token types involved (payment, utility, security, stablecoin)
-5. Do they handle fiat currency?
-6. Do they hold client assets long-term?
-7. Do they operate an order book?
+3. Business model (deposit-taking, lending, payment services, asset management, insurance)
+4. Client types (retail, institutional, HNWI)
+5. Planned capital and legal structure
+6. Cross-border activities
+7. Do they handle client assets?
 8. Swiss presence (office, directors)
 9. Existing capital and licenses
 10. Current compliance setup (AML officer, auditor, policies)
@@ -81,8 +83,8 @@ TOOLS: list[anthropic.types.ToolParam] = [
                         " business_description,"
                         " services, handles_fiat,"
                         " handles_client_assets,"
-                        " operates_order_book,"
-                        " token_types,"
+                        " client_types,"
+                        " cross_border_activities,"
                         " has_swiss_office,"
                         " has_swiss_director,"
                         " existing_capital_chf,"
@@ -143,7 +145,7 @@ TOOLS: list[anthropic.types.ToolParam] = [
         "name": "search_knowledge_base",
         "description": (
             "Search the regulatory knowledge base for"
-            " Swiss crypto licensing info. Use to verify"
+            " Swiss financial licensing info. Use to verify"
             " requirements or answer client questions."
         ),
         "input_schema": {
@@ -151,7 +153,7 @@ TOOLS: list[anthropic.types.ToolParam] = [
             "properties": {
                 "query": {
                     "type": "string",
-                    "description": "The search query about Swiss crypto regulation",
+                    "description": "The search query about Swiss financial regulation",
                 },
             },
             "required": ["query"],
@@ -170,19 +172,13 @@ TOOLS: list[anthropic.types.ToolParam] = [
                 "pathway": {
                     "type": "string",
                     "enum": [
-                        "sro",
-                        "finma_fintech",
                         "finma_banking",
-                        "finma_dlt",
+                        "finma_fintech",
                         "finma_securities",
-                        "finma_payment_systems",
+                        "finma_fund_management",
+                        "finma_insurance",
                     ],
                     "description": "The recommended regulatory pathway",
-                },
-                "target_sro": {
-                    "type": "string",
-                    "enum": ["VQF", "PolyReg", "SO-FIT", "other"],
-                    "description": "If pathway is SRO, which SRO to target",
                 },
                 "reason": {
                     "type": "string",
@@ -264,8 +260,6 @@ async def _execute_tool(
     if tool_name == "set_pathway":
         pathway = tool_input["pathway"]
         client.pathway = pathway
-        if "target_sro" in tool_input:
-            client.target_sro = tool_input["target_sro"]
         client.checklist = get_checklist_for_pathway(pathway)
         if pathway.startswith("finma"):
             parts = pathway.split("_", 1)

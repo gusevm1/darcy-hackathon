@@ -1,0 +1,119 @@
+FINANCIAL INSTITUTIONS ACT (FinIA) — SECURITIES FIRM LICENSE
+==============================================================
+
+1. LEGAL BASIS
+The Federal Act on Financial Institutions (FinIA, SR 954.1) and the
+Financial Institutions Ordinance (FinIO, SR 954.11) govern the licensing
+and supervision of securities firms in Switzerland. FinIA replaced the
+former Stock Exchange Act (SESTA) provisions on securities dealers.
+
+2. SCOPE
+A securities firm (Wertpapierhaus) is an entity that professionally:
+- Trades in securities for its own account on a short-term basis (proprietary trading)
+- Acts as a market maker
+- Trades in securities for client accounts (execution-only or advisory)
+- Underwrites securities and offers them publicly (underwriting)
+- Creates derivatives and offers them publicly
+
+3. LICENSING REQUIREMENT
+Operating as a securities firm without a FINMA license is prohibited
+(Art. 41 FinIA). The license requirement applies regardless of whether
+the activity is conducted from Switzerland or cross-border.
+
+4. LEGAL FORM
+Securities firms must be organized as:
+- Corporation (AG)
+- Limited partnership with shares (Kommandit-AG)
+- Limited liability company (GmbH)
+Swiss law entity required; foreign firms need a branch license.
+
+5. MINIMUM CAPITAL
+- Minimum share capital: CHF 1.5 million, fully paid-up (Art. 45 FinIA)
+- Market makers: higher capital requirements may apply
+- Capital adequacy requirements per FinIO Art. 63 ff.
+- Risk diversification rules (concentration limits)
+- Ongoing own funds requirements based on business volume
+
+6. ORGANIZATIONAL REQUIREMENTS
+- Board of directors with adequate expertise in securities business
+- Executive management with at least two qualified persons
+- Management must be conducted from Switzerland
+- Clear separation of functions: front office, middle office, back office
+- Function separation between trading and settlement
+- Effective internal control system (ICS)
+- Three lines of defense model
+
+7. FIT AND PROPER REQUIREMENTS
+All key persons must:
+- Enjoy a good reputation (unbescholten)
+- Have adequate professional qualifications
+- Offer guarantee of proper business conduct (Gewaehr)
+- Not have been subject to criminal conviction for financial crimes
+- Submit FINMA personal questionnaires with supporting documentation
+
+8. QUALIFIED PARTICIPATIONS
+- Holders of 10%+ must be disclosed and approved by FINMA
+- Beneficial ownership must be transparent through the chain
+- Foreign controlling shareholders: reciprocity requirements may apply
+- Material changes require prior FINMA approval
+
+9. RISK MANAGEMENT FRAMEWORK
+Securities firms must maintain:
+- Market risk controls (VaR or standard approach)
+- Credit and counterparty risk management
+- Settlement and delivery risk controls
+- Liquidity risk management with stress testing
+- Operational risk management
+- Legal and compliance risk assessment
+- Position limits and stop-loss controls
+
+10. CONDUCT RULES (FinSA)
+Securities firms must comply with FinSA conduct requirements:
+- Client classification (retail, professional, institutional)
+- Suitability and appropriateness assessment
+- Best execution policy
+- Conflicts of interest management and disclosure
+- Client information and documentation (KID)
+- Record-keeping and order documentation
+
+11. AML COMPLIANCE
+Securities firms are financial intermediaries under AMLA and must:
+- Implement comprehensive AML/KYC program
+- Apply CDD and EDD procedures
+- Implement transaction monitoring
+- Sanctions screening (SECO, UN, EU lists)
+- Market abuse prevention controls
+- SAR reporting to MROS
+
+12. TRADING AND SETTLEMENT
+- Document trading systems and algorithms
+- Implement pre- and post-trade controls
+- Client asset segregation procedures
+- Position reporting to trade repositories
+- Margin and collateral management
+
+13. INTERNAL CONTROLS
+- Compliance function with adequate authority and resources
+- Internal audit function with annual audit plan
+- Risk management function independent from business lines
+- Regular reporting to board and executive management
+
+14. AUDIT REQUIREMENTS
+- Licensing audit by FINMA-approved audit firm
+- Annual regulatory audit
+- Annual financial audit
+- Special audits as directed by FINMA
+
+15. APPLICATION PROCESS
+- Submit application via FINMA EHP platform
+- Processing time: typically 4-10 months
+- Comprehensive documentation package required
+- FINMA may conduct on-site visits during assessment
+- License conditions may be imposed
+
+16. ONGOING OBLIGATIONS
+- Periodic regulatory reporting (capital, risk, financial)
+- Report material organizational changes to FINMA
+- Maintain minimum capital and own funds
+- Annual regulatory and financial audits
+- Compliance with FINMA circulars and guidance

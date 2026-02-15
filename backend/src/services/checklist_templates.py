@@ -180,25 +180,27 @@ def get_sro_checklist() -> list[ChecklistItem]:
             7,
             ["sro-16"],
         ),
-        # VASP-specific (if applicable)
+        # AML program documentation
         _item(
             "sro-22",
             "compliance",
-            "Prepare token type analysis and classification",
+            "Prepare anti-money laundering program documentation",
             "sro",
-            7,
+            14,
+            ["sro-16"],
         ),
         _item(
             "sro-23",
             "compliance",
-            "Document wallet management and hot/cold storage policies",
+            "Document client identification and due diligence procedures",
             "sro",
             14,
+            ["sro-16"],
         ),
         _item(
             "sro-24",
             "compliance",
-            "Integrate blockchain analytics and Travel Rule compliance",
+            "Establish transaction monitoring framework",
             "sro",
             21,
             ["sro-16"],
@@ -1172,13 +1174,515 @@ def get_payment_systems_checklist() -> list[ChecklistItem]:
     ]
 
 
+def get_fund_management_checklist() -> list[ChecklistItem]:
+    """Checklist for Fund Management Company (CISA) — min CHF 1M capital."""
+    return [
+        # Legal & corporate
+        _item(
+            "fund-01",
+            "legal_structure",
+            "Register legal entity (AG or Kommandit-AG)",
+            "finma",
+            14,
+        ),
+        _item(
+            "fund-02",
+            "legal_structure",
+            "Prepare articles of association specifying fund management activities",
+            "finma",
+            14,
+            ["fund-01"],
+        ),
+        _item(
+            "fund-03",
+            "legal_structure",
+            "Obtain commercial register extract",
+            "finma",
+            7,
+            ["fund-01"],
+        ),
+        # Capital
+        _item(
+            "fund-04",
+            "capital",
+            "Deposit minimum capital of CHF 1 million fully paid-up",
+            "finma",
+            21,
+            ["fund-01"],
+        ),
+        _item(
+            "fund-05",
+            "capital",
+            "Prepare capital adequacy calculation (own funds requirements)",
+            "finma",
+            14,
+            ["fund-04"],
+        ),
+        # Ownership
+        _item(
+            "fund-06",
+            "documentation",
+            "Prepare shareholder structure and qualified participation forms",
+            "finma",
+            7,
+            ["fund-01"],
+        ),
+        _item(
+            "fund-07",
+            "documentation",
+            "Prepare beneficial ownership declaration and group structure",
+            "finma",
+            7,
+            ["fund-06"],
+        ),
+        # Governance & personnel
+        _item(
+            "fund-08",
+            "governance",
+            "Establish board of directors with relevant expertise",
+            "finma",
+            21,
+            ["fund-01"],
+        ),
+        _item(
+            "fund-09",
+            "governance",
+            "Appoint executive management with fund management experience",
+            "finma",
+            30,
+            ["fund-08"],
+        ),
+        _item(
+            "fund-10",
+            "personnel",
+            "Complete FINMA personal questionnaires for all key persons",
+            "finma",
+            14,
+            ["fund-09"],
+        ),
+        _item(
+            "fund-11",
+            "personnel",
+            "Gather IDs, CVs, criminal records, debt extracts for key persons",
+            "finma",
+            14,
+            ["fund-09"],
+        ),
+        _item(
+            "fund-12",
+            "governance",
+            "Complete fit-and-proper declarations (Gewaehrsformular)",
+            "finma",
+            7,
+            ["fund-09"],
+        ),
+        # Fund documentation
+        _item(
+            "fund-13",
+            "documentation",
+            "Prepare fund management agreement (Fondsvertrag)",
+            "finma",
+            21,
+            ["fund-09"],
+        ),
+        _item(
+            "fund-14",
+            "documentation",
+            "Prepare fund prospectus with investment policy and risk disclosures",
+            "finma",
+            21,
+            ["fund-13"],
+        ),
+        _item(
+            "fund-15",
+            "documentation",
+            "Appoint custodian bank (Depotbank) for fund assets",
+            "finma",
+            14,
+            ["fund-01"],
+        ),
+        _item(
+            "fund-16",
+            "documentation",
+            "Prepare custodian bank agreement",
+            "finma",
+            14,
+            ["fund-15"],
+        ),
+        # Investor protection
+        _item(
+            "fund-17",
+            "compliance",
+            "Prepare investor protection measures and redemption procedures",
+            "finma",
+            14,
+            ["fund-13"],
+        ),
+        _item(
+            "fund-18",
+            "compliance",
+            "Draft valuation policy for fund assets (NAV calculation)",
+            "finma",
+            14,
+            ["fund-13"],
+        ),
+        # Risk management & compliance
+        _item(
+            "fund-19",
+            "compliance",
+            "Draft comprehensive risk management framework",
+            "finma",
+            21,
+        ),
+        _item(
+            "fund-20",
+            "compliance",
+            "Appoint compliance officer and risk manager",
+            "finma",
+            14,
+        ),
+        _item(
+            "fund-21",
+            "compliance",
+            "Draft AML/KYC policies and CDD procedures",
+            "finma",
+            21,
+            ["fund-20"],
+        ),
+        _item(
+            "fund-22",
+            "compliance",
+            "Implement transaction monitoring and sanctions screening",
+            "finma",
+            30,
+            ["fund-21"],
+        ),
+        _item(
+            "fund-23",
+            "compliance",
+            "Establish internal audit function",
+            "finma",
+            14,
+            ["fund-20"],
+        ),
+        _item(
+            "fund-24",
+            "compliance",
+            "Engage FINMA-recognized external auditor",
+            "finma",
+            14,
+        ),
+        # IT & operations
+        _item(
+            "fund-25",
+            "it_operations",
+            "Document portfolio management and order execution systems",
+            "finma",
+            21,
+        ),
+        _item(
+            "fund-26",
+            "it_operations",
+            "Prepare business continuity and disaster recovery plan",
+            "finma",
+            14,
+        ),
+        # Application
+        _item(
+            "fund-27",
+            "application",
+            "Prepare comprehensive business plan with 3-year projections",
+            "finma",
+            30,
+            ["fund-09"],
+        ),
+        _item("fund-28", "application", "Register on FINMA EHP platform", "finma", 1),
+        _item(
+            "fund-29",
+            "application",
+            "Submit complete fund management application via EHP",
+            "finma",
+            14,
+            [
+                "fund-05",
+                "fund-07",
+                "fund-12",
+                "fund-16",
+                "fund-21",
+                "fund-24",
+                "fund-27",
+                "fund-28",
+            ],
+        ),
+        _item(
+            "fund-30",
+            "application",
+            "FINMA assessment period (4-10 months)",
+            "finma",
+            180,
+            ["fund-29"],
+        ),
+    ]
+
+
+def get_insurance_checklist() -> list[ChecklistItem]:
+    """Checklist for Insurance License (ISA) — solvency requirements."""
+    return [
+        # Legal & corporate
+        _item(
+            "ins-01",
+            "legal_structure",
+            "Register legal entity (AG or cooperative)",
+            "finma",
+            14,
+        ),
+        _item(
+            "ins-02",
+            "legal_structure",
+            "Prepare articles of association specifying insurance activities",
+            "finma",
+            14,
+            ["ins-01"],
+        ),
+        _item(
+            "ins-03",
+            "legal_structure",
+            "Obtain commercial register extract",
+            "finma",
+            7,
+            ["ins-01"],
+        ),
+        # Ownership
+        _item(
+            "ins-04",
+            "documentation",
+            "Prepare shareholder structure and qualified participation forms",
+            "finma",
+            7,
+            ["ins-01"],
+        ),
+        _item(
+            "ins-05",
+            "documentation",
+            "Prepare beneficial ownership declaration and group structure",
+            "finma",
+            7,
+            ["ins-04"],
+        ),
+        # Governance & personnel
+        _item(
+            "ins-06",
+            "governance",
+            "Establish board of directors with insurance expertise",
+            "finma",
+            21,
+            ["ins-01"],
+        ),
+        _item(
+            "ins-07",
+            "governance",
+            "Appoint executive management with insurance industry experience",
+            "finma",
+            30,
+            ["ins-06"],
+        ),
+        _item(
+            "ins-08",
+            "personnel",
+            "Complete FINMA personal questionnaires for all key persons",
+            "finma",
+            14,
+            ["ins-07"],
+        ),
+        _item(
+            "ins-09",
+            "personnel",
+            "Gather IDs, CVs, criminal records, debt extracts for key persons",
+            "finma",
+            14,
+            ["ins-07"],
+        ),
+        _item(
+            "ins-10",
+            "governance",
+            "Complete fit-and-proper declarations (Gewaehrsformular)",
+            "finma",
+            7,
+            ["ins-07"],
+        ),
+        # Business plan
+        _item(
+            "ins-11",
+            "application",
+            "Prepare comprehensive business plan covering all insurance lines",
+            "finma",
+            30,
+            ["ins-07"],
+        ),
+        _item(
+            "ins-12",
+            "application",
+            "Prepare general and special insurance conditions (AVB)",
+            "finma",
+            21,
+            ["ins-11"],
+        ),
+        # Actuarial requirements
+        _item(
+            "ins-13",
+            "compliance",
+            "Appoint responsible actuary (verantwortlicher Aktuar)",
+            "finma",
+            21,
+        ),
+        _item(
+            "ins-14",
+            "compliance",
+            "Prepare actuarial reports and technical provisions",
+            "finma",
+            30,
+            ["ins-13"],
+        ),
+        _item(
+            "ins-15",
+            "compliance",
+            "Prepare tariff calculations and premium documentation",
+            "finma",
+            21,
+            ["ins-13"],
+        ),
+        # Solvency & capital
+        _item(
+            "ins-16",
+            "capital",
+            "Meet minimum capital requirements (varies by insurance class)",
+            "finma",
+            21,
+            ["ins-01"],
+        ),
+        _item(
+            "ins-17",
+            "capital",
+            "Prepare solvency margin calculation (SST — Swiss Solvency Test)",
+            "finma",
+            30,
+            ["ins-16"],
+        ),
+        _item(
+            "ins-18",
+            "capital",
+            "Establish tied assets (gebundenes Vermoegen) per FINMA requirements",
+            "finma",
+            21,
+            ["ins-16"],
+        ),
+        # Reinsurance
+        _item(
+            "ins-19",
+            "compliance",
+            "Prepare reinsurance program and agreements",
+            "finma",
+            21,
+            ["ins-14"],
+        ),
+        # Risk management & compliance
+        _item(
+            "ins-20",
+            "compliance",
+            "Draft comprehensive risk management framework",
+            "finma",
+            21,
+        ),
+        _item(
+            "ins-21",
+            "compliance",
+            "Appoint compliance officer and risk manager",
+            "finma",
+            14,
+        ),
+        _item(
+            "ins-22",
+            "compliance",
+            "Draft AML/KYC policies (life insurance — CDD procedures)",
+            "finma",
+            21,
+            ["ins-21"],
+        ),
+        _item(
+            "ins-23",
+            "compliance",
+            "Establish internal audit function",
+            "finma",
+            14,
+            ["ins-21"],
+        ),
+        _item(
+            "ins-24",
+            "compliance",
+            "Engage FINMA-recognized external auditor",
+            "finma",
+            14,
+        ),
+        # Policyholder protection
+        _item(
+            "ins-25",
+            "compliance",
+            "Prepare policyholder protection measures and claims handling procedures",
+            "finma",
+            14,
+            ["ins-12"],
+        ),
+        # IT & operations
+        _item(
+            "ins-26",
+            "it_operations",
+            "Document policy administration and claims systems",
+            "finma",
+            21,
+        ),
+        _item(
+            "ins-27",
+            "it_operations",
+            "Prepare business continuity and disaster recovery plan",
+            "finma",
+            14,
+        ),
+        # Application
+        _item("ins-28", "application", "Register on FINMA EHP platform", "finma", 1),
+        _item(
+            "ins-29",
+            "application",
+            "Submit complete insurance license application via EHP",
+            "finma",
+            14,
+            [
+                "ins-05",
+                "ins-10",
+                "ins-14",
+                "ins-17",
+                "ins-22",
+                "ins-24",
+                "ins-28",
+            ],
+        ),
+        _item(
+            "ins-30",
+            "application",
+            "FINMA assessment period (6-12 months)",
+            "finma",
+            270,
+            ["ins-29"],
+        ),
+    ]
+
+
 def get_checklist_for_pathway(pathway: str) -> list[ChecklistItem]:
-    if pathway == "sro":
-        return get_sro_checklist()
     if pathway == "finma_securities":
         return get_securities_firm_checklist()
-    if pathway == "finma_payment_systems":
-        return get_payment_systems_checklist()
-    if pathway.startswith("finma"):
+    if pathway == "finma_fund_management":
+        return get_fund_management_checklist()
+    if pathway == "finma_insurance":
+        return get_insurance_checklist()
+    if pathway in ("finma_banking", "finma_fintech"):
         return get_finma_checklist()
     return []

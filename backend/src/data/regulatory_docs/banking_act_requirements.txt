@@ -1,0 +1,142 @@
+BANKING ACT (BankA) — FULL BANKING LICENSE REQUIREMENTS
+=========================================================
+
+1. LEGAL BASIS
+The Federal Act on Banks and Savings Banks (BankA, SR 952.0) and the
+Banking Ordinance (BankO, SR 952.02) govern the licensing, organization,
+and supervision of banks in Switzerland. Additional requirements come from
+the Capital Adequacy Ordinance (CAO) and Liquidity Ordinance (LiqO).
+
+2. DEFINITION OF BANKING ACTIVITY
+A banking license is required for entities that:
+- Accept deposits from the public on a professional basis, AND/OR
+- Refinance themselves from multiple sources to provide financing, AND/OR
+- Publicly advertise to accept deposits
+(Art. 1 para. 2 BankA)
+
+3. LEGAL FORM
+Banks must be organized as:
+- Corporation (AG) — most common
+- Cooperative (Genossenschaft)
+- Partnership (Kommanditgesellschaft) — rare
+- Cantonal bank: public law entity
+Foreign banks may operate through branches with FINMA approval.
+
+4. MINIMUM CAPITAL
+- Minimum paid-up capital: CHF 10 million (Art. 3 para. 2 let. b BankA)
+- FINMA may require higher capital depending on:
+  - Scope and complexity of activities
+  - Risk profile
+  - Balance sheet size
+  - International activities
+
+5. CAPITAL ADEQUACY (CAO — Basel III)
+Banks must comply with Basel III capital requirements:
+- Common Equity Tier 1 (CET1): minimum 4.5% of RWA
+- Tier 1 capital: minimum 6% of RWA
+- Total capital: minimum 8% of RWA
+- Capital conservation buffer: 2.5%
+- Countercyclical buffer: as set by SNB
+- Leverage ratio: minimum 3%
+Systemically important banks face additional requirements.
+
+6. LIQUIDITY REQUIREMENTS (LiqO)
+- Liquidity Coverage Ratio (LCR): minimum 100%
+- Net Stable Funding Ratio (NSFR): minimum 100%
+- Intraday liquidity management
+- Liquidity stress testing
+- Emergency liquidity planning
+
+7. ORGANIZATIONAL REQUIREMENTS
+- Board of directors (Verwaltungsrat):
+  - Minimum 3 members, majority independent
+  - Chairman cannot simultaneously be CEO
+  - Audit committee, risk committee, compensation committee
+  - Adequate expertise in banking, risk management, accounting
+- Executive management (Geschaeftsleitung):
+  - At least 2 qualified persons
+  - Management conducted from Switzerland
+  - Adequate professional qualifications and experience
+- Three lines of defense model:
+  - First line: business units (risk ownership)
+  - Second line: risk management and compliance (oversight)
+  - Third line: internal audit (independent assurance)
+
+8. FIT AND PROPER REQUIREMENTS
+All key persons must:
+- Enjoy a good reputation (unbescholten)
+- Have adequate professional qualifications
+- Offer guarantee of proper business conduct (Gewaehr)
+- Submit FINMA personal questionnaires
+- Provide criminal record extracts, debt enforcement extracts
+- Disclose all mandates and potential conflicts of interest
+
+9. QUALIFIED PARTICIPATIONS
+- 10%+ shareholders must be disclosed and approved
+- Beneficial ownership chain must be transparent
+- FINMA may deny if participation jeopardizes sound management
+- Changes in qualified participations require prior FINMA approval
+
+10. DEPOSIT PROTECTION
+- Membership in esisuisse (Swiss deposit insurance scheme) mandatory
+- Protected deposits: up to CHF 100,000 per depositor
+- System-wide coverage limit: CHF 6 billion
+- Contributions based on total privileged deposits
+
+11. INTERNAL CONTROLS AND COMPLIANCE
+- Comprehensive internal control system (ICS)
+- Independent compliance function
+- Risk management function with adequate authority
+- Internal audit function with direct reporting to board
+- Regular reporting on risk exposure and compliance status
+
+12. AML COMPLIANCE
+Banks must comply with comprehensive AML requirements:
+- AMLA (Anti-Money Laundering Act)
+- AMLO-FINMA (AML Ordinance)
+- CDB (Agreement on Due Diligence by Banks)
+- KYC/CDD/EDD procedures
+- Transaction monitoring
+- Sanctions screening (SECO, UN, EU, OFAC)
+- PEP screening
+- SAR reporting to MROS
+- Record retention (10 years)
+
+13. RISK MANAGEMENT FRAMEWORK
+Comprehensive risk management covering:
+- Credit risk (largest risk category for most banks)
+- Market risk
+- Interest rate risk in the banking book
+- Operational risk
+- Liquidity risk
+- Concentration risk
+- Reputational risk
+- Strategic risk
+- Legal and compliance risk
+
+14. REPORTING OBLIGATIONS
+- Quarterly: capital adequacy, large exposures, liquidity
+- Semi-annually: balance sheet, income statement
+- Annually: audited financial statements, annual report
+- Ad hoc: material events, changes in organization or activities
+
+15. AUDIT REQUIREMENTS
+- Licensing audit (initial application)
+- Annual regulatory audit by FINMA-recognized audit firm
+- Annual financial audit
+- Special audits as directed by FINMA
+
+16. APPLICATION PROCESS
+- Pre-notification to FINMA recommended
+- Submit application via FINMA EHP platform
+- Processing time: typically 6-18 months
+- Comprehensive documentation package required
+- FINMA may conduct on-site visits
+- License may be subject to conditions and restrictions
+
+17. ONGOING SUPERVISION
+- Direct supervision by FINMA
+- On-site inspections (planned and ad hoc)
+- Thematic reviews
+- Enforcement actions if non-compliant
+- Recovery and resolution planning (for larger banks)

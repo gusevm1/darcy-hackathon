@@ -164,48 +164,27 @@ def analyze_gaps(client: Client) -> GapAnalysis:
                 )
             )
 
-    if pathway == "sro" and client.aml_officer_swiss_resident is False:
+    if client.aml_officer_swiss_resident is False:
         gaps.append(
             Gap(
                 category="compliance",
                 field_or_item="aml_officer_swiss_resident",
-                description="AML officer should ideally be Swiss-resident for SRO",
+                description="AML officer should ideally be Swiss-resident",
                 severity="needs_review",
             )
         )
 
-    # FINMA-specific triggers
-    if client.handles_client_assets is True and pathway == "sro":
-        gaps.append(
-            Gap(
-                category="governance",
-                field_or_item="handles_client_assets",
-                description=(
-                    "Long-term custody of client assets"
-                    " may require FINMA license, not just SRO"
-                ),
-                severity="needs_review",
-            )
-        )
-    if client.operates_order_book is True and pathway == "sro":
-        gaps.append(
-            Gap(
-                category="governance",
-                field_or_item="operates_order_book",
-                description=(
-                    "Operating an order book typically"
-                    " requires FINMA banking or DLT license"
-                ),
-                severity="needs_review",
-            )
-        )
-        critical_blockers.append(
-            "Order book operation may require FINMA license upgrade"
-        )
-
-    # Securities Firm specific capital check
-    if pathway == "finma_securities":
-        min_capital = 1_500_000
+    # Pathway-specific capital checks
+    _pathway_capital: dict[str, tuple[int, str]] = {
+        "finma_banking": (10_000_000, "Banking license requires CHF 10M minimum"),
+        "finma_securities": (1_500_000, "Securities Firm requires CHF 1.5M minimum"),
+        "finma_fund_management": (
+            1_000_000,
+            "Fund Management requires CHF 1M minimum",
+        ),
+    }
+    if pathway in _pathway_capital:
+        min_capital, label = _pathway_capital[pathway]
         if (
             client.existing_capital_chf is not None
             and client.existing_capital_chf < min_capital
@@ -216,25 +195,39 @@ def analyze_gaps(client: Client) -> GapAnalysis:
                     category="capital",
                     field_or_item="existing_capital_chf",
                     description=(
-                        f"Securities Firm requires CHF 1.5M minimum."
+                        f"{label}."
                         f" Shortfall: CHF {shortfall:,}"
                     ),
                     severity="missing",
                 )
             )
             critical_blockers.append(
-                f"Securities Firm capital shortfall of CHF {shortfall:,}"
+                f"Capital shortfall of CHF {shortfall:,} for {pathway}"
             )
 
-    # Payment Systems specific checks
-    if pathway == "finma_payment_systems":
+    # Fund Management specific checks
+    if pathway == "finma_fund_management":
         gaps.append(
             Gap(
                 category="governance",
-                field_or_item="systemic_importance",
+                field_or_item="custodian_bank",
                 description=(
-                    "Payment Systems Operator license only required"
-                    " for systemically important systems — confirm with FINMA/SNB"
+                    "Fund Management Company must appoint a custodian bank"
+                    " (Depotbank) — confirm custodian arrangement"
+                ),
+                severity="needs_review",
+            )
+        )
+
+    # Insurance specific checks
+    if pathway == "finma_insurance":
+        gaps.append(
+            Gap(
+                category="compliance",
+                field_or_item="actuarial_requirements",
+                description=(
+                    "Insurance license requires appointment of a responsible"
+                    " actuary and Swiss Solvency Test (SST) compliance"
                 ),
                 severity="needs_review",
             )

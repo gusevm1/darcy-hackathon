@@ -1,0 +1,101 @@
+COLLECTIVE INVESTMENT SCHEMES ACT (CISA) — FUND MANAGEMENT COMPANY LICENSE
+===========================================================================
+
+1. LEGAL BASIS
+The Federal Act on Collective Investment Schemes (CISA, SR 951.31) and the
+Collective Investment Schemes Ordinance (CISO, SR 951.311) govern the
+establishment and operation of fund management companies in Switzerland.
+
+2. SCOPE
+A fund management company (Fondsleitung) manages Swiss collective investment
+schemes (contractual funds) on behalf of investors. It acts in its own name
+but for the account of the fund investors.
+
+3. LICENSING REQUIREMENT
+Any entity managing Swiss collective investment schemes requires a FINMA
+license as a fund management company (Art. 28 CISA). Operating without a
+license is a criminal offence.
+
+4. LEGAL FORM
+Fund management companies must be organized as a corporation (AG) or limited
+partnership with shares (Kommandit-AG) under Swiss law (Art. 28 para. 2 CISA).
+
+5. MINIMUM CAPITAL
+- Minimum share capital: CHF 1 million, fully paid-up (Art. 29 CISA)
+- Own funds must be maintained at adequate levels considering the volume
+  and complexity of managed funds
+- FINMA may require additional own funds based on risk assessment
+
+6. ORGANIZATIONAL REQUIREMENTS
+- Board of directors with at least three members
+- Majority of board members must be independent
+- Executive management must have adequate professional qualifications
+  and experience in fund management
+- Clear separation of functions: portfolio management, risk management,
+  compliance, and operations
+- Effective internal control system (ICS)
+- Independent compliance and risk management functions
+
+7. FIT AND PROPER REQUIREMENTS
+All persons responsible for management and business conduct must:
+- Enjoy a good reputation
+- Have adequate professional qualifications
+- Offer guarantee of proper business conduct (Gewaehr)
+- Submit FINMA personal questionnaires
+- Provide criminal record and debt enforcement extracts
+
+8. QUALIFIED PARTICIPATIONS
+Holders of qualified participations (10% or more) must:
+- Be identified and disclosed to FINMA
+- Not jeopardize sound and prudent management
+- Obtain FINMA approval before acquiring qualified participations
+
+9. FUND MANAGEMENT AGREEMENT (FONDSVERTRAG)
+- Must be approved by FINMA before fund launch
+- Contains investment policy, fee structure, valuation rules
+- Defines rights and obligations of fund management company,
+  custodian bank, and investors
+
+10. CUSTODIAN BANK (DEPOTBANK)
+- Mandatory appointment of a custodian bank (Art. 72 CISA)
+- Custodian bank must be a Swiss-licensed bank
+- Responsibilities: safekeeping of fund assets, payment transactions,
+  supervision of fund management company
+- Custodian bank must be independent from the fund management company
+
+11. INVESTOR PROTECTION
+- Duty to act in the best interests of investors
+- Equal treatment of investors
+- Transparent fee disclosure
+- Regular reporting (semi-annual and annual reports)
+- Right of investors to redeem units at NAV
+
+12. RISK MANAGEMENT
+- Comprehensive risk management framework
+- Liquidity management with stress testing
+- Counterparty risk monitoring
+- Market risk controls
+- Operational risk management
+
+13. AML COMPLIANCE
+Fund management companies are financial intermediaries under AMLA and must:
+- Implement AML/KYC procedures
+- Affiliate with an SRO or submit to direct FINMA AML supervision
+- Comply with the CDB (Agreement on Due Diligence)
+
+14. AUDIT REQUIREMENTS
+- Annual financial audit by a FINMA-recognized audit firm
+- Regulatory audit covering compliance with CISA requirements
+- Fund-level audits for each managed collective investment scheme
+
+15. APPLICATION PROCESS
+- Submit application via FINMA EHP platform
+- Processing time: typically 4-10 months
+- Application fee and annual supervisory levy apply
+- FINMA may impose conditions on the license
+
+16. ONGOING OBLIGATIONS
+- Report material changes to FINMA
+- Maintain minimum capital and own funds requirements
+- Submit periodic regulatory reports
+- Comply with FINMA circulars and guidance

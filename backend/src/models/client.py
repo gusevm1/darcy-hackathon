@@ -1,4 +1,4 @@
-"""Client models for Swiss crypto licensing applications."""
+"""Client models for Swiss financial licensing applications."""
 
 from datetime import datetime
 from typing import Literal
@@ -47,25 +47,22 @@ class Client(BaseModel):
     # Regulatory Pathway
     pathway: (
         Literal[
-            "sro",
-            "finma_fintech",
             "finma_banking",
-            "finma_dlt",
+            "finma_fintech",
             "finma_securities",
-            "finma_payment_systems",
+            "finma_fund_management",
+            "finma_insurance",
             "undetermined",
         ]
         | None
     ) = None
-    target_sro: Literal["VQF", "PolyReg", "SO-FIT", "other"] | None = None
     finma_license_type: (
         Literal[
-            "fintech",
             "banking",
-            "securities_dealer",
-            "dlt_facility",
+            "fintech",
             "securities_firm",
-            "payment_systems",
+            "fund_management",
+            "insurance",
         ]
         | None
     ) = None
@@ -74,8 +71,8 @@ class Client(BaseModel):
     services: list[str] = Field(default_factory=list)
     handles_fiat: bool | None = None
     handles_client_assets: bool | None = None
-    operates_order_book: bool | None = None
-    token_types: list[str] = Field(default_factory=list)
+    client_types: list[str] = Field(default_factory=list)
+    cross_border_activities: bool | None = None
 
     # Capital & Corporate
     minimum_capital_chf: int | None = None

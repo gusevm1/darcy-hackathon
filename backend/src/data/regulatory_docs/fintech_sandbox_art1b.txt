@@ -1,0 +1,115 @@
+FINTECH SANDBOX — ART. 1b BANKING ACT (BankA)
+================================================
+
+1. LEGAL BASIS
+Art. 1b of the Federal Act on Banks and Savings Banks (BankA, SR 952.0)
+and Art. 6a-6e of the Banking Ordinance (BankO, SR 952.02) establish the
+FinTech sandbox regime, allowing certain innovative financial service
+providers to accept public deposits without a full banking license.
+
+2. PURPOSE
+The FinTech sandbox was introduced on 1 January 2019 to lower market entry
+barriers for innovative fintech companies. It provides a simplified
+regulatory framework while maintaining adequate customer protection.
+
+3. SCOPE — WHO CAN USE THE SANDBOX
+The sandbox is available to entities that:
+- Accept deposits from the public up to a maximum of CHF 100 million
+- Do NOT invest or pay interest on these deposits
+- Inform depositors that deposits are not covered by deposit insurance
+- Are not subject to individual prudential supervision requirements
+
+4. DEPOSIT LIMIT
+- Maximum aggregate deposits: CHF 100 million
+- Deposits must NOT be invested or lent out
+- Deposits must NOT bear interest
+- Once CHF 100M threshold is exceeded, full banking license required
+
+5. LICENSING REQUIREMENT
+Art. 1b entities must obtain a FINMA FinTech authorization:
+- Simplified application compared to full banking license
+- Lower capital requirements than banking license
+- Reduced organizational requirements
+- But still subject to FINMA supervision
+
+6. LEGAL FORM
+- Must be a legal entity under Swiss law (AG, GmbH, or cooperative)
+- Swiss registered office and place of effective management
+
+7. CAPITAL REQUIREMENTS
+- Minimum capital: CHF 300,000 (significantly lower than banking)
+- Must maintain at least 3% of accepted deposits as own funds
+- FINMA may impose higher requirements based on risk assessment
+
+8. ORGANIZATIONAL REQUIREMENTS
+- Board of directors with at least two members
+- Executive management with adequate qualifications
+- Management conducted from Switzerland
+- Internal control system (ICS) proportionate to business
+- Compliance function (may be outsourced for smaller entities)
+
+9. FIT AND PROPER REQUIREMENTS
+Key persons must:
+- Enjoy a good reputation
+- Have adequate professional qualifications
+- Offer guarantee of proper business conduct (Gewaehr)
+- Submit required documentation to FINMA
+
+10. CUSTOMER INFORMATION
+- Must inform depositors clearly that:
+  a) The entity is not a bank
+  b) Deposits are not covered by the deposit insurance scheme
+  c) Deposits are not invested or interest-bearing
+- Information must be provided before accepting deposits
+
+11. AML COMPLIANCE
+FinTech sandbox entities are financial intermediaries and must:
+- Implement AML/KYC procedures
+- Affiliate with an SRO or submit to direct FINMA AML supervision
+- Comply with AMLA and AMLO-FINMA requirements
+- CDB (Agreement on Due Diligence) obligations apply
+
+12. ACCOUNTING AND AUDIT
+- Annual financial statements per Swiss GAAP or IFRS
+- Regulatory audit by FINMA-approved audit firm
+- Audit scope is reduced compared to full banking license
+
+13. RESTRICTIONS AND LIMITATIONS
+- No lending activities permitted
+- No interest payment on deposits
+- No fiduciary deposits
+- Cannot operate as a bank in substance
+- Must transition to full banking license if exceeding CHF 100M
+
+14. ADVANTAGES OVER FULL BANKING LICENSE
+- Lower minimum capital (CHF 300K vs CHF 10M for banking)
+- Simplified organizational requirements
+- Reduced reporting obligations
+- Faster application processing (typically 3-6 months)
+- Lower ongoing supervisory fees
+
+15. TRANSITION TO FULL BANKING LICENSE
+If a sandbox entity:
+- Exceeds CHF 100M in deposits, or
+- Wants to engage in lending or interest-paying activities
+it must apply for and obtain a full banking license.
+
+16. APPLICATION PROCESS
+- Submit application via FINMA EHP platform
+- Processing time: typically 3-6 months
+- Simplified documentation compared to banking license
+- FINMA may impose conditions on the authorization
+
+17. REPORTING OBLIGATIONS
+- Annual financial reporting to FINMA
+- Report material changes to business model or organization
+- Deposit volume monitoring and reporting
+- AML reporting as required by SRO or FINMA
+
+18. PRACTICAL CONSIDERATIONS
+- Suitable for: payment services, e-money, crowdfunding platforms,
+  innovative deposit-based services
+- Not suitable for: traditional lending, wealth management, full
+  banking services, insurance, securities dealing
+- Consider full banking or other specialized license if business
+  model requires activities beyond sandbox scope

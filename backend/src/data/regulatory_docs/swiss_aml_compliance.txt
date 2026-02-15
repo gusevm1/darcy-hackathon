@@ -1,0 +1,158 @@
+SWISS AML COMPLIANCE FOR FINANCIAL INSTITUTIONS
+=================================================
+
+1. LEGAL FRAMEWORK
+Swiss anti-money laundering (AML) regulation is based on:
+- Federal Act on Combating Money Laundering and Terrorist Financing
+  (AMLA, SR 955.0)
+- Anti-Money Laundering Ordinance (AMLO, SR 955.01)
+- FINMA Anti-Money Laundering Ordinance (AMLO-FINMA, SR 955.033.0)
+- Agreement on the Swiss Banks' Code of Conduct with Regard to the
+  Exercise of Due Diligence (CDB)
+- Swiss Criminal Code Art. 260ter (criminal organization),
+  Art. 305bis (money laundering), Art. 305ter (insufficient diligence)
+
+2. SCOPE — FINANCIAL INTERMEDIARIES
+The following are considered financial intermediaries under AMLA:
+- Banks (BankA)
+- Securities firms (FinIA)
+- Fund management companies (CISA)
+- Insurance companies offering life insurance (ISA)
+- Payment service providers
+- Money changers and money transmitters
+- Persons who professionally accept, hold, or transfer assets
+
+3. SRO MEMBERSHIP VS DIRECT FINMA SUPERVISION
+Financial intermediaries must either:
+- Join a self-regulatory organization (SRO) recognized by FINMA, OR
+- Submit to direct FINMA AML supervision (FINMA SO)
+SROs include: VQF, PolyReg, SO-FIT, ARIF, OAD FCT, and others.
+Banks, securities firms, and fund management companies typically submit
+to direct FINMA supervision for AML purposes.
+
+4. CUSTOMER DUE DILIGENCE (CDD)
+Financial intermediaries must verify:
+- Identity of the contracting party (Art. 3 AMLA)
+- Identity of the beneficial owner (Art. 4 AMLA)
+- Purpose and nature of the business relationship (Art. 6 AMLA)
+Identification documents required:
+- Natural persons: valid ID document (passport, ID card)
+- Legal entities: commercial register extract, articles of association
+- Trusts: trust deed, identification of settlor and beneficiaries
+
+5. ENHANCED DUE DILIGENCE (EDD)
+Enhanced measures required for:
+- Politically exposed persons (PEPs) — domestic and foreign
+- Complex or unusual transactions
+- Higher-risk countries (FATF grey/black list)
+- Correspondent banking relationships
+- Private banking and high-value transactions
+- Legal structures with complex ownership chains
+
+6. TRANSACTION MONITORING
+Financial intermediaries must implement:
+- Automated transaction monitoring systems
+- Risk-based approach to monitoring thresholds
+- Detection of unusual patterns and behaviors
+- Cash transaction reporting above CHF 100,000 (for banks)
+- Regular calibration and testing of monitoring rules
+
+7. SANCTIONS SCREENING
+Must screen against:
+- SECO sanctions lists (Swiss primary lists)
+- UN Security Council sanctions lists
+- EU sanctions lists (commonly applied)
+- OFAC SDN list (for USD-denominated transactions)
+Screening required for:
+- New client onboarding
+- Ongoing monitoring of existing clients
+- All payment transactions (sender and beneficiary)
+- Real-time and batch screening capabilities
+
+8. SUSPICIOUS ACTIVITY REPORTING (SAR)
+- Financial intermediaries must report to MROS (Money Laundering
+  Reporting Office Switzerland) when:
+  a) They know or have reasonable suspicion that assets are connected
+     to money laundering, terrorist financing, or criminal organization
+  b) Negotiations are broken off due to AML concerns
+- Filing a SAR triggers a 5-working-day asset freeze
+- MROS may extend the freeze to 20 working days
+- Tipping-off prohibition applies
+
+9. RECORD KEEPING
+- All CDD documents must be retained for 10 years after the end of
+  the business relationship (Art. 7 AMLA)
+- Transaction records: 10 years
+- Internal reports and risk assessments: 10 years
+- SAR filings and related documentation: 10 years
+- Records must be reproducible in Switzerland
+
+10. RISK ASSESSMENT FRAMEWORK
+Financial intermediaries must conduct:
+- Enterprise-wide AML risk assessment
+- Client risk classification (low, medium, high, prohibited)
+- Geographic risk assessment
+- Product/service risk assessment
+- Delivery channel risk assessment
+- Regular updates (at least annually)
+
+11. AML COMPLIANCE OFFICER
+- Must appoint a qualified AML compliance officer
+- Officer should have adequate authority, resources, and independence
+- Responsibilities: AML program oversight, SAR filing, training,
+  policy updates, regulatory reporting
+- For banks and securities firms: preferably Swiss-resident
+- Must have appropriate training and experience
+
+12. TRAINING
+- All employees must receive initial AML training
+- Annual refresher training required
+- Training must cover: CDD procedures, suspicious activity indicators,
+  SAR filing process, sanctions requirements
+- Records of training must be maintained
+
+13. INTERNAL CONTROLS AND AUDIT
+- Regular internal review of AML program effectiveness
+- Independent testing of AML controls (internal audit or external)
+- Board oversight of AML compliance
+- Annual AML audit as part of regulatory audit
+
+14. SPECIFIC REQUIREMENTS BY INSTITUTION TYPE
+
+Banks (BankA):
+- Full AMLA, AMLO-FINMA, and CDB compliance
+- Correspondent banking due diligence
+- Wire transfer rules (FATF Recommendation 16)
+- Cross-border payment transparency
+
+Securities Firms (FinIA):
+- AMLA and AMLO-FINMA compliance
+- Market abuse prevention
+- Transaction reporting to trade repositories
+- Client asset protection
+
+Fund Management Companies (CISA):
+- AMLA compliance for fund subscriptions
+- Investor identification and verification
+- Source of funds documentation
+- Distribution channel due diligence
+
+Insurance Companies (ISA — Life Insurance):
+- AMLA applies to life insurance activities
+- Policyholder and beneficial owner identification
+- Premium payment monitoring
+- Surrender value monitoring
+
+15. PENALTIES AND ENFORCEMENT
+- Criminal penalties for money laundering: up to 5 years imprisonment
+- Administrative penalties by FINMA: license revocation, industry bans
+- SRO sanctions: fines, membership revocation
+- Organizational deficiencies: FINMA may appoint an investigating agent
+- Personal liability for responsible persons
+
+16. RECENT DEVELOPMENTS
+- Increased focus on beneficial ownership transparency
+- Enhanced CDD for PEPs and high-risk jurisdictions
+- Growing regulatory expectations for transaction monitoring
+- FATF mutual evaluation recommendations being implemented
+- Increasing coordination with EU AML framework developments

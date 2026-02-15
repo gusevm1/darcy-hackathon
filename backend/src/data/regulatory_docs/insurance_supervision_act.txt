@@ -1,0 +1,121 @@
+INSURANCE SUPERVISION ACT (ISA) — INSURANCE LICENSE REQUIREMENTS
+=================================================================
+
+1. LEGAL BASIS
+The Federal Act on the Supervision of Insurance Companies (ISA, SR 961.01)
+and the Insurance Supervision Ordinance (ISO, SR 961.011) regulate the
+licensing and ongoing supervision of insurance undertakings in Switzerland.
+
+2. SCOPE
+Any entity offering insurance products in or from Switzerland requires a
+FINMA license. This covers direct insurers (life and non-life), reinsurers,
+and insurance groups/conglomerates.
+
+3. INSURANCE CLASSES
+FINMA distinguishes between:
+- Life insurance (Class A): individual life, group life, unit-linked
+- Non-life insurance (Class B): property, liability, health, accident,
+  motor vehicle, transport, credit, legal expenses
+- Reinsurance (Class C): proportional and non-proportional
+
+4. LEGAL FORM
+Insurance companies must be organized as:
+- Corporation (AG) under Swiss law, OR
+- Cooperative (Genossenschaft)
+Foreign insurers may operate via a Swiss branch with authorization.
+
+5. MINIMUM CAPITAL
+Capital requirements vary by insurance class:
+- Life insurance: CHF 5-20 million (depending on scope)
+- Non-life insurance: CHF 3-10 million (depending on classes)
+- Reinsurance: CHF 3-10 million
+- Captive insurers: reduced requirements may apply
+FINMA may require additional capital based on risk profile.
+
+6. SOLVENCY REQUIREMENTS — SWISS SOLVENCY TEST (SST)
+- All licensed insurers must comply with the SST
+- SST is a risk-based capital adequacy framework
+- Target capital = risk-bearing capital must exceed required capital
+- Standard model or approved internal model may be used
+- SST ratio must be reported annually to FINMA
+- SST ratio below 100% triggers supervisory intervention
+
+7. TIED ASSETS (GEBUNDENES VERMOEGEN)
+- Insurers must maintain tied assets to cover technical provisions
+- Tied assets must be invested according to prudent person principle
+- Investment restrictions: quality, diversification, liquidity
+- Regular reporting on tied asset composition to FINMA
+- Custodian bank required for tied asset safekeeping
+
+8. ORGANIZATIONAL REQUIREMENTS
+- Board of directors with adequate insurance expertise
+- Executive management with professional qualifications
+- Clear organizational structure with function separation
+- Effective internal control system (ICS)
+- Independent compliance, risk management, and actuarial functions
+- Internal audit function
+
+9. FIT AND PROPER REQUIREMENTS
+Key persons must:
+- Enjoy a good reputation
+- Have adequate professional qualifications in insurance
+- Offer guarantee of proper business conduct (Gewaehr)
+- Submit FINMA personal questionnaires
+
+10. RESPONSIBLE ACTUARY
+- Mandatory appointment of a responsible actuary (verantwortlicher Aktuar)
+- Must be qualified and approved by FINMA
+- Responsibilities: technical provisions, premium calculations,
+  solvency assessment, annual actuarial report to FINMA
+- Independent from executive management
+
+11. BUSINESS PLAN
+The license application must include a comprehensive business plan:
+- Insurance classes and products to be offered
+- Target markets and distribution channels
+- Reinsurance program
+- Three-year financial projections
+- Risk management strategy
+- Investment strategy for tied assets
+
+12. GENERAL AND SPECIAL INSURANCE CONDITIONS (AVB)
+- Must be submitted to FINMA for approval (life insurance)
+- Non-life: notification duty for AVB
+- Consumer protection requirements apply
+- Transparency in premium calculation and fee disclosure
+
+13. REINSURANCE
+- Adequate reinsurance program mandatory
+- Reinsurance contracts must be disclosed to FINMA
+- Counterparty risk management for reinsurance
+- Concentration limits on reinsurance partners
+
+14. POLICYHOLDER PROTECTION
+- Insurance guarantee scheme (for certain life insurance policies)
+- Claims handling procedures and deadlines
+- Complaints handling process
+- Information duties to policyholders
+
+15. AML COMPLIANCE (LIFE INSURANCE)
+Life insurance companies are financial intermediaries under AMLA and must:
+- Implement AML/KYC procedures for life insurance policies
+- Affiliate with an SRO or submit to direct FINMA AML supervision
+- Identify beneficial owners of policies above threshold
+
+16. AUDIT REQUIREMENTS
+- Annual financial audit by a FINMA-recognized audit firm
+- Regulatory audit covering ISA compliance
+- Actuarial audit of technical provisions
+
+17. APPLICATION PROCESS
+- Submit application via FINMA EHP platform
+- Processing time: typically 6-12 months
+- Requires complete documentation package
+- FINMA may impose conditions or restrictions on the license
+
+18. ONGOING OBLIGATIONS
+- Annual SST reporting
+- Quarterly financial reporting
+- Report material changes to FINMA
+- Maintain tied assets and solvency requirements
+- Comply with FINMA circulars and insurance-specific guidance
