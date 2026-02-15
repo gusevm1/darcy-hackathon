@@ -3,7 +3,8 @@
 import logging
 from pathlib import Path
 
-from src.services import rag_service
+from src.models.client import ClientDocument
+from src.services import document_store, rag_service
 
 logger = logging.getLogger(__name__)
 
@@ -69,3 +70,37 @@ async def seed_regulatory_docs() -> None:
     # Rebuild BM25 corpus after seeding
     await rag_service.rebuild_bm25_corpus()
     logger.info("Regulatory docs seeding complete")
+
+
+async def ingest_client_document(doc: ClientDocument) -> int:
+    """Ingest an uploaded client document into the knowledge base."""
+    path = Path(doc.file_path)
+    if not path.exists():
+        logger.warning("File not found for client doc: %s", doc.file_path)
+        return 0
+    text = _parse_file(path)
+    doc_id = f"client-{doc.client_id}-{doc.document_id}"
+    title = doc.document_id.replace("-", " ").title()
+    source = f"client:{doc.client_id}/{doc.file_name}"
+    return await rag_service.ingest_document(
+        text, doc_id, title, source, client_id=doc.client_id
+    )
+
+
+async def seed_client_docs() -> None:
+    """Index any uploaded client documents that aren't yet in Qdrant."""
+    existing = await rag_service.list_documents()
+    existing_ids = {d["doc_id"] for d in existing}
+
+    all_client_ids = await document_store.list_all_client_ids()
+    for client_id in all_client_ids:
+        docs = await document_store.list_documents(client_id)
+        for doc in docs:
+            doc_id = f"client-{doc.client_id}-{doc.document_id}"
+            if doc_id in existing_ids:
+                continue
+            count = await ingest_client_document(doc)
+            if count:
+                logger.info("Seeded: %s (%d chunks)", doc_id, count)
+
+    await rag_service.rebuild_bm25_corpus()

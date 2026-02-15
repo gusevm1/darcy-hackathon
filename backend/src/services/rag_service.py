@@ -104,6 +104,7 @@ async def ingest_document(
     doc_id: str,
     title: str,
     source: str,
+    client_id: str | None = None,
 ) -> int:
     """Chunk, embed, and store a document. Returns number of chunks."""
     assert _qdrant is not None
@@ -121,6 +122,7 @@ async def ingest_document(
                     "doc_id": doc_id,
                     "title": title,
                     "source": source,
+                    "client_id": client_id,
                     "chunk_index": i,
                     "text": chunk,
                     "content_hash": content_hash(text),

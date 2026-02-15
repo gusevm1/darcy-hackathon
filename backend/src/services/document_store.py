@@ -95,6 +95,17 @@ async def list_documents(client_id: str) -> list[ClientDocument]:
         await db.close()
 
 
+async def list_all_client_ids() -> list[str]:
+    """Return all distinct client IDs that have uploaded documents."""
+    db = await _get_db()
+    try:
+        cursor = await db.execute("SELECT DISTINCT client_id FROM client_documents")
+        rows = await cursor.fetchall()
+        return [row[0] for row in rows]
+    finally:
+        await db.close()
+
+
 async def delete_document(client_id: str, document_id: str) -> bool:
     doc = await get_document(client_id, document_id)
     if doc is None:

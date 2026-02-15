@@ -103,6 +103,12 @@ export function useChatSessions(clientId?: string, clientContext?: ClientContext
       try {
         abortRef.current = new AbortController()
 
+        // Build conversation history (last 10 messages, excluding welcome + current)
+        const history = activeChat.messages
+          .filter((m) => m.id !== 'welcome' && m.content.trim())
+          .slice(-10)
+          .map((m) => ({ role: m.role, content: m.content }))
+
         await streamConsultChat(
           trimmed,
           {
@@ -138,7 +144,8 @@ export function useChatSessions(clientId?: string, clientContext?: ClientContext
           },
           clientId,
           clientContext,
-          abortRef.current.signal
+          abortRef.current.signal,
+          history
         )
       } catch {
         setChats((prev) =>

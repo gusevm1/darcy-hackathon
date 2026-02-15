@@ -12,7 +12,7 @@ from src.routes.health import router as health_router
 from src.routes.kb import router as kb_router
 from src.routes.onboard import router as onboard_router
 from src.services import client_store, rag_service
-from src.services.document_ingestion import seed_regulatory_docs
+from src.services.document_ingestion import seed_client_docs, seed_regulatory_docs
 
 logger = logging.getLogger(__name__)
 
@@ -31,6 +31,8 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         logger.info("RAG service initialized")
         await seed_regulatory_docs()
         logger.info("Regulatory docs seeded")
+        await seed_client_docs()
+        logger.info("Client documents indexed")
     except Exception:
         logger.exception("Failed to initialize RAG service (Qdrant may not be running)")
 

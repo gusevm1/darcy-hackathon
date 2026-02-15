@@ -10,7 +10,7 @@ import anthropic
 
 from src.config import settings
 from src.models.client import Client, FlaggedItem
-from src.services import client_store, rag_service
+from src.services import client_store, document_store, rag_service
 from src.services.gap_analyzer import analyze_gaps
 
 logger = logging.getLogger(__name__)
@@ -31,6 +31,7 @@ per-pathway checklists with 35-88 items per license type)
 5. Help draft responses to regulatory authority questions
 6. Compare licensing pathways (timelines, capital requirements, document counts)
 7. Advise on application timelines and the FINMA EHP submission process
+8. List and read uploaded client documents to review their content
 
 **When a client_id is provided:**
 - You have access to the client's full profile, checklist, and flags
@@ -203,6 +204,38 @@ TOOLS: list[anthropic.types.ToolParam] = [
             "required": ["client_id", "flag_id", "resolution_notes"],
         },
     },
+    {
+        "name": "list_client_documents",
+        "description": "List all uploaded documents for a client with their status and metadata.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "client_id": {
+                    "type": "string",
+                    "description": "The client ID",
+                },
+            },
+            "required": ["client_id"],
+        },
+    },
+    {
+        "name": "get_client_document",
+        "description": "Retrieve the full text content of an uploaded client document.",
+        "input_schema": {
+            "type": "object",
+            "properties": {
+                "client_id": {
+                    "type": "string",
+                    "description": "The client ID",
+                },
+                "document_id": {
+                    "type": "string",
+                    "description": "The document ID (e.g., banking-2-10)",
+                },
+            },
+            "required": ["client_id", "document_id"],
+        },
+    },
 ]
 
 
@@ -295,6 +328,36 @@ async def _execute_tool(tool_name: str, tool_input: dict[str, Any]) -> str:
                 await client_store.save_client(client)
                 return f"Flag {flag.id} resolved: {tool_input['resolution_notes']}"
         return f"Flag {tool_input['flag_id']} not found."
+
+    if tool_name == "list_client_documents":
+        docs = await document_store.list_documents(tool_input["client_id"])
+        return json.dumps(
+            [
+                {
+                    "document_id": d.document_id,
+                    "file_name": d.file_name,
+                    "status": d.status,
+                    "file_size": d.file_size,
+                }
+                for d in docs
+            ]
+        )
+
+    if tool_name == "get_client_document":
+        doc = await document_store.get_document(
+            tool_input["client_id"], tool_input["document_id"]
+        )
+        if doc is None:
+            return f"Document {tool_input['document_id']} not found."
+        from pathlib import Path
+
+        file_path = Path(doc.file_path)
+        if not file_path.exists():
+            return "Document file not found on disk."
+        text = file_path.read_text(encoding="utf-8")
+        if len(text) > 10000:
+            text = text[:10000] + "\n\n[... truncated — document continues ...]"
+        return text
 
     return f"Unknown tool: {tool_name}"
 

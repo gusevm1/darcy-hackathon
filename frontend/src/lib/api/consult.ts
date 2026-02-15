@@ -72,7 +72,8 @@ export function streamConsultChat(
   callbacks: SSECallbacks,
   clientId?: string,
   clientContext?: ClientContext,
-  signal?: AbortSignal
+  signal?: AbortSignal,
+  conversationHistory?: Array<{ role: string; content: string }>
 ) {
   return streamSSE(
     '/api/consult/chat',
@@ -80,6 +81,7 @@ export function streamConsultChat(
       message,
       ...(clientId ? { client_id: clientId } : {}),
       ...(clientContext ? { client_context: clientContext } : {}),
+      ...(conversationHistory?.length ? { conversation_history: conversationHistory } : {}),
     },
     callbacks,
     signal

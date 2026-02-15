@@ -1,5 +1,6 @@
 """Client document upload, listing, download, delete, and verification endpoints."""
 
+import logging
 from pathlib import Path
 
 from fastapi import APIRouter, HTTPException, UploadFile
@@ -8,7 +9,10 @@ from pydantic import BaseModel
 
 from src.models.client import ClientDocument
 from src.services import document_store
+from src.services.document_ingestion import ingest_client_document
 from src.services.document_verifier import verify_document
+
+logger = logging.getLogger(__name__)
 
 router = APIRouter(prefix="/api/client-documents", tags=["client-documents"])
 
@@ -71,6 +75,13 @@ async def upload_document(
         content=content,
         content_type=file.content_type or "",
     )
+
+    # Index into knowledge base
+    try:
+        await ingest_client_document(doc)
+    except Exception:
+        logger.warning("Failed to index document %s into KB", document_id)
+
     return _doc_to_response(doc)
 
 
