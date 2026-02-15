@@ -125,12 +125,12 @@ export function DocumentItem({ document, state, onUpload, onReset, isUploading, 
       </div>
 
       <Dialog open={viewerOpen} onOpenChange={setViewerOpen}>
-        <DialogContent className="sm:max-w-4xl max-h-[85vh] flex flex-col">
+        <DialogContent className="sm:max-w-4xl">
           <DialogHeader>
             <DialogTitle>{document.name}</DialogTitle>
             <DialogDescription>{state?.fileName}</DialogDescription>
           </DialogHeader>
-          <ScrollArea className="flex-1 min-h-0">
+          <ScrollArea className="max-h-[65vh]">
             {viewerLoading ? (
               <div className="flex items-center justify-center py-12">
                 <Loader2 className="h-6 w-6 animate-spin text-muted-foreground" />
