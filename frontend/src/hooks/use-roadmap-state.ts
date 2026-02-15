@@ -61,7 +61,7 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
             category: doc.category,
             description: doc.description,
             summary: `Document for ${client.company}: ${doc.name} — ${stage.name} stage.`,
-            mockContent: `CONFIDENTIAL — ${client.company}\n${doc.name}\nPrepared for FINMA\n\nThis document covers the ${doc.name.toLowerCase()} requirements for the ${definition.label} application.`,
+            content: `CONFIDENTIAL — ${client.company}\n${doc.name}\nPrepared for FINMA\n\nThis document covers the ${doc.name.toLowerCase()} requirements for the ${definition.label} application.`,
           })
           setPreviewOpen(true)
           break

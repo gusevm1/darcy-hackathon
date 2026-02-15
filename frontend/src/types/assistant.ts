@@ -69,5 +69,5 @@ export interface DocumentPreview {
   category: string
   description: string
   summary: string
-  mockContent: string
+  content: string
 }

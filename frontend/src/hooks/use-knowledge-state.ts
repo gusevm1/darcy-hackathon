@@ -1,9 +1,11 @@
 'use client'
 
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { clients } from '@/data/clients'
 import { licenseDefinitions } from '@/data/license-stages'
+import { listDocuments } from '@/lib/api/kb'
+import type { KBDocument } from '@/lib/api/types'
 import { buildFileTree } from '@/lib/build-file-tree'
 import type { DocumentPreview, FileTreeClientFolder, FileTreeDocument } from '@/types/assistant'
 
@@ -37,41 +39,13 @@ function buildGeneralInfoTree(): FileTreeClientFolder[] {
   }))
 }
 
-function buildInternalKBTree(): FileTreeClientFolder[] {
-  const categories = [
-    {
-      id: 'regulation',
-      name: 'Regulations',
-      docs: [
-        { id: 'kb-1', name: 'FINMA Licensing Overview' },
-        { id: 'kb-4', name: 'Capital Adequacy Requirements' },
-        { id: 'kb-10', name: 'Swiss Solvency Test (SST)' },
-      ],
-    },
-    {
-      id: 'legislation',
-      name: 'Legislation',
-      docs: [
-        { id: 'kb-2', name: 'Banking Act (BankA) Summary' },
-        { id: 'kb-5', name: 'Insurance Supervision Act (ISA)' },
-      ],
-    },
-    {
-      id: 'compliance',
-      name: 'Compliance & Guides',
-      docs: [
-        { id: 'kb-3', name: 'AML/KYC Best Practices' },
-        { id: 'kb-6', name: 'FinTech License Guide' },
-        { id: 'kb-8', name: 'Corporate Governance Circular 2017/1' },
-        { id: 'kb-9', name: 'Outsourcing Guidelines' },
-      ],
-    },
-    {
-      id: 'templates',
-      name: 'Templates',
-      docs: [{ id: 'kb-7', name: 'Risk Management Framework Template' }],
-    },
-  ]
+function buildInternalKBTreeFromDocs(docs: KBDocument[]): FileTreeClientFolder[] {
+  const grouped = new Map<string, KBDocument[]>()
+  for (const doc of docs) {
+    const source = doc.source || 'Other'
+    if (!grouped.has(source)) grouped.set(source, [])
+    grouped.get(source)!.push(doc)
+  }
 
   return [
     {
@@ -79,20 +53,20 @@ function buildInternalKBTree(): FileTreeClientFolder[] {
       clientId: 'internal-kb',
       name: 'Internal Knowledge Base',
       company: 'FINMA Comply',
-      children: categories.map((cat) => ({
+      children: Array.from(grouped.entries()).map(([source, sourceDocs]) => ({
         type: 'stage' as const,
-        stageId: cat.id,
-        name: cat.name,
-        children: cat.docs.map((doc) => ({
+        stageId: source.toLowerCase().replace(/\s+/g, '-'),
+        name: source,
+        children: sourceDocs.map((doc) => ({
           type: 'document' as const,
-          documentId: doc.id,
-          name: doc.name,
-          fileName: `${doc.id}.pdf`,
+          documentId: doc.doc_id,
+          name: doc.title,
+          fileName: `${doc.doc_id}.pdf`,
           status: 'approved' as const,
           clientId: 'internal-kb',
           clientName: 'Internal Knowledge Base',
-          stageId: cat.id,
-          stageName: cat.name,
+          stageId: source.toLowerCase().replace(/\s+/g, '-'),
+          stageName: source,
         })),
       })),
     },
@@ -101,6 +75,8 @@ function buildInternalKBTree(): FileTreeClientFolder[] {
 
 export function useKnowledgeState() {
   const [activeTab, setActiveTab] = useState<KnowledgeTab>('clients')
+  const [kbDocs, setKbDocs] = useState<KBDocument[]>([])
+  const [kbLoading, setKbLoading] = useState(false)
 
   const { expandedNodes, highlightedDocumentId, toggleNode } = useFileTree()
 
@@ -112,9 +88,28 @@ export function useKnowledgeState() {
     handlePreviewOpenChange,
   } = useDocumentPreview()
 
+  useEffect(() => {
+    let cancelled = false
+    async function fetchDocs() {
+      setKbLoading(true)
+      try {
+        const result = await listDocuments(0, 100)
+        if (!cancelled) setKbDocs(result.items)
+      } catch (err) {
+        console.error('Failed to fetch KB documents:', err)
+      } finally {
+        if (!cancelled) setKbLoading(false)
+      }
+    }
+    fetchDocs()
+    return () => {
+      cancelled = true
+    }
+  }, [])
+
   const clientTree = useMemo(() => buildFileTree(clients, licenseDefinitions), [])
   const generalTree = useMemo(() => buildGeneralInfoTree(), [])
-  const internalTree = useMemo(() => buildInternalKBTree(), [])
+  const internalTree = useMemo(() => buildInternalKBTreeFromDocs(kbDocs), [kbDocs])
 
   const activeTree = useMemo(() => {
     switch (activeTab) {
@@ -143,7 +138,7 @@ export function useKnowledgeState() {
         category: 'General',
         description: `${doc.name} — part of the ${doc.stageName} stage.`,
         summary: `This document covers ${doc.name.toLowerCase()} requirements${definition ? ` under ${definition.legalBasis}` : ''}.`,
-        mockContent: `DOCUMENT: ${doc.name}\n\nCategory: ${doc.stageName}\nSource: ${doc.clientName}\n\nThis is a placeholder document for the knowledge base viewer. In production, this would display the actual document content retrieved from the backend.`,
+        content: `DOCUMENT: ${doc.name}\n\nCategory: ${doc.stageName}\nSource: ${doc.clientName}\n\nThis is a placeholder document for the knowledge base viewer. In production, this would display the actual document content retrieved from the backend.`,
       }
       setPreviewDocument(preview)
       setPreviewOpen(true)
@@ -165,5 +160,6 @@ export function useKnowledgeState() {
     handlePreviewOpenChange,
     handleDocumentClick,
     handleUploadFile,
+    kbLoading,
   }
 }

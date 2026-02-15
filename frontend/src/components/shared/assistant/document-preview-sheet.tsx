@@ -45,7 +45,7 @@ interface DocumentPreviewSheetProps {
 export function DocumentPreviewSheet({ document, open, onOpenChange }: DocumentPreviewSheetProps) {
   if (!document) return null
 
-  const pages = splitIntoPages(document.mockContent)
+  const pages = splitIntoPages(document.content)
 
   return (
     <Sheet open={open} onOpenChange={onOpenChange}>
