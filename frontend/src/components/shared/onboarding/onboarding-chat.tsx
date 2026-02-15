@@ -1,9 +1,6 @@
 'use client'
 
-import { Construction } from 'lucide-react'
-
 import { ChatArea } from '@/components/shared/assistant/chat-area'
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { useOnboardingChat } from '@/hooks/use-onboarding-chat'
 
 export function OnboardingChat() {
@@ -14,19 +11,9 @@ export function OnboardingChat() {
       <div className="border-b px-6 py-4">
         <h1 className="text-lg font-semibold">License Onboarding</h1>
         <p className="text-muted-foreground text-sm">
-          AI-guided interview to determine your licensing requirements
+          AI-guided interview to determine your FINMA licensing requirements and set up your
+          application roadmap
         </p>
-      </div>
-
-      <div className="px-6 py-3">
-        <Alert>
-          <Construction className="h-4 w-4" />
-          <AlertTitle>Under Construction</AlertTitle>
-          <AlertDescription>
-            This onboarding flow is a preview. Full AI-powered onboarding with document generation
-            is coming soon.
-          </AlertDescription>
-        </Alert>
       </div>
 
       <ChatArea

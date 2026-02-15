@@ -13,101 +13,174 @@ Legal hierarchy:
 - Federal Council ordinance: LiqO (SR 952.06)
 - FINMA implementing regulation: FINMA Circular 2015/2 "Liquidity risks –
   banks" (margin nos. 1–520)
-- Planned replacement: LiqO-FINMA ordinance (consultation launched July 2025)
+- Planned replacement: LiqO-FINMA ordinance (consultation launched July 2025,
+  expected to replace Circular 2015/2 with a formal FINMA ordinance)
 
-Scope (Art. 1 LiqO): all banks under BankA, account-holding securities
-firms, financial groups of banks, and foreign bank branches in Switzerland.
+The LiqO transposes the Basel III liquidity framework into Swiss law,
+implementing both the Liquidity Coverage Ratio (LCR) and the Net Stable
+Funding Ratio (NSFR) as set by the Basel Committee on Banking Supervision.
+
+Scope (Art. 1 LiqO): all banks licensed under BankA, account-holding
+securities firms, financial groups of banks, and foreign bank branches
+in Switzerland (with certain adjustments).
 
 Purpose (Art. 2 LiqO): banks must at all times hold sufficient liquid assets
-to meet payment obligations, including under stress, and maintain sustainable
-liquidity reserves and appropriate financing structures.
+to meet payment obligations, including under stress conditions, and maintain
+adequately measured, sustainable liquidity reserves and appropriate financing
+structures.
+
 
 2. LIQUIDITY RISK MANAGEMENT FRAMEWORK (QUALITATIVE REQUIREMENTS)
 ------------------------------------------------------------------
 Articles 5–10 LiqO; FINMA Circular 2015/2 margin nos. 1–100.
 
-Art. 5 — General: banks shall manage liquidity risks proportionate to their
-size, type, scope, complexity, and riskiness, at entity and group level.
-Art. 6 — Identification and monitoring: processes for measuring, managing,
-and monitoring liquidity risks; early warning indicators required.
-Art. 7 — Risk mitigation: limit system covering counterparties, instruments,
-markets, currencies; diversified funding sources and maturities. Planned
-amendment (effective 2027): mandatory liquidity and financial planning.
-Art. 8 — Stress testing: institution-specific, market-wide, and combined
-stress scenarios; include off-balance sheet and contingent obligations.
-Art. 9 — Contingency funding plan: strategies for liquidity shortfalls;
-annual review and update required.
-Art. 10 — Board and senior management: approve liquidity risk strategy and
-risk tolerance; ensure adequate resources; receive timely reporting.
+Art. 5 — General risk management: banks shall manage liquidity risks
+proportionate to their size, type, scope, complexity, and riskiness of
+business activities, at both entity and group level.
+
+Art. 6 — Identification and monitoring: banks must establish processes and
+systems for identifying, measuring, managing, and monitoring liquidity risks.
+These must ensure sufficient liquidity at all times, unimpaired payment and
+settlement systems, and early warning indicators.
+
+Art. 7 — Risk mitigation: banks shall maintain a limit system covering
+counterparties, instrument types, markets, and currencies, plus a financing
+structure with diversified funding sources and maturities. Planned amendment
+to Art. 7 para. 1 (effective 1 January 2027): mandatory liquidity and
+financial planning as part of the TBTF reform package.
+
+Art. 8 — Stress testing: banks must define and run stress scenarios including
+institution-specific (name crisis), market-wide, and combined shocks. Must
+account for off-balance sheet exposures and contingent funding obligations
+from securitization vehicles and special purpose entities.
+
+Art. 9 — Contingency funding plan: every bank must have a plan setting out
+strategies and measures for addressing liquidity shortfalls in stress
+situations. The plan must be reviewed and updated at least annually.
+
+Art. 10 — Board and senior management responsibilities: approve liquidity
+risk strategy and risk tolerance; ensure adequate resources for liquidity
+risk management; oversee and review liquidity positions regularly; receive
+timely and relevant liquidity risk reporting.
+
 
 3. LIQUIDITY COVERAGE RATIO (LCR)
 -----------------------------------
 Articles 12–17e LiqO; FINMA Circular 2015/2 margin nos. 101–320.
 
-Art. 12 — All banks must comply with the LCR.
-Art. 13 — LCR = HQLA / Total Net Cash Outflows over 30 days. Minimum: >= 1
-(i.e., LCR >= 100%).
-Art. 14 — Stress scenario assumes combined idiosyncratic and market-wide
-shock: partial loss of retail/wholesale deposits, loss of secured financing,
-derivative outflows from downgrades, increased haircuts, facility drawdowns.
-Art. 14a — Calculated at least monthly; FINMA may require daily/weekly for
-Categories 1 and 2.
+Art. 12 — Obligation: all banks licensed under BankA must comply with LCR.
+
+Art. 13 — LCR calculation:
+    LCR = HQLA / Total Net Cash Outflows over 30 calendar days
+A bank fulfills LCR requirements if the quotient is at least 1 (LCR >= 100%).
+
+Art. 14 — Stress scenario assumptions: combined idiosyncratic and market-wide
+shock resulting in partial loss of retail/wholesale deposits, loss of secured
+short-term financing, derivative outflows from credit downgrades, increased
+secured lending haircuts, drawdowns on committed facilities, and obligations
+to fund contractual asset purchases.
+
+Art. 14a — LCR must be calculated at least monthly. FINMA may require more
+frequent calculation (daily or weekly) for systemically important banks
+(Categories 1 and 2).
+
 
 4. HIGH-QUALITY LIQUID ASSETS (HQLA)
 --------------------------------------
 Articles 15–15e LiqO; Annex 1 LiqO.
 
-Art. 15 — HQLA must be unencumbered, freely available, readily convertible
-to cash. Operational requirements: under treasury control, not co-mingled
-with trading, periodically tested via repo or sale.
+Art. 15 — General requirements: HQLA must be unencumbered, freely available,
+and readily convertible to cash in private markets without legal, regulatory,
+or operational restrictions. Operational requirements: under treasury or
+liquidity management control, not co-mingled with trading positions,
+periodically tested for market access via repo or outright sale.
 
 Composition limits:
-- Level 1: no cap
-- Level 2 (combined 2A + 2B): maximum 40% of HQLA
-- Level 2B: maximum 15% of HQLA
+- Level 1 assets: no cap (unlimited inclusion)
+- Level 2 assets (combined 2A + 2B): maximum 40% of total HQLA
+- Level 2B assets: maximum 15% of total HQLA
 
-Art. 15a — Level 1 (0% haircut): coins/banknotes, central bank reserves
-(incl. SNB), sovereign/central bank securities at 0% risk weight, Swiss
-Confederation bonds, domestic sovereign debt in local currency.
+Art. 15a — Level 1 HQLA (0% haircut):
+- Coins and banknotes
+- Central bank reserves (including SNB reserves)
+- Sovereign/central bank securities assigned 0% risk weight (BIS, IMF, ECB,
+  European Commission, multilateral development banks)
+- Swiss Confederation bonds and debt instruments
+- Domestic sovereign or central bank debt in local currency
 
-Art. 15b — Level 2A (15% haircut): sovereign/MDB securities at 20% risk
-weight, corporate bonds rated AA- or better, covered bonds per Art. 15d,
-Swiss canton/city/ESG securities meeting eligibility criteria.
-Level 2B (min 50% haircut): corporate debt rated A+ to BBB-, qualifying
-RMBS, common equity in major indices (e.g., SMI).
+Art. 15b — Level 2 HQLA:
+Level 2A (15% haircut):
+- Sovereign/MDB securities assigned 20% risk weight
+- Corporate debt securities rated AA- or better
+- Covered bonds rated AA- or better per Art. 15d requirements
+- Securities issued by Swiss cantons, cities, communities, and the
+  Emissionszentrale Schweizer Gemeinden (ESG) meeting eligibility criteria
 
-Art. 15c — Alternative Liquidity Approaches (ALA): committed SNB facilities
-or foreign currency HQLA with FX haircuts where domestic HQLA is scarce.
-Art. 15d — Covered bonds: must be under Pfandbriefgesetz, not self-issued,
-risk weight <= 20%, rated AA- or better.
+Level 2B (minimum 50% haircut):
+- Corporate debt securities rated A+ to BBB-
+- Qualifying residential mortgage-backed securities (RMBS)
+- Common equity shares in major stock indices (e.g., Swiss Market Index/SMI)
+
+Art. 15c — Alternative Liquidity Approaches (ALA): where domestic HQLA
+supply is insufficient, FINMA may permit committed SNB liquidity facilities
+or foreign currency HQLA with appropriate FX haircuts.
+
+Art. 15d — Covered bond requirements: must be subject to Pfandbriefgesetz
+public supervision, not self-issued or by affiliated entities, risk weight
+<= 20%, minimum credit rating AA- or equivalent.
+
+Art. 15e — All HQLA must be periodically monetized through repo or sale to
+test market access and the bank's liquidation capability.
+
 
 5. CASH OUTFLOWS CALCULATION
 ------------------------------
 Art. 16 LiqO; Annex 2 LiqO; Circular 2015/2 margin nos. 200–280.
 
-Outflows = outstanding balances x outflow rates per Annex 2:
-- Retail deposits (stable/insured): 5%; less stable: 10%
-- Term deposits > 30 days (no early withdrawal): 0%
-- Operational wholesale deposits: 25%
+Total expected cash outflows are calculated by multiplying outstanding
+balances by outflow rates specified in Annex 2.
+
+Key outflow categories and rates:
+Retail deposits:
+- Stable deposits (insured, established relationship): 5%
+- Less stable deposits: 10%
+- Term deposits > 30 days with no early withdrawal option: 0%
+
+Unsecured wholesale funding:
+- Operational deposits (clearing, custody, cash management): 25%
 - Non-operational deposits, non-financial corporates: 40%
 - Non-operational deposits, financial institutions: 100%
-- Secured by Level 1 HQLA: 0%; Level 2A: 15%; Level 2B: 25–50%
+- Other unsecured wholesale funding: 100%
+
+Secured funding:
+- Secured by Level 1 HQLA: 0%; by Level 2A: 15%; by Level 2B: 25–50%
 - All other secured funding: 100%
-- Downgrade triggers (up to 3 notches): 100% (margin no. 255)
-- Committed facilities: retail/SME 5%, corporates 10%/30%, banks 40%
+
+Additional outflows:
+- Downgrade triggers (up to 3 notches): 100% (Circular margin no. 255)
+- Committed facilities: retail/SME 5%, corporates 10% (credit) / 30%
+  (liquidity), banks and financial institutions 40%
+- Derivative cash outflows: contractual plus historical lookback for
+  collateral calls
+
 
 6. CASH INFLOWS CALCULATION
 -----------------------------
 Art. 17 LiqO; Annex 3 LiqO; Circular 2015/2 margin nos. 281–320.
 
-Inflows = contractual receivables x inflow rates per Annex 3.
-Cap: total inflows capped at 75% of total outflows (minimum 25% HQLA).
+Inflows are calculated by multiplying contractual receivables by inflow
+rates per Annex 3. Total inflows are capped at 75% of total expected
+outflows, requiring a minimum 25% HQLA buffer regardless of inflow levels.
 
-Key rates: reverse repos backed by Level 1: 0%; Level 2A: 15%; Level 2B:
-50%; other collateral: 100%. Performing loans — retail/SME and non-financial
-wholesale: 50%; financial institutions: 100%.
+Key inflow categories and rates:
+- Reverse repos backed by Level 1 HQLA: 0% (already counted as HQLA)
+- Backed by Level 2A: 15%; Level 2B: 50%; other collateral: 100%
+- Performing loans — retail/SME and non-financial wholesale: 50%
+- Financial institution counterparties: 100%
 
-FINMA may set bespoke inflow/outflow rates per Art. 17b LiqO.
+FINMA may set bespoke inflow/outflow rates deviating from Annexes 2 and 3
+for specific banks or categories (Art. 17b LiqO).
+
 
 7. NET STABLE FUNDING RATIO (NSFR)
 ------------------------------------
@@ -115,196 +188,269 @@ Articles 17f–17s LiqO; Annexes 4–5; Circular 2015/2 margin nos. 321–520.
 Effective 1 July 2021 (Federal Council amendment of 11 September 2020).
 
 Art. 17f — All banks must comply, except those exempt under the small banks
-regime (Art. 17e LiqO / Art. 47a CAO).
-Art. 17g — NSFR = ASF / RSF; minimum >= 1 (100%).
+regime (Art. 17e LiqO referencing Art. 47a CAO).
+
+Art. 17g — NSFR = Available Stable Funding (ASF) / Required Stable Funding
+(RSF). Minimum >= 1 (i.e., NSFR >= 100%).
 
 Art. 17h — Available Stable Funding (ASF) per Annex 4:
-- Regulatory capital, liabilities > 1 year: 100%
+- Regulatory capital (CET1, AT1, Tier 2 > 1 year), liabilities > 1 year: 100%
 - Stable retail/SME deposits < 1 year: 95%
 - Less stable retail/SME deposits < 1 year: 90%
-- Wholesale non-financial corporate < 1 year: 50%
+- Wholesale non-financial corporate funding < 1 year: 50%
 - Operational deposits: 50%
-- Other liabilities < 6 months: 0%
+- Other liabilities and capital instruments < 6 months: 0%
 
 Art. 17i — Required Stable Funding (RSF) per Annex 5:
 - Cash, central bank reserves, unencumbered Level 1 HQLA: 0%
-- Unencumbered Level 2A: 15%; Level 2B: 50%
-- HQLA encumbered for exceptional central bank ops: 0% (L1) / 15% (L2)
-- Loans to FIs < 6 months: 10%
+- Unencumbered Level 2A HQLA: 15%; Level 2B: 50%
+- HQLA encumbered for exceptional central bank operations: 0% (Level 1,
+  Annex 5 item 1.8) / 15% (Level 2, Annex 5 item 3.3)
+- Loans to financial institutions < 6 months: 10%
 - Performing corporate loans < 1 year: 50%
-- Residential mortgages >= 1 year, RW <= 35%: 65%
+- Residential mortgages >= 1 year with risk weight <= 35%: 65%
 - Other loans >= 1 year: 85%; all other assets: 100%
-- Off-balance sheet: irrevocable facilities 5%
+- Off-balance sheet irrevocable credit/liquidity facilities: 5%
+
 
 8. LIQUIDITY STRESS TESTING REQUIREMENTS
 ------------------------------------------
 Art. 8 LiqO; Circular 2015/2 margin nos. 60–85.
 
-Types: short-term (30 days, LCR-aligned), medium-term (30 days to 1 year),
-combined idiosyncratic and market-wide scenarios.
+Types of required stress tests:
+- Short-term (up to 30 days) aligned with LCR scenarios
+- Medium-term (30 days to 1 year) covering structural funding risks
+- Combined idiosyncratic and market-wide scenarios
 
-Stress factors: credit downgrade (up to 3 notches), retail/wholesale deposit
-loss, increased secured funding haircuts, margin calls, facility drawdowns,
-loss of market access, FX restrictions.
+Stress factors to consider: significant credit downgrade (up to 3 notches),
+retail/wholesale deposit loss, increased secured funding haircuts, large
+margin calls, facility drawdowns, loss of market access, FX convertibility
+and access restrictions.
 
-Frequency by category:
-- Category 1–2: at least quarterly (ad hoc as needed)
+Frequency by FINMA category:
+- Category 1–2: at least quarterly, with ad hoc tests as needed
 - Category 3: at least semi-annually
 - Category 4–5: at least annually
 
-Governance: results reported to board and senior management; integrated
-into contingency funding plan; assumptions reviewed regularly.
-FINMA conducts own supervisory stress tests for Categories 1 and 2.
+Governance: stress test results must be reported to the board and senior
+management, integrated into the contingency funding plan, and assumptions
+reviewed regularly. FINMA also conducts its own supervisory stress tests
+for banks in Categories 1 and 2.
+
 
 9. INTRADAY LIQUIDITY MANAGEMENT
 ----------------------------------
 Art. 7 LiqO; Circular 2015/2 margin nos. 86–100.
 
-Banks must meet payment/settlement obligations timely during each business
-day. Requirements: measure daily gross inflows/outflows, anticipate critical
-times, prioritize time-critical obligations, maintain intraday buffers,
-access SNB standing facilities where applicable, demonstrate ability to
-manage intraday stress impact.
+Banks must meet payment and settlement obligations on a timely basis during
+each business day, with tools tailored to risk profile, business activities,
+and systemic importance.
 
-Monitoring tools: real-time payment flow monitoring, intraday usage metrics,
-buffer tracking, time-specific obligation monitoring.
+Specific requirements:
+- Measure expected daily gross inflows/outflows
+- Anticipate critical settlement times and prioritize time-critical payments
+- Maintain sufficient intraday liquidity buffers
+- Access SNB standing facilities for intraday credit where applicable
+- Demonstrate ability to manage intraday stress events
 
-Enhanced for Category 1–2: daily monitoring/reporting, intraday stress
-simulations, direct FINMA reporting on intraday metrics.
+Monitoring tools: real-time payment flow monitoring, intraday liquidity
+usage metrics, available buffer tracking, time-specific obligation tracking.
+
+Enhanced requirements for Category 1–2 banks: daily intraday monitoring
+and reporting, simulation of intraday stress events, direct participant
+reporting to FINMA on intraday metrics.
+
 
 10. REPORTING OBLIGATIONS
 ---------------------------
 Art. 3–4 LiqO; Circular 2015/2 margin nos. 420–480.
 
-LCR reporting (cut-off: month-end):
-- Category 1–2: monthly (daily capability on request)
-- Category 3–5: monthly (simplified template for SBR banks)
+Art. 3 — FINMA defines reporting templates. Cut-off date: last calendar
+day of each month (LCR) or relevant period (NSFR).
 
-NSFR reporting:
+LCR reporting frequency:
+- Category 1–2 (systemically important): monthly, with daily capability
+  on request
+- Category 3–5: monthly (simplified template for SBR banks)
+- Submission: within 30 business days (reduced for SIBs)
+
+NSFR reporting frequency:
 - Category 1–2: monthly
 - Category 3: quarterly
 - Category 4–5: semi-annually (exempt SBR banks need not report)
 
-Additional reports: funding concentration, currency-specific LCR, maturity
-mismatch profiles, intraday metrics (Cat. 1–2).
+Additional reports: funding concentration metrics, currency-specific LCR
+for all significant currencies, maturity mismatch profiles, intraday
+liquidity metrics (Category 1–2 only).
 
-Art. 4 — SNB may request additional data under the National Bank Act
-(SR 951.11). Submitted via SNB eSurvey/EMI and/or FINMA EHP platform.
+Art. 4 — SNB may request additional liquidity data for monetary policy and
+financial stability under the National Bank Act (SR 951.11). Data submitted
+via SNB eSurvey/EMI and/or FINMA EHP platform.
+
 
 11. FINMA CATEGORY-SPECIFIC THRESHOLDS
 ----------------------------------------
-FINMA assigns banks to five categories per Annex 3 Banking Ordinance
-(BO; SR 952.02), based on total assets, assets under management, privileged
-deposits, and required capital.
+FINMA assigns banks to five supervisory categories per Annex 3 of the
+Banking Ordinance (BO; SR 952.02), based on total assets, assets under
+management, privileged deposits, and required capital.
 
-Category 1 (G-SIBs/D-SIBs): total assets typically > CHF 250bn; very high
-risk; full LCR/NSFR with daily monitoring; enhanced stress testing and
-intraday reporting; TBTF requirements apply. Example: UBS.
+Category 1 — Systemically important banks (G-SIBs/D-SIBs):
+Total assets typically > CHF 250 billion. Very high risk. Full LCR/NSFR
+with daily monitoring capability. Enhanced stress testing and intraday
+reporting. Subject to TBTF requirements. Example: UBS.
 
-Category 2: total assets typically CHF 50–250bn; high risk; full LCR/NSFR,
-monthly reporting; enhanced stress testing. Examples: Raiffeisen, ZKB.
+Category 2 — Large and important banks:
+Total assets typically CHF 50–250 billion. High risk. Full LCR/NSFR with
+monthly reporting. Enhanced stress testing. Examples: Raiffeisen, ZKB.
 
-Category 3: total assets typically CHF 15–50bn; significant risk; LCR
-monthly, NSFR quarterly; semi-annual stress testing minimum.
+Category 3 — Medium-large banks:
+Total assets typically CHF 15–50 billion. Significant risk. LCR monthly,
+NSFR quarterly reporting. Semi-annual stress testing minimum.
 
-Category 4: total assets typically CHF 1–15bn; medium risk; full LCR;
-NSFR required unless in SBR; NSFR reporting semi-annually.
+Category 4 — Medium-sized banks:
+Total assets typically CHF 1–15 billion. Medium risk. Full LCR required.
+NSFR required unless admitted to SBR. NSFR reporting semi-annually.
+Eligible for small banks regime.
 
-Category 5: total assets typically < CHF 1bn; low risk; LCR required
-(simplified under SBR); NSFR exempt under SBR; quantitative supervision.
+Category 5 — Small banks:
+Total assets typically < CHF 1 billion. Low risk. LCR required (simplified
+calculation under SBR). NSFR exempt under SBR. Supervised primarily via
+quantitative indicators.
 
-Small Banks Regime (Art. 47a CAO): Cat. 4–5 banks that are well-capitalized
-and liquid may apply. Benefits: NSFR exemption (Art. 17e), simplified LCR,
-reduced reporting. Criteria: leverage ratio above minimum, LCR > 110%,
-no complex activities, stable diversified funding.
+Small Banks Regime (SBR) — Art. 47a CAO:
+Categories 4 and 5 banks that are well-capitalized and liquid may apply.
+Benefits: NSFR exemption (Art. 17e LiqO), simplified LCR calculation,
+reduced reporting. Indicative criteria: leverage ratio significantly above
+minimum, LCR consistently above 110%, no complex activities, stable and
+diversified funding base.
+
 
 12. GROUP-LEVEL VS. ENTITY-LEVEL REQUIREMENTS
 -----------------------------------------------
 Art. 5 LiqO; Circular 2015/2 margin nos. 10–25.
 
-Entity level: each Swiss bank must individually comply with LCR, NSFR,
-and qualitative requirements. Entity-level reporting required.
+Entity level: each bank in Switzerland must individually comply with LCR,
+NSFR, and qualitative requirements (Arts. 5–10). Entity-level reporting
+is required.
 
-Group level: financial groups with Swiss parent must also comply on
-consolidated basis, including consolidated stress testing and contingency
-planning. Group-level reporting required.
+Group level: financial groups with a Swiss parent must also comply on a
+consolidated basis. Consolidated stress testing, contingency planning, and
+group-level reporting are required alongside entity-level reporting.
 
 Cross-border: FINMA may require separate LCR for material foreign
-subsidiaries/branches; banks must assess cross-jurisdictional asset access
-and report to FINMA during stress. If entity mainly funded by foreign
-branches, FINMA may exclude those inflows from LCR (Art. 17b).
+subsidiaries or branches. Banks must assess cross-jurisdictional asset
+access and inform FINMA during stress. Where an entity is mainly funded
+by foreign branches, FINMA may exclude those inflows from LCR (Art. 17b).
+Transferability restrictions from foreign regulators must be reflected in
+liquidity planning.
 
 Waivers: FINMA may grant partial entity-level LCR waivers within a group
-if enforceable internal liquidity support exists.
+if enforceable group-internal liquidity support mechanisms exist.
+
 
 13. EMERGENCY LIQUIDITY PLANNING
 ----------------------------------
 Art. 9 LiqO; Circular 2015/2 margin nos. 50–59.
 
-Contingency funding plan (CFP) must include:
-- Escalation procedures and quantitative trigger levels
-- Defined crisis management roles and responsibilities
-- Communication strategies (internal, external, regulators, SNB)
-- Emergency funding sources: asset sales/repos, SNB ELA, outflow deferral,
-  lending curtailment
-- Estimated timing and amounts of raisable liquidity
-- Legal/operational steps to access emergency funding
+Every bank must maintain a contingency funding plan (CFP) that includes:
+- Clear escalation procedures and quantitative trigger levels
+- Defined roles and responsibilities for crisis management
+- Communication strategies (internal, external, regulators, SNB, markets)
+- Identified emergency funding sources: asset sales/repos, SNB emergency
+  liquidity assistance (ELA), outflow deferral, lending curtailment
+- Estimated timing and amounts of liquidity raisable under stress
+- Legal and operational steps required to access emergency funding
 
-Review: annual minimum; simulation exercises recommended; results reported
-to board. For Cat. 1–2: CFP must align with TBTF recovery plan
-(Art. 64 BankA, Circular 2019/3).
+Review and testing: CFP must be reviewed and updated at least annually,
+with simulation exercises recommended. Results reported to the board.
 
-Notification: banks must immediately notify FINMA if liquidity falls below
-internal triggers or CFP is activated.
+For Categories 1 and 2: CFP must integrate with the TBTF recovery plan
+(Art. 64 BankA, FINMA Circular 2019/3).
+
+Banks must immediately notify FINMA if liquidity falls below established
+internal trigger levels or if the CFP is activated. FINMA may require
+specific measures to restore liquidity buffers.
+
 
 14. CONCENTRATION LIMITS
 --------------------------
 Art. 7 LiqO; Circular 2015/2 margin nos. 30–45.
 
-Banks must diversify funding across counterparties, instrument types,
-markets, currencies, and maturities. Formal limit system required covering
-individual counterparties, connected groups, instruments, and currencies.
-Limits must be board-approved, continuously monitored, and breaches
-escalated. Concentration metrics reported alongside LCR/NSFR data.
+Banks must ensure diversification of funding across:
+- Counterparties (no excessive reliance on single/few providers)
+- Instrument types (retail, wholesale, secured, unsecured, capital market)
+- Markets and geographies
+- Currencies
+- Maturities (avoid excessive short-term concentration)
 
-Related: maximum risk concentration per counterparty is 25% of eligible
-capital under risk diversification rules (Art. 97 CAO).
+A formal limit system is required covering individual counterparties, groups
+of connected counterparties, instruments, and currencies. Limits must be
+board-approved, continuously monitored, and breaches escalated to senior
+management. Concentration metrics are reported alongside LCR/NSFR data.
+
+Related: under risk diversification rules (Art. 97 CAO), maximum risk
+concentration per counterparty is 25% of a bank's eligible capital.
+
 
 15. CURRENCY-SPECIFIC REQUIREMENTS
 ------------------------------------
-Art. 17a LiqO; Circular 2015/2 margin nos. 300–320.
+Art. 17a LiqO; Circular 2015/2 margin nos. 300–325.
 
-Significant currency: foreign currency liabilities >= 5% of total
-liabilities (margin no. 325). Banks must calculate and monitor LCR
-separately in each significant currency, respecting the 15%/40% HQLA
-composition limits.
+Significant currency threshold: a foreign currency is significant if
+liabilities in that currency amount to >= 5% of total liabilities
+(margin no. 325). Banks must calculate and monitor LCR separately in
+each significant currency, respecting the 15%/40% HQLA composition limits.
 
-Currency mismatch: banks must assess ability to raise funds and convert
-HQLA under stress per currency; FX risk in stress tests; separate FX
-stress tests and CFP measures for each significant currency.
+Currency mismatch management: banks must assess ability to raise funds and
+convert HQLA in each significant currency under stress. FX risk from HQLA/
+outflow mismatches must be incorporated into stress tests. Separate FX stress
+tests and specific CFP measures are required for each significant currency.
 
-NSFR: primarily all-currency; FINMA may require currency-specific NSFR
-monitoring for material mismatches.
+NSFR: calculated on an all-currency basis; FINMA may require supplementary
+currency-specific NSFR monitoring for banks with material mismatches.
 
-CHF specifics: Confederation bonds are Level 1 HQLA without cap; SNB
-provides intraday/overnight CHF facilities; ALA (Art. 15c) applies where
-CHF HQLA supply is limited.
+CHF specifics: Swiss Confederation bonds qualify as Level 1 HQLA without
+cap. The SNB provides intraday and overnight CHF liquidity facilities.
+Where CHF HQLA supply is limited, the ALA mechanism (Art. 15c) may apply.
 
-16. TRANSITIONAL PROVISIONS
------------------------------
-LCR phase-in: 60% (2015), 70% (2016), 80% (2017), 90% (2018), 100% (2019).
-NSFR: full 100% from 1 July 2021 (no phase-in).
-SBR expansion: 2022–2023 with simplified LCR and NSFR exemption for
-eligible Cat. 4–5 banks.
 
-Planned amendments (2025+):
-- Art. 7 para. 1: mandatory liquidity/financial planning (eff. 2027)
-- LiqO-FINMA: replacing Circular 2015/2 (consultation closing Sept 2025)
+16. TRANSITIONAL PROVISIONS AND RECENT AMENDMENTS
+----------------------------------------------------
+LCR phase-in: 60% (2015), 70% (2016), 80% (2017), 90% (2018), full 100%
+from 1 January 2019. NSFR: full 100% from 1 July 2021, no phase-in.
+NSFR reporting obligations commenced 1 July 2021 (monthly Cat. 1–2,
+quarterly Cat. 3, semi-annually Cat. 4–5).
 
-Post-Credit Suisse reforms under review: LCR 30-day horizon adequacy,
-enhanced intraday monitoring for SIBs, holding company liquidity
-requirements, cross-border transferability, mandatory financial planning.
+Small banks regime expansion (2022–2023): simplified LCR calculation and
+NSFR exemption for eligible Category 4 and 5 banks under Art. 47a CAO.
+
+Planned future amendments (as of 2025):
+- Art. 7 para. 1 LiqO: mandatory liquidity and financial planning (part
+  of TBTF reform following the Credit Suisse crisis), expected 1 Jan 2027
+- LiqO-FINMA: new FINMA ordinance replacing Circular 2015/2, adopting
+  existing content with additional technical provisions; consultation
+  launched July 2025, closing 29 September 2025
+
+Post-Credit Suisse reforms under review: adequacy of LCR 30-day stress
+horizon (modern crises develop faster), enhanced intraday monitoring for
+SIBs, liquidity requirements for holding companies and parent entities,
+cross-border liquidity transferability, mandatory financial planning.
+
+Key related regulations:
+- Banking Ordinance (BO; SR 952.02): supervisory categorization (Annex 3)
+- Capital Adequacy Ordinance (CAO; SR 952.03): capital, leverage, SBR
+- FINMA Circular 2019/3: recovery and resolution for SIBs
+- National Bank Act (NBA; SR 951.11): SNB data collection and facilities
+
+Annexes to the LiqO:
+- Annex 1: HQLA definitions and eligibility criteria
+- Annex 2: Cash outflow categories and rates for LCR
+- Annex 3: Cash inflow categories and rates for LCR
+- Annex 4: ASF categories and factors for NSFR
+- Annex 5: RSF categories and factors for NSFR
+
 
 === END OF DOCUMENT ===
 Systematic reference: SR 952.06
-Last substantive update reflected: January 2025
+Last substantive update reflected: January 2025 (with references to planned
+amendments through 2027)

@@ -1676,13 +1676,340 @@ def get_insurance_checklist() -> list[ChecklistItem]:
     ]
 
 
+def get_fintech_checklist() -> list[ChecklistItem]:
+    """Checklist for FinTech License (Art. 1b BankA) — CHF 300K capital."""
+    return [
+        # Pre-consultation
+        _item(
+            "ft-01",
+            "pre_consultation",
+            "Prepare fintech business model description (deposit ceiling < CHF 100M)",
+            "finma",
+            14,
+        ),
+        _item(
+            "ft-02",
+            "pre_consultation",
+            "Draft regulatory classification memo (Art. 1b BankA eligibility)",
+            "finma",
+            10,
+        ),
+        _item(
+            "ft-03",
+            "pre_consultation",
+            "Email project outline to fintech@finma.ch for preliminary feedback",
+            "finma",
+            3,
+            ["ft-01"],
+        ),
+        _item(
+            "ft-04",
+            "pre_consultation",
+            "Self-register on FINMA EHP portal (2FA verification)",
+            "finma",
+            3,
+        ),
+        _item(
+            "ft-05",
+            "pre_consultation",
+            "Document pre-consultation meeting minutes",
+            "finma",
+            3,
+            ["ft-03"],
+        ),
+        # Legal structure
+        _item(
+            "ft-06",
+            "legal_structure",
+            "Register legal entity (AG, Kommandit-AG, or GmbH)",
+            "finma",
+            14,
+        ),
+        _item(
+            "ft-07",
+            "legal_structure",
+            "Prepare articles of association (fintech purpose restriction)",
+            "finma",
+            14,
+            ["ft-06"],
+        ),
+        _item(
+            "ft-08",
+            "legal_structure",
+            "Establish Swiss office address",
+            "finma",
+            7,
+            ["ft-06"],
+        ),
+        _item(
+            "ft-09",
+            "legal_structure",
+            "Obtain commercial register extract",
+            "finma",
+            7,
+            ["ft-06"],
+        ),
+        # Capital — lighter than banking
+        _item(
+            "ft-10",
+            "capital",
+            "Deposit minimum capital of CHF 300,000 fully paid-up",
+            "finma",
+            14,
+            ["ft-06"],
+        ),
+        _item(
+            "ft-11",
+            "capital",
+            "Open Swiss bank account for capital deposit",
+            "finma",
+            14,
+            ["ft-06"],
+        ),
+        # Ownership
+        _item(
+            "ft-12",
+            "documentation",
+            "Prepare share capital structure and shareholder register",
+            "finma",
+            7,
+            ["ft-06"],
+        ),
+        _item(
+            "ft-13",
+            "documentation",
+            "Complete qualified participation forms (10%+ holders)",
+            "finma",
+            7,
+            ["ft-12"],
+        ),
+        _item(
+            "ft-14",
+            "documentation",
+            "Prepare beneficial ownership declaration",
+            "finma",
+            7,
+            ["ft-12"],
+        ),
+        # Governance & personnel
+        _item(
+            "ft-15",
+            "governance",
+            "Appoint Swiss-resident director(s) with signing authority",
+            "finma",
+            14,
+            ["ft-06"],
+        ),
+        _item(
+            "ft-16",
+            "governance",
+            "Establish board of directors (composition, committees)",
+            "finma",
+            14,
+            ["ft-06"],
+        ),
+        _item(
+            "ft-17",
+            "governance",
+            "Appoint executive management team",
+            "finma",
+            21,
+            ["ft-16"],
+        ),
+        _item(
+            "ft-18",
+            "personnel",
+            "Complete FINMA personal questionnaires for all key persons",
+            "finma",
+            14,
+            ["ft-17"],
+        ),
+        _item(
+            "ft-19",
+            "personnel",
+            "Gather IDs, CVs, criminal records, debt extracts for key persons",
+            "finma",
+            14,
+            ["ft-17"],
+        ),
+        _item(
+            "ft-20",
+            "governance",
+            "Complete fit-and-proper declarations (Gewaehrsformular)",
+            "finma",
+            7,
+            ["ft-17"],
+        ),
+        # Business plan
+        _item(
+            "ft-21",
+            "application",
+            "Prepare 3-year business plan (demonstrate deposits < CHF 100M)",
+            "finma",
+            30,
+            ["ft-17"],
+        ),
+        # Compliance
+        _item(
+            "ft-22",
+            "compliance",
+            "Appoint AML compliance officer (Swiss-resident)",
+            "finma",
+            14,
+        ),
+        _item(
+            "ft-23",
+            "compliance",
+            "Draft AML/CFT framework and KYC procedures",
+            "finma",
+            21,
+            ["ft-22"],
+        ),
+        _item(
+            "ft-24",
+            "compliance",
+            "Implement transaction monitoring system",
+            "finma",
+            21,
+            ["ft-23"],
+        ),
+        _item(
+            "ft-25",
+            "compliance",
+            "Implement sanctions screening (SECO, UN, EU)",
+            "finma",
+            14,
+            ["ft-23"],
+        ),
+        _item(
+            "ft-26",
+            "compliance",
+            "Prepare deposit protection concept (no deposit insurance disclosure)",
+            "finma",
+            7,
+        ),
+        _item(
+            "ft-27",
+            "compliance",
+            "Draft investor/client information document (risk disclosures)",
+            "finma",
+            7,
+            ["ft-26"],
+        ),
+        _item(
+            "ft-28",
+            "compliance",
+            "Prepare deposit ceiling monitoring mechanism (real-time < CHF 100M)",
+            "finma",
+            14,
+        ),
+        # Internal controls
+        _item(
+            "ft-29",
+            "compliance",
+            "Prepare internal control system documentation",
+            "finma",
+            14,
+            ["ft-22"],
+        ),
+        _item(
+            "ft-30",
+            "compliance",
+            "Engage FINMA-recognized external auditor",
+            "finma",
+            14,
+        ),
+        # IT & operations
+        _item(
+            "ft-31",
+            "it_operations",
+            "Draft IT security policy and cybersecurity framework",
+            "finma",
+            21,
+        ),
+        _item(
+            "ft-32",
+            "it_operations",
+            "Prepare business continuity and disaster recovery plan",
+            "finma",
+            14,
+        ),
+        _item(
+            "ft-33",
+            "it_operations",
+            "Document core systems and data architecture",
+            "finma",
+            14,
+        ),
+        _item(
+            "ft-34",
+            "it_operations",
+            "Prepare data protection policy (Swiss DPA)",
+            "finma",
+            7,
+        ),
+        # Outsourcing
+        _item(
+            "ft-35",
+            "documentation",
+            "Document outsourcing arrangements with contracts",
+            "finma",
+            14,
+        ),
+        # SRO membership
+        _item(
+            "ft-36",
+            "compliance",
+            "Obtain SRO membership or apply for direct FINMA AML supervision",
+            "finma",
+            30,
+            ["ft-23"],
+        ),
+        # Application
+        _item(
+            "ft-37",
+            "application",
+            "Complete EHP fintech application template + annexes",
+            "finma",
+            14,
+            [
+                "ft-10",
+                "ft-14",
+                "ft-20",
+                "ft-21",
+                "ft-23",
+                "ft-30",
+                "ft-31",
+            ],
+        ),
+        _item(
+            "ft-38",
+            "application",
+            "Pay FINMA application processing fee",
+            "finma",
+            3,
+            ["ft-37"],
+        ),
+        _item(
+            "ft-39",
+            "application",
+            "FINMA assessment period (6-16 months)",
+            "finma",
+            270,
+            ["ft-38"],
+        ),
+    ]
+
+
 def get_checklist_for_pathway(pathway: str) -> list[ChecklistItem]:
+    if pathway == "finma_banking":
+        return get_finma_checklist()
+    if pathway == "finma_fintech":
+        return get_fintech_checklist()
     if pathway == "finma_securities":
         return get_securities_firm_checklist()
     if pathway == "finma_fund_management":
         return get_fund_management_checklist()
     if pathway == "finma_insurance":
         return get_insurance_checklist()
-    if pathway in ("finma_banking", "finma_fintech"):
-        return get_finma_checklist()
     return []

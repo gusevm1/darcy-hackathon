@@ -13,7 +13,7 @@ const welcomeMessage: ChatMessage = {
   id: 'onboard-welcome',
   role: 'assistant',
   content:
-    "Welcome to the FINMA license onboarding process. I'll help you determine which Swiss financial licenses you need and guide you through the initial requirements. Tell me about your company and the financial services you plan to offer.",
+    "Welcome to the FINMA license onboarding process! I'm DarcyAI, your regulatory intake specialist.\n\nI'll guide you through determining which Swiss financial license you need and set up your personalized application roadmap. I have deep knowledge of all FINMA license types including **Banking**, **FinTech**, **Securities Firm**, **Fund Management**, and **Insurance** licenses.\n\nTo get started, please tell me:\n1. **Your company name** and planned legal structure\n2. **What financial services** you plan to offer in Switzerland",
   citations: [],
   timestamp: new Date(),
 }
