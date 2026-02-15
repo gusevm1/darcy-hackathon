@@ -7,7 +7,7 @@ import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { useOnboardingChat } from '@/hooks/use-onboarding-chat'
 
 export function OnboardingChat() {
-  const { messages, sendMessage } = useOnboardingChat()
+  const { messages, sendMessage, isLoading } = useOnboardingChat()
 
   return (
     <div className="flex h-[calc(100vh-3.5rem)] flex-col">
@@ -34,6 +34,7 @@ export function OnboardingChat() {
         messages={messages}
         onSendMessage={sendMessage}
         placeholder="Tell us about your company and financial services..."
+        isLoading={isLoading}
       />
     </div>
   )

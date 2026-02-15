@@ -22,6 +22,7 @@ interface ChatAreaProps {
   onSelectChat?: (chatId: string) => void
   title?: string
   placeholder?: string
+  isLoading?: boolean
 }
 
 export function ChatArea({
@@ -34,6 +35,7 @@ export function ChatArea({
   onSelectChat,
   title = 'Compliance Assistant',
   placeholder = 'Ask about documents, compliance, or status...',
+  isLoading = false,
 }: ChatAreaProps) {
   const [inputValue, setInputValue] = useState('')
   const scrollAreaRef = useRef<HTMLDivElement>(null)
@@ -96,8 +98,9 @@ export function ChatArea({
             onChange={(e) => setInputValue(e.target.value)}
             placeholder={placeholder}
             className="flex-1"
+            disabled={isLoading}
           />
-          <Button type="submit" size="icon" disabled={!inputValue.trim()}>
+          <Button type="submit" size="icon" disabled={!inputValue.trim() || isLoading}>
             <Send className="h-4 w-4" />
             <span className="sr-only">Send message</span>
           </Button>

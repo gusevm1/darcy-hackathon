@@ -2,7 +2,7 @@
 
 import { useCallback, useRef, useState } from 'react'
 
-import { sendOnboardingMessage, startOnboarding } from '@/lib/api/onboard'
+import { startOnboarding, streamOnboardingChat } from '@/lib/api/onboard'
 import type { ChatMessage } from '@/types/assistant'
 
 function generateId() {
@@ -22,52 +22,83 @@ export function useOnboardingChat() {
   const [messages, setMessages] = useState<ChatMessage[]>([welcomeMessage])
   const [isLoading, setIsLoading] = useState(false)
   const sessionIdRef = useRef<string | null>(null)
+  const abortRef = useRef<AbortController | null>(null)
 
-  const sendMessage = useCallback(async (content: string) => {
-    const trimmed = content.trim()
-    if (!trimmed) return
+  const sendMessage = useCallback(
+    async (content: string) => {
+      const trimmed = content.trim()
+      if (!trimmed || isLoading) return
 
-    const userMsg: ChatMessage = {
-      id: generateId(),
-      role: 'user',
-      content: trimmed,
-      citations: [],
-      timestamp: new Date(),
-    }
-
-    setMessages((prev) => [...prev, userMsg])
-    setIsLoading(true)
-
-    try {
-      if (!sessionIdRef.current) {
-        const { sessionId } = await startOnboarding()
-        sessionIdRef.current = sessionId
-      }
-
-      const response = await sendOnboardingMessage(sessionIdRef.current, trimmed)
-
-      const assistantMsg: ChatMessage = {
+      const userMsg: ChatMessage = {
         id: generateId(),
-        role: 'assistant',
-        content: response.content,
+        role: 'user',
+        content: trimmed,
         citations: [],
         timestamp: new Date(),
       }
 
-      setMessages((prev) => [...prev, assistantMsg])
-    } catch {
-      const errorMsg: ChatMessage = {
-        id: generateId(),
+      const placeholderId = generateId()
+      const placeholderMsg: ChatMessage = {
+        id: placeholderId,
         role: 'assistant',
-        content: 'Sorry, I encountered an error processing your request. Please try again.',
+        content: '',
         citations: [],
         timestamp: new Date(),
       }
-      setMessages((prev) => [...prev, errorMsg])
-    } finally {
-      setIsLoading(false)
-    }
-  }, [])
+
+      setMessages((prev) => [...prev, userMsg, placeholderMsg])
+      setIsLoading(true)
+
+      try {
+        if (!sessionIdRef.current) {
+          const { sessionId } = await startOnboarding()
+          sessionIdRef.current = sessionId
+        }
+
+        abortRef.current = new AbortController()
+
+        await streamOnboardingChat(
+          sessionIdRef.current,
+          trimmed,
+          {
+            onText(chunk) {
+              setMessages((prev) =>
+                prev.map((m) =>
+                  m.id === placeholderId ? { ...m, content: m.content + chunk } : m,
+                ),
+              )
+            },
+            onError(err) {
+              setMessages((prev) =>
+                prev.map((m) =>
+                  m.id === placeholderId
+                    ? { ...m, content: 'Sorry, I encountered an error. Please try again.' }
+                    : m,
+                ),
+              )
+              console.error('Onboarding SSE error:', err)
+            },
+          },
+          abortRef.current.signal,
+        )
+      } catch {
+        setMessages((prev) =>
+          prev.map((m) =>
+            m.id === placeholderId
+              ? {
+                  ...m,
+                  content: m.content || 'Sorry, I encountered an error. Please try again.',
+                }
+              : m,
+          ),
+        )
+      } finally {
+        setIsLoading(false)
+        abortRef.current = null
+      }
+    },
+    [isLoading],
+  )
 
   return { messages, sendMessage, isLoading }
 }
