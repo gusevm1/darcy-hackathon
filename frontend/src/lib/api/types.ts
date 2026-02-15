@@ -95,12 +95,3 @@ export interface OnboardingSession {
   messages: OnboardingMessage[]
 }
 
-export interface ConsultMessage {
-  role: 'user' | 'assistant'
-  content: string
-}
-
-export interface ConsultResponse {
-  message: ConsultMessage
-  citations?: string[]
-}

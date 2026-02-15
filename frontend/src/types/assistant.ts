@@ -44,12 +44,6 @@ export interface ChatMessage {
   timestamp: Date
 }
 
-export interface CannedResponse {
-  keywords: string[]
-  content: string
-  citationDocIds: string[]
-}
-
 export interface ChatSession {
   id: string
   title: string

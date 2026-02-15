@@ -26,8 +26,8 @@ class ClientCreateRequest(BaseModel):
     services: list[str] | None = None
     handles_fiat: bool | None = None
     handles_client_assets: bool | None = None
-    operates_order_book: bool | None = None
-    token_types: list[str] | None = None
+    client_types: list[str] | None = None
+    cross_border_activities: bool | None = None
 
 
 class ClientUpdateRequest(BaseModel):
@@ -42,8 +42,8 @@ class ClientUpdateRequest(BaseModel):
     services: list[str] | None = None
     handles_fiat: bool | None = None
     handles_client_assets: bool | None = None
-    operates_order_book: bool | None = None
-    token_types: list[str] | None = None
+    client_types: list[str] | None = None
+    cross_border_activities: bool | None = None
     existing_capital_chf: int | None = None
     has_aml_officer: bool | None = None
     aml_officer_swiss_resident: bool | None = None
