@@ -9,7 +9,7 @@ services:
       - QDRANT_URL=http://qdrant:6333
     depends_on:
       qdrant:
-        condition: service_healthy
+        condition: service_started
     restart: unless-stopped
     volumes:
       - ./backend/src/data:/app/src/data
@@ -34,12 +34,6 @@ services:
       - qdrant_storage:/qdrant/storage
     environment:
       - QDRANT__STORAGE__ON_DISK_PAYLOAD=true
-    healthcheck:
-      test: ["CMD-SHELL", "curl -f http://localhost:6333/healthz || exit 1"]
-      interval: 30s
-      timeout: 5s
-      start_period: 10s
-      retries: 3
     deploy:
       resources:
         limits:
