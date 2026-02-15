@@ -32,9 +32,8 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
 
   const { documentStates, uploadDocument, resetDocument } = useDocumentState(client.documentStates)
 
-  const clientsForChat = useMemo(() => [client], [client])
-  const { chats, activeChatId, messages, createNewChat, switchChat, sendMessage } =
-    useChatSessions(clientsForChat)
+  const { chats, activeChatId, messages, createNewChat, switchChat, sendMessage, isLoading } =
+    useChatSessions(client.id)
 
   const {
     previewDocument,
@@ -93,6 +92,7 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
     createNewChat,
     switchChat,
     sendMessage,
+    isLoading,
     previewDocument,
     previewOpen,
     handlePreviewOpenChange,

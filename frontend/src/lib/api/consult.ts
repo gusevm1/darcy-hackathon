@@ -1,29 +1,7 @@
 import { type SSECallbacks, streamSSE } from './sse-client'
-import type { ConsultMessage, ConsultResponse, GapAnalysis, NextStep } from './types'
+import type { GapAnalysis, NextStep } from './types'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
-
-export async function sendConsultMessage(
-  message: string,
-  history: ConsultMessage[],
-  clientId?: string
-): Promise<ConsultResponse> {
-  if (!API_URL) {
-    const { matchCannedResponse } = await import('./mock-data')
-    const matched = matchCannedResponse(message)
-    return {
-      message: { role: 'assistant', content: matched.content },
-      citations: matched.citationDocIds,
-    }
-  }
-  const res = await fetch(`${API_URL}/api/consult/message`, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ message, history, clientId }),
-  })
-  if (!res.ok) throw new Error('Failed to send consult message')
-  return res.json()
-}
 
 export async function analyzeGaps(clientId: string): Promise<GapAnalysis> {
   if (!API_URL) {

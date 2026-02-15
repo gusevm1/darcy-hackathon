@@ -38,6 +38,7 @@ export default function RoadmapPage() {
           previewDocument={state.previewDocument}
           previewOpen={state.previewOpen}
           onPreviewOpenChange={state.handlePreviewOpenChange}
+          isLoading={state.isLoading}
         />
       }
     />

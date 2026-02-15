@@ -16,6 +16,7 @@ interface RoadmapChatPanelProps {
   previewDocument: DocumentPreview | null
   previewOpen: boolean
   onPreviewOpenChange: (open: boolean) => void
+  isLoading?: boolean
 }
 
 export function RoadmapChatPanel({
@@ -30,6 +31,7 @@ export function RoadmapChatPanel({
   previewDocument,
   previewOpen,
   onPreviewOpenChange,
+  isLoading,
 }: RoadmapChatPanelProps) {
   return (
     <div className="flex h-full flex-col">
@@ -43,6 +45,7 @@ export function RoadmapChatPanel({
         onNewChat={onNewChat}
         onSelectChat={onSelectChat}
         placeholder="Ask about this client's compliance status..."
+        isLoading={isLoading}
       />
       <DocumentPreviewSheet
         document={previewDocument}

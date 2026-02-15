@@ -1,11 +1,8 @@
 'use client'
 
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 
-import { matchCannedResponse } from '@/data/canned-responses'
-import { licenseDefinitions } from '@/data/license-stages'
-import { resolveCitations } from '@/lib/resolve-citations'
-import type { Client } from '@/types'
+import { streamConsultChat } from '@/lib/api/consult'
 import type { ChatMessage, ChatSession } from '@/types/assistant'
 
 function generateId() {
@@ -31,9 +28,11 @@ function createDefaultChat(): ChatSession {
   }
 }
 
-export function useChatSessions(clientsState: Client[]) {
+export function useChatSessions(clientId?: string) {
   const [chats, setChats] = useState<ChatSession[]>(() => [createDefaultChat()])
   const [activeChatId, setActiveChatId] = useState('default')
+  const [isLoading, setIsLoading] = useState(false)
+  const abortRef = useRef<AbortController | null>(null)
 
   const activeChat = useMemo(
     () => chats.find((c) => c.id === activeChatId) ?? chats[0],
@@ -64,9 +63,9 @@ export function useChatSessions(clientsState: Client[]) {
   }, [])
 
   const sendMessage = useCallback(
-    (content: string) => {
+    async (content: string) => {
       const trimmed = content.trim()
-      if (!trimmed) return
+      if (!trimmed || isLoading) return
 
       const userMsg: ChatMessage = {
         id: generateId(),
@@ -76,25 +75,22 @@ export function useChatSessions(clientsState: Client[]) {
         timestamp: new Date(),
       }
 
-      const matched = matchCannedResponse(trimmed)
-      const citations = resolveCitations(matched.citationDocIds, clientsState, licenseDefinitions)
-
-      const assistantMsg: ChatMessage = {
-        id: generateId(),
+      const placeholderId = generateId()
+      const placeholderMsg: ChatMessage = {
+        id: placeholderId,
         role: 'assistant',
-        content: matched.content,
-        citations,
+        content: '',
+        citations: [],
         timestamp: new Date(),
       }
 
       setChats((prev) =>
         prev.map((chat) => {
           if (chat.id !== activeChatId) return chat
-
           const isFirstUserMessage = !chat.messages.some((m) => m.role === 'user')
           return {
             ...chat,
-            messages: [...chat.messages, userMsg, assistantMsg],
+            messages: [...chat.messages, userMsg, placeholderMsg],
             title: isFirstUserMessage
               ? trimmed.slice(0, 50) + (trimmed.length > 50 ? '...' : '')
               : chat.title,
@@ -102,8 +98,67 @@ export function useChatSessions(clientsState: Client[]) {
           }
         })
       )
+      setIsLoading(true)
+
+      try {
+        abortRef.current = new AbortController()
+
+        await streamConsultChat(
+          trimmed,
+          {
+            onText(chunk) {
+              setChats((prev) =>
+                prev.map((chat) => {
+                  if (chat.id !== activeChatId) return chat
+                  return {
+                    ...chat,
+                    messages: chat.messages.map((m) =>
+                      m.id === placeholderId ? { ...m, content: m.content + chunk } : m
+                    ),
+                  }
+                })
+              )
+            },
+            onError(err) {
+              setChats((prev) =>
+                prev.map((chat) => {
+                  if (chat.id !== activeChatId) return chat
+                  return {
+                    ...chat,
+                    messages: chat.messages.map((m) =>
+                      m.id === placeholderId
+                        ? { ...m, content: 'Sorry, I encountered an error. Please try again.' }
+                        : m
+                    ),
+                  }
+                })
+              )
+              console.error('Consult SSE error:', err)
+            },
+          },
+          clientId,
+          abortRef.current.signal
+        )
+      } catch {
+        setChats((prev) =>
+          prev.map((chat) => {
+            if (chat.id !== activeChatId) return chat
+            return {
+              ...chat,
+              messages: chat.messages.map((m) =>
+                m.id === placeholderId
+                  ? { ...m, content: m.content || 'Sorry, I encountered an error. Please try again.' }
+                  : m
+              ),
+            }
+          })
+        )
+      } finally {
+        setIsLoading(false)
+        abortRef.current = null
+      }
     },
-    [clientsState, activeChatId]
+    [activeChatId, clientId, isLoading]
   )
 
   return {
@@ -113,5 +168,6 @@ export function useChatSessions(clientsState: Client[]) {
     createNewChat,
     switchChat,
     sendMessage,
+    isLoading,
   }
 }
