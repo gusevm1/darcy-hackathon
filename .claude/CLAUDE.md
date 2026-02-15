@@ -113,7 +113,31 @@ This project has the shadcn MCP server configured (`.mcp.json` at repo root). Yo
 
 ---
 
-## Deploying to EC2
+## Deploying Frontend to Vercel
+
+### Project Details
+- **Vercel Project:** `darcy-hackathon` (team: `maxims-projects-e4175e3c`)
+- **Production URL:** https://darcy-hackathon.vercel.app
+- **Root Directory:** `frontend/` (configured in Vercel project settings)
+- **Git Integration:** Connected to `gusevm1/darcy-hackathon` — pushes to `main` auto-deploy to production
+
+### How It Deploys
+Pushing to `main` triggers an automatic Vercel production build. No manual CLI deploy needed.
+
+### CLI Deploy Caveats
+- **Do NOT run `vercel` from inside `frontend/`** — Vercel's root directory setting is already `frontend/`, so running from there doubles the path to `frontend/frontend/`. Always run from the repo root.
+- **Use `--archive=tgz`** if deploying via CLI to avoid hitting the file upload rate limit (`api-upload-free` cap of 5000 requests). Example: `vercel --prod --yes --archive=tgz`
+- **Prefer Git-triggered deploys** over CLI deploys — just push to `main` and let the integration handle it.
+- The `.vercel/` directory is gitignored. If a fresh clone needs linking, run `vercel link` from the repo root.
+
+### Environment Variables
+Set these in Vercel project settings (Settings → Environment Variables), not in `.env` files:
+- `NEXT_PUBLIC_API_URL` — Backend API base URL (currently `http://18.195.13.46`)
+- `NEXT_PUBLIC_APP_URL` — Frontend URL (defaults to `http://localhost:3000` if unset)
+
+---
+
+## Deploying Backend to EC2
 
 ### Connection Details
 - **Instance:** t4g.small (ARM64, Ubuntu 24.04) — `i-0bdcad744a86d60c8`
@@ -159,5 +183,6 @@ sudo docker compose down && sudo docker compose up -d --build
 ### Full Push + Deploy Workflow
 1. Run pre-commit checks (see "Before Committing" above)
 2. `git push origin main`
-3. SSH into EC2, pull, and rebuild (see Deploy Steps)
-4. Verify with health check and document listing
+3. **Frontend:** Vercel auto-deploys from the push — no action needed
+4. **Backend:** SSH into EC2, pull, and rebuild (see Deploy Steps above)
+5. Verify both: Vercel production URL + EC2 health check and document listing
