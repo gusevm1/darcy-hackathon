@@ -49,3 +49,13 @@ export interface Client {
   startDate: string
   contactEmail: string
 }
+
+export interface EHPComment {
+  id: string
+  documentId: string
+  author: string
+  role: 'finma-reviewer' | 'applicant' | 'consultant' | 'auditor'
+  content: string
+  timestamp: string
+  resolved: boolean
+}
