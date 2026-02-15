@@ -110,3 +110,54 @@ This project has the shadcn MCP server configured (`.mcp.json` at repo root). Yo
 - `cd backend && ruff check .` — no lint errors
 - `cd backend && mypy src/` — no type errors
 - `cd backend && pytest` — all tests pass
+
+---
+
+## Deploying to EC2
+
+### Connection Details
+- **Instance:** t4g.small (ARM64, Ubuntu 24.04) — `i-0bdcad744a86d60c8`
+- **Elastic IP:** `18.195.13.46`
+- **Region:** eu-central-1 (Frankfurt)
+- **SSH:** `ssh -i ~/.ssh/darcy-hackathon-key.pem ubuntu@18.195.13.46`
+- **Repo on EC2:** `/home/ubuntu/darcy-hackathon` (branch: `main`)
+- **Stack:** Docker Compose (API on port 8000 + Qdrant on 6333) behind Nginx reverse proxy (port 80)
+- **Systemd:** `darcy-api.service` auto-restarts Docker Compose on reboot
+- **API Base URL:** `http://18.195.13.46`
+
+### Deploy Steps (after pushing to `main`)
+```bash
+ssh -i ~/.ssh/darcy-hackathon-key.pem ubuntu@18.195.13.46
+cd /home/ubuntu/darcy-hackathon && git pull origin main
+sudo docker compose down && sudo docker compose up -d --build
+```
+Use `--build` whenever `requirements.txt`, `Dockerfile`, or source files change.
+
+### Verify Deployment
+```bash
+# Health check
+curl -s http://18.195.13.46/health
+
+# Check indexed documents (expect 10)
+curl -s http://18.195.13.46/api/kb/documents | python3 -m json.tool
+
+# Test search
+curl -s -X POST http://18.195.13.46/api/kb/search \
+  -H "Content-Type: application/json" \
+  -d '{"query": "test query", "top_k": 3}' | python3 -m json.tool
+```
+
+### Rollback
+```bash
+ssh -i ~/.ssh/darcy-hackathon-key.pem ubuntu@18.195.13.46
+cd /home/ubuntu/darcy-hackathon
+git log --oneline -5          # find the good commit
+git checkout <commit-hash>
+sudo docker compose down && sudo docker compose up -d --build
+```
+
+### Full Push + Deploy Workflow
+1. Run pre-commit checks (see "Before Committing" above)
+2. `git push origin main`
+3. SSH into EC2, pull, and rebuild (see Deploy Steps)
+4. Verify with health check and document listing
