@@ -20,6 +20,7 @@ class ConsultChatRequest(BaseModel):
     client_id: str | None = None
     message: str
     conversation_history: list[dict[str, Any]] = []
+    client_context: dict[str, Any] | None = None
 
 
 class NextStepsResponse(BaseModel):
@@ -34,16 +35,19 @@ async def consult_chat(
     request: Request, body: ConsultChatRequest
 ) -> EventSourceResponse:
     """Stream a consultant conversation turn. Optionally scoped to a client."""
+    # Resolve client_id: only keep it if the client exists in the backend DB.
+    resolved_client_id = body.client_id
     if body.client_id:
         client = await client_store.get_client(body.client_id)
         if client is None:
-            raise HTTPException(status_code=404, detail="Client not found")
+            resolved_client_id = None
 
     async def event_generator() -> AsyncGenerator[str, None]:
         async for chunk in run_consultant_turn(
             body.message,
             body.conversation_history,
-            body.client_id,
+            resolved_client_id,
+            body.client_context,
         ):
             if await request.is_disconnected():
                 break

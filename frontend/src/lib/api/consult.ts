@@ -59,15 +59,28 @@ export async function getNextSteps(clientId: string): Promise<NextStep[]> {
   return res.json()
 }
 
+export interface ClientContext {
+  name: string
+  company: string
+  licenseType: string
+  currentStageName: string
+  documentSummary: string
+}
+
 export function streamConsultChat(
   message: string,
   callbacks: SSECallbacks,
   clientId?: string,
+  clientContext?: ClientContext,
   signal?: AbortSignal
 ) {
   return streamSSE(
     '/api/consult/chat',
-    { message, ...(clientId ? { client_id: clientId } : {}) },
+    {
+      message,
+      ...(clientId ? { client_id: clientId } : {}),
+      ...(clientContext ? { client_context: clientContext } : {}),
+    },
     callbacks,
     signal
   )

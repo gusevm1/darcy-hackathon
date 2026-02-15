@@ -2,7 +2,7 @@
 
 import { useCallback, useMemo, useRef, useState } from 'react'
 
-import { streamConsultChat } from '@/lib/api/consult'
+import { type ClientContext, streamConsultChat } from '@/lib/api/consult'
 import type { ChatMessage, ChatSession } from '@/types/assistant'
 
 function generateId() {
@@ -28,7 +28,7 @@ function createDefaultChat(): ChatSession {
   }
 }
 
-export function useChatSessions(clientId?: string) {
+export function useChatSessions(clientId?: string, clientContext?: ClientContext) {
   const [chats, setChats] = useState<ChatSession[]>(() => [createDefaultChat()])
   const [activeChatId, setActiveChatId] = useState('default')
   const [isLoading, setIsLoading] = useState(false)
@@ -137,6 +137,7 @@ export function useChatSessions(clientId?: string) {
             },
           },
           clientId,
+          clientContext,
           abortRef.current.signal
         )
       } catch {
@@ -158,7 +159,7 @@ export function useChatSessions(clientId?: string) {
         abortRef.current = null
       }
     },
-    [activeChatId, clientId, isLoading]
+    [activeChatId, clientId, clientContext, isLoading]
   )
 
   return {

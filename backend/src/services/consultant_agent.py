@@ -303,6 +303,7 @@ async def run_consultant_turn(
     user_message: str,
     conversation_history: list[dict[str, Any]],
     client_id: str | None = None,
+    client_context: dict[str, Any] | None = None,
 ) -> AsyncIterator[str]:
     """Run one turn of the consultant conversation. Yields SSE JSON events."""
     # Build system prompt with optional client context
@@ -321,6 +322,17 @@ async def run_consultant_turn(
             system += f"- Checklist: {done}/{total} complete\n"
             unresolved = sum(1 for f in client.flags if not f.resolved)
             system += f"- Flags: {unresolved} unresolved\n"
+    elif client_context:
+        # Frontend-provided client context (demo/mock data not in backend DB)
+        system += "\n\n**Current client context (from application):**\n"
+        system += f"- Name: {client_context.get('name', 'Unknown')}\n"
+        system += f"- Company: {client_context.get('company', 'Unknown')}\n"
+        system += f"- License Type: {client_context.get('licenseType', 'Unknown')}\n"
+        stage_name = client_context.get("currentStageName", "Unknown")
+        system += f"- Current Stage: {stage_name}\n"
+        doc_summary = client_context.get("documentSummary", "")
+        if doc_summary:
+            system += f"- Documents: {doc_summary}\n"
 
     messages: list[anthropic.types.MessageParam] = list(conversation_history)  # type: ignore[arg-type]
     messages.append({"role": "user", "content": user_message})

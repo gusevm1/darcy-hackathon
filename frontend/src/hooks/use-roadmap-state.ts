@@ -4,6 +4,7 @@ import { useCallback, useMemo, useState } from 'react'
 
 import { clients as allClients } from '@/data/clients'
 import { licenseDefinitions } from '@/data/license-stages'
+import type { ClientContext } from '@/lib/api/consult'
 import type { Citation } from '@/types/assistant'
 
 import { useChatSessions } from './use-chat-sessions'
@@ -32,8 +33,21 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
 
   const { documentStates, uploadDocument, resetDocument } = useDocumentState(client.documentStates)
 
+  const clientContext = useMemo((): ClientContext => {
+    const stageName = definition?.stages[client.currentStageIndex]?.name ?? 'Unknown'
+    const approved = client.documentStates.filter((d) => d.status === 'approved').length
+    const total = client.documentStates.length
+    return {
+      name: client.name,
+      company: client.company,
+      licenseType: client.licenseType,
+      currentStageName: stageName,
+      documentSummary: `${approved} of ${total} documents approved`,
+    }
+  }, [client, definition])
+
   const { chats, activeChatId, messages, createNewChat, switchChat, sendMessage, isLoading } =
-    useChatSessions(client.id)
+    useChatSessions(client.id, clientContext)
 
   const {
     previewDocument,
