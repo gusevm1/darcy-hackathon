@@ -1,4 +1,4 @@
-import { type SSECallbacks, streamSSE } from './sse-client'
+import { type SSECallbacks, resolveUrl, streamSSE } from './sse-client'
 import type { GapAnalysis, NextStep } from './types'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
@@ -16,7 +16,7 @@ export async function analyzeGaps(clientId: string): Promise<GapAnalysis> {
       critical_blockers: [],
     }
   }
-  const res = await fetch(`${API_URL}/api/consult/analyze-gaps/${clientId}`, {
+  const res = await fetch(resolveUrl(`/api/consult/analyze-gaps/${clientId}`), {
     method: 'POST',
   })
   if (!res.ok) throw new Error('Failed to analyze gaps')
@@ -52,7 +52,7 @@ export async function getNextSteps(clientId: string): Promise<NextStep[]> {
       },
     ]
   }
-  const res = await fetch(`${API_URL}/api/consult/next-steps/${clientId}`, {
+  const res = await fetch(resolveUrl(`/api/consult/next-steps/${clientId}`), {
     method: 'POST',
   })
   if (!res.ok) throw new Error('Failed to get next steps')

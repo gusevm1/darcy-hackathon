@@ -1,4 +1,36 @@
-const API_URL = process.env.NEXT_PUBLIC_API_URL ?? ''
+/**
+ * Resolves the base URL for API requests.
+ * In production (Vercel), routes through /api/proxy to avoid mixed-content.
+ * In development, hits the backend directly if NEXT_PUBLIC_API_URL is set.
+ */
+function getBaseUrl(): string {
+  const directUrl = process.env.NEXT_PUBLIC_API_URL
+  if (!directUrl) return ''
+
+  // If running in the browser on HTTPS, use the same-origin proxy to avoid mixed content
+  if (typeof window !== 'undefined' && window.location.protocol === 'https:') {
+    return ''
+  }
+
+  return directUrl
+}
+
+/**
+ * Resolves the full path for an API call.
+ * When proxying, rewrites /api/foo → /api/proxy/foo
+ */
+function resolveUrl(path: string): string {
+  const base = getBaseUrl()
+  if (base) return `${base}${path}`
+
+  // Proxy mode: /api/onboard/chat → /api/proxy/onboard/chat
+  if (path.startsWith('/api/')) {
+    return `/api/proxy/${path.slice(5)}`
+  }
+  return path
+}
+
+export { resolveUrl }
 
 export interface SSECallbacks {
   onText?: (chunk: string) => void
@@ -13,7 +45,9 @@ export async function streamSSE(
   callbacks: SSECallbacks,
   signal?: AbortSignal
 ): Promise<void> {
-  const res = await fetch(`${API_URL}${path}`, {
+  const url = resolveUrl(path)
+
+  const res = await fetch(url, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(body),

@@ -1,4 +1,4 @@
-import { type SSECallbacks, streamSSE } from './sse-client'
+import { type SSECallbacks, resolveUrl, streamSSE } from './sse-client'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
@@ -6,7 +6,7 @@ export async function startOnboarding(): Promise<{ sessionId: string }> {
   if (!API_URL) {
     return { sessionId: crypto.randomUUID() }
   }
-  const res = await fetch(`${API_URL}/api/onboard/start`, { method: 'POST' })
+  const res = await fetch(resolveUrl('/api/onboard/start'), { method: 'POST' })
   if (!res.ok) throw new Error('Failed to start onboarding')
   const data = (await res.json()) as { client_id: string }
   return { sessionId: data.client_id }
