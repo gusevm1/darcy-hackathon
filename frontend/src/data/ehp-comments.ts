@@ -258,26 +258,6 @@ export const ehpComments: EHPComment[] = [
     timestamp: '2025-10-28T10:00:00Z',
     resolved: true,
   },
-  {
-    id: 'ehp-032',
-    documentId: 'banking-3-4',
-    author: 'A. Weber',
-    role: 'finma-reviewer',
-    content:
-      'IT security concept needs to address cloud infrastructure risks specifically. Please add a section on cloud service provider oversight per FINMA Circular 2018/3.',
-    timestamp: '2025-11-05T14:00:00Z',
-    resolved: false,
-  },
-  {
-    id: 'ehp-033',
-    documentId: 'banking-3-7',
-    author: 'M. Brunner',
-    role: 'finma-reviewer',
-    content:
-      'Liquidity framework is sound. LCR projections show adequate buffers. Please include NSFR calculation as well for completeness.',
-    timestamp: '2025-11-10T09:30:00Z',
-    resolved: false,
-  },
 ]
 
 /**

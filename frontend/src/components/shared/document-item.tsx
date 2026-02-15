@@ -8,7 +8,6 @@ import {
   Eye,
   Loader2,
   MessageSquare,
-  RefreshCw,
   Upload,
   XCircle,
 } from 'lucide-react'
@@ -175,31 +174,18 @@ export function DocumentItem({
               </Button>
             )}
 
-            {status === 'not-started' && (
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={triggerFilePicker}
-                disabled={isUploading}
-              >
-                <Upload className="mr-1 h-3 w-3" />
-                Upload
-              </Button>
-            )}
-            {(status === 'uploaded' ||
-              status === 'rejected' ||
-              status === 'error' ||
-              status === 'verified') && (
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={triggerFilePicker}
-                disabled={isUploading}
-              >
-                <RefreshCw className="mr-1 h-3 w-3" />
-                Replace
-              </Button>
-            )}
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={triggerFilePicker}
+              disabled={isUploading || status === 'approved'}
+              className={cn(
+                status === 'approved' && 'opacity-50 cursor-not-allowed'
+              )}
+            >
+              <Upload className="mr-1 h-3 w-3" />
+              Upload
+            </Button>
           </div>
         </div>
 
