@@ -2,11 +2,16 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
-import { clients } from '@/data/clients'
+import { clients as staticClients } from '@/data/clients'
 import { licenseDefinitions } from '@/data/license-stages'
+import {
+  downloadDocument,
+  listDocuments as listClientDocuments,
+} from '@/lib/api/client-documents'
 import { listDocuments } from '@/lib/api/kb'
 import type { KBDocument } from '@/lib/api/types'
 import { buildFileTree } from '@/lib/build-file-tree'
+import type { Client } from '@/types'
 import type { DocumentPreview, FileTreeClientFolder, FileTreeDocument } from '@/types/assistant'
 
 import { useDocumentPreview } from './use-document-preview'
@@ -77,6 +82,7 @@ export function useKnowledgeState() {
   const [activeTab, setActiveTab] = useState<KnowledgeTab>('clients')
   const [kbDocs, setKbDocs] = useState<KBDocument[]>([])
   const [kbLoading, setKbLoading] = useState(false)
+  const [liveClients, setLiveClients] = useState<Client[]>(staticClients)
 
   const { expandedNodes, highlightedDocumentId, toggleNode } = useFileTree()
 
@@ -87,6 +93,39 @@ export function useKnowledgeState() {
     setPreviewOpen,
     handlePreviewOpenChange,
   } = useDocumentPreview()
+
+  // Sync client document states with backend
+  useEffect(() => {
+    let cancelled = false
+    async function syncClients() {
+      const updated = await Promise.all(
+        staticClients.map(async (client) => {
+          try {
+            const backendDocs = await listClientDocuments(client.id)
+            const backendMap = new Map(backendDocs.map((d) => [d.document_id, d]))
+            const mergedStates = client.documentStates.map((s) => {
+              const bd = backendMap.get(s.documentId)
+              if (bd) {
+                return {
+                  documentId: s.documentId,
+                  status: bd.status === 'pending' ? ('uploaded' as const) : (bd.status as typeof s.status),
+                  fileName: bd.file_name,
+                  uploadedAt: bd.uploaded_at,
+                }
+              }
+              return s
+            })
+            return { ...client, documentStates: mergedStates }
+          } catch {
+            return client
+          }
+        })
+      )
+      if (!cancelled) setLiveClients(updated)
+    }
+    syncClients()
+    return () => { cancelled = true }
+  }, [])
 
   useEffect(() => {
     let cancelled = false
@@ -107,7 +146,7 @@ export function useKnowledgeState() {
     }
   }, [])
 
-  const clientTree = useMemo(() => buildFileTree(clients, licenseDefinitions), [])
+  const clientTree = useMemo(() => buildFileTree(liveClients, licenseDefinitions), [liveClients])
   const generalTree = useMemo(() => buildGeneralInfoTree(), [])
   const internalTree = useMemo(() => buildInternalKBTreeFromDocs(kbDocs), [kbDocs])
 
@@ -127,6 +166,11 @@ export function useKnowledgeState() {
       const definition = licenseDefinitions.find((d) =>
         d.stages.some((s) => s.documents.some((dd) => dd.id === doc.documentId))
       )
+      const reqDoc = definition?.stages
+        .flatMap((s) => s.documents)
+        .find((dd) => dd.id === doc.documentId)
+
+      // Show preview immediately with loading content
       const preview: DocumentPreview = {
         documentId: doc.documentId,
         documentName: doc.name,
@@ -135,13 +179,29 @@ export function useKnowledgeState() {
         stageName: doc.stageName,
         status: doc.status,
         fileName: doc.fileName,
-        category: 'General',
-        description: `${doc.name} — part of the ${doc.stageName} stage.`,
+        category: reqDoc?.category ?? 'General',
+        description: reqDoc?.description ?? `${doc.name} — part of the ${doc.stageName} stage.`,
         summary: `This document covers ${doc.name.toLowerCase()} requirements${definition ? ` under ${definition.legalBasis}` : ''}.`,
-        content: `DOCUMENT: ${doc.name}\n\nCategory: ${doc.stageName}\nSource: ${doc.clientName}\n\nThis is a placeholder document for the knowledge base viewer. In production, this would display the actual document content retrieved from the backend.`,
+        content: 'Loading document content…',
       }
       setPreviewDocument(preview)
       setPreviewOpen(true)
+
+      // Fetch actual content from backend
+      if (doc.clientId && doc.clientId !== 'internal-kb') {
+        downloadDocument(doc.clientId, doc.documentId)
+          .then((blob) => blob.text())
+          .then((text) => {
+            setPreviewDocument((prev) => (prev?.documentId === doc.documentId ? { ...prev, content: text } : prev))
+          })
+          .catch(() => {
+            setPreviewDocument((prev) =>
+              prev?.documentId === doc.documentId
+                ? { ...prev, content: 'Failed to load document content.' }
+                : prev
+            )
+          })
+      }
     },
     [setPreviewDocument, setPreviewOpen]
   )
