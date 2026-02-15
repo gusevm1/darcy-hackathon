@@ -1,0 +1,455 @@
+FINMA FULL BANKING LICENSE FOR CRYPTO BUSINESSES
+==================================================
+
+1. OVERVIEW AND LEGAL BASIS
+----------------------------
+
+The Swiss Financial Market Supervisory Authority (FINMA) issues banking licenses
+under the Federal Act on Banks and Savings Banks (Banking Act, BankA; SR 952.0)
+and its implementing ordinance, the Banking Ordinance (BankO; SR 952.02). A full
+banking license is the most comprehensive authorization available in Switzerland's
+financial regulatory framework and permits the holder to accept deposits from the
+public on a commercial basis, grant loans, and conduct all banking activities
+without restriction.
+
+For crypto and digital-asset businesses, the full banking license becomes
+relevant when the business model involves accepting customer deposits denominated
+in fiat currency or crypto assets that qualify as deposits under Swiss law, or
+when operating a centralized exchange with an order book and matching engine that
+does not qualify for the more limited DLT Trading Facility license.
+
+The legal basis for the licensing requirement is Article 1a BankA, which states
+that any person or entity that commercially accepts deposits from the public or
+publicly solicits deposits requires a banking license from FINMA. FINMA's Circular
+2008/3 ("Public deposits at non-banks") further clarifies when crypto-related
+activities trigger this requirement.
+
+
+2. WHEN IS A BANKING LICENSE REQUIRED?
+---------------------------------------
+
+A full banking license is required in the following scenarios relevant to crypto
+businesses:
+
+(a) Commercial deposit-taking: If a crypto platform accepts fiat currency
+    deposits from clients that exceed the scope of the FinTech license (i.e.,
+    deposits exceeding CHF 100 million or deposits that are invested or bear
+    interest), a full banking license is mandatory.
+
+(b) Operating a centralized exchange with order book: Running a matching engine
+    that pairs buy and sell orders for crypto assets and holds customer funds in
+    an omnibus account structure generally requires a banking license, unless the
+    platform qualifies as a DLT Trading Facility under FMIA.
+
+(c) Lending and credit activities: If a crypto business extends loans or credit
+    facilities using customer deposits, it must hold a banking license.
+
+(d) Stablecoin issuance: Issuing stablecoins backed by fiat currency reserves
+    where the issuer accepts funds from the public may constitute deposit-taking
+    and require a banking license, depending on the structure.
+
+(e) Yield-generating products: Offering interest or yield on deposited crypto
+    assets or fiat may trigger the deposit-taking requirement if the yield is
+    generated through lending or investment of those deposits.
+
+Activities that do NOT require a banking license include pure brokerage (matching
+buyers and sellers without holding funds), custody-only services (which may fall
+under the FinTech license or SRO membership), and advisory services.
+
+
+3. CAPITAL REQUIREMENTS
+------------------------
+
+The minimum capital requirement for a banking license in Switzerland is
+CHF 10 million in fully paid-up share capital. This is a statutory minimum under
+Article 3 paragraph 2 letter b BankA. In practice, FINMA may require
+significantly higher capitalization depending on the business model, risk
+profile, and projected balance sheet size.
+
+Key capital-related requirements include:
+
+- Minimum share capital: CHF 10,000,000 fully paid-up at the time of licensing.
+- Capital adequacy: Compliance with the Capital Adequacy Ordinance (CAO;
+  SR 952.03), which implements Basel III standards in Switzerland.
+- Risk-weighted assets: Crypto assets held on the bank's balance sheet must be
+  risk-weighted according to FINMA Circular 2017/7 ("Credit risk - banks") and
+  the Basel Committee's prudential treatment of crypto-asset exposures.
+- Capital buffers: Banks must maintain a capital conservation buffer of 2.5% of
+  risk-weighted assets, and FINMA may impose institution-specific additional
+  buffers.
+- Liquidity requirements: Compliance with the Liquidity Ordinance (LiqO;
+  SR 952.06), including Liquidity Coverage Ratio (LCR) and Net Stable Funding
+  Ratio (NSFR) requirements.
+- Leverage ratio: A minimum leverage ratio of 3% applies.
+
+For crypto-specific operations, FINMA pays particular attention to the volatility
+of crypto-asset holdings and may require additional capital buffers for market
+risk arising from proprietary positions in digital assets.
+
+
+4. ORGANIZATIONAL REQUIREMENTS
+-------------------------------
+
+FINMA imposes strict organizational requirements on banking license applicants.
+These are designed to ensure sound governance, adequate risk management, and
+operational resilience.
+
+4.1 Corporate Structure
+The applicant must be organized as a Swiss legal entity, typically a corporation
+(Aktiengesellschaft / AG) or a cooperative (Genossenschaft). Foreign entities
+must establish a Swiss subsidiary. Branch structures are possible for foreign
+banks already supervised in their home jurisdiction.
+
+4.2 Board of Directors
+- Minimum of three members, the majority of whom must be independent.
+- At least one board member must be resident in Switzerland.
+- Board members must demonstrate individual and collective fitness and propriety
+  (fit and proper test).
+- The board must include members with expertise in banking, risk management,
+  compliance, and -- for crypto businesses -- technology and cybersecurity.
+- The chair of the board may not simultaneously serve as CEO.
+
+4.3 Executive Management
+- At least two qualified persons must be responsible for day-to-day management.
+- Executive managers must be resident in Switzerland or in close proximity.
+- Managers must pass FINMA's fit and proper assessment.
+- Clear segregation of duties between the CEO, CFO, CRO (Chief Risk Officer),
+  and CCO (Chief Compliance Officer).
+
+4.4 Internal Control System
+- Three lines of defense model: (1) business operations, (2) risk management and
+  compliance, (3) internal audit.
+- Internal audit must be independent and report directly to the board or the
+  audit committee.
+- A compliance function must be established that is independent of revenue-
+  generating business units.
+
+4.5 External Audit
+- Appointment of a FINMA-recognized audit firm as regulatory auditor.
+- Annual regulatory audit in addition to financial audit.
+- The external auditor reports to both FINMA and the board.
+
+
+5. APPLICATION PROCESS THROUGH FINMA EHP
+-----------------------------------------
+
+FINMA processes all banking license applications through its electronic platform,
+the EHP (Erhebungs- und Gesuchsportal / Survey and Application Portal). The
+application process proceeds as follows:
+
+Step 1: Pre-Application Phase (optional but recommended)
+- Informal consultation with FINMA's Banking Division to discuss the business
+  model and confirm that a banking license is the correct authorization category.
+- FINMA may provide preliminary guidance on specific requirements.
+- Duration: 2-4 weeks.
+
+Step 2: Formal Application Submission
+- File the application through the EHP portal with all required documentation.
+- Pay the application fee (FINMA charges on a cost-recovery basis; fees for
+  banking license applications typically range from CHF 50,000 to CHF 200,000
+  depending on complexity).
+
+Step 3: Completeness Check
+- FINMA reviews the application for completeness within 4-6 weeks.
+- If incomplete, FINMA issues a request for supplementary information.
+
+Step 4: Substantive Review
+- Detailed review of the business plan, governance structure, capital adequacy,
+  risk management framework, IT infrastructure, and AML/KYC procedures.
+- FINMA may engage external experts for technical assessments, particularly for
+  crypto-related technology.
+- Duration: 6-12 months.
+
+Step 5: On-site Assessment
+- FINMA or its mandated auditors may conduct on-site visits to assess operational
+  readiness, IT systems, and organizational structure.
+
+Step 6: Decision
+- FINMA issues the banking license with or without conditions, or rejects the
+  application with reasons.
+- The decision is communicated in writing and may be appealed to the Federal
+  Administrative Court.
+
+
+6. REQUIRED DOCUMENTATION
+--------------------------
+
+The following documents must be submitted with the banking license application:
+
+(a) Business plan covering at least three years, including detailed financial
+    projections, target market analysis, product descriptions, and growth
+    strategy.
+
+(b) Articles of association (Statuten) and organizational regulations
+    (Organisationsreglement).
+
+(c) Detailed organizational chart showing reporting lines, committees, and
+    key functions.
+
+(d) CVs, references, and supporting documentation for all members of the board
+    of directors and executive management (fit and proper documentation).
+
+(e) Shareholder structure with identification of all qualified participants
+    (holders of 10% or more of capital or voting rights), including ultimate
+    beneficial owners.
+
+(f) Capital plan demonstrating compliance with minimum capital requirements and
+    projected capital adequacy ratios.
+
+(g) Comprehensive risk management framework document covering credit risk,
+    market risk, operational risk, liquidity risk, and -- for crypto businesses --
+    technology risk, custody risk, and smart contract risk.
+
+(h) AML/KYC compliance manual detailing client onboarding procedures, ongoing
+    monitoring, suspicious activity reporting, and sanctions screening.
+
+(i) IT security concept (Informatik-Sicherheitskonzept) covering system
+    architecture, data protection, cybersecurity measures, business continuity
+    planning, and disaster recovery.
+
+(j) Internal control system documentation including internal audit charter,
+    compliance function description, and risk appetite statement.
+
+(k) Outsourcing agreements (if any) with detailed risk assessments for each
+    outsourced function.
+
+(l) Confirmation of appointment of a FINMA-recognized regulatory auditor.
+
+(m) Proof of minimum capital deposit (bank confirmation of CHF 10M or more).
+
+
+7. TIMELINE
+-------------
+
+The typical timeline for obtaining a full banking license is 12 to 24 months from
+formal application submission. The timeline breaks down approximately as follows:
+
+- Pre-application consultation: 1-2 months
+- Application preparation: 2-4 months
+- Completeness check by FINMA: 1-2 months
+- Substantive review: 6-12 months
+- On-site assessment and follow-up: 1-3 months
+- Final decision: 1-2 months
+
+Factors that may extend the timeline include the complexity of the business model,
+deficiencies in submitted documentation, FINMA's current workload, novel legal
+questions arising from crypto-specific activities, and the need for international
+coordination with foreign supervisors.
+
+FINMA does not guarantee processing times and reserves the right to extend the
+review period as necessary. Applicants are advised to begin the process well in
+advance of their planned launch date.
+
+
+8. GOVERNANCE REQUIREMENTS
+---------------------------
+
+Beyond the organizational structure described in Section 4, FINMA requires banks
+to implement robust corporate governance practices:
+
+8.1 Board Committees
+- Audit Committee: Mandatory for all banks. Oversees financial reporting,
+  internal and external audit, and internal controls.
+- Risk Committee: Mandatory for systemically important banks; recommended for
+  all others. Oversees the risk management framework.
+- Compensation Committee: Required if the bank employs more than 250 staff or
+  has total assets exceeding CHF 15 billion.
+- Technology Committee: Recommended for crypto banks given the critical role of
+  IT infrastructure.
+
+8.2 Conflicts of Interest
+- Written policies for identifying, managing, and disclosing conflicts of
+  interest.
+- Board members and executives must disclose all outside activities and
+  financial interests.
+- Transactions with related parties must be conducted at arm's length and
+  documented.
+
+8.3 Compensation
+- Compensation policies must align with FINMA Circular 2010/1 ("Remuneration
+  schemes").
+- Variable compensation must be linked to risk-adjusted performance.
+- Deferral and clawback mechanisms for senior management and material risk-takers.
+
+8.4 Fit and Proper Requirements
+- Ongoing obligation: Board members and executives must continue to meet fit
+  and proper standards throughout their tenure.
+- FINMA must be notified of any changes in the board or executive management
+  before they take effect.
+- FINMA may require removal of individuals who no longer meet the standards.
+
+
+9. RISK MANAGEMENT FRAMEWORK
+------------------------------
+
+FINMA Circular 2017/1 ("Corporate governance - banks") and Circular 2008/21
+("Operational risks and resilience - banks") set out detailed risk management
+requirements. For crypto businesses, the following areas require particular
+attention:
+
+9.1 Market Risk
+- Policies for managing exposure to crypto-asset price volatility.
+- Mark-to-market or mark-to-model valuation of digital asset holdings.
+- Stress testing and scenario analysis for extreme market movements.
+
+9.2 Credit Risk
+- Counterparty risk assessment for crypto lending and DeFi exposures.
+- Collateral management policies for crypto-collateralized loans.
+- Concentration limits for individual counterparties and asset classes.
+
+9.3 Operational Risk
+- Comprehensive operational risk framework covering technology failures, human
+  error, fraud, and external events.
+- Key Risk Indicators (KRIs) specific to crypto operations (e.g., failed
+  transactions, smart contract vulnerabilities, private key compromises).
+
+9.4 Liquidity Risk
+- Liquidity management framework addressing the specific liquidity
+  characteristics of crypto assets.
+- Contingency funding plans for scenarios involving rapid client withdrawals
+  or market dislocations.
+
+9.5 Technology and Cyber Risk
+- See Section 10 for detailed IT security requirements.
+
+
+10. IT SECURITY REQUIREMENTS
+------------------------------
+
+Given the technology-intensive nature of crypto businesses, FINMA places
+particular emphasis on IT security. Requirements are derived from FINMA Circular
+2023/1 ("Operational resilience and BCM - banks") and applicable FINMA guidance.
+
+10.1 IT Governance
+- Board-level oversight of IT strategy and cybersecurity.
+- Appointment of a Chief Information Security Officer (CISO) or equivalent.
+- Regular reporting to the board on IT risk and cybersecurity posture.
+
+10.2 Cybersecurity
+- Multi-layered defense architecture (defense in depth).
+- Regular penetration testing by independent third parties (at least annually).
+- Vulnerability management program with defined SLAs for remediation.
+- Security Operations Center (SOC) or equivalent monitoring capability.
+- Incident response plan with defined escalation procedures.
+
+10.3 Private Key Management
+- Hardware Security Modules (HSMs) for storing cryptographic keys.
+- Multi-signature or threshold-signature schemes for transaction authorization.
+- Geographic distribution of key material.
+- Key ceremony procedures with multiple participants and audit trails.
+- Disaster recovery procedures for key material.
+
+10.4 Business Continuity and Disaster Recovery
+- Business Continuity Plan (BCP) covering all critical functions.
+- Disaster Recovery Plan (DRP) with defined Recovery Time Objectives (RTOs) and
+  Recovery Point Objectives (RPOs).
+- Regular testing of BCP and DRP (at least annually).
+- Geographic redundancy of critical systems.
+
+10.5 Data Protection
+- Compliance with the Swiss Federal Act on Data Protection (FADP; SR 235.1).
+- Data classification and handling procedures.
+- Encryption of sensitive data at rest and in transit.
+- Access control based on the principle of least privilege.
+
+
+11. ONGOING SUPERVISION AND REPORTING
+---------------------------------------
+
+Once licensed, banks are subject to continuous FINMA supervision:
+
+11.1 Regulatory Reporting
+- Monthly: Liquidity reporting (LCR, NSFR).
+- Quarterly: Capital adequacy reporting, large exposure reporting.
+- Semi-annually: Interest rate risk in the banking book.
+- Annually: Comprehensive regulatory audit by the FINMA-recognized auditor.
+- Ad hoc: Immediate reporting of material events (cyber incidents, significant
+  losses, changes in management or ownership).
+
+11.2 Supervisory Interactions
+- Regular supervisory meetings with FINMA (frequency depends on the bank's
+  risk category and systemic importance).
+- Thematic reviews and on-site inspections by FINMA or mandated auditors.
+- Participation in FINMA surveys and data collections.
+
+11.3 Ongoing Obligations
+- Maintain minimum capital requirements at all times.
+- Comply with all applicable FINMA circulars and guidance.
+- Notify FINMA of any material changes in business model, ownership, or
+  governance structure.
+- Maintain adequate insurance coverage.
+- Contribute to the deposit protection scheme (esisuisse) for covered deposits
+  up to CHF 100,000 per depositor.
+
+11.4 Enforcement
+- FINMA has broad enforcement powers, including the ability to issue orders,
+  impose conditions on the license, appoint supervisory agents (Beauftragter),
+  restrict business activities, or revoke the license.
+- Violations of banking law may result in criminal prosecution by the relevant
+  authorities.
+
+
+12. APPLICATION TO CRYPTO BUSINESSES
+--------------------------------------
+
+Several Swiss crypto companies have obtained full banking licenses, including
+SEBA Bank (now AMINA Bank) and Sygnum Bank, both licensed in 2019. Their
+experience provides useful precedents:
+
+12.1 Crypto-Native Banking Activities
+Licensed crypto banks typically offer:
+- Custody of digital assets with institutional-grade security.
+- Trading and execution services for crypto assets.
+- Fiat on-ramp and off-ramp services.
+- Tokenization of traditional assets.
+- Staking services (subject to regulatory classification).
+- Crypto-collateralized lending.
+
+12.2 Specific FINMA Expectations for Crypto Banks
+- Technology due diligence: FINMA expects thorough technical documentation of
+  blockchain interactions, smart contract risks, and wallet architecture.
+- Asset classification: Each crypto asset offered must be classified under
+  Swiss law (payment token, utility token, or asset token per FINMA ICO
+  Guidelines 2018).
+- Staking and DeFi: Activities involving staking or DeFi protocols require
+  specific risk assessments and board-level approval.
+- Cross-border: Crypto banks must address cross-border regulatory risks given
+  the borderless nature of blockchain networks.
+
+12.3 Advantages of the Banking License for Crypto Businesses
+- Full range of financial services without restrictions.
+- Deposit protection under esisuisse for fiat deposits.
+- Credibility and trust with institutional clients.
+- Access to Swiss National Bank (SNB) payment systems (SIC/euroSIC).
+- Ability to issue covered bonds and participate in interbank markets.
+
+12.4 Challenges and Considerations
+- High capital requirements (CHF 10M minimum, often higher in practice).
+- Extensive regulatory burden and ongoing compliance costs.
+- Long application timeline (12-24 months).
+- Need for experienced banking professionals in governance roles.
+- Annual regulatory audit costs (CHF 200,000 to CHF 500,000+).
+
+In summary, the full banking license is the gold standard of Swiss financial
+regulation and provides crypto businesses with the broadest possible scope of
+authorized activities. However, the significant capital, organizational, and
+compliance requirements mean it is typically pursued only by well-funded entities
+with institutional ambitions. Smaller or more focused crypto businesses may find
+the FinTech license or SRO membership more appropriate as initial steps.
+
+
+REFERENCES
+-----------
+- Federal Act on Banks and Savings Banks (BankA; SR 952.0)
+- Banking Ordinance (BankO; SR 952.02)
+- Capital Adequacy Ordinance (CAO; SR 952.03)
+- Liquidity Ordinance (LiqO; SR 952.06)
+- FINMA Circular 2008/3 "Public deposits at non-banks"
+- FINMA Circular 2017/1 "Corporate governance - banks"
+- FINMA Circular 2008/21 "Operational risks and resilience - banks"
+- FINMA Circular 2023/1 "Operational resilience and BCM - banks"
+- FINMA Circular 2010/1 "Remuneration schemes"
+- FINMA Circular 2017/7 "Credit risk - banks"
+- FINMA ICO Guidelines (2018, updated)
+- Basel Committee on Banking Supervision: Prudential treatment of cryptoasset
+  exposures (December 2022, updated)

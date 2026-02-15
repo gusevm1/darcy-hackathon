@@ -1,0 +1,457 @@
+FINMA FINTECH LICENSE
+Authorization under Art. 1b of the Swiss Banking Act
+Comprehensive Guide to the FinTech License for Innovative Financial Services
+
+================================================================================
+1. OVERVIEW AND LEGAL BASIS
+================================================================================
+
+1.1 Introduction
+
+The FINMA FinTech license (also referred to as the "banking license light" or
+"innovation license") was introduced on January 1, 2019, through the addition
+of Art. 1b to the Swiss Banking Act (BA, SR 952.0). It creates a new
+authorization category specifically designed for innovative financial service
+providers that accept public deposits but do not engage in the traditional
+banking business of lending and maturity transformation.
+
+The FinTech license bridges the gap between SRO membership (no deposit-taking
+permitted) and a full banking license (extensive requirements). It allows
+qualifying businesses to accept public deposits of up to CHF 100 million
+without the full regulatory burden of a banking license.
+
+1.2 Legal Basis
+
+- Banking Act (BA), Art. 1b: Core provision establishing the FinTech license
+- Banking Ordinance (BO), Art. 13a–13h: Implementing provisions
+- FINMA Circular 2008/3 "Public Deposits with Non-Banks": Clarification of
+  deposit-taking thresholds
+- AMLA and AMLO-FINMA: AML obligations for FinTech license holders
+- FINMA Guidance: Various guidance documents on application procedures and
+  expectations
+
+1.3 Policy Rationale
+
+The Swiss Federal Council introduced the FinTech license to:
+- Lower barriers to entry for innovative financial services
+- Maintain Switzerland's competitiveness as a fintech hub
+- Provide a proportionate regulatory framework for businesses that accept
+  deposits but do not engage in credit intermediation
+- Enable crypto and blockchain businesses to operate within a clear legal
+  framework
+
+================================================================================
+2. SCOPE — WHAT THE LICENSE ALLOWS
+================================================================================
+
+2.1 Core Permission: Accept Public Deposits up to CHF 100 Million
+
+The FinTech license authorizes the holder to accept deposits from the public up
+to a total of CHF 100 million. "Public deposits" means funds received from more
+than 20 depositors or funds received through public solicitation, which would
+otherwise require a full banking license under Art. 1 para. 2 BA.
+
+2.2 Key Restriction: No Investment or Interest
+
+The fundamental limitation of the FinTech license is that deposits received:
+- May NOT be invested in any manner
+- May NOT bear interest
+- Must be held in readily available form (e.g., in bank accounts or, for
+  crypto businesses, in secure wallets)
+
+This restriction ensures that FinTech license holders do not engage in maturity
+transformation or credit intermediation — the core activities that give rise to
+banking-specific risks and require a full banking license.
+
+2.3 Suitable Business Models
+
+The FinTech license is designed for and commonly used by:
+
+(a) Payment service providers:
+    - Companies that hold client funds for payment processing
+    - E-money issuers (within Swiss regulatory classification)
+    - Remittance services holding settlement funds
+
+(b) Crypto custody platforms:
+    - Companies that hold fiat currency or stablecoins on behalf of clients
+    - Crypto exchanges that hold client fiat balances
+    - Important: Holding pure crypto assets (e.g., BTC, ETH) may not constitute
+      "deposit-taking" under the Banking Act, but holding fiat or fiat-
+      equivalent funds on behalf of clients does
+
+(c) Crowdfunding and crowdlending platforms:
+    - Platforms that temporarily hold investor funds before deployment
+    - Settlement accounts for peer-to-peer transactions
+
+(d) Trading platforms (without order books):
+    - Crypto exchanges that match buyers and sellers without a central order
+      book (acting as principal or broker)
+    - Platforms that hold client funds during the trading process
+
+(e) Stablecoin issuers:
+    - Depending on the stablecoin structure, issuers may need a FinTech license
+      or full banking license
+
+2.4 Activities NOT Covered
+
+The FinTech license does NOT authorize:
+- Lending or credit business
+- Investment of client deposits
+- Operating an exchange with a central order book (requires DLT trading facility
+  license or banking license)
+- Asset management (requires FinIA license)
+- Securities dealing (requires securities firm license)
+
+================================================================================
+3. KEY REQUIREMENTS
+================================================================================
+
+3.1 Capital Requirements
+
+(a) Minimum capital: CHF 300,000
+
+(b) OR 5% of accepted public deposits — whichever is higher
+
+(c) The capital must be:
+    - Fully paid up
+    - Maintained at all times
+    - Composed of qualifying capital (equity, retained earnings)
+    - Not encumbered or pledged
+
+(d) Example:
+    - At CHF 6 million in deposits: 5% = CHF 300,000 (minimum applies)
+    - At CHF 10 million in deposits: 5% = CHF 500,000
+    - At CHF 50 million in deposits: 5% = CHF 2,500,000
+    - At CHF 100 million in deposits: 5% = CHF 5,000,000
+
+3.2 Organizational Requirements
+
+(a) Legal form: Swiss legal entity (AG, GmbH, or cooperative)
+
+(b) Registered office and place of management in Switzerland
+
+(c) Board of Directors:
+    - Minimum 3 members for an AG
+    - At least one member must be Swiss-resident
+    - Members must be fit and proper (no criminal convictions for financial
+      crimes, no regulatory bans, adequate professional qualifications)
+    - Independent risk oversight function
+
+(d) Executive Management:
+    - Must be conducted from Switzerland
+    - At least two members of the executive management (dual control principle)
+    - Must be fit and proper
+    - Must possess adequate professional experience and qualifications
+
+(e) AML Compliance Officer:
+    - Dedicated qualified compliance officer
+    - Must have appropriate authority, reporting line to the board
+    - Relevant experience in AML compliance (minimum 2–3 years)
+
+(f) Internal controls:
+    - Internal control system (ICS) proportionate to the size and complexity
+      of the business
+    - Risk management framework
+    - Compliance function
+    - Internal audit (may be outsourced for smaller entities)
+
+3.3 Client Information Duty
+
+FinTech license holders must inform clients before establishing a business
+relationship that:
+- The company is not a bank
+- Deposits are not covered by the Swiss deposit insurance scheme (esisuisse)
+
+This disclosure must be made clearly and prominently.
+
+3.4 Deposit Insurance Exclusion
+
+Unlike banks, FinTech license holders are NOT members of esisuisse (Swiss
+deposit insurance scheme). Client deposits are therefore not insured up to
+CHF 100,000 per depositor, as they would be with a bank. This must be clearly
+disclosed to clients.
+
+3.5 No Depositor Preference
+
+In the event of insolvency, depositors of a FinTech license holder do not
+benefit from the depositor preference that applies to banks under the Banking
+Act. However, if deposits are segregated, clients may be able to claim them
+outside the bankruptcy estate.
+
+================================================================================
+4. APPLICATION PROCESS
+================================================================================
+
+4.1 Pre-Application Phase
+
+(a) Self-assessment: Determine whether the FinTech license is the appropriate
+    authorization category for the business model.
+
+(b) Pre-notification to FINMA: FINMA strongly recommends a pre-notification
+    before filing a formal application. This involves:
+    - Submitting a brief description of the business model
+    - FINMA provides preliminary feedback on the appropriateness of the
+      FinTech license category
+    - This is not a binding opinion but helps avoid unnecessary applications
+    - Timeline: 2–4 weeks for FINMA response
+
+(c) Engage advisors: Engage legal counsel, compliance consultants, and auditors
+    experienced with FINMA licensing processes.
+
+4.2 Application Submission via FINMA EHP
+
+FINMA uses the Electronic Handling Platform (EHP, also known as the "Bewilligungs-
+und Anerkennungsplattform") for license applications. The application must be
+submitted through this platform.
+
+(a) Create an account on the FINMA EHP portal
+(b) Complete the application form
+(c) Upload all required documentation
+(d) Pay the application fee
+
+4.3 Required Documentation
+
+The application package must include:
+
+(a) Corporate documents:
+    - Articles of incorporation
+    - Commercial register extract
+    - Organizational regulations (Organisationsreglement)
+    - Organizational chart
+    - Shareholder register and beneficial ownership structure
+    - Board of directors and executive management composition
+
+(b) Business plan:
+    - Detailed description of the business model
+    - Target market, client types, and geographic scope
+    - Product and service descriptions
+    - Revenue model
+    - Financial projections (3–5 years)
+    - Growth strategy
+    - Competitive analysis
+
+(c) Governance and personnel:
+    - CVs of all board members and executive management
+    - Fit and proper declarations
+    - Criminal record extracts
+    - Proof of professional qualifications
+    - Employment contracts for key personnel
+
+(d) IT security concept:
+    - IT architecture description
+    - Cybersecurity framework
+    - Data protection measures
+    - Business continuity and disaster recovery plans
+    - Penetration testing results (if available)
+    - For crypto businesses: wallet architecture, key management procedures,
+      hot/cold wallet strategy
+
+(e) AML framework:
+    - Complete AML/CFT policy manual
+    - KYC/CDD procedures
+    - Risk assessment methodology
+    - Transaction monitoring system description
+    - SAR filing procedures
+    - Sanctions screening procedures
+    - Travel rule implementation (for VASPs)
+    - Record-keeping procedures
+    - Training plan
+
+(f) Risk management:
+    - Risk management framework
+    - Operational risk assessment
+    - Liquidity management plan
+    - Outsourcing arrangements and risk assessment
+
+(g) Financial documents:
+    - Audited financial statements (if existing entity)
+    - Capital adequacy demonstration
+    - Proof of minimum capital (bank confirmation)
+
+(h) Audit arrangements:
+    - Engagement letter with a FINMA-recognized audit firm
+    - Confirmation of the audit firm's willingness to act
+
+4.4 FINMA Review Process
+
+(a) Completeness check: FINMA reviews the submission for completeness
+    (typically 2–4 weeks). Incomplete applications are returned.
+
+(b) Substantive review: FINMA conducts a thorough review of the application
+    covering all aspects of the business. This includes:
+    - Assessment of the business model's compliance with Art. 1b BA
+    - Fit and proper assessment of key personnel
+    - Review of organizational adequacy
+    - Review of IT security and operational resilience
+    - Review of AML compliance framework
+    - Assessment of capital adequacy
+    - Risk assessment
+
+(c) Questions and dialogue: FINMA will raise questions and request additional
+    information. Prompt and thorough responses are essential.
+
+(d) Decision: FINMA issues its decision (approval, conditional approval, or
+    rejection).
+
+4.5 Timeline
+
+Typical timeline from application submission to decision:
+- Well-prepared application: 3–4 months
+- Standard application: 4–6 months
+- Complex application or significant remediation needed: 6–12 months
+
+Factors that extend the timeline:
+- Incomplete documentation
+- Novel or complex business model
+- Concerns about key personnel
+- Inadequate IT security or AML framework
+- Slow response to FINMA queries
+
+4.6 Fees
+
+FINMA charges fees for the application process and ongoing supervision:
+- Application fee: Based on FINMA's actual effort (typically CHF 10,000–50,000)
+- Annual supervisory fee: Based on the size and risk profile of the licensee
+  (typically CHF 5,000–30,000 per year)
+
+================================================================================
+5. ONGOING SUPERVISION AND REPORTING
+================================================================================
+
+5.1 FINMA Supervision
+
+FinTech license holders are directly supervised by FINMA:
+- FINMA is the primary supervisory authority
+- AML compliance is supervised under AMLO-FINMA (not through an SRO)
+- FINMA may conduct inspections, request information, and issue orders
+
+5.2 External Audit
+
+- Annual audit by a FINMA-recognized audit firm
+- Scope: financial audit and regulatory audit (including AML compliance)
+- Audit report submitted to FINMA
+- Remediation of audit findings within FINMA-set deadlines
+
+5.3 Reporting Obligations
+
+FinTech license holders must report to FINMA:
+- Annual financial statements (audited)
+- Annual regulatory report
+- Deposit volume reports (monthly or quarterly)
+- Material change notifications (changes to board, management, beneficial
+  owners, business model, etc.)
+- Significant operational incidents (cybersecurity breaches, system failures,
+  fraud, etc.)
+- SAR filings (notification to FINMA alongside MROS filing)
+
+5.4 Capital Monitoring
+
+- The licensee must monitor its capital ratio continuously
+- If deposits approach the CHF 100 million limit or the capital ratio drops
+  below 5%, the licensee must take action
+- FINMA must be notified immediately if the licensee breaches capital
+  requirements
+
+================================================================================
+6. COMPARISON WITH FULL BANKING LICENSE
+================================================================================
+
+Feature                 | FinTech License        | Full Banking License
+------------------------|------------------------|--------------------------
+Legal basis             | Art. 1b BA             | Art. 1 BA
+Deposit limit           | CHF 100 million        | No limit
+Investment of deposits  | Prohibited             | Permitted
+Interest on deposits    | Prohibited             | Permitted
+Minimum capital         | CHF 300,000 or 5%      | CHF 10 million
+Deposit insurance       | Not covered (esisuisse)| Covered (esisuisse)
+Lending                 | Not permitted          | Permitted
+Organizational          | Proportionate          | Full banking governance
+requirements            |                        |
+Application timeline    | 3–6 months             | 12–24 months
+Ongoing supervision     | Moderate               | Intensive
+Suitable for            | Payment services,      | Full banking, lending,
+                        | custody, small          | large-scale deposit-taking,
+                        | exchanges               | trading with order book
+
+================================================================================
+7. TRANSITION SCENARIOS
+================================================================================
+
+7.1 From FINMA Sandbox to FinTech License
+
+The FINMA sandbox (Art. 6 para. 2–4 BO) allows businesses to accept deposits
+from up to 20 persons, not exceeding CHF 1 million total, without any license.
+When the business grows beyond these thresholds, it must obtain a FinTech
+license or banking license.
+
+7.2 From FinTech License to Banking License
+
+If the business exceeds the CHF 100 million deposit limit, or if the business
+model evolves to include lending or deposit investment, the entity must upgrade
+to a full banking license. FINMA provides a transition pathway.
+
+7.3 From SRO Membership to FinTech License
+
+Businesses initially operating with SRO membership (e.g., crypto exchanges
+within sandbox thresholds) may need to obtain a FinTech license as they grow.
+The SRO membership terminates upon obtaining the FinTech license, as the entity
+is then directly supervised by FINMA.
+
+================================================================================
+8. PRACTICAL CONSIDERATIONS FOR CRYPTO BUSINESSES
+================================================================================
+
+8.1 When a Crypto Business Needs a FinTech License
+
+A crypto business needs a FinTech license when:
+- It holds fiat currency deposits from more than 20 clients
+- Total fiat deposits exceed CHF 1 million
+- It does not invest or pay interest on the deposits
+- It does not operate an exchange with a central order book
+
+8.2 Custody of Crypto Assets vs. Fiat Deposits
+
+Important distinction:
+- Holding pure crypto assets (BTC, ETH, etc.) for clients may not constitute
+  "deposit-taking" under the Banking Act (this is a debated point)
+- Holding fiat currency or fiat-pegged stablecoins for clients DOES constitute
+  deposit-taking
+- Mixed custody (fiat + crypto) triggers the deposit-taking analysis for the
+  fiat component
+
+8.3 Stablecoin Considerations
+
+- Fiat-backed stablecoins: issuance likely requires at least a FinTech license
+  (depending on structure, may require a full banking license)
+- Algorithmic stablecoins: case-by-case analysis
+- Using stablecoins: merely using stablecoins does not necessarily require a
+  FinTech license, but holding client stablecoins in custody may trigger
+  deposit-taking analysis
+
+8.4 Practical Tips
+
+1. Engage FINMA early through the pre-notification process
+2. Invest in a robust IT security concept — this is heavily scrutinized
+3. Ensure the AML framework is specifically tailored to the crypto business
+4. Plan for ongoing compliance costs (audit, supervision, compliance staff)
+5. Build the organizational structure before applying (board, management,
+   compliance officer must be in place)
+6. Consider whether the FINMA sandbox can bridge the gap while the application
+   is being processed
+
+================================================================================
+9. REFERENCES
+================================================================================
+
+- Federal Act on Banks and Savings Banks (Banking Act, BA), SR 952.0,
+  in particular Art. 1b
+- Banking Ordinance (BO), SR 952.02, in particular Art. 13a–13h
+- Anti-Money Laundering Act (AMLA), SR 955.0
+- Anti-Money Laundering Ordinance FINMA (AMLO-FINMA), SR 955.033.0
+- FINMA Circular 2008/3 "Public Deposits with Non-Banks"
+- FINMA website: www.finma.ch
+- FINMA EHP platform: ehp.finma.ch
+
+================================================================================
+END OF DOCUMENT
+================================================================================

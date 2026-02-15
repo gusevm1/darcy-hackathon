@@ -1,0 +1,442 @@
+SWISS ANTI-MONEY LAUNDERING ACT (AMLA)
+Federal Act on Combating Money Laundering and Terrorist Financing
+(Geldwaeschereigesetz, GwG) — SR 955.0
+
+Last revised: Comprehensive overview incorporating amendments through 2025
+
+================================================================================
+1. PURPOSE AND SCOPE (Articles 1–3)
+================================================================================
+
+1.1 Purpose (Art. 1)
+
+The Anti-Money Laundering Act (AMLA) is the cornerstone of Switzerland's framework
+for preventing money laundering, terrorist financing, and — since the 2021 amendments —
+the financing of the proliferation of weapons of mass destruction. Its stated purpose
+is to establish the due diligence obligations of financial intermediaries and to
+regulate the supervision of compliance with those obligations.
+
+AMLA does not itself create criminal offences for money laundering. Those are found
+in Art. 305bis and Art. 305ter of the Swiss Criminal Code (CC). Rather, AMLA imposes
+preventive, administrative obligations on financial intermediaries and establishes
+the supervisory architecture through which those obligations are enforced.
+
+1.2 Scope — Financial Intermediaries (Art. 2)
+
+AMLA applies to "financial intermediaries," which it divides into two categories:
+
+(a) Prudentially supervised entities (Art. 2 para. 2):
+    - Banks under the Banking Act (BA)
+    - Fund management companies and asset managers of collective investment
+      schemes under the Collective Investment Schemes Act (CISA)
+    - Insurance institutions under the Insurance Supervision Act (ISA)
+    - Securities dealers (now "securities firms") under the Financial
+      Institutions Act (FinIA)
+    - DLT trading facilities under the Financial Market Infrastructure Act (FMIA)
+    - Licensed FinTech companies under Art. 1b BA
+    - Managers of collective assets and trustees under FinIA
+
+(b) Non-prudentially supervised financial intermediaries (Art. 2 para. 3):
+    Persons who on a professional basis accept, hold on deposit, or help to
+    transfer or invest assets belonging to third parties. This catch-all
+    provision captures a wide range of activities including:
+    - Money transmission / payment services
+    - Currency exchange (including crypto-to-fiat exchange)
+    - Lending
+    - Trading in securities or financial instruments for third-party accounts
+    - Asset management
+    - Investment advisory services involving a power of disposition
+
+    The Federal Council specifies through ordinance (AMLO, SR 955.01) when
+    an activity is carried out "on a professional basis" — generally when
+    annual gross revenue exceeds CHF 50,000 or transaction volume exceeds
+    CHF 2 million.
+
+1.3 Dealers (Art. 2 para. 1bis)
+
+Since the 2019 amendment, persons who trade in goods on a professional basis and
+accept cash payments exceeding CHF 100,000 (per transaction or linked transactions)
+are also subject to AMLA due diligence obligations.
+
+1.4 Exclusion of Certain Activities
+
+Certain activities are explicitly excluded from AMLA scope, including pure software
+development, pure advisory services without disposition powers, and activities
+already fully supervised under other legislation where the supervision is deemed
+equivalent.
+
+1.5 Application to Virtual Asset Service Providers (VASPs)
+
+Switzerland does not have a standalone VASP licensing regime. Instead, VASPs are
+captured under the existing AMLA framework as financial intermediaries under
+Art. 2 para. 3. Specifically:
+
+- Crypto exchanges (fiat-to-crypto and crypto-to-crypto) are financial intermediaries
+- Crypto custody/wallet providers holding assets for clients are financial intermediaries
+- Token issuers may be financial intermediaries depending on token classification
+- DeFi protocol operators may be financial intermediaries if they exercise sufficient
+  control over the protocol
+
+FINMA has clarified through various guidance documents that the substance-over-form
+principle applies: the economic function of the activity, not its technical
+implementation, determines whether AMLA applies.
+
+================================================================================
+2. DUE DILIGENCE OBLIGATIONS (Articles 3–8)
+================================================================================
+
+2.1 Identification of the Contracting Partner (Art. 3)
+
+Financial intermediaries must verify the identity of the contracting partner when:
+- Establishing a business relationship
+- Carrying out transactions exceeding CHF 25,000 (or CHF 5,000 in the case of
+  money exchange, and CHF 1,000 for virtual asset transfers)
+- There is suspicion of money laundering or terrorist financing
+- Previously obtained identification data is doubtful
+
+For natural persons: identification is based on an official identity document
+(passport, identity card). The financial intermediary must record: name, date of
+birth, nationality, residential address, and the identification document details.
+
+For legal entities: identification is based on an extract from the commercial register
+or equivalent document. The financial intermediary must additionally identify the
+persons authorized to act on behalf of the entity and verify their authority.
+
+For crypto/virtual asset businesses, FINMA and the SROs have clarified that video
+identification and electronic identification procedures are permissible, subject to
+specific requirements set out in AMLO-FINMA and respective SRO regulations.
+
+2.2 Identification of the Beneficial Owner (Art. 4)
+
+The financial intermediary must require the contracting partner to declare the
+identity of the beneficial owner (BO) with due care. A beneficial owner declaration
+must be obtained whenever:
+
+- A business relationship is established
+- The contracting partner is not the beneficial owner or there is doubt
+- An operating or domiciliary company is involved
+- A cash transaction exceeds CHF 25,000
+- A virtual asset transfer exceeds CHF 1,000
+
+For legal entities: the BO is the natural person who ultimately controls the entity,
+typically through holding 25% or more of the capital or voting rights, or through
+other means of control.
+
+The financial intermediary may not merely accept the declaration at face value; it
+must verify its plausibility based on available information.
+
+2.3 Duty of Care in Asset Transfers (Art. 4a — "Travel Rule")
+
+When transferring assets (including virtual assets) on behalf of a client, the
+financial intermediary must provide the recipient's financial intermediary with:
+- Name of the originator
+- Account number (or wallet address) of the originator
+- Address, date of birth, or national identification number of the originator
+
+The receiving financial intermediary must verify whether the originator information
+is complete. If information is missing or incomplete, the receiving intermediary
+must request it, and if it is not provided, must refuse or return the transfer.
+
+For virtual asset transfers, Art. 10 AMLO-FINMA provides specific implementation
+rules, including the CHF 1,000 threshold above which full originator and beneficiary
+information must accompany the transfer.
+
+2.4 Renewed Due Diligence (Art. 5)
+
+Financial intermediaries must repeat their due diligence procedures when:
+- There are doubts about the identity of the contracting partner or beneficial owner
+  during the course of the business relationship
+- Transactions are inconsistent with the documented purpose of the business
+  relationship or the economic background of the client
+- A risk-relevant change occurs (e.g., change in beneficial ownership, change
+  in client's risk profile, significant change in transaction patterns)
+
+This provision creates an ongoing monitoring obligation that goes beyond the initial
+onboarding process.
+
+2.5 Duty to Keep Records (Art. 7)
+
+Financial intermediaries must maintain the following records for at least 10 years
+from the end of the business relationship or the completion of the transaction:
+
+- Transaction documents sufficient to allow a knowledgeable third party to form
+  a reliable opinion about the transactions and business relationships
+- Due diligence records (identification documents, BO declarations, risk
+  classifications, enhanced due diligence records)
+- Correspondence and internal notes relating to AML compliance
+
+Records must be kept in Switzerland or in a location accessible to Swiss supervisory
+authorities. For crypto businesses, this includes blockchain transaction records,
+wallet address mappings, and any off-chain transaction documentation.
+
+2.6 Organizational Measures (Art. 8)
+
+Financial intermediaries must take organizational measures necessary to prevent
+money laundering and terrorist financing, including:
+
+- Appointing a qualified AML compliance officer
+- Establishing internal AML policies, procedures, and controls
+- Providing regular AML training to relevant staff
+- Implementing a risk-based approach to client relationships
+- Maintaining an internal reporting system
+- Conducting regular internal reviews and audits
+
+For higher-risk businesses (including many crypto businesses), FINMA and SROs
+expect more extensive organizational measures, including dedicated compliance
+teams, automated transaction monitoring systems, and enhanced governance.
+
+================================================================================
+3. REPORTING AND ASSET FREEZING (Articles 9–10)
+================================================================================
+
+3.1 Duty to Report (Art. 9)
+
+A financial intermediary must immediately file a Suspicious Activity Report (SAR)
+with the Money Laundering Reporting Office Switzerland (MROS) when it:
+
+- Knows or has reasonable suspicion that assets involved in the business
+  relationship are connected to a criminal offence under Art. 260ter (criminal
+  organization) or Art. 305bis CC (money laundering)
+- Knows or has reasonable suspicion that assets are subject to the power of
+  disposal of a criminal organization
+- Knows or has reasonable suspicion that assets serve the financing of terrorism
+  (Art. 260quinquies CC)
+
+The report must include all relevant information available to the financial
+intermediary. After filing the SAR, the financial intermediary must follow the
+instructions of MROS and may not inform the client or any third party about the
+report ("tipping-off" prohibition).
+
+MROS analyses the report and, if it deems the suspicion well-founded, forwards
+it to the relevant prosecution authority. Approximately 60-70% of SARs are
+forwarded in practice.
+
+3.2 Right to Report (Art. 305ter para. 2 CC)
+
+In addition to the mandatory reporting duty under Art. 9, Art. 305ter para. 2 of
+the Criminal Code provides a right to report: financial intermediaries may report
+observations that indicate assets are of criminal origin even if the threshold for
+mandatory reporting is not yet met. This right-to-report mechanism is intended to
+encourage proactive cooperation with authorities.
+
+3.3 Asset Freezing (Art. 10)
+
+Upon filing a SAR, the financial intermediary must immediately freeze the assets
+that are the subject of the report. The freeze applies for a maximum of five
+business days. Within that period, MROS must inform the financial intermediary
+either:
+- That the case has been forwarded to prosecution (in which case the freeze
+  continues until a judicial order is issued), or
+- That the case has been closed (in which case the freeze must be lifted)
+
+If the financial intermediary terminates the business relationship instead of
+filing a SAR, it must freeze the assets for five business days and inform MROS.
+
+================================================================================
+4. SUPERVISORY FRAMEWORK (Articles 12–18)
+================================================================================
+
+4.1 Two-Track Supervision Model
+
+AMLA establishes a two-track supervisory model for non-prudentially supervised
+financial intermediaries:
+
+(a) SRO membership (Art. 14): Financial intermediaries under Art. 2 para. 3 must
+    affiliate with a recognized self-regulatory organization (SRO). The SRO
+    supervises compliance with AMLA due diligence obligations on behalf of FINMA.
+
+(b) Direct FINMA supervision (Art. 14a): As an alternative to SRO membership,
+    financial intermediaries may apply for direct supervision by FINMA. This
+    option, introduced in the 2019 reform (effective January 1, 2020), is
+    intended primarily for larger, more complex intermediaries and certain
+    FinTech businesses.
+
+4.2 Self-Regulatory Organizations (Art. 14)
+
+SROs are private-law organizations recognized by FINMA to supervise financial
+intermediaries' compliance with AMLA. They must:
+
+- Issue their own regulations specifying AMLA due diligence obligations
+  (subject to FINMA approval)
+- Monitor their members' compliance through regular audits
+- Impose sanctions on non-compliant members
+- Report serious violations to FINMA
+
+Recognized SROs include: VQF (Verein zur Qualitaetssicherung von
+Finanzdienstleistungen), PolyReg, SO-FIT (formerly OAR-G), and several
+sector-specific SROs.
+
+4.3 FINMA Direct Supervision (Art. 14a)
+
+Financial intermediaries directly supervised by FINMA (DSFI) are subject to:
+- AMLO-FINMA (Anti-Money Laundering Ordinance FINMA)
+- Direct FINMA inspections
+- Mandatory external AML audits
+- FINMA reporting requirements
+
+This path is more resource-intensive but may be preferred by larger entities
+that want a direct relationship with the regulator.
+
+================================================================================
+5. CRIMINAL PROVISIONS
+================================================================================
+
+5.1 Criminal Code Provisions
+
+The primary criminal offences related to money laundering are in the Criminal Code:
+
+- Art. 305bis CC — Money laundering: Anyone who carries out an act that is
+  calculated to frustrate the identification of the origin, the tracing, or
+  the forfeiture of assets which he knows or must assume to originate from
+  a felony or from a qualified tax misdemeanor, is punishable by imprisonment
+  of up to 3 years or a monetary penalty. In serious cases (professional
+  activity, large amounts, criminal organization involvement), imprisonment
+  of up to 5 years.
+
+- Art. 305ter CC — Insufficient diligence in financial transactions: Anyone who
+  on a professional basis accepts, holds on deposit, helps to invest, or
+  helps to transfer assets belonging to another person, and fails to verify
+  the identity of the beneficial owner with the diligence required by the
+  circumstances, is punishable by imprisonment of up to 1 year or a monetary
+  penalty.
+
+5.2 AMLA Administrative Penalties
+
+FINMA has a range of enforcement tools for AMLA violations:
+- Orders to remedy deficiencies
+- Appointment of an investigating agent
+- Revocation of license or SRO recognition
+- Publication of enforcement decisions (naming and shaming)
+- Disgorgement of profits
+- Industry bans for responsible individuals (up to 5 years)
+
+================================================================================
+6. RECENT AMENDMENTS RELATED TO CRYPTO AND VIRTUAL ASSETS
+================================================================================
+
+6.1 DLT Act (2021)
+
+The Federal Act on the Adaptation of Federal Law to Developments in Distributed
+Ledger Technology (DLT Act), which entered into force on August 1, 2021, brought
+several changes relevant to AMLA:
+
+- Introduction of DLT securities (Art. 973d et seq. CO)
+- Creation of the DLT trading facility license under FMIA
+- Explicit inclusion of DLT trading facilities in the Art. 2 para. 2 list
+- Clarification that AMLA applies to all financial intermediaries regardless of
+  the technology used
+
+6.2 AMLA Reform (2023)
+
+The revised AMLA provisions tightened requirements for:
+- Beneficial owner transparency
+- Adviser due diligence obligations
+- Cross-border transaction monitoring
+- Enhanced due diligence for virtual asset transactions
+
+6.3 Travel Rule Implementation
+
+FINMA clarified through revised AMLO-FINMA that the travel rule applies to all
+virtual asset transfers and that financial intermediaries must ensure originator
+and beneficiary information accompanies transfers above CHF 1,000.
+
+6.4 Ongoing Consultation (2024–2025)
+
+The Federal Council has continued to refine the AMLA framework to align with
+evolving FATF standards, including:
+- Expanded definition of virtual assets to cover certain DeFi activities
+- Clarification of obligations for staking and lending platforms
+- Requirements for unhosted wallet risk management
+
+================================================================================
+7. APPLICATION TO VIRTUAL ASSET SERVICE PROVIDERS (VASPs)
+================================================================================
+
+7.1 FINMA's Approach
+
+FINMA applies a technology-neutral, substance-over-form approach. Any person or
+entity that, on a professional basis, provides services that fall within Art. 2
+para. 3 AMLA — regardless of whether those services are provided through
+traditional or blockchain-based technology — is a financial intermediary subject
+to AMLA.
+
+7.2 Specific VASP Activities and Their AMLA Classification
+
+Exchange services (fiat-to-crypto, crypto-to-fiat, crypto-to-crypto):
+Financial intermediary under Art. 2 para. 3. SRO membership or FINMA direct
+supervision required.
+
+Custody/wallet services (holding private keys for clients):
+Financial intermediary under Art. 2 para. 3 (holding assets on deposit). SRO
+membership or FINMA direct supervision required. Depending on scale, may require
+FinTech license or banking license.
+
+Token issuance (ICO/ITO/STO):
+The issuer may be a financial intermediary if the token constitutes a payment
+token or if the issuer provides ongoing financial intermediary services.
+Utility tokens generally do not trigger AMLA obligations unless they have a
+payment function.
+
+Transfer services:
+Any service that facilitates the transfer of virtual assets between parties is
+a financial intermediary.
+
+DeFi protocols:
+Where a natural or legal person exercises sufficient control over a DeFi protocol
+(e.g., controls smart contracts, has admin keys, earns fees from protocol
+operation), that person may be classified as a financial intermediary. Fully
+decentralized, permissionless protocols without identifiable operators remain
+in a regulatory grey zone, though FINMA has signaled a willingness to extend
+regulation to protocol operators.
+
+7.3 Practical Implications for Crypto Businesses
+
+Crypto businesses operating in or from Switzerland must:
+1. Determine whether their activities constitute financial intermediation
+2. If yes, affiliate with an SRO (VQF and PolyReg are the most crypto-friendly)
+   or apply for FINMA direct supervision
+3. Implement full AMLA due diligence procedures
+4. Establish a compliant AML framework (policies, compliance officer, training,
+   transaction monitoring, record-keeping)
+5. Comply with travel rule requirements for virtual asset transfers
+6. File SARs with MROS as required
+7. Depending on scale and activities, obtain additional FINMA licenses (FinTech
+   license, banking license, DLT trading facility license, etc.)
+
+================================================================================
+8. KEY DEFINITIONS AND THRESHOLDS
+================================================================================
+
+- Business relationship: Any ongoing professional relationship with a financial
+  intermediary for the provision of financial services
+- Occasional transaction: A transaction carried out outside an established
+  business relationship
+- Identification threshold (general): CHF 25,000 for occasional transactions
+- Identification threshold (money exchange): CHF 5,000
+- Identification threshold (virtual asset transfers): CHF 1,000
+- Cash payment threshold (dealers): CHF 100,000
+- Record retention period: 10 years
+- Asset freeze period: 5 business days (pending MROS decision)
+- Politically Exposed Person (PEP): Persons entrusted with prominent public
+  functions (Swiss or foreign), their family members, and close associates
+
+================================================================================
+9. REFERENCES AND RELATED LEGISLATION
+================================================================================
+
+- Federal Act on Combating Money Laundering and Terrorist Financing (AMLA/GwG),
+  SR 955.0
+- Anti-Money Laundering Ordinance (AMLO), SR 955.01
+- Anti-Money Laundering Ordinance-FINMA (AMLO-FINMA), SR 955.033.0
+- Swiss Criminal Code (CC), SR 311.0, in particular Art. 305bis and 305ter
+- Federal Act on Banks and Savings Banks (Banking Act, BA), SR 952.0
+- Financial Market Infrastructure Act (FMIA), SR 958.1
+- Financial Institutions Act (FinIA), SR 954.1
+- FINMA Circular 2016/7 "Video and Online Identification"
+- FINMA Guidance 02/2019 "Payments on the Blockchain"
+- FATF Recommendations, in particular Recommendation 15 (New Technologies)
+  and Recommendation 16 (Wire Transfers / Travel Rule)
+
+================================================================================
+END OF DOCUMENT
+================================================================================
