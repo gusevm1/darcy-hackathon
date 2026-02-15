@@ -1,16 +1,12 @@
-import type {
-  ConsultMessage,
-  ConsultResponse,
-  GapAnalysis,
-  NextStep,
-} from './types'
+import { type SSECallbacks, streamSSE } from './sse-client'
+import type { ConsultMessage, ConsultResponse, GapAnalysis, NextStep } from './types'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
 
 export async function sendConsultMessage(
   message: string,
   history: ConsultMessage[],
-  clientId?: string,
+  clientId?: string
 ): Promise<ConsultResponse> {
   if (!API_URL) {
     const { matchCannedResponse } = await import('./mock-data')
@@ -31,36 +27,20 @@ export async function sendConsultMessage(
 
 export async function analyzeGaps(clientId: string): Promise<GapAnalysis> {
   if (!API_URL) {
-    const { clients, licenseDefinitions } = await import('./mock-data')
-    const client = clients.find((c) => c.id === clientId)
-    if (!client) throw new Error('Client not found')
-    const definition = licenseDefinitions.find(
-      (d) => d.type === client.licenseType,
-    )
-    if (!definition) throw new Error('License definition not found')
-
-    const missingDocuments = definition.stages.flatMap((stage) =>
-      stage.documents
-        .filter((doc) => {
-          const state = client.documentStates.find(
-            (s) => s.documentId === doc.id,
-          )
-          return !state || state.status === 'not-started'
-        })
-        .map((doc) => doc.name),
-    )
-
     return {
-      clientId,
-      missingDocuments: missingDocuments.slice(0, 5),
-      recommendations: [
-        'Prioritize uploading documents for the current stage',
-        'Ensure all corporate governance documents are up to date',
-        'Schedule a review meeting with the compliance team',
-      ],
+      client_id: clientId,
+      pathway: 'undetermined',
+      readiness_score: 0,
+      total_items: 0,
+      completed_items: 0,
+      gaps: [],
+      next_steps: [],
+      critical_blockers: [],
     }
   }
-  const res = await fetch(`${API_URL}/api/consult/gaps/${clientId}`)
+  const res = await fetch(`${API_URL}/api/consult/analyze-gaps/${clientId}`, {
+    method: 'POST',
+  })
   if (!res.ok) throw new Error('Failed to analyze gaps')
   return res.json()
 }
@@ -69,27 +49,48 @@ export async function getNextSteps(clientId: string): Promise<NextStep[]> {
   if (!API_URL) {
     return [
       {
-        id: '1',
-        title: 'Upload missing documents',
-        description:
-          'Complete document uploads for the current licensing stage',
-        priority: 'high',
+        priority: 1,
+        action: 'Upload missing documents',
+        category: 'documentation',
+        estimated_days: 14,
+        depends_on: [],
+        regulatory_reference: null,
       },
       {
-        id: '2',
-        title: 'Review compliance checklist',
-        description: 'Ensure all regulatory requirements are addressed',
-        priority: 'medium',
+        priority: 2,
+        action: 'Review compliance checklist',
+        category: 'compliance',
+        estimated_days: 7,
+        depends_on: [],
+        regulatory_reference: null,
       },
       {
-        id: '3',
-        title: 'Schedule FINMA consultation',
-        description: 'Book a pre-consultation meeting with FINMA',
-        priority: 'low',
+        priority: 3,
+        action: 'Schedule FINMA consultation',
+        category: 'regulatory',
+        estimated_days: 30,
+        depends_on: [],
+        regulatory_reference: null,
       },
     ]
   }
-  const res = await fetch(`${API_URL}/api/consult/next-steps/${clientId}`)
+  const res = await fetch(`${API_URL}/api/consult/next-steps/${clientId}`, {
+    method: 'POST',
+  })
   if (!res.ok) throw new Error('Failed to get next steps')
   return res.json()
+}
+
+export function streamConsultChat(
+  message: string,
+  callbacks: SSECallbacks,
+  clientId?: string,
+  signal?: AbortSignal
+) {
+  return streamSSE(
+    '/api/consult/chat',
+    { message, ...(clientId ? { client_id: clientId } : {}) },
+    callbacks,
+    signal
+  )
 }

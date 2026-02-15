@@ -1,33 +1,50 @@
-import type { ClientDocumentState, LicenseType } from '@/types'
+// --- SSE Event Types (matching backend SSE JSON format) ---
 
-export interface ApiClient {
-  id: string
-  name: string
-  company: string
-  licenseType: LicenseType
-  currentStageIndex: number
-  documentStates: ClientDocumentState[]
-  startDate: string
-  contactEmail: string
+export interface SSETextEvent {
+  type: 'text'
+  content: string
 }
 
+export interface SSEToolUseEvent {
+  type: 'tool_use'
+  tool: string
+  input: Record<string, unknown>
+}
+
+export interface SSEDoneEvent {
+  type: 'done'
+}
+
+export type SSEEvent = SSETextEvent | SSEToolUseEvent | SSEDoneEvent
+
+// --- Knowledge Base (matching backend kb.py models) ---
+
 export interface KBDocument {
-  id: string
+  doc_id: string
   title: string
-  content: string
-  metadata: Record<string, string>
+  source: string
 }
 
 export interface KBSearchResult {
-  document: KBDocument
+  text: string
+  title: string
+  source: string
+  doc_id: string
   score: number
 }
 
-export interface GapAnalysis {
-  clientId: string
-  missingDocuments: string[]
-  recommendations: string[]
+// --- Client (matching backend clients.py ClientListItem) ---
+
+export interface ApiClient {
+  id: string
+  company_name: string
+  status: string
+  pathway: string | null
+  created_at: string
+  updated_at: string
 }
+
+// --- Pagination (matching backend pagination.py) ---
 
 export interface PaginatedResponse<T> {
   items: T[]
@@ -36,15 +53,46 @@ export interface PaginatedResponse<T> {
   limit: number
 }
 
-export interface OnboardingSession {
-  id: string
-  clientId?: string
-  messages: OnboardingMessage[]
+// --- Gap Analysis (matching backend client.py GapAnalysis) ---
+
+export interface Gap {
+  category: string
+  field_or_item: string
+  description: string
+  severity: 'missing' | 'incomplete' | 'needs_review'
 }
+
+export interface NextStep {
+  priority: number
+  action: string
+  category: string
+  estimated_days: number | null
+  depends_on: string[]
+  regulatory_reference: string | null
+}
+
+export interface GapAnalysis {
+  client_id: string
+  pathway: string
+  readiness_score: number
+  total_items: number
+  completed_items: number
+  gaps: Gap[]
+  next_steps: NextStep[]
+  critical_blockers: string[]
+}
+
+// --- Chat Messages ---
 
 export interface OnboardingMessage {
   role: 'user' | 'assistant'
   content: string
+}
+
+export interface OnboardingSession {
+  id: string
+  clientId?: string
+  messages: OnboardingMessage[]
 }
 
 export interface ConsultMessage {
@@ -55,11 +103,4 @@ export interface ConsultMessage {
 export interface ConsultResponse {
   message: ConsultMessage
   citations?: string[]
-}
-
-export interface NextStep {
-  id: string
-  title: string
-  description: string
-  priority: 'high' | 'medium' | 'low'
 }

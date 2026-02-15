@@ -1,3 +1,4 @@
+import { type SSECallbacks, streamSSE } from './sse-client'
 import type { OnboardingMessage } from './types'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
@@ -8,12 +9,13 @@ export async function startOnboarding(): Promise<{ sessionId: string }> {
   }
   const res = await fetch(`${API_URL}/api/onboard/start`, { method: 'POST' })
   if (!res.ok) throw new Error('Failed to start onboarding')
-  return res.json()
+  const data = (await res.json()) as { client_id: string }
+  return { sessionId: data.client_id }
 }
 
 export async function sendOnboardingMessage(
   sessionId: string,
-  message: string,
+  message: string
 ): Promise<OnboardingMessage> {
   if (!API_URL) {
     const responses = [
@@ -32,4 +34,13 @@ export async function sendOnboardingMessage(
   })
   if (!res.ok) throw new Error('Failed to send onboarding message')
   return res.json()
+}
+
+export function streamOnboardingChat(
+  clientId: string,
+  message: string,
+  callbacks: SSECallbacks,
+  signal?: AbortSignal
+) {
+  return streamSSE('/api/onboard/chat', { client_id: clientId, message }, callbacks, signal)
 }
