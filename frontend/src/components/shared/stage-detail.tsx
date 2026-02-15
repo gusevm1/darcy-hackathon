@@ -1,0 +1,75 @@
+'use client'
+
+import { Progress } from '@/components/ui/progress'
+import { DocumentItem } from '@/components/shared/document-item'
+import type { ClientDocumentState, LicenseStage } from '@/types'
+
+interface StageDetailProps {
+  stage: LicenseStage
+  documentStates: ClientDocumentState[]
+  onUpload: (docId: string, fileName: string) => void
+  onReset: (docId: string) => void
+}
+
+export function StageDetail({
+  stage,
+  documentStates,
+  onUpload,
+  onReset,
+}: StageDetailProps) {
+  const stageDocIds = new Set(stage.documents.map((d) => d.id))
+  const stageStates = documentStates.filter((s) =>
+    stageDocIds.has(s.documentId),
+  )
+  const completedCount = stageStates.filter(
+    (s) => s.status === 'approved',
+  ).length
+  const totalCount = stage.documents.length
+  const progress =
+    totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0
+
+  const categories = Array.from(
+    new Set(stage.documents.map((d) => d.category)),
+  )
+
+  return (
+    <div className="space-y-6">
+      <div className="space-y-2">
+        <h3 className="text-lg font-semibold">{stage.name}</h3>
+        <p className="text-muted-foreground text-sm">{stage.description}</p>
+        <div className="flex items-center gap-3">
+          <Progress value={progress} className="h-2 max-w-xs" />
+          <span className="text-muted-foreground text-sm">
+            {completedCount} of {totalCount} approved
+          </span>
+        </div>
+      </div>
+
+      {categories.map((category) => {
+        const categoryDocs = stage.documents.filter(
+          (d) => d.category === category,
+        )
+        return (
+          <div key={category} className="space-y-3">
+            <h4 className="text-muted-foreground text-sm font-medium uppercase tracking-wide">
+              {category}
+            </h4>
+            <div className="space-y-2">
+              {categoryDocs.map((doc) => (
+                <DocumentItem
+                  key={doc.id}
+                  document={doc}
+                  state={documentStates.find(
+                    (s) => s.documentId === doc.id,
+                  )}
+                  onUpload={onUpload}
+                  onReset={onReset}
+                />
+              ))}
+            </div>
+          </div>
+        )
+      })}
+    </div>
+  )
+}
