@@ -9,6 +9,21 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ path
   url.search = req.nextUrl.search
 
   const res = await fetch(url.toString())
+  const contentType = res.headers.get('content-type') ?? ''
+
+  // Non-JSON responses (file downloads, etc.) — pass through as-is
+  if (!contentType.includes('application/json')) {
+    return new Response(res.body, {
+      status: res.status,
+      headers: {
+        'Content-Type': contentType,
+        ...(res.headers.get('content-disposition')
+          ? { 'Content-Disposition': res.headers.get('content-disposition')! }
+          : {}),
+      },
+    })
+  }
+
   const data = await res.json()
   return NextResponse.json(data, { status: res.status })
 }
