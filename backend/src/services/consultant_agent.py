@@ -134,10 +134,7 @@ TOOLS: list[anthropic.types.ToolParam] = [
                 },
                 "item_id": {
                     "type": "string",
-                    "description": (
-                        "The checklist item ID"
-                        " (e.g., sro-01, fin-01)"
-                    ),
+                    "description": ("The checklist item ID (e.g., sro-01, fin-01)"),
                 },
                 "status": {
                     "type": "string",
@@ -317,29 +314,15 @@ async def run_consultant_turn(
             system += f"- Company: {client.company_name or 'Not set'}\n"
             system += f"- Status: {client.status}\n"
             system += f"- Pathway: {client.pathway or 'Undetermined'}\n"
-            svc = (
-                ", ".join(client.services)
-                if client.services
-                else "Not specified"
-            )
+            svc = ", ".join(client.services) if client.services else "Not specified"
             system += f"- Services: {svc}\n"
-            done = sum(
-                1
-                for i in client.checklist
-                if i.status == "complete"
-            )
+            done = sum(1 for i in client.checklist if i.status == "complete")
             total = len(client.checklist)
-            system += (
-                f"- Checklist: {done}/{total} complete\n"
-            )
-            unresolved = sum(
-                1 for f in client.flags if not f.resolved
-            )
-            system += (
-                f"- Flags: {unresolved} unresolved\n"
-            )
+            system += f"- Checklist: {done}/{total} complete\n"
+            unresolved = sum(1 for f in client.flags if not f.resolved)
+            system += f"- Flags: {unresolved} unresolved\n"
 
-    messages: list[dict[str, Any]] = list(conversation_history)
+    messages: list[anthropic.types.MessageParam] = list(conversation_history)  # type: ignore[arg-type]
     messages.append({"role": "user", "content": user_message})
 
     api_client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
@@ -352,7 +335,7 @@ async def run_consultant_turn(
             max_tokens=4096,
             system=system,
             tools=TOOLS,
-            messages=messages,  # type: ignore[arg-type]
+            messages=messages,
         )
 
         assistant_text = ""
@@ -389,6 +372,6 @@ async def run_consultant_turn(
                 }
             )
 
-        messages.append({"role": "user", "content": tool_results})
+        messages.append({"role": "user", "content": tool_results})  # type: ignore[typeddict-item]
 
     yield json.dumps({"type": "done"})

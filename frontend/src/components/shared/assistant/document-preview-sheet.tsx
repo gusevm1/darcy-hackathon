@@ -10,28 +10,10 @@ import {
   SheetHeader,
   SheetTitle,
 } from '@/components/ui/sheet'
+import { statusLabel, statusVariant } from '@/lib/constants/status'
 import type { DocumentPreview } from '@/types/assistant'
 
 import { PdfPage } from './pdf-page'
-
-const statusVariant: Record<
-  string,
-  'default' | 'secondary' | 'destructive' | 'outline'
-> = {
-  'not-started': 'outline',
-  uploaded: 'secondary',
-  'under-review': 'default',
-  approved: 'default',
-  rejected: 'destructive',
-}
-
-const statusLabel: Record<string, string> = {
-  'not-started': 'Not Started',
-  uploaded: 'Uploaded',
-  'under-review': 'Under Review',
-  approved: 'Approved',
-  rejected: 'Rejected',
-}
 
 function splitIntoPages(content: string, charsPerPage = 1200): string[] {
   const paragraphs = content.split('\n\n')

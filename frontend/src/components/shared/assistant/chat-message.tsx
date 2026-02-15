@@ -1,5 +1,7 @@
 'use client'
 
+import { memo } from 'react'
+
 import { Bot, User } from 'lucide-react'
 
 import { cn } from '@/lib/utils'
@@ -51,7 +53,7 @@ function renderContent(
   })
 }
 
-export function ChatMessage({ message, onCitationClick }: ChatMessageProps) {
+export const ChatMessage = memo(function ChatMessage({ message, onCitationClick }: ChatMessageProps) {
   const isUser = message.role === 'user'
 
   return (
@@ -91,4 +93,4 @@ export function ChatMessage({ message, onCitationClick }: ChatMessageProps) {
       </div>
     </div>
   )
-}
+})

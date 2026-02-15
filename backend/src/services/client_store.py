@@ -18,19 +18,9 @@ async def _get_db() -> aiosqlite.Connection:
 
 
 async def init_db() -> None:
-    db = await _get_db()
-    try:
-        await db.execute(
-            """
-            CREATE TABLE IF NOT EXISTS clients (
-                id TEXT PRIMARY KEY,
-                data TEXT NOT NULL
-            )
-            """
-        )
-        await db.commit()
-    finally:
-        await db.close()
+    from src.services.migrations.runner import run_migrations
+
+    await run_migrations(DB_PATH)
 
 
 async def save_client(client: Client) -> None:
@@ -57,12 +47,20 @@ async def get_client(client_id: str) -> Client | None:
         await db.close()
 
 
-async def list_clients() -> list[Client]:
+async def list_clients(skip: int = 0, limit: int = 50) -> tuple[list[Client], int]:
     db = await _get_db()
     try:
-        cursor = await db.execute("SELECT data FROM clients ORDER BY rowid DESC")
+        count_cursor = await db.execute("SELECT COUNT(*) FROM clients")
+        count_row = await count_cursor.fetchone()
+        total = count_row[0] if count_row else 0
+
+        cursor = await db.execute(
+            "SELECT data FROM clients ORDER BY rowid DESC LIMIT ? OFFSET ?",
+            (limit, skip),
+        )
         rows = await cursor.fetchall()
-        return [Client.model_validate_json(row[0]) for row in rows]
+        clients = [Client.model_validate_json(row[0]) for row in rows]
+        return clients, total
     finally:
         await db.close()
 

@@ -169,7 +169,14 @@ TOOLS: list[anthropic.types.ToolParam] = [
             "properties": {
                 "pathway": {
                     "type": "string",
-                    "enum": ["sro", "finma_fintech", "finma_banking", "finma_dlt", "finma_securities", "finma_payment_systems"],
+                    "enum": [
+                        "sro",
+                        "finma_fintech",
+                        "finma_banking",
+                        "finma_dlt",
+                        "finma_securities",
+                        "finma_payment_systems",
+                    ],
                     "description": "The recommended regulatory pathway",
                 },
                 "target_sro": {
@@ -198,8 +205,7 @@ TOOLS: list[anthropic.types.ToolParam] = [
                 "summary": {
                     "type": "string",
                     "description": (
-                        "Brief summary of the intake"
-                        " findings for the consultant"
+                        "Brief summary of the intake findings for the consultant"
                     ),
                 },
             },
@@ -291,9 +297,9 @@ async def run_onboarding_turn(client: Client, user_message: str) -> AsyncIterato
     await client_store.save_client(client)
 
     # Build messages for Claude
-    messages: list[dict[str, Any]] = []
+    messages: list[anthropic.types.MessageParam] = []
     for msg in client.conversation_history:
-        messages.append({"role": msg["role"], "content": msg["content"]})
+        messages.append({"role": msg["role"], "content": msg["content"]})  # type: ignore[typeddict-item]
 
     api_client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
 
@@ -305,7 +311,7 @@ async def run_onboarding_turn(client: Client, user_message: str) -> AsyncIterato
             max_tokens=2048,
             system=SYSTEM_PROMPT,
             tools=TOOLS,
-            messages=messages,  # type: ignore[arg-type]
+            messages=messages,
         )
 
         # Process response content
@@ -350,6 +356,6 @@ async def run_onboarding_turn(client: Client, user_message: str) -> AsyncIterato
                 }
             )
 
-        messages.append({"role": "user", "content": tool_results})
+        messages.append({"role": "user", "content": tool_results})  # type: ignore[typeddict-item]
 
     yield json.dumps({"type": "done"})

@@ -79,7 +79,7 @@ export function ChatArea({
       </div>
 
       <ScrollArea ref={scrollAreaRef} className="min-h-0 flex-1 p-4">
-        <div className="space-y-4">
+        <div className="space-y-4" role="log" aria-live="polite">
           {messages.map((msg) => (
             <ChatMessage
               key={msg.id}

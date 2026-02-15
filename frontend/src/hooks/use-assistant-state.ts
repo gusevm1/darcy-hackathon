@@ -1,144 +1,67 @@
 'use client'
 
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useMemo, useState } from 'react'
 
 import { toast } from 'sonner'
 
 import { clients as initialClients } from '@/data/clients'
-import { matchCannedResponse } from '@/data/canned-responses'
 import { licenseDefinitions } from '@/data/license-stages'
 import { buildFileTree } from '@/lib/build-file-tree'
-import { resolveCitations } from '@/lib/resolve-citations'
 import type { Client } from '@/types'
-import type {
-  ChatMessage,
-  ChatSession,
-  Citation,
-  DocumentPreview,
-} from '@/types/assistant'
+import type { Citation } from '@/types/assistant'
 
-function generateId() {
-  return Math.random().toString(36).slice(2, 11)
-}
-
-const welcomeMessage: ChatMessage = {
-  id: 'welcome',
-  role: 'assistant',
-  content:
-    'Hello! I\'m your FINMA compliance assistant. I can help you navigate the licensing process, review document status, and answer questions about regulatory requirements. Try asking about **AML/KYC policies**, **capital requirements**, or the **status** of your applications.',
-  citations: [],
-  timestamp: new Date(),
-}
-
-function createDefaultChat(): ChatSession {
-  return {
-    id: 'default',
-    title: 'Welcome',
-    messages: [welcomeMessage],
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  }
-}
+import { useChatSessions } from './use-chat-sessions'
+import { useDocumentPreview } from './use-document-preview'
+import { useFileTree } from './use-file-tree'
 
 export function useAssistantState() {
   const [clientsState, setClientsState] = useState<Client[]>(() =>
-    JSON.parse(JSON.stringify(initialClients)),
+    structuredClone(initialClients),
   )
-  const [expandedNodes, setExpandedNodes] = useState<Set<string>>(() => {
-    const set = new Set<string>()
-    initialClients.forEach((c) => set.add(c.id))
-    return set
-  })
-  const [highlightedDocumentId, setHighlightedDocumentId] = useState<
-    string | null
-  >(null)
-  const [chats, setChats] = useState<ChatSession[]>(() => [createDefaultChat()])
-  const [activeChatId, setActiveChatId] = useState('default')
-  const [previewDocument, setPreviewDocument] =
-    useState<DocumentPreview | null>(null)
-  const [previewOpen, setPreviewOpen] = useState(false)
 
-  const highlightTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
+  const {
+    expandedNodes,
+    highlightedDocumentId,
+    highlightTimerRef,
+    setExpandedNodes,
+    setHighlightedDocumentId,
+    toggleNode,
+  } = useFileTree()
+
+  const {
+    chats,
+    activeChatId,
+    messages,
+    createNewChat,
+    switchChat,
+    sendMessage,
+  } = useChatSessions(clientsState)
+
+  const {
+    previewDocument,
+    previewOpen,
+    setPreviewDocument,
+    setPreviewOpen,
+    handlePreviewOpenChange: baseHandlePreviewOpenChange,
+  } = useDocumentPreview()
 
   const fileTree = useMemo(
     () => buildFileTree(clientsState, licenseDefinitions),
     [clientsState],
   )
 
-  const activeChat = useMemo(
-    () => chats.find((c) => c.id === activeChatId) ?? chats[0],
-    [chats, activeChatId],
-  )
-  const messages = activeChat.messages
-
-  const createNewChat = useCallback(() => {
-    const newChat: ChatSession = {
-      id: generateId(),
-      title: 'New Chat',
-      messages: [
-        {
-          ...welcomeMessage,
-          id: generateId(),
-          timestamp: new Date(),
-        },
-      ],
-      createdAt: new Date(),
-      updatedAt: new Date(),
-    }
-    setChats((prev) => [newChat, ...prev])
-    setActiveChatId(newChat.id)
-  }, [])
-
-  const switchChat = useCallback((chatId: string) => {
-    setActiveChatId(chatId)
-  }, [])
-
-  const sendMessage = useCallback(
-    (content: string) => {
-      const trimmed = content.trim()
-      if (!trimmed) return
-
-      const userMsg: ChatMessage = {
-        id: generateId(),
-        role: 'user',
-        content: trimmed,
-        citations: [],
-        timestamp: new Date(),
+  const handlePreviewOpenChange = useCallback(
+    (open: boolean) => {
+      baseHandlePreviewOpenChange(open)
+      if (!open) {
+        setHighlightedDocumentId(null)
+        if (highlightTimerRef.current) {
+          clearTimeout(highlightTimerRef.current)
+          highlightTimerRef.current = null
+        }
       }
-
-      const matched = matchCannedResponse(trimmed)
-      const citations = resolveCitations(
-        matched.citationDocIds,
-        clientsState,
-        licenseDefinitions,
-      )
-
-      const assistantMsg: ChatMessage = {
-        id: generateId(),
-        role: 'assistant',
-        content: matched.content,
-        citations,
-        timestamp: new Date(),
-      }
-
-      setChats((prev) =>
-        prev.map((chat) => {
-          if (chat.id !== activeChatId) return chat
-
-          const isFirstUserMessage =
-            !chat.messages.some((m) => m.role === 'user')
-          return {
-            ...chat,
-            messages: [...chat.messages, userMsg, assistantMsg],
-            title: isFirstUserMessage
-              ? trimmed.slice(0, 50) + (trimmed.length > 50 ? '...' : '')
-              : chat.title,
-            updatedAt: new Date(),
-          }
-        }),
-      )
     },
-    [clientsState, activeChatId],
+    [baseHandlePreviewOpenChange, setHighlightedDocumentId, highlightTimerRef],
   )
 
   const handleCitationClick = useCallback(
@@ -149,10 +72,8 @@ export function useAssistantState() {
 
       setHighlightedDocumentId(citation.documentId)
 
-      // Auto-expand parent nodes
       setExpandedNodes((prev) => {
         const next = new Set(prev)
-        // Find client and stage for this document
         for (const client of clientsState) {
           const definition = licenseDefinitions.find(
             (d) => d.type === client.licenseType,
@@ -173,7 +94,6 @@ export function useAssistantState() {
         return next
       })
 
-      // Build preview
       for (const client of clientsState) {
         const definition = licenseDefinitions.find(
           (d) => d.type === client.licenseType,
@@ -212,26 +132,11 @@ export function useAssistantState() {
         highlightTimerRef.current = null
       }, 3000)
     },
-    [clientsState],
-  )
-
-  const handlePreviewOpenChange = useCallback(
-    (open: boolean) => {
-      setPreviewOpen(open)
-      if (!open) {
-        setHighlightedDocumentId(null)
-        if (highlightTimerRef.current) {
-          clearTimeout(highlightTimerRef.current)
-          highlightTimerRef.current = null
-        }
-      }
-    },
-    [],
+    [clientsState, highlightTimerRef, setHighlightedDocumentId, setExpandedNodes, setPreviewDocument, setPreviewOpen],
   )
 
   const handleUploadFile = useCallback(
     (file: File) => {
-      // Find a random not-started document across all clients
       const candidates: { clientIndex: number; docId: string }[] = []
 
       clientsState.forEach((client, clientIndex) => {
@@ -250,7 +155,7 @@ export function useAssistantState() {
       const pick = candidates[Math.floor(Math.random() * candidates.length)]
 
       setClientsState((prev) => {
-        const next = JSON.parse(JSON.stringify(prev)) as Client[]
+        const next = structuredClone(prev)
         const client = next[pick.clientIndex]
         const docState = client.documentStates.find(
           (ds) => ds.documentId === pick.docId,
@@ -263,7 +168,6 @@ export function useAssistantState() {
         return next
       })
 
-      // Find the document name for the toast
       let docName = pick.docId
       for (const def of licenseDefinitions) {
         for (const stage of def.stages) {
@@ -282,18 +186,6 @@ export function useAssistantState() {
     },
     [clientsState],
   )
-
-  const toggleNode = useCallback((nodeId: string) => {
-    setExpandedNodes((prev) => {
-      const next = new Set(prev)
-      if (next.has(nodeId)) {
-        next.delete(nodeId)
-      } else {
-        next.add(nodeId)
-      }
-      return next
-    })
-  }, [])
 
   return {
     fileTree,

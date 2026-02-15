@@ -1,5 +1,7 @@
 'use client'
 
+import { memo } from 'react'
+
 import type { Citation } from '@/types/assistant'
 
 interface CitationBadgeProps {
@@ -7,7 +9,7 @@ interface CitationBadgeProps {
   onCitationClick: (citation: Citation) => void
 }
 
-export function CitationBadge({
+export const CitationBadge = memo(function CitationBadge({
   citation,
   onCitationClick,
 }: CitationBadgeProps) {
@@ -21,4 +23,4 @@ export function CitationBadge({
       [{citation.index}]
     </button>
   )
-}
+})

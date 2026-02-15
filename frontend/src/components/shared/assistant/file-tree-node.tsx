@@ -1,6 +1,6 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { memo, useEffect, useRef } from 'react'
 
 import {
   ChevronDown,
@@ -36,7 +36,7 @@ interface FileTreeNodeProps {
   registerRef: (docId: string, el: HTMLDivElement | null) => void
 }
 
-export function FileTreeNode({
+export const FileTreeNode = memo(function FileTreeNode({
   node,
   depth,
   expandedNodes,
@@ -151,4 +151,18 @@ export function FileTreeNode({
       )}
     </div>
   )
-}
+}, (prev, next) => {
+  if (prev.node !== next.node) return false
+  if (prev.depth !== next.depth) return false
+  if (prev.highlightedDocumentId !== next.highlightedDocumentId) return false
+  if (prev.onToggle !== next.onToggle) return false
+  if (prev.onDocumentClick !== next.onDocumentClick) return false
+  if (prev.registerRef !== next.registerRef) return false
+  // Custom Set comparison: check size and relevant entries
+  if (prev.expandedNodes === next.expandedNodes) return true
+  if (prev.expandedNodes.size !== next.expandedNodes.size) return false
+  for (const key of prev.expandedNodes) {
+    if (!next.expandedNodes.has(key)) return false
+  }
+  return true
+})

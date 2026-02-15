@@ -8,19 +8,48 @@ services:
     environment:
       - QDRANT_URL=http://qdrant:6333
     depends_on:
-      - qdrant
+      qdrant:
+        condition: service_healthy
+    restart: unless-stopped
     volumes:
       - ./backend/src/data:/app/src/data
       - client_data:/app/data
+    deploy:
+      resources:
+        limits:
+          memory: 512M
+          cpus: "0.5"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
 
   qdrant:
     image: qdrant/qdrant:latest
     expose:
       - "6333"
+    restart: unless-stopped
     volumes:
       - qdrant_storage:/qdrant/storage
     environment:
       - QDRANT__STORAGE__ON_DISK_PAYLOAD=true
+    healthcheck:
+      test: ["CMD-SHELL", "curl -f http://localhost:6333/healthz || exit 1"]
+      interval: 30s
+      timeout: 5s
+      start_period: 10s
+      retries: 3
+    deploy:
+      resources:
+        limits:
+          memory: 256M
+          cpus: "0.25"
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
 
 volumes:
   qdrant_storage:

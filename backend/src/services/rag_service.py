@@ -132,9 +132,8 @@ async def ingest_document(
         await _qdrant.upsert(collection_name=settings.qdrant_collection, points=points)
         # Update BM25 corpus
         for p in points:
-            _bm25_corpus.append(
-                {"id": str(p.id), "text": str(p.payload["text"])}  # type: ignore[index]
-            )
+            if p.payload is not None:
+                _bm25_corpus.append({"id": str(p.id), "text": str(p.payload["text"])})
 
     logger.info("Ingested '%s': %d chunks", title, len(points))
     return len(points)
