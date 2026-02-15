@@ -9,9 +9,11 @@ RUN pip install --no-cache-dir -r requirements.txt
 
 COPY . .
 
-RUN mkdir -p /app/data && chown -R appuser:appuser /app
+RUN mkdir -p /app/data /app/src/data && chown -R appuser:appuser /app
 
-USER appuser
+# Note: USER appuser is not set because host-mounted volumes
+# (./backend/src/data:/app/src/data) retain host ownership.
+# To run as non-root, use named volumes or fix host dir permissions.
 
 HEALTHCHECK --interval=30s --timeout=5s --start-period=10s --retries=3 \
     CMD python -c "import urllib.request; urllib.request.urlopen('http://localhost:8000/health')"
