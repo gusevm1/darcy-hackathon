@@ -3,6 +3,13 @@
     "shadcn": {
       "command": "npx",
       "args": ["shadcn@latest", "mcp"]
+    },
+    "darcy": {
+      "command": "/home/ubuntu/darcy-hackathon/mcp-server/.venv/bin/python",
+      "args": ["/home/ubuntu/darcy-hackathon/mcp-server/server.py"],
+      "env": {
+        "DARCY_API_URL": "http://localhost:8000"
+      }
     }
   }
 }

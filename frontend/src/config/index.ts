@@ -9,4 +9,5 @@ export const navItems = [
   { label: 'Onboarding', href: '/onboarding' },
   { label: 'Roadmap', href: '/roadmap' },
   { label: 'Knowledge', href: '/knowledge' },
+  { label: 'MCP', href: '/mcp' },
 ] as const
