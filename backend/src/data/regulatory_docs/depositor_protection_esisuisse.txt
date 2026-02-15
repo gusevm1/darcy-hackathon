@@ -1,0 +1,1076 @@
+ESISUISSE — SWISS DEPOSITOR PROTECTION SCHEME
+==============================================
+Comprehensive Knowledge Base Document
+Last updated: 2025
+
+
+1. OVERVIEW OF SWISS DEPOSITOR PROTECTION
+------------------------------------------
+
+Swiss depositor protection is governed by Articles 37a through 37jbis of
+the Federal Act on Banks and Savings Banks (Banking Act, BankA; SR 952.0),
+together with Articles 42a through 44a of the Banking Ordinance (BankO;
+SR 952.02). The scheme protects deposits held at banks and securities firms
+licensed by the Swiss Financial Market Supervisory Authority (FINMA).
+
+The Swiss depositor protection framework rests on three pillars:
+
+(a) Bankruptcy privilege (Konkursprivileg): Privileged deposits enjoy
+    preferential treatment in bankruptcy proceedings, meaning they are
+    satisfied before ordinary unsecured claims (Art. 37a BankA).
+
+(b) Immediate payout mechanism (Sofortauszahlung): Protected deposits are
+    paid out from the insolvent bank's available liquid assets at the
+    outset of bankruptcy proceedings, outside the normal schedule of claims
+    (Art. 37b BankA).
+
+(c) Deposit insurance (Einlagensicherung): If the insolvent bank's liquid
+    assets are insufficient to cover the full payout of protected deposits,
+    the deposit insurance body — esisuisse — steps in to fund the shortfall
+    (Art. 37h BankA).
+
+The Swiss system is distinctive in several respects. It combines statutory
+provisions in the Banking Act with self-regulation by esisuisse, uses an
+ex-post funding model rather than a pre-funded deposit insurance fund, and
+requires banks to maintain a domestic asset coverage ratio of 125% of
+privileged deposits.
+
+
+2. ESISUISSE AS THE DEPOSIT INSURANCE BODY
+--------------------------------------------
+
+esisuisse (formally: Einlagensicherung der Schweizer Banken und
+Effektenhändler) is the deposit insurance body for Switzerland. It is
+organized as a private-law association (Verein) under Swiss law, domiciled
+in Basel. esisuisse was established in 2005 and operates under the
+self-regulation framework recognized by FINMA pursuant to Art. 37h BankA.
+
+Key organizational facts:
+
+- Legal form: Association under Art. 60 et seq. Swiss Civil Code (ZGB)
+- Domicile: Basel, Switzerland
+- Governing documents: Statutes (version 23.12.2022), Self-Regulation
+  Agreement (version 23.12.2022)
+- Memorandum of Understanding (MoU) with FINMA for coordination and
+  information exchange
+- Member of the International Association of Deposit Insurers (IADI)
+
+As of 31 December 2024, esisuisse comprises 256 members:
+- 232 active banks
+- 19 active securities firms (account-holding)
+- 5 institutes in wind-down operations
+
+esisuisse performs the following core functions:
+- Administering the deposit insurance scheme
+- Collecting and managing member data on protected and privileged deposits
+- Coordinating with FINMA and bank liquidators in the event of insolvency
+- Transferring funds to the liquidator for payout to depositors
+- Recovering disbursed amounts through the bankruptcy dividend
+- Issuing self-regulation documents and client information templates
+- Publishing annual reports and deposit statistics
+
+
+3. MEMBERSHIP REQUIREMENTS
+----------------------------
+
+Membership in esisuisse is mandatory for all institutions that accept
+protected deposits, as stipulated in Art. 37h para. 3 BankA.
+
+The following institutions must be members:
+
+(a) All banks licensed by FINMA under Art. 1 BankA, including:
+    - Universal banks
+    - Private banks
+    - Cantonal banks
+    - Raiffeisen cooperatives (each cooperative is a separate member)
+    - PostFinance
+    - Foreign bank branches authorized by FINMA
+
+(b) Account-holding securities firms licensed under the Financial
+    Institutions Act (FinIA; SR 954.1) that accept client deposits.
+
+The following are NOT required to be members:
+- Non-account-holding securities firms
+- FinTech license holders under Art. 1b BankA (sandbox or innovation
+  license entities)
+- Fund management companies (unless they also hold a banking license)
+- Insurance companies
+- Entities operating under the fintech sandbox (Art. 6 para. 2 BankO)
+
+Member obligations include:
+- Payment of annual membership fees
+- Compliance with esisuisse self-regulation documents
+- Reporting of deposit data to esisuisse (annual data submission)
+- Maintaining the required collateral for payment obligations
+- Making contributions upon call by esisuisse in an insolvency event
+- Displaying standardized client information about deposit insurance
+  on websites and in client documentation
+
+
+4. PROTECTED DEPOSIT CATEGORIES
+---------------------------------
+
+The following deposit categories are protected by the deposit insurance
+scheme (Art. 37a para. 1 BankA, as amended effective 1 January 2023):
+
+4.1 Deposits Covered by Deposit Insurance (Protected Deposits)
+
+(a) Credit balances in government-issued currencies (CHF, EUR, USD, etc.)
+    on accounts held in the client's name, including:
+    - Savings accounts
+    - Current accounts (Kontokorrent)
+    - Investment accounts
+    - Salary accounts
+    - Youth and student accounts
+
+(b) Overnight deposits, fixed-term deposits, and time deposits
+
+(c) Credit balances on metal accounts (gold, silver, platinum, palladium)
+    where the contract provides for repayment in a government-issued
+    currency
+
+(d) Medium-term notes (Kassenobligationen) issued by the bank, provided:
+    - They are denominated in a government-issued currency
+    - They are deposited in custody with the issuing bank
+    - They are held in the name of the bearer/depositor
+
+(e) Deposits in foreign government-issued currencies, converted at the
+    exchange rate prevailing on the date bankruptcy proceedings commence
+
+4.2 Deposits Not Covered by Deposit Insurance (Exclusions)
+
+The following are NOT protected by deposit insurance:
+
+(a) Deposits exceeding CHF 100,000 per client per bank (the excess
+    portion falls into the third creditor class)
+
+(b) Securities held in custody accounts (these are client property and
+    are segregated and returned in bankruptcy — not deposits)
+
+(c) Cryptocurrency units held in custody accounts
+
+(d) Contents of safe deposit boxes
+
+(e) Bonds and other debt securities (unless qualifying as medium-term
+    notes deposited with the issuing bank)
+
+(f) Credit balances not denominated in a government-issued currency
+
+(g) Deposits at institutions not authorized by FINMA
+
+(h) Assets held through insurance wrappers, structured products, or
+    derivatives
+
+(i) Dormant assets (assets whose owner has had no contact with the bank
+    for an extended period and cannot be located)
+
+(j) As of 1 January 2023: deposits by financial intermediaries (banks,
+    securities firms, insurance companies) — these are no longer protected
+
+(k) Deposits at fintech license holders (Art. 1b BankA) and sandbox
+    entities (Art. 6 para. 2 BankO)
+
+
+5. CHF 100,000 PER DEPOSITOR PER BANK GUARANTEE
+--------------------------------------------------
+
+The maximum deposit insurance coverage is CHF 100,000 per depositor
+(client) per bank (Art. 37a para. 1 BankA).
+
+Key rules governing this limit:
+
+(a) All accounts held by the same client at the same bank are aggregated
+    toward the CHF 100,000 limit. This includes savings accounts, current
+    accounts, time deposits, and qualifying medium-term notes.
+
+(b) Each bank is treated as a separate entity. A depositor with accounts
+    at multiple banks receives CHF 100,000 protection at each bank.
+
+(c) For Raiffeisen: Each Raiffeisen cooperative is treated as a separate,
+    independent bank. The CHF 100,000 limit applies independently to each
+    cooperative. Branches and subsidiaries of a single cooperative are NOT
+    treated as separate entities.
+
+(d) Accrued interest credited to the client's account is included in the
+    protected amount. Interest that has accrued but not yet been booked,
+    and expired fees or charges, are excluded.
+
+(e) The Federal Council may adjust the CHF 100,000 limit if its real
+    value is significantly eroded by inflation (Art. 37a para. 7 BankA).
+
+(f) Deposits in foreign currencies are converted to CHF at the exchange
+    rate prevailing on the date bankruptcy proceedings are opened. The
+    CHF 100,000 limit applies to the converted amount.
+
+
+6. PRIVILEGED DEPOSITS IN BANKRUPTCY (Art. 37a BankA)
+------------------------------------------------------
+
+The bankruptcy privilege (Konkursprivileg) grants preferential treatment
+to certain deposits in bank insolvency proceedings. Privileged deposits
+are satisfied in the second creditor class, ahead of ordinary unsecured
+claims (third class).
+
+The creditor hierarchy in Swiss bank bankruptcy is:
+
+First class (Art. 219 SchKG):
+- Employee salary claims and related social insurance contributions
+
+Second class (Art. 37a BankA):
+- Protected deposits (up to CHF 100,000 per depositor per bank)
+- Preferential deposits at foreign branches of Swiss banks (up to
+  CHF 100,000, but NOT covered by deposit insurance)
+- Vested benefits deposits (Freizügigkeitsguthaben) up to CHF 100,000
+  per client and foundation
+- Pillar 3a pension deposits (Säule 3a) up to CHF 100,000 per client
+  and foundation
+- Claims of esisuisse for amounts disbursed under the deposit insurance
+  scheme (subrogation)
+
+Third class:
+- All other unsecured claims, including:
+  - Deposit amounts exceeding CHF 100,000
+  - Claims by financial intermediaries (since 1 January 2023)
+  - Ordinary trade creditors
+
+If available funds are insufficient to satisfy all creditors within a
+class, they receive pro-rata distributions (bankruptcy dividend).
+
+The 125% asset coverage requirement (Art. 37a para. 5 BankA) mandates
+that banks must at all times hold assets located in Switzerland equal to
+at least 125% of their total privileged deposits (protected deposits plus
+preferential deposits). This backing requirement is designed to ensure
+that in bankruptcy, sufficient domestically located assets exist to cover
+the privileged claims.
+
+
+7. IMMEDIATE PAYOUT MECHANISM
+-------------------------------
+
+The immediate payout mechanism (Sofortauszahlung) is a key feature of
+the Swiss system, established in Art. 37b BankA. It ensures that
+protected deposits are disbursed at the outset of bankruptcy proceedings,
+outside the ordinary schedule of claims.
+
+The mechanism operates as follows:
+
+Step 1: FINMA opens bankruptcy proceedings against the bank and appoints
+a liquidator (Art. 33 et seq. BankA).
+
+Step 2: The liquidator identifies all depositors with protected deposits
+and contacts them to provide payout instruction forms.
+
+Step 3: The liquidator uses the bank's available liquid assets to pay out
+protected deposits. These payments are made outside the ordinary schedule
+of claims (i.e., they are not subject to the normal bankruptcy procedure
+timeline).
+
+Step 4: If the bank's available liquidity is insufficient to cover all
+protected deposits, the liquidator notifies esisuisse.
+
+Step 5: esisuisse calls on its member banks for contributions and
+transfers the necessary funds to the liquidator within seven working days
+(as of 1 January 2023; previously 20 working days).
+
+Step 6: The liquidator disburses the esisuisse-funded amounts to the
+remaining depositors.
+
+Step 7: esisuisse is subrogated to the depositors' claims in the second
+creditor class and recovers the amounts it disbursed through the
+bankruptcy dividend.
+
+Important constraints:
+- Banks may NOT offset client debts (including mortgages) against
+  protected deposits. The depositor receives the full protected amount,
+  and the bank's counterclaims remain as separate receivables in the
+  bankruptcy estate.
+- All banking services cease immediately upon opening of bankruptcy
+  (transfers, e-banking, cards, standing orders).
+- Incoming transfers to the bankrupt institution are automatically
+  returned to the sender.
+
+
+8. CONTRIBUTION CALCULATION METHODOLOGY
+-----------------------------------------
+
+esisuisse operates on an ex-post funding model. Member banks do not make
+regular contributions into a standing fund. Instead, contributions are
+called when an insolvency event requires esisuisse to supplement the
+bankrupt institution's liquid assets.
+
+8.1 System Limit Calculation
+
+The total payment obligation of all member banks is set at 1.6% of all
+protected deposits in Switzerland (Art. 37h para. 3bis BankA). Based on
+the latest reported data:
+
+- Protected deposits as of 31.12.2024: CHF 497.4 billion
+- System limit (1.6%): approximately CHF 7.96 billion
+- Protected deposits as of 31.12.2023: CHF 496.5 billion
+- System limit (1.6%): approximately CHF 7.94 billion
+
+The Federal Council may increase this percentage if necessary.
+
+8.2 Individual Bank Contribution Calculation
+
+Each member bank's share of the total payment obligation is calculated
+based on its proportion of total protected deposits relative to the
+aggregate protected deposits of all member banks. The formula is:
+
+  Individual payment obligation =
+    (Bank's protected deposits / Total protected deposits of all members)
+    x Total system payment obligation
+
+Example: If a bank holds CHF 5 billion in protected deposits and total
+protected deposits across all members are CHF 497.4 billion, the bank's
+share = (5 / 497.4) x 7.96 billion = approximately CHF 80 million.
+
+8.3 Individual Bank Contribution Cap
+
+Each member bank's individual contribution is capped at 50% of its
+required minimum capital (Art. 37h para. 3ter BankA). If a bank's
+calculated share exceeds this cap, the excess is redistributed
+proportionally among the remaining members.
+
+For a bank with the statutory minimum capital of CHF 10 million, the cap
+would be CHF 5 million. For larger banks with higher minimum capital
+requirements, the cap is correspondingly higher.
+
+8.4 Collateral Requirement (since 1 January 2023)
+
+As of 1 January 2023, member banks must deposit 50% of their individual
+payment obligation with a third-party custodian in advance, in the form
+of securities or money (Art. 37h para. 3quater BankA). The deadline for
+initial collateral deposits was 1 December 2023.
+
+The remaining 50% is subject to the ordinary liquidity requirements
+applicable to banks and is called upon only when needed.
+
+8.5 Contribution Periods
+
+The contribution data reported by banks is used for the following
+contribution periods:
+- Data as of 31.12.2024: contribution period 01.07.2025 - 30.06.2026
+- Data as of 31.12.2023: contribution period 01.07.2024 - 30.06.2025
+- Data as of 31.12.2022: contribution period 01.07.2023 - 30.06.2024
+
+
+9. SYSTEM LIMIT
+-----------------
+
+The system limit represents the maximum aggregate amount that esisuisse
+can call upon from all member banks in any single insolvency event or
+series of related events.
+
+Historical development of the system limit:
+
+- Prior to 2008: CHF 4 billion
+- 2008 legislative reform: increased to CHF 6 billion
+- 1 January 2023 reform: changed from a fixed nominal amount to a
+  formula-based approach of 1.6% of all protected deposits, resulting
+  in approximately CHF 7.9 billion (previously CHF 6 billion)
+
+The current system limit is approximately CHF 7.96 billion (based on
+31.12.2024 data). This amount is recalculated annually based on the
+most recent deposit data submitted by member banks.
+
+Important notes on the system limit:
+- The 1.6% figure is set by the Federal Council and may be adjusted
+- If a bank failure exceeds the system limit, depositors may not receive
+  full immediate payout; the remainder would be subject to the ordinary
+  bankruptcy proceedings
+- The system limit applies to the aggregate of all ongoing insolvency
+  events simultaneously requiring esisuisse funding
+- In 2009, proposals to increase the limit to CHF 10 billion and to
+  introduce ex-ante funding were rejected by the Swiss legislature
+
+
+10. INDIVIDUAL BANK CONTRIBUTION CAPS
+---------------------------------------
+
+Individual bank contributions are subject to a cap to prevent excessive
+strain on any single institution (Art. 37h para. 3ter BankA).
+
+The cap is set at 50% of the bank's required minimum capital, calculated
+as follows:
+
+(a) The "minimum capital" refers to the regulatory minimum capital
+    requirement applicable to the bank under the Capital Adequacy
+    Ordinance (CAO; SR 952.03), not the bank's actual capital.
+
+(b) For a standard bank with the statutory minimum of CHF 10 million,
+    the cap is CHF 5 million.
+
+(c) For systemically important banks (UBS, PostFinance, Raiffeisen,
+    Zürcher Kantonalbank), the minimum capital requirement is
+    substantially higher, and so is the contribution cap.
+
+(d) If a bank's proportional share of the system-wide payment obligation
+    exceeds its 50% minimum capital cap, the excess amount is
+    redistributed among remaining member banks (subject to their own
+    caps).
+
+(e) This cap mechanism is designed to ensure that deposit insurance
+    contributions do not themselves destabilize the contributing banks.
+
+
+11. FUNDING MECHANISM (EX-POST CONTRIBUTIONS)
+-----------------------------------------------
+
+The Swiss deposit insurance system is fundamentally ex-post in nature,
+meaning that member banks contribute funds only after an insolvency event
+has occurred, rather than building up a pre-funded reserve.
+
+11.1 How the Ex-Post System Works
+
+(a) An insolvency event is triggered (FINMA opens bankruptcy proceedings).
+
+(b) The bank's own liquid assets are used first to pay out protected
+    deposits (Art. 37b BankA).
+
+(c) If the bank's liquidity is insufficient, the liquidator notifies
+    esisuisse of the shortfall.
+
+(d) esisuisse issues a call for contributions to all member banks.
+
+(e) Member banks must transfer their share of the required amount to
+    esisuisse. Since 1 January 2023, 50% of each bank's obligation is
+    already held as collateral with a third-party custodian and can be
+    released immediately.
+
+(f) esisuisse transfers the collected funds to the liquidator within
+    seven working days.
+
+(g) The liquidator disburses the funds to depositors.
+
+(h) esisuisse subsequently recovers its outlays through the bankruptcy
+    dividend as a second-class creditor.
+
+11.2 Advantages of the Ex-Post Model
+
+- No opportunity cost: banks do not lock up capital in a standing fund
+- No investment risk on fund assets
+- Full system capacity available at all times (subject to member
+  solvency)
+
+11.3 Disadvantages and Criticisms
+
+- Pro-cyclical: contributions are called precisely when the banking
+  system may be under stress
+- Reliance on member solvency: if multiple banks fail simultaneously,
+  remaining banks must absorb larger contributions
+- No pre-funded buffer for immediate deployment
+- Slower than pre-funded systems in theory (though the collateral
+  requirement since 2023 partially addresses this)
+
+11.4 Hybrid Element (since 2023)
+
+The 2023 reform introduced a hybrid element: 50% of each bank's payment
+obligation must be deposited as collateral (securities or cash) with a
+third-party custodian. This pre-positioned collateral can be released
+rapidly, effectively creating a partial pre-funding mechanism while
+retaining the overall ex-post structure.
+
+
+12. SELF-REGULATION RECOGNIZED BY FINMA
+-----------------------------------------
+
+The Swiss deposit insurance system operates as a self-regulatory scheme
+under the umbrella of FINMA recognition, pursuant to Art. 37h BankA.
+
+12.1 Legal Framework
+
+The Banking Act sets the statutory framework (Arts. 37a-37jbis), but
+the operational details are governed by esisuisse's self-regulatory
+documents:
+
+- Statutes of esisuisse (current version: 23.12.2022)
+- Self-Regulation Agreement (current version: 23.12.2022)
+- Memorandum of Understanding between esisuisse and FINMA
+
+FINMA recognizes the self-regulation as meeting the statutory
+requirements of the Banking Act. This recognition is essential: without
+it, the self-regulation would have no binding legal effect on member
+institutions.
+
+12.2 FINMA Oversight
+
+Although esisuisse operates the scheme, FINMA maintains supervisory
+oversight:
+- FINMA monitors whether member banks can comply with contribution
+  obligations
+- FINMA coordinates with esisuisse in insolvency events
+- FINMA may intervene if the self-regulation is inadequate
+- The MoU formalizes information exchange between esisuisse and FINMA
+- FINMA reviews the adequacy of the scheme periodically
+
+12.3 Self-Regulation Content
+
+The self-regulation documents cover:
+- Membership criteria and admission procedures
+- Data reporting obligations and formats
+- Contribution calculation methodology
+- Collateral requirements and custodian arrangements
+- Payout procedures and timelines
+- Client information requirements (standardized website texts)
+- Governance of esisuisse (board composition, annual general meeting)
+- Dispute resolution between esisuisse and members
+
+
+13. COVERAGE EXCLUSIONS — DETAILED ANALYSIS
+----------------------------------------------
+
+Understanding what is NOT covered is as important as knowing what is
+protected. The following categories are explicitly excluded from Swiss
+deposit insurance:
+
+13.1 Amount-Based Exclusions
+- Any deposit amount exceeding CHF 100,000 per client per bank
+- The excess portion is classified as a third-class bankruptcy claim
+
+13.2 Entity-Based Exclusions (since 1 January 2023)
+- Deposits by banks (interbank deposits)
+- Deposits by securities firms
+- Deposits by insurance companies
+- These financial intermediary deposits lost protection in the 2023 reform
+
+13.3 Product-Based Exclusions
+- Securities in custody (segregated client assets, not deposits)
+- Cryptocurrency units in custody
+- Structured products and derivatives
+- Insurance wrapper products
+- Bonds and debt instruments (except qualifying medium-term notes)
+- Safe deposit box contents
+- Credit balances not in government-issued currencies
+
+13.4 Institutional Exclusions
+- Deposits at fintech license holders (Art. 1b BankA)
+- Deposits at sandbox entities (Art. 6 para. 2 BankO)
+- Deposits at non-FINMA-authorized institutions
+- Deposits at non-account-holding securities firms
+
+13.5 Status-Based Exclusions
+- Dormant assets (where the depositor cannot be located and has had no
+  contact with the bank)
+
+13.6 Structural Exclusions
+- Deposits held through virtual IBANs or correspondent accounts where
+  the depositor is not the direct contractual partner of the Swiss bank
+- Nominee or omnibus account structures where the beneficial owner is
+  not identifiable to the bank
+
+
+14. PAYOUT PROCESS AND TIMELINES
+----------------------------------
+
+14.1 Current Payout Process (as of 1 January 2023)
+
+The payout process involves multiple parties: FINMA (as supervisory
+authority), the appointed liquidator, esisuisse, and the depositors.
+
+Timeline overview:
+
+Day 0: FINMA opens bankruptcy proceedings and appoints a liquidator.
+
+Day 0 to Day 5: The liquidator identifies depositors with protected
+claims, prepares payout forms, and contacts clients.
+
+Day 5 onwards: Clients receive payout instruction forms and return them
+to the liquidator with banking details for the payout.
+
+Parallel track (if bank liquidity is insufficient):
+- The liquidator notifies esisuisse of the funding shortfall.
+- esisuisse calls on member banks for contributions.
+- esisuisse transfers funds to the liquidator within 7 working days
+  (Art. 37h para. 3quinquies BankA).
+
+After receiving client instructions: The liquidator disburses funds to
+depositors. Current practice: several weeks can be expected, depending
+on the complexity of the bank's client structure and client cooperation.
+
+14.2 Target Payout Timeline (effective 1 January 2028)
+
+From 1 January 2028, the target is to complete payout within seven
+working days after the liquidator receives the client's payout
+instruction (Art. 37b para. 2 BankA as amended). This is a significant
+acceleration from current practice.
+
+14.3 Key Payout Rules
+
+(a) Payout is made to the depositor's designated account at another
+    bank. Cash payouts are not standard practice.
+
+(b) If the depositor does not respond to the liquidator's request for
+    payout instructions, the funds remain with the liquidation estate
+    and are subject to the ordinary bankruptcy procedure.
+
+(c) The liquidator must process payouts without offsetting the bank's
+    claims against the depositor (no netting of mortgages or loans).
+
+(d) For pension deposits (Pillar 3a, vested benefits), payout is made
+    to the relevant pension institution, not directly to the individual.
+
+
+15. CROSS-BORDER CONSIDERATIONS
+----------------------------------
+
+15.1 Foreign Branches of Swiss Banks
+
+Deposits at foreign branches of Swiss banks are treated differently from
+deposits at the Swiss head office:
+
+- They are NOT covered by deposit insurance (esisuisse does not pay)
+- They DO enjoy preferential bankruptcy status (second creditor class)
+  up to CHF 100,000
+- They are treated as a separate client relationship from the Swiss
+  branch deposits
+- The depositor at a foreign branch is a separate "depositor" from the
+  same person's relationship at the Swiss head office
+- Payout occurs only during the ordinary liquidation process (not via
+  the immediate payout mechanism)
+
+15.2 Swiss Branches of Foreign Banks
+
+Foreign banks operating branches in Switzerland with FINMA authorization
+are members of esisuisse. Deposits at such branches are covered by Swiss
+deposit insurance up to CHF 100,000.
+
+However, if the foreign bank also has home-country deposit insurance, the
+Swiss depositor may have a choice or may benefit from dual coverage,
+depending on the bilateral arrangements.
+
+15.3 Clients Resident Abroad
+
+Swiss deposit insurance protects all clients regardless of their country
+of residence or domicile. The decisive factor is whether the bank is
+a FINMA-authorized institution operating in Switzerland, not the
+depositor's location.
+
+15.4 Virtual IBANs and Correspondent Banking
+
+Deposits held through virtual Swiss IBANs or correspondent account
+structures are NOT protected by Swiss deposit insurance if the depositor
+is not the direct contractual partner of the Swiss bank. The decisive
+criterion is the direct contractual relationship between the depositor
+and the FINMA-authorized institution.
+
+
+16. JOINT ACCOUNT TREATMENT
+------------------------------
+
+The treatment of joint accounts changed significantly with the 2023
+reform.
+
+16.1 Rules Effective 1 January 2023
+
+(a) If several persons own an account together (joint account), the
+    group of joint account holders is treated as a single, separate
+    client (Art. 37a para. 2 BankA).
+
+(b) The joint account receives a single CHF 100,000 protection limit.
+    The balance is NOT divided among the individual holders for purposes
+    of calculating coverage.
+
+(c) Each joint account holder's separate individual accounts at the same
+    bank receive independent CHF 100,000 protection.
+
+(d) Amounts on the joint account exceeding CHF 100,000 fall into the
+    third creditor class.
+
+(e) Surplus amounts from a joint account cannot be transferred or
+    attributed to one of the individual holders' separate protection
+    entitlements.
+
+16.2 Previous Rules (before 1 January 2023)
+
+Under the pre-2023 regime, joint account balances were divided among the
+account holders, and each holder's share was then added to their
+individual deposits at the same bank, with the aggregate subject to the
+CHF 100,000 limit per person. This could result in higher aggregate
+protection for married couples or other joint holders.
+
+16.3 Practical Example
+
+Spouses A and B hold:
+- Joint account: CHF 150,000
+- A's individual account: CHF 80,000
+- B's individual account: CHF 60,000
+
+Protection under current rules (since 2023):
+- Joint account: CHF 100,000 protected (CHF 50,000 in third class)
+- A's individual account: CHF 80,000 protected
+- B's individual account: CHF 60,000 protected
+- Total protection: CHF 240,000
+
+Under previous rules (before 2023):
+- Joint account split: A = CHF 75,000, B = CHF 75,000
+- A total: CHF 75,000 + CHF 80,000 = CHF 155,000 => CHF 100,000 protected
+- B total: CHF 75,000 + CHF 60,000 = CHF 135,000 => CHF 100,000 protected
+- Total protection: CHF 200,000
+
+Thus, the 2023 reform can result in either higher or lower total
+protection depending on individual circumstances.
+
+
+17. PILLAR 2 AND PILLAR 3a PENSION DEPOSIT PROTECTION
+--------------------------------------------------------
+
+Pension deposits receive special treatment under Swiss depositor
+protection law. It is critical to distinguish between deposit insurance
+(esisuisse payout) and bankruptcy privilege (preferential creditor
+status).
+
+17.1 Pillar 3a Deposits — Account Solution (Cash)
+
+(a) Pillar 3a cash deposits are NOT covered by deposit insurance.
+    esisuisse does NOT pay out Pillar 3a deposits.
+
+(b) They DO enjoy bankruptcy privilege: Pillar 3a deposits are
+    classified as second-class creditor claims up to CHF 100,000 per
+    client and per foundation (Art. 37a para. 1 BankA).
+
+(c) This is a separate entitlement from regular deposit protection.
+    A client with CHF 100,000 in a regular savings account and
+    CHF 100,000 in a Pillar 3a account at the same bank has
+    CHF 200,000 in total privileged claims.
+
+(d) Payout of Pillar 3a deposits occurs during or after liquidation
+    proceedings (not via the immediate payout mechanism). Payment is
+    made to the pension foundation, not to the individual.
+
+(e) Proposed legislation: Both chambers of the Swiss parliament have
+    supported removing the CHF 100,000 cap on Pillar 3a bankruptcy
+    privilege, which would protect the full amount of Pillar 3a cash
+    deposits in bankruptcy. This reform is pending as of 2025.
+
+17.2 Pillar 3a Deposits — Securities Solution
+
+Securities held in Pillar 3a custody accounts are not affected by bank
+bankruptcy. They are the property of the pension foundation and are
+segregated from the bank's assets. They are returned to the foundation
+in bankruptcy, not subject to the CHF 100,000 limit.
+
+17.3 Vested Benefits Deposits (Freizügigkeitsguthaben / Pillar 2)
+
+(a) Vested benefits cash deposits follow the same rules as Pillar 3a
+    cash deposits: NOT covered by deposit insurance, but enjoy second-
+    class bankruptcy privilege up to CHF 100,000 per client and per
+    foundation.
+
+(b) Securities in vested benefits custody accounts are foundation
+    property and are segregated and returned in bankruptcy.
+
+(c) The CHF 100,000 privilege applies per foundation. If a client has
+    vested benefits at two different foundations at the same bank, each
+    receives up to CHF 100,000 in preferential treatment.
+
+17.4 Insurance-Based Solutions (Pillar 3a and Vested Benefits)
+
+Pension assets held through insurance policies (insurance-based Pillar
+3a or vested benefits) are not covered by deposit insurance. They are
+protected under insurance supervision law (VAG; SR 961.01) and the
+Swiss Insurance Contract Act (VVG; SR 221.229.1).
+
+
+18. MEDIUM-TERM BOND TREATMENT
+---------------------------------
+
+Medium-term notes (Kassenobligationen / Kassenscheine) receive specific
+treatment under Swiss depositor protection:
+
+(a) Medium-term notes ARE protected by deposit insurance, PROVIDED that:
+    - They are denominated in a government-issued currency
+    - They are deposited in custody with the issuing bank
+    - They are in the name of the holder
+
+(b) If the medium-term notes are held at a bank other than the issuer,
+    they are treated as securities in custody (segregated assets) and
+    are not subject to deposit insurance (but are returned to the
+    holder as their property).
+
+(c) The value of medium-term notes held at the issuing bank is
+    aggregated with other deposits at that bank toward the CHF 100,000
+    limit.
+
+(d) Medium-term notes issued by a bank that has entered bankruptcy lose
+    their value as debt instruments of the issuer. The deposit insurance
+    covers the custodial claim (up to CHF 100,000) if deposited with the
+    issuing bank.
+
+
+19. COMPARISON WITH EU DEPOSIT GUARANTEE SCHEMES DIRECTIVE (DGSD)
+--------------------------------------------------------------------
+
+The Swiss depositor protection system differs from the EU framework in
+several important respects.
+
+19.1 Coverage Level
+- Switzerland: CHF 100,000 (approximately EUR 95,000-105,000 depending
+  on exchange rate)
+- EU (DGSD): EUR 100,000 per depositor per credit institution
+- Both systems provide comparable nominal coverage levels
+
+19.2 Funding Model
+- Switzerland: Primarily ex-post, with a hybrid element (50% collateral
+  since 2023)
+- EU (DGSD): Primarily ex-ante, with Member States required to build
+  fund reserves of at least 0.8% of covered deposits by 3 July 2024
+  (Art. 10 DGSD)
+- The Swiss model is fundamentally different in philosophy
+
+19.3 Target Fund Size
+- Switzerland: 1.6% of protected deposits (approx. CHF 7.96 billion)
+- EU (DGSD): 0.8% of covered deposits (minimum target level)
+- Swiss system has a proportionally larger capacity
+
+19.4 Payout Timeline
+- Switzerland: Target of 7 working days (esisuisse transfer) with full
+  7-working-day client payout target from 2028
+- EU (DGSD): 7 working days for payout to depositors (since 2024,
+  reduced from 20 working days)
+- Similar target timelines
+
+19.5 Scope of Coverage
+- Switzerland: Banks and account-holding securities firms
+- EU (DGSD): Credit institutions as defined in CRR
+- EU system covers only credit institutions; Swiss system also covers
+  certain securities firms
+
+19.6 Joint Accounts
+- Switzerland: Treated as a single client with CHF 100,000 limit
+  (since 2023)
+- EU (DGSD): Each joint account holder generally receives individual
+  coverage
+- Significant difference: EU system is more favorable for joint holders
+
+19.7 Pension Deposits
+- Switzerland: NOT covered by deposit insurance (only bankruptcy
+  privilege)
+- EU (DGSD): Member States may provide higher coverage for certain
+  temporary high balances, including pension benefits
+- EU system generally provides stronger protection for pension deposits
+
+19.8 Netting / Set-Off
+- Switzerland: No netting of bank claims against protected deposits
+- EU (DGSD): Varies by Member State; some allow set-off
+- Swiss system is more protective against netting
+
+19.9 Cross-Border
+- Switzerland: Foreign branches of Swiss banks — privilege only, no
+  deposit insurance. Swiss branches of foreign banks — covered.
+- EU (DGSD): Home country DGS principle (branch deposits covered by
+  home country scheme, with host country topping up if needed)
+- Different approaches to cross-border coverage
+
+19.10 Supervision
+- Switzerland: Self-regulation recognized by FINMA
+- EU (DGSD): Deposit guarantee schemes supervised by national
+  designated authorities
+- Swiss model relies more heavily on self-regulation
+
+
+20. REPORTING OBLIGATIONS
+---------------------------
+
+Member banks have extensive reporting obligations to esisuisse, which
+form the basis for contribution calculations and systemic monitoring.
+
+20.1 Annual Data Submission
+
+All member institutions must report the following data to esisuisse
+annually:
+
+(a) Total protected deposits (deposits covered by deposit insurance up
+    to CHF 100,000 per client, aggregated across all clients)
+
+(b) Total preferential deposits (including deposits at foreign branches
+    and pension deposits enjoying bankruptcy privilege)
+
+(c) Number of depositors with protected claims
+
+(d) Breakdown of deposits by category (savings, current accounts, time
+    deposits, medium-term notes)
+
+(e) Asset coverage data (demonstrating compliance with the 125%
+    domestic asset coverage ratio)
+
+The reporting date is 31 December of each year. The reported data is
+used for the contribution period commencing the following 1 July.
+
+20.2 Client Information Obligations
+
+Member banks must provide standardized client information about deposit
+insurance, as prescribed by esisuisse's self-regulation:
+
+(a) Publication of esisuisse client information on the bank's website
+
+(b) Provision of deposit insurance information to clients upon
+    establishing a new banking relationship
+
+(c) Information must be provided in at least the bank's business
+    languages
+
+(d) Content and format are prescribed by esisuisse's standardized
+    templates (last updated: 26.10.2022)
+
+20.3 Reporting to FINMA
+
+FINMA separately monitors compliance with deposit protection
+requirements as part of its ongoing supervision:
+
+(a) Annual regulatory audit covers compliance with Art. 37a BankA
+    (125% asset coverage ratio)
+
+(b) FINMA receives information from esisuisse under the MoU regarding
+    systemic readiness and individual bank compliance
+
+(c) Banks must report any circumstances that may affect their ability
+    to meet contribution obligations
+
+
+21. ANNUAL DATA SUBMISSION REQUIREMENTS — DETAILED
+-----------------------------------------------------
+
+21.1 Submission Timeline
+
+- Reporting date: 31 December
+- Submission deadline: typically within Q1 of the following year
+- Data validation: esisuisse verifies submissions and may request
+  corrections or supplementary information
+- Publication: esisuisse publishes aggregate statistics (total protected
+  deposits, number of members) in its annual report and on its website
+
+21.2 Data Quality Requirements
+
+(a) Data must be based on the bank's internal records and reconciled
+    with regulatory reporting data submitted to FINMA and the SNB.
+
+(b) The bank's external auditor reviews the deposit data as part of
+    the annual regulatory audit.
+
+(c) Material errors or misstatements in reported data may result in
+    sanctions under the self-regulation agreement.
+
+21.3 Contribution Period Alignment
+
+Reported data forms the basis for the following contribution period:
+- Data as of 31.12.2024 => period 01.07.2025 - 30.06.2026
+- Data as of 31.12.2023 => period 01.07.2024 - 30.06.2025
+
+This six-month offset ensures that esisuisse has time to validate
+submissions and calculate individual bank obligations before the new
+contribution period begins.
+
+21.4 Consequences of Non-Compliance
+
+Failure to submit data or submission of materially inaccurate data may
+result in:
+- Formal warnings from esisuisse
+- Estimation of the bank's contribution by esisuisse (typically
+  conservative, i.e., higher than actual)
+- Escalation to FINMA for supervisory action
+- In extreme cases, membership sanctions under esisuisse statutes
+
+
+22. SYSTEMICALLY IMPORTANT BANKS AND DEPOSIT INSURANCE
+---------------------------------------------------------
+
+Systemically important banks (too-big-to-fail, or TBTF) are subject to
+special resolution planning requirements but remain covered by deposit
+insurance.
+
+Currently designated systemically important banks in Switzerland:
+- UBS (globally systemically important)
+- PostFinance (domestically systemically important)
+- Raiffeisen Group (domestically systemically important)
+- Zürcher Kantonalbank (domestically systemically important)
+
+Key considerations:
+- Deposits at systemically important banks are still protected by
+  deposit insurance up to CHF 100,000
+- TBTF banks must maintain emergency plans (recovery and resolution
+  plans) that include provisions for continuity of depositor access
+- In a TBTF resolution scenario, deposits may be maintained through
+  bail-in or bridge bank mechanisms rather than through esisuisse
+  payout
+- The esisuisse system is designed primarily for smaller and medium-
+  sized bank failures; a failure of a systemically important bank
+  would likely be handled through the TBTF resolution framework
+
+
+23. CANTONAL BANK STATE GUARANTEES
+-------------------------------------
+
+Many cantonal banks benefit from explicit or implicit state guarantees
+from their respective cantons. These guarantees supplement deposit
+insurance.
+
+(a) State guarantees cover deposits beyond the CHF 100,000 esisuisse
+    limit, providing additional protection to depositors.
+
+(b) Not all cantonal banks have state guarantees. Notably, the cantonal
+    banks of Vaud (BCV), Bern (BEKB), and Geneva (BCGE) have converted
+    to limited state guarantees or have no full guarantee.
+
+(c) The scope and amount of state guarantees vary by canton and are
+    governed by cantonal law.
+
+(d) State guarantees are independent of deposit insurance. A depositor
+    at a cantonal bank with a state guarantee benefits from both the
+    esisuisse protection (up to CHF 100,000) and the cantonal guarantee
+    (for amounts beyond CHF 100,000, subject to cantonal law).
+
+
+24. KEY LEGAL REFERENCES
+---------------------------
+
+Federal Act on Banks and Savings Banks (BankA; SR 952.0):
+- Art. 37a: Privileged deposits; definition and scope
+- Art. 37b: Immediate payout of privileged deposits
+- Art. 37c: (repealed / reserved)
+- Art. 37d: Segregation of custody assets
+- Art. 37e: (reserved)
+- Art. 37f: (reserved)
+- Art. 37g: Depositor protection; general principles
+- Art. 37h: Deposit insurance; self-regulation; system limit; funding
+- Art. 37i: Payout obligations; subrogation
+- Art. 37j: Individual contribution caps
+- Art. 37jbis: Collateral requirements
+
+Banking Ordinance (BankO; SR 952.02):
+- Art. 42a: Privileged deposits; detailed categories
+- Art. 43: Asset coverage requirements (125% rule)
+- Art. 44: Medium-term notes; custody requirements
+- Art. 44a: Reporting obligations
+
+Capital Adequacy Ordinance (CAO; SR 952.03):
+- Relevant for determining minimum capital for contribution cap
+  calculation
+
+FINMA Circulars:
+- Circular 2012/1: (historical) Credit rating agencies — relevant for
+  collateral quality
+- Various FINMA guidance on deposit protection compliance
+
+esisuisse Self-Regulation:
+- Statutes (version 23.12.2022)
+- Self-Regulation Agreement (version 23.12.2022)
+- MoU between esisuisse and FINMA
+- Standardized client information templates (version 26.10.2022)
+- Overview of relevant legal texts on deposit insurance (June 2023)
+
+
+REFERENCES AND SOURCES
+------------------------
+- Federal Act on Banks and Savings Banks (BankA; SR 952.0)
+- Banking Ordinance (BankO; SR 952.02)
+- Capital Adequacy Ordinance (CAO; SR 952.03)
+- esisuisse website: https://www.esisuisse.ch
+- esisuisse Self-Regulation Agreement (version 23.12.2022)
+- esisuisse Statutes (version 23.12.2022)
+- FINMA website: https://www.finma.ch
+- FINMA Memorandum of Understanding with esisuisse
+- EU Directive 2014/49/EU (Deposit Guarantee Schemes Directive)
+- Swiss Debt Enforcement and Bankruptcy Act (SchKG; SR 281.1)
+- Federal Act on Vested Benefits (FZG; SR 831.42)
+- Ordinance on Tax-Privileged Retirement Savings (BVV 3; SR 831.461.3)

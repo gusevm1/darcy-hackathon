@@ -1,0 +1,443 @@
+================================================================================
+FINMA CIRCULAR 2017/1: CORPORATE GOVERNANCE -- BANKS
+================================================================================
+
+Document:       FINMA Circular 2017/1 "Corporate Governance -- Banks"
+Issuer:         Swiss Financial Market Supervisory Authority (FINMA)
+Date of Issue:  1 November 2016
+Entry into Force: 1 July 2017
+Last Amendment: 4 November 2020 (effective 1 January 2021)
+Replaces:       FINMA Circular 2008/24 "Supervision and Internal Control -- Banks"
+Languages:      German (binding), French, Italian, English (unofficial)
+
+================================================================================
+I. PURPOSE, SCOPE, AND LEGAL BASIS
+================================================================================
+
+FINMA Circular 2017/1 establishes supervisory requirements for corporate
+governance, risk management, the internal control system (ICS), and internal
+audit at Swiss banks and securities dealers (Rz 1). It consolidates Circular
+2008/24, its FAQs, and governance provisions from other circulars into one
+instrument, incorporating the BCBS Guidelines on Corporate Governance (2015).
+
+Legal basis:
+- Art. 3 para. 2 let. a Banking Act (BA): Proper organization
+- Art. 3 para. 2 let. a Banking Ordinance (BO): Organizational rules
+- Art. 10 para. 2 let. d Stock Exchange Act (SESTA): Securities dealers
+- Art. 7 para. 3 FINMASA: Authorization of circulars
+- Art. 3f BA: Internal audit; Art. 3c BA: Groups and conglomerates
+
+The circular applies to (Rz 1-5): banks licensed under Art. 3 BA, securities
+dealers under SESTA, financial groups (Art. 3c para. 1 BA), and financial
+conglomerates dominated by banks or securities dealers (Art. 3c para. 2 BA).
+
+Proportionality (Rz 6-8): All requirements are implemented case-by-case,
+giving due consideration to size, complexity, structure, and risk profile.
+FINMA retains discretion to grant reliefs or impose stricter conditions.
+
+================================================================================
+II. CATEGORY-SPECIFIC PROPORTIONALITY
+================================================================================
+
+FINMA classifies institutions into five supervisory categories (Rz 6-8):
+
+Category 1 -- Systemically important banks (G-SIBs, D-SIBs):
+  Separate audit and risk committees; nomination and compensation committees
+  at group level; CRO as executive management member; enhanced risk data
+  aggregation and reporting.
+
+Category 2 -- Large banks:
+  Separate audit and risk committees; CRO required; enhanced requirements.
+
+Category 3 -- Medium-sized banks:
+  Audit and risk committees required but may be combined; CRO required.
+
+Category 4 -- Smaller banks:
+  Baseline requirements only; no mandatory committees.
+
+Category 5 -- Smallest banks:
+  Baseline requirements only; simplified governance permitted.
+
+FINMA may deviate from category-based requirements in individual cases.
+
+================================================================================
+III. BOARD OF DIRECTORS (GOVERNING BODY)
+================================================================================
+
+A. Duties and Responsibilities (Rz 10-16)
+
+The governing body exercises supreme direction, supervision, and control:
+
+- Business Strategy (Rz 10): Define and approve business strategy, guiding
+  principles for corporate culture, and the risk policy.
+- Risk Management (Rz 11): Approve the framework concept for institution-wide
+  risk management; bear responsibility for establishing, regulating, and
+  monitoring effective risk management and overall risk steering.
+- ICS Oversight (Rz 12): Ensure an appropriate risk and control environment;
+  ensure effectiveness of the ICS; monitor independent control bodies.
+- Internal Audit (Rz 13): Appoint/dismiss head of internal audit; approve
+  audit charter and plan; monitor audit effectiveness.
+- Structural Decisions (Rz 14-15): Decide on important changes to entity and
+  group structure; approve investments of strategic importance.
+- Organizational Regulations (Rz 16): Issue organizational regulations and
+  internal directives; define framework for delegation of duties.
+
+B. Composition and Independence (Rz 17-25)
+
+At least one-third of governing body members shall be independent (Rz 17).
+FINMA may approve exceptions, e.g. for purely domestic financial groups.
+
+Independence criteria -- a member is independent if cumulatively (Rz 18-22):
+a) Not engaging in any function at the institution, nor having done so in the
+   last two years (Rz 18)
+b) Not employed as the responsible lead auditor of the institution's audit
+   firm within the last two years (Rz 19)
+c) Not maintaining a business relationship with the institution of a type or
+   scope that could lead to a conflict of interest (Rz 20)
+d) Not a qualified shareholder per Art. 3 para. 2 let. cbis BA (Rz 21)
+e) No close personal relationships with persons under the above criteria
+   (Rz 22)
+
+Fit and proper -- collectively (Rz 23-25): banking and financial markets, risk
+management and internal controls, financial accounting and auditing, strategic
+leadership, and legal/regulatory matters. Individually: good reputation,
+adequate qualifications, sufficient time availability.
+
+C. Committees (Rz 26-34)
+
+The governing body may establish committees; overall responsibility is
+retained by the full board (Rz 26-27). Written charters defining mandate,
+authority, composition, and reporting obligations required (Rz 28). Majority
+of audit/risk committee members shall be independent (Rz 33); committee
+chairs shall be independent (Rz 34).
+
+================================================================================
+IV. AUDIT COMMITTEE (Rz 35-40)
+================================================================================
+
+The audit committee supports the governing body in overseeing:
+
+- Financial Reporting (Rz 35): Monitor integrity of financial statements;
+  evaluate accounting policies; review annual and interim reports.
+- ICS and Compliance (Rz 36): Monitor and evaluate the effectiveness of
+  the internal control system and the compliance function.
+- Risk Control (Rz 37): Evaluate risk control effectiveness; where combined
+  with the risk committee (Category 3), assume risk committee duties.
+- External Auditor (Rz 38): Evaluate independence and effectiveness of the
+  regulatory auditor; review audit scope and results; propose appointment
+  or removal; monitor progress on audit findings.
+- Internal Audit (Rz 39): Oversee internal audit; approve audit plan;
+  review reports; monitor implementation of recommendations.
+- Remediation (Rz 40): Compliance or risk control reports to the audit
+  committee at least every six months on progress eliminating shortcomings
+  and implementing recommendations of internal audit or the regulatory auditor.
+
+================================================================================
+V. RISK COMMITTEE (Rz 41-43)
+================================================================================
+
+The risk committee supports the governing body on risk management:
+
+- Risk Appetite (Rz 41): Assist in defining and reviewing risk appetite and
+  tolerance; review risk policy and framework concept; evaluate alignment of
+  risk profile with business strategy.
+- Risk Monitoring (Rz 42): Receive regular CRO reports on risk management
+  framework; monitor compliance with risk limits; review stress tests.
+- Risk Reporting (Rz 43): Ensure the governing body receives adequate and
+  timely risk information; escalate material risk issues.
+
+Category 3: where combined with audit committee, full scope of both mandates.
+
+================================================================================
+VI. NOMINATION AND COMPENSATION COMMITTEE (Rz 44-45)
+================================================================================
+
+Systemically important institutions (Category 1) must establish at group level:
+
+Nomination Committee: identify and recommend candidates for governing body
+and senior management; assess qualifications; review composition and
+succession planning; evaluate independence of members.
+
+Compensation Committee: support design of remuneration policy; review
+compensation for senior management and control function heads; approve total
+remuneration pool annually; ensure alignment with risk appetite.
+
+Detailed remuneration requirements: FINMA Circular 2010/1 "Remuneration
+Schemes" (revised in parallel).
+
+================================================================================
+VII. EXECUTIVE MANAGEMENT (Rz 46-59)
+================================================================================
+
+A. Organization and Responsibilities (Rz 46-52)
+
+The management body is responsible for operational management in line with
+the governing body's strategy and resolutions (Rz 46):
+
+- Day-to-day operations and strategy implementation (Rz 47)
+- Management information systems (MIS) (Rz 48)
+- Internal control system implementation (Rz 49)
+- Technology infrastructure and IT governance (Rz 50)
+- Regulatory compliance monitoring (Rz 51)
+- Adequate staffing and personnel development (Rz 52)
+
+Clear separation of duties between revenue-generating and control functions.
+
+B. Risk Framework Concept (Rz 53-59)
+
+The management body prepares the risk framework concept
+(Risikorahmenkonzept) for governing body approval (Rz 53). Minimum content:
+
+- Risk Policy (Rz 54): risk types, management principles, organizational
+  framework for risk governance
+- Risk Appetite (Rz 55): quantitative and qualitative parameters for material
+  risks; considers capital and risk profile
+- Risk Limits (Rz 56): translates appetite into operational limits; covers
+  all material categories; defines escalation procedures
+- Risk Identification (Rz 57): systematic identification of new/emerging
+  risks; on- and off-balance-sheet
+- Risk Data Aggregation (Rz 58): Categories 1-3 must include provisions
+  aligned with BCBS 239 principles
+- Stress Testing (Rz 59): institution-wide stress tests and scenario
+  analyses; results reported to governing body
+
+Annual evaluation and approval by the governing body.
+
+================================================================================
+VIII. INTERNAL CONTROL SYSTEM (Rz 60-66)
+================================================================================
+
+A. General Requirements (Rz 60-62)
+
+The institution must maintain an effective ICS proportionate to its size,
+complexity, structure, and risk profile (Rz 60). Minimum two controlling
+levels: revenue-generating units and independent control bodies (Rz 61).
+
+B. Three Lines of Defense Model (Rz 63-66)
+
+First Line -- Revenue-Generating Units (Rz 63): primary responsibility for
+risk identification, assessment, and management; implementation of internal
+controls in daily operations; adherence to risk limits and policies.
+
+Second Line -- Independent Control Bodies (Rz 64-65): independent of revenue-
+generating units; must cover at minimum risk control and compliance functions;
+monitor risks and statutory/regulatory/internal compliance; provide oversight,
+frameworks, and independent challenge to first line.
+
+Third Line -- Internal Audit (Rz 66): organizationally separate from first
+and second lines; independent objective assurance to governing body; reviews
+effectiveness of risk management, controls, and governance; reports directly
+to governing body or audit committee.
+
+================================================================================
+IX. RISK MANAGEMENT FUNCTION (Rz 67-76)
+================================================================================
+
+Organization (Rz 67-70): Categories 1-3 must appoint an independent risk
+control function. CRO required for Categories 1-3; for systemically important
+institutions, CRO must be an executive management member. The CRO may also
+oversee other non-revenue-generating control functions (e.g., compliance).
+CRO must have direct access to the governing body and risk committee.
+
+Responsibilities (Rz 71-74):
+- Systematic monitoring of individual and aggregated risk exposures (Rz 71)
+- Quantitative/qualitative risk analyses, stress tests, scenario analyses
+  under adverse conditions (Rz 72)
+- Regular reporting to management (semi-annually) and governing body
+  (annually); timely notification of special developments (Rz 73)
+- Support development of the risk framework concept (Rz 74)
+
+Reporting (Rz 75-76): semi-annual to management body; annual to governing
+body; immediate notification of material developments; in critical situations,
+direct reporting to governing body without delay. Risk committee receives
+regular CRO reports on risk framework compliance.
+
+================================================================================
+X. COMPLIANCE FUNCTION (Rz 77-82)
+================================================================================
+
+Organization (Rz 77-79): institutions must establish a compliance function.
+Categories 1-3 must appoint an independent compliance function as an
+independent control body. CCO must have appropriate authority, resources, and
+information access. CCO may report to the CRO if the CRO assumes combined
+control function responsibilities.
+
+Responsibilities (Rz 80-82):
+- Regulatory monitoring: track changes in laws, regulations, and expectations;
+  assess impact; advise management (Rz 80)
+- Compliance risk management: identify and assess compliance risks; develop
+  policies and procedures; monitor adherence (Rz 81)
+- Reporting: report to audit committee at least every six months on progress
+  eliminating shortcomings and implementing internal/external audit
+  recommendations; escalate material issues (Rz 82)
+
+================================================================================
+XI. INTERNAL AUDIT FUNCTION (Rz 83-95)
+================================================================================
+
+A. Organization and Independence (Rz 83-86)
+
+Internal audit must be organizationally separate from both first and second
+lines (Rz 83). Reports directly to the governing body or audit committee
+(Rz 84). The governing body appoints/dismisses the head of internal audit,
+approves the charter and audit plan, and ensures adequate resources (Rz 85).
+Internal audit must be free from management influence; staff must not engage
+in operational activities; head of internal audit has unrestricted access to
+the governing body and audit committee chairs (Rz 86).
+
+B. Responsibilities (Rz 87-90)
+
+- Assurance: independent review of risk management, internal control
+  effectiveness, governance, and second-line functions (Rz 87)
+- Planning: risk-based audit planning; comprehensive multi-year coverage;
+  coordination with regulatory auditor (Rz 88)
+- Reporting: at least annually to governing body, management body, and
+  regulatory audit firm; issue audit reports with recommendations (Rz 89)
+- Special investigations: upon request of the governing body (Rz 90)
+
+C. Delegation of Internal Audit (Rz 91-95)
+
+Internal audit may be delegated to (Rz 92-94):
+a) Parent/group company if regulated (bank, securities dealer, insurer)
+b) Independent second audit firm (separate from regulatory auditor)
+c) Unregulated group company or independent third party -- a notable
+   expansion, subject to auditor confirmation of professional capabilities
+   and adequate technical/human resources
+
+Conditions (Rz 95): governing body retains overall responsibility; delegate
+must meet professional and resource requirements; regulatory auditor confirms
+capabilities; FINMA must be notified or approve the arrangement.
+
+================================================================================
+XII. OUTSOURCING GOVERNANCE (Rz 96-97)
+================================================================================
+
+Outsourcing does not relieve the governing or management body of their
+responsibilities (Rz 96). Key governance requirements (Rz 97):
+- Governing body approval for outsourcing material functions
+- Adequate oversight and monitoring of outsourced activities
+- Clear SLAs defining responsibilities, performance, and reporting
+- Retained expertise to oversee outsourced functions
+- Business continuity and exit strategies
+
+Detailed outsourcing rules: FINMA Circular 2018/3 "Outsourcing -- Banks
+and Insurers" (effective 1 April 2018).
+
+================================================================================
+XIII. INFORMATION AND REPORTING FLOWS
+================================================================================
+
+The circular prescribes structured reporting flows (Rz 73, 75-76, 82, 89):
+
+To the Governing Body: annual risk control report; annual internal audit
+report; semi-annual compliance progress (via audit committee); immediate
+notification of critical developments.
+
+To the Management Body: semi-annual risk control reports; timely notification
+of special developments; internal audit findings.
+
+To the Audit Committee: semi-annual remediation progress reports from
+compliance/risk control; internal and external audit reports.
+
+To the Risk Committee: regular CRO reports on risk framework; stress test
+results; risk limit utilization.
+
+Escalation: risk control and compliance may bypass management and report
+directly to the governing body in important cases. Internal audit has direct
+access to the governing body at all times.
+
+================================================================================
+XIV. FIT AND PROPER REQUIREMENTS
+================================================================================
+
+Governing body (Rz 23-25): individual -- good reputation, adequate
+qualifications, sufficient time; collective -- expertise in banking, risk
+management, accounting, strategy, and law. Ongoing reassessment required.
+
+Executive management (Rz 46, 52): professional qualifications, experience,
+and personal integrity for proper conduct of business.
+
+Key function holders (Rz 67-68, 79): CRO and CCO must possess specific
+expertise relevant to their function with appropriate standing and authority.
+
+================================================================================
+XV. CONFLICT OF INTEREST MANAGEMENT (Rz 29-30)
+================================================================================
+
+The governing body defines how conflicts of interest are identified,
+disclosed, managed, and avoided (Rz 29). All current and previous conflicts
+must be disclosed -- including financial interests, business relationships,
+personal connections, external mandates, and shareholdings.
+
+If a conflict cannot be avoided (Rz 30), the institution takes appropriate
+steps: recusal from conflicted decisions; information barriers; independent
+review; documentation. Organizational measures include policies on external
+mandates, personal account dealing, and related party transactions.
+
+================================================================================
+XVI. FINANCIAL GROUPS AND CONGLOMERATES (Rz 98-100)
+================================================================================
+
+Circular provisions apply by analogy to financial groups and bank-dominated
+conglomerates (Rz 98). Group standards must ensure efficient and uniform
+management, appropriate information exchange, defined duties and independence
+at each management level, and group-wide risk management and ICS frameworks
+(Rz 99-100). The parent governing body bears responsibility for group-level
+governance.
+
+================================================================================
+XVII. TRANSITIONAL PROVISIONS (Rz 101-106)
+================================================================================
+
+- Entry into force: 1 July 2017 (Rz 101)
+- General transition: most requirements within one year (by 1 July 2018)
+  (Rz 102)
+- Categories 1-3 enhanced: one-year implementation from entry into force
+  for mandatory committees, CRO, and risk data aggregation (Rz 103-104)
+- Systemically relevant banks: comply from entry into force or within three
+  years of classification, whichever is later (Rz 105)
+- New entrants: higher-category requirements within reasonable FINMA-
+  determined timeframe (Rz 106)
+
+================================================================================
+XVIII. RELATED CIRCULARS
+================================================================================
+
+- Circular 2010/1 "Remuneration Schemes": detailed remuneration rules
+- Circular 2008/21 / 2023/1 "Operational Risks": operational risk management
+- Circular 2016/1 "Disclosure -- Banks": governance disclosure duties
+- Circular 2018/3 "Outsourcing -- Banks and Insurers": outsourcing framework
+- Circular 2017/2 "Corporate Governance -- Insurers": parallel for insurers
+
+================================================================================
+XIX. MARGIN NUMBER (Rz) STRUCTURE SUMMARY
+================================================================================
+
+Rz 1-5:     Purpose, scope, and applicability
+Rz 6-8:     Proportionality and supervisory categories
+Rz 10-16:   Governing body duties and responsibilities
+Rz 17-22:   Independence requirements
+Rz 23-25:   Fit and proper / qualifications
+Rz 26-34:   Committees (general provisions)
+Rz 35-40:   Audit committee
+Rz 41-43:   Risk committee
+Rz 44-45:   Nomination and compensation committees
+Rz 46-52:   Management body organization and responsibilities
+Rz 53-59:   Risk framework concept
+Rz 60-62:   ICS general requirements
+Rz 63-66:   Three lines of defense model
+Rz 67-76:   Risk control function (CRO, reporting)
+Rz 77-82:   Compliance function (CCO, reporting)
+Rz 83-95:   Internal audit (organization, duties, delegation)
+Rz 96-97:   Outsourcing governance
+Rz 98-100:  Financial groups and conglomerates
+Rz 101-106: Transitional provisions
+
+Total margin numbers: approximately 106
+
+================================================================================
+This document was compiled from publicly available sources including FINMA
+Circular 2017/1 and related guidance. For binding legal interpretation, refer
+to the official German version at www.finma.ch.
+Last updated: February 2026
+================================================================================

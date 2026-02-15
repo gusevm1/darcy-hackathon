@@ -1,0 +1,1020 @@
+SWISS CAPITAL ADEQUACY ORDINANCE (CAO / ERV)
+=============================================================
+Eigenmittelverordnung (ERV), SR 952.03
+Ordinance on Capital Adequacy and Risk Diversification for Banks
+and Securities Firms of 1 June 2012 (as amended)
+
+=============================================================
+1. OVERVIEW AND LEGAL BASIS
+=============================================================
+
+The Swiss Capital Adequacy Ordinance (CAO), known in German as the
+Eigenmittelverordnung (ERV), is the principal federal ordinance governing
+the capital adequacy and risk diversification requirements for banks and
+securities firms in Switzerland. It bears the systematic reference
+number SR 952.03.
+
+The CAO is enacted pursuant to:
+- Art. 4 of the Federal Act on Banks and Savings Banks (Banking Act,
+  BankA, SR 952.0), which empowers the Federal Council to issue
+  provisions on capital adequacy and risk diversification
+- Art. 4bis BankA, which addresses requirements for systemically
+  important banks
+- Art. 50 of the Financial Market Supervision Act (FINMASA, SR 956.1)
+
+The ordinance was adopted by the Federal Council on 1 June 2012 and has
+been subject to multiple amendments, most recently to implement the
+final Basel III standards effective 1 January 2025.
+
+The CAO applies to:
+- Banks as defined under the Banking Act (BankA)
+- Securities firms (formerly securities dealers)
+- Financial groups and conglomerates on a consolidated basis
+- Systemically important banks (with enhanced requirements)
+
+The overarching purpose of the CAO is to ensure that banks hold
+sufficient capital to adequately limit their risks, thereby protecting
+creditors, depositors, and the stability of the Swiss financial system.
+
+=============================================================
+2. STRUCTURE OF THE ORDINANCE
+=============================================================
+
+The CAO is organized into several titles (Titel), which are further
+subdivided into chapters (Kapitel), sections (Abschnitt), and articles
+(Art.). The principal structural divisions are:
+
+Title 1: General Provisions
+  - Scope of application, definitions, and general principles
+  - Art. 1-15 CAO
+
+Title 2: Eligible Capital (Anrechenbare Eigenmittel)
+  - Definition and composition of regulatory capital
+  - CET1, AT1, Tier 2, deductions, and adjustments
+  - Art. 16-40 CAO
+
+Title 3: Minimum Capital Requirements (Erforderliche Eigenmittel)
+  - Credit risk (standardized and IRB approaches)
+  - Market risk
+  - Operational risk
+  - Non-counterparty related risk
+  - Art. 41-95 CAO
+
+Title 4: Capital Buffers
+  - Capital conservation buffer
+  - Countercyclical capital buffer
+  - Art. 43-44 CAO (integrated within minimum capital provisions)
+
+Title 5: Risk Diversification (Risikoverteilung)
+  - Large exposure limits and concentration risk
+  - Art. 96-112 CAO
+
+Title 6: Leverage Ratio
+  - Minimum leverage ratio requirements
+  - Art. 46 CAO and related provisions
+
+Title 7: Reporting and Disclosure (Offenlegung)
+  - Capital adequacy reporting to the Swiss National Bank (SNB)
+  - Public disclosure obligations
+  - Art. 47-47e CAO
+
+Title 8: Systemically Important Banks (Systemrelevante Banken)
+  - Enhanced capital requirements for SIBs
+  - Going concern and gone concern capital
+  - Art. 124-135 CAO (formerly Art. 123a ff.)
+
+Title 9: Transitional and Final Provisions
+  - Phase-in schedules and transitional rules
+
+=============================================================
+3. MINIMUM CAPITAL REQUIREMENTS
+=============================================================
+
+3.1 Absolute Minimum Capital
+-----------------------------
+Under Art. 3 para. 2 let. b BankA, every bank in Switzerland must
+maintain a fully paid-in minimum capital of CHF 10 million. FINMA may
+require higher minimum capital depending on the scope, complexity, and
+risk profile of a bank's activities.
+
+3.2 Risk-Based Capital Ratios (Art. 41-42 CAO)
+-----------------------------------------------
+Banks must hold sufficient eligible capital to cover the risks arising
+from their business activities. The minimum capital ratios, expressed
+as a percentage of risk-weighted assets (RWA), are:
+
+- Common Equity Tier 1 (CET1):  minimum 4.5% of RWA
+- Tier 1 capital (CET1 + AT1):  minimum 6.0% of RWA
+- Total capital (Tier 1 + Tier 2): minimum 8.0% of RWA
+
+These ratios correspond to the Basel III minimums and are specified in
+Art. 42 CAO. Banks must demonstrate compliance on a continuous basis,
+not merely at reporting dates.
+
+3.3 Calculation of Required Capital (Art. 42 CAO)
+---------------------------------------------------
+The total required capital is calculated as the sum of:
+- Capital required for credit risk (Art. 49-75 CAO)
+- Capital required for non-counterparty-related risk (Art. 76-78 CAO)
+- Capital required for market risk (Art. 79-88 CAO)
+- Capital required for operational risk (Art. 89-95 CAO)
+
+The resulting aggregate constitutes the total risk-weighted positions
+(Gesamtrisikopositionen), against which minimum capital ratios are
+measured.
+
+=============================================================
+4. ELIGIBLE CAPITAL COMPONENTS
+=============================================================
+
+4.1 Overview (Art. 16-17 CAO)
+------------------------------
+Eligible regulatory capital consists of two main tiers:
+- Tier 1 Capital (T1), which subdivides into:
+  - Common Equity Tier 1 (CET1)
+  - Additional Tier 1 (AT1)
+- Tier 2 Capital (T2)
+
+Total eligible capital = CET1 + AT1 + T2 (after regulatory deductions)
+
+4.2 Common Equity Tier 1 Capital (CET1) — Art. 18-21 CAO
+----------------------------------------------------------
+CET1 is the highest-quality component of regulatory capital. It
+consists of:
+- Paid-in share capital (Gesellschaftskapital) — common shares for
+  corporations (AG), or equivalent capital for cooperatives and
+  cantonal banks organized under public law
+- Share premium (Agio) from the issuance of CET1 instruments
+- Disclosed reserves (offene Reserven)
+- Reserves for general banking risks (Reserven fuer allgemeine
+  Bankrisiken), provided they are taxed and disclosed
+- Retained earnings (Gewinnvortrag), including audited interim profits
+  net of foreseeable dividends
+- Minority interests in CET1 of consolidated subsidiaries (subject to
+  restrictions per Art. 22 CAO)
+
+CET1 instruments must:
+- Represent the most subordinated claim in liquidation
+- Carry no fixed or mandatory dividends
+- Be perpetual with no maturity date or redemption incentive
+- Absorb losses on a going-concern basis
+
+4.3 Additional Tier 1 Capital (AT1) — Art. 24-27 CAO
+------------------------------------------------------
+AT1 instruments supplement CET1 and must meet stringent criteria:
+- Perpetual with no fixed maturity date
+- First call option no earlier than 5 years after issuance
+- Callable only with prior FINMA approval
+- Contain a loss-absorption mechanism: either
+  (a) Contractual conversion into CET1 (equity conversion), or
+  (b) Contractual write-down of principal
+- The trigger event is specified as a decline of the CET1 ratio below
+  a predefined threshold (minimum 5.125% per Art. 24 CAO) or a
+  determination of non-viability by FINMA
+- Must not contain features that could hinder recapitalization
+- Coupon payments are fully discretionary and non-cumulative
+
+Swiss AT1 instruments (often referred to as "CoCos" — contingent
+convertible bonds) may be issued with higher trigger thresholds
+(e.g., 7% CET1 for systemically important banks).
+
+4.4 Tier 2 Capital (T2) — Art. 28-30 CAO
+------------------------------------------
+Tier 2 capital provides supplementary loss absorption, primarily in
+a gone-concern (resolution) scenario. T2 instruments must:
+- Have an original maturity of at least 5 years
+- Contain no incentive to redeem (e.g., step-up coupons are restricted)
+- Be callable only after a minimum of 5 years, with FINMA approval
+- Be subordinated to all depositors and general creditors
+- Include a loss-absorption mechanism (write-down or conversion) upon
+  the occurrence of a trigger event or non-viability determination
+
+Tier 2 capital is subject to amortization: during the final 5 years
+before maturity, Tier 2 instruments are progressively reduced in
+recognized value (straight-line amortization of 20% per year).
+
+4.5 Regulatory Deductions (Art. 31-40 CAO)
+--------------------------------------------
+The CAO mandates specific deductions from capital components to ensure
+that only genuine loss-absorbing capital is recognized:
+
+Deductions from CET1 include:
+- Goodwill and other intangible assets (Art. 32 CAO)
+- Deferred tax assets dependent on future profitability (Art. 32 CAO)
+- Cash flow hedge reserves related to items not measured at fair value
+- Shortfall of provisions relative to expected losses (IRB banks)
+- Gains on sale related to securitization transactions
+- Defined benefit pension fund assets (net of associated deferred tax)
+- Reciprocal cross-holdings in CET1 instruments
+- Investments in own CET1 instruments (treasury shares)
+- Significant investments in the capital of financial institutions
+  (subject to threshold deductions per Art. 35 CAO)
+
+Corresponding deduction rules apply to AT1 and T2 capital for holdings
+of AT1 and T2 instruments of other financial institutions.
+
+=============================================================
+5. CREDIT RISK CAPITAL REQUIREMENTS
+=============================================================
+
+5.1 General Framework (Art. 49-75 CAO)
+----------------------------------------
+Credit risk is defined as the risk of loss arising from a counterparty's
+failure to meet its obligations or from a reduction in the value of
+financial instruments issued by a third party. Banks must hold capital
+against credit risk for all on-balance-sheet exposures and off-balance-
+sheet commitments.
+
+Two principal approaches are available:
+(a) The Swiss Standardized Approach (SA-BIS) — Art. 50-62 CAO
+(b) The Internal Ratings-Based Approach (IRB) — Art. 63-75 CAO
+
+Banks using the IRB approach require prior FINMA authorization.
+
+5.2 Standardized Approach (SA-BIS) — Art. 50-62 CAO
+-----------------------------------------------------
+Under the SA-BIS approach, exposures are assigned to defined exposure
+classes, each with prescribed risk weights. The key exposure classes
+and their risk weights are:
+
+Sovereign and central bank exposures:
+- Swiss Confederation and SNB: 0%
+- Other sovereigns: 0% to 150%, based on external credit rating
+
+Public sector entities (cantons, municipalities):
+- Swiss cantons and municipalities: 0% (with cantonal guarantee) or 20%
+- Other public entities: 20% to 150%, based on rating
+
+Multilateral development banks: 0% to 50%
+
+Bank exposures:
+- Rated banks: 20% to 150%, depending on external rating
+- Unrated banks: 20% to 50%, depending on jurisdiction and maturity
+
+Corporate exposures:
+- Rated corporates: 20% to 150%, based on external credit rating
+- Unrated corporates: 100% (standard risk weight)
+- SME preferential treatment: 85% for qualifying small and medium
+  enterprises (per Basel III final revisions, effective 2025)
+
+Retail exposures:
+- Qualifying retail: 75% risk weight
+- This includes exposures to natural persons or small businesses
+  meeting granularity and size criteria
+
+Residential mortgage exposures:
+- Risk weight depends on loan-to-value (LTV) ratio:
+  - LTV up to 50%: 20% risk weight (effective 2025 revision)
+  - LTV 50-60%: 25%
+  - LTV 60-80%: 30%
+  - LTV 80-90%: 40%
+  - LTV 90-100%: 50%
+  - LTV above 100%: 70%
+- Own-use residential property benefits from preferential treatment
+- Investment properties generally attract higher risk weights
+
+Commercial real estate exposures:
+- Risk weight of 60% to 150% depending on LTV and property type
+- Exposures secured by income-producing real estate (IPRE) are
+  subject to specific treatment under the 2025 revisions
+
+Equity exposures:
+- Listed equities: 250%
+- Unlisted equities: 400%
+- Speculative equity investments: 1250%
+
+Other assets:
+- Cash and gold: 0%
+- Fixed assets, other assets: 100%
+- Past-due exposures: 100% to 150%, depending on specific provisions
+
+5.3 Credit Risk Mitigation (Art. 56-61 CAO)
+---------------------------------------------
+The CAO recognizes several credit risk mitigation techniques:
+- Financial collateral (comprehensive and simple approach)
+- Guarantees and credit derivatives
+- On-balance-sheet netting
+- Real estate collateral (with specific valuation requirements)
+
+Under the comprehensive approach, collateral values are adjusted using
+regulatory haircuts to account for market risk, currency mismatch,
+and maturity mismatch.
+
+5.4 Internal Ratings-Based Approach (IRB) — Art. 63-75 CAO
+------------------------------------------------------------
+Banks with FINMA approval may use internal models to estimate:
+- Probability of default (PD)
+- Loss given default (LGD) — under A-IRB (Advanced IRB)
+- Exposure at default (EAD) — under A-IRB
+- Effective maturity (M) — under A-IRB
+
+Under the Foundation IRB (F-IRB), banks estimate only PD; LGD, EAD,
+and M are set by the regulator.
+
+The IRB approach requires:
+- Robust rating systems with clearly defined rating grades
+- A minimum of 5-7 years of historical data
+- Regular validation and back-testing
+- Stress testing of credit portfolios
+- Annual FINMA review and approval
+
+5.5 Output Floor (Basel III Final, effective 2025)
+----------------------------------------------------
+Following the Basel III finalization, the CAO introduces an output
+floor that limits the capital benefit from using internal models:
+
+- Risk-weighted assets calculated under the IRB approach must be at
+  least a specified percentage of the RWA that would result from
+  the standardized approach (SA-BIS)
+- Phase-in schedule:
+  - 1 January 2025: 50%
+  - 1 January 2026: 55%
+  - 1 January 2027: 60%
+  - 1 January 2028: 65%
+  - 1 January 2029: 70%
+  - 1 January 2030: 72.5% (fully phased in)
+
+This ensures that internal models do not produce capital requirements
+that are less than 72.5% of those under the standardized approach.
+
+=============================================================
+6. MARKET RISK CAPITAL REQUIREMENTS
+=============================================================
+
+6.1 General Framework (Art. 79-88 CAO)
+----------------------------------------
+Market risk is the risk of loss from changes in market prices,
+including interest rates, equity prices, foreign exchange rates, and
+commodity prices. Banks must hold capital for market risk in respect
+of positions held in the trading book, as well as foreign exchange and
+commodity positions across the entire balance sheet.
+
+6.2 Trading Book and Banking Book (TBEO-FINMA)
+------------------------------------------------
+The allocation of positions between the trading book and banking book
+is governed by the FINMA Trading Book and Banking Book Ordinance
+(TBEO-FINMA), which replaced FINMA Circular 2013/1 effective
+1 January 2025. Key principles include:
+- Trading book positions must be held with trading intent or to hedge
+  other trading book positions
+- Strict boundary: transfers between books require documentation and
+  FINMA notification; capital impact of transfers must be reported
+- Presumption of trading book allocation for specific instruments
+
+6.3 Standardized Approach for Market Risk
+-------------------------------------------
+Under the standardized approach, capital requirements for market risk
+are calculated by summing the requirements for each risk factor:
+
+- Interest rate risk: general and specific risk charges based on
+  maturity method or duration method
+- Equity risk: general market risk (8%) and specific risk (4%-12%
+  depending on diversification and listing)
+- Foreign exchange risk: shorthand method based on overall net open
+  position; 8% capital charge on the higher of aggregate net long
+  or net short positions
+- Commodity risk: simplified approach or maturity ladder approach
+
+6.4 Internal Models Approach (IMA)
+------------------------------------
+Banks with FINMA authorization may use internal models (Value-at-Risk
+and Expected Shortfall models) to calculate market risk capital:
+- Confidence level: 99% (VaR) / 97.5% (ES under revised framework)
+- Holding period: 10 trading days (VaR) / varying horizons (ES)
+- Observation period: minimum 1 year of historical data
+- Multiplication factor: minimum 3.0, subject to increase based on
+  back-testing results (plus-factor mechanism)
+- Stressed VaR / Stressed ES requirements
+- Model validation and FINMA approval required
+
+The 2025 revisions implement the Fundamental Review of the Trading
+Book (FRTB), introducing the revised standardized approach (SA) and
+revised internal models approach (IMA) for market risk.
+
+6.5 Credit Valuation Adjustment (CVA) Risk
+--------------------------------------------
+Banks must hold capital for CVA risk — the risk of mark-to-market
+losses on OTC derivatives due to deterioration in counterparty
+creditworthiness. The CAO provides for:
+- Standardized CVA approach (SA-CVA)
+- Basic CVA approach (BA-CVA)
+- Exemptions for certain smaller exposures
+
+=============================================================
+7. OPERATIONAL RISK CAPITAL REQUIREMENTS
+=============================================================
+
+7.1 General Framework (Art. 89-95 CAO)
+----------------------------------------
+Operational risk is defined as the risk of loss resulting from
+inadequate or failed internal processes, people, and systems, or from
+external events. This includes legal risk but excludes strategic and
+reputational risk.
+
+7.2 Approaches for Calculating Operational Risk Capital
+---------------------------------------------------------
+Prior to 2025, the CAO provided three approaches:
+- Basic Indicator Approach (BIA): 15% of average gross income over
+  three years
+- Standardized Approach (TSA): weighted average of gross income by
+  business line (12%-18%)
+- Advanced Measurement Approach (AMA): internal models with FINMA
+  approval
+
+7.3 Standardized Measurement Approach (SMA) — Effective 2025
+--------------------------------------------------------------
+With the implementation of the final Basel III standards, the CAO
+replaces the previous approaches with the Standardized Measurement
+Approach (SMA), as specified in the FINMA Leverage Ratio and
+Operational Risks Ordinance (LROV-FINMA):
+
+The SMA is based on:
+(a) Business Indicator Component (BIC):
+    - The Business Indicator (BI) is calculated from financial
+      statement items: interest, leasing and dividend component;
+      services component; and financial component
+    - The BIC applies marginal coefficients to the BI:
+      - BI up to EUR 1 billion: coefficient of 12%
+      - BI EUR 1-30 billion: coefficient of 15%
+      - BI above EUR 30 billion: coefficient of 18%
+
+(b) Internal Loss Multiplier (ILM):
+    - Derived from a bank's actual historical loss experience
+    - Banks must maintain comprehensive internal loss databases
+    - The ILM adjusts the BIC upward or downward based on the
+      ratio of average historical losses to the BIC
+    - FINMA may set the ILM to 1 for smaller institutions
+
+The SMA capital requirement = BIC x ILM
+
+Banks must maintain detailed loss data records covering at least 10
+years, including loss amounts, recovery amounts, dates, business lines,
+and event types. The data must be regularly validated.
+
+=============================================================
+8. CAPITAL CONSERVATION BUFFER
+=============================================================
+
+8.1 Requirement (Art. 43 CAO)
+-------------------------------
+All banks must maintain a capital conservation buffer (Eigenmittel-
+puffer) of 2.5% of risk-weighted assets, to be held entirely in
+CET1 capital. This buffer sits above the minimum capital ratios.
+
+Combined with the minimum CET1 ratio of 4.5%, the effective CET1
+requirement including the buffer is 7.0% of RWA.
+
+8.2 Buffer Distribution Constraints
+--------------------------------------
+When a bank's CET1 capital falls within the buffer range (i.e.,
+between 4.5% and 7.0% of RWA), automatic constraints on capital
+distributions apply:
+
+CET1 ratio range          Maximum distribution (% of earnings)
+4.500% - 5.125%           0% (no distributions permitted)
+5.125% - 5.750%           Up to 20%
+5.750% - 6.375%           Up to 40%
+6.375% - 7.000%           Up to 60%
+Above 7.000%              No constraint
+
+Capital distributions subject to restriction include:
+- Dividend payments
+- Share buybacks
+- Discretionary bonus payments
+- AT1 coupon payments (to the extent discretionary)
+
+8.3 Category-Specific Buffer Requirements
+-------------------------------------------
+The capital buffer varies by FINMA supervisory category:
+- Category 1 banks (G-SIBs): subject to additional TLAC and
+  gone-concern requirements (see Section 13)
+- Category 2 banks (D-SIBs): buffer of up to 4.0% CET1 of RWA
+- Category 3 banks: buffer of up to 3.2% CET1 of RWA
+- Category 4 banks: 2.5% standard buffer
+- Category 5 banks: 2.5% standard buffer (or simplified regime)
+
+=============================================================
+9. COUNTERCYCLICAL CAPITAL BUFFER
+=============================================================
+
+9.1 Sectoral Countercyclical Buffer (Art. 44 CAO)
+---------------------------------------------------
+The Federal Council, upon proposal by the Swiss National Bank (SNB),
+may activate a sectoral countercyclical capital buffer (CCyB) of up
+to 2.5% of risk-weighted positions in CET1 capital.
+
+The CCyB is targeted at excessive credit growth in specific sectors
+and is currently applied to mortgage-backed exposures secured by
+Swiss residential property. As of the most recent activation, the
+sectoral CCyB stands at 2.5% for such exposures.
+
+Key features:
+- Activation and deactivation by Federal Council decision
+- Applies to specific exposure classes (currently residential
+  mortgage lending in Switzerland)
+- Must be held in CET1 capital
+- The SNB monitors credit market conditions and makes recommendations
+- Buffer may be adjusted (increased, decreased, or deactivated)
+  depending on macroeconomic and credit cycle conditions
+
+9.2 Extended Countercyclical Buffer
+--------------------------------------
+An extended countercyclical buffer of up to 2.5% CET1 of RWA may be
+imposed on banks with total assets exceeding CHF 250 billion and
+significant foreign exposures, to address systemic risks arising from
+international lending activities.
+
+=============================================================
+10. LEVERAGE RATIO REQUIREMENTS
+=============================================================
+
+10.1 Minimum Leverage Ratio (Art. 46 CAO)
+-------------------------------------------
+All banks must maintain a minimum leverage ratio of 3.0%, calculated
+as:
+
+Leverage Ratio = Tier 1 Capital / Total Exposure Measure
+
+The leverage ratio serves as a non-risk-weighted backstop to the
+risk-based capital requirements, preventing excessive leverage
+regardless of the risk weight assigned to assets.
+
+10.2 Total Exposure Measure
+------------------------------
+The total exposure measure includes:
+- On-balance-sheet assets (excluding deductions from Tier 1 capital)
+- Derivative exposures (using SA-CCR or simplified methodology)
+- Securities financing transaction (SFT) exposures
+- Off-balance-sheet items (applying credit conversion factors)
+
+The detailed calculation methodology is specified in the FINMA
+Leverage Ratio and Operational Risks Ordinance (LROV-FINMA).
+
+10.3 Leverage Ratio for Systemically Important Banks
+------------------------------------------------------
+Systemically important banks are subject to enhanced leverage ratio
+requirements:
+- Minimum going-concern leverage ratio: 4.5% for domestic SIBs
+- Higher requirements for G-SIBs based on systemic importance score
+- Gone-concern leverage ratio requirements are calibrated relative
+  to going-concern requirements
+
+10.4 Small Banks Regime (SBR)
+-------------------------------
+Banks qualifying for the Small Banks Regime (SBR) under Art. 47a-47e
+CAO are subject to a simplified leverage ratio of at least 8.0%
+instead of the full risk-based capital requirements. This regime
+eliminates the need to calculate RWA, capital buffers, and the
+sectoral countercyclical buffer for qualifying institutions.
+
+=============================================================
+11. CAPITAL PLANNING AND ICAAP
+=============================================================
+
+11.1 Internal Capital Adequacy Assessment Process (ICAAP)
+-----------------------------------------------------------
+Under FINMA supervisory expectations, particularly FINMA Circular
+2017/1 "Corporate Governance — Banks," institutions must maintain
+a robust ICAAP. While the CAO itself prescribes the minimum
+regulatory capital (Pillar 1), the ICAAP encompasses a comprehensive
+assessment of all material risks (Pillar 2).
+
+The ICAAP must:
+- Identify and measure all material risks, including those not fully
+  captured under Pillar 1 (e.g., concentration risk, interest rate
+  risk in the banking book, strategic risk)
+- Define an appropriate level of internal capital (economic capital)
+  that exceeds regulatory minimums by an adequate margin
+- Include forward-looking capital planning over a multi-year horizon
+  (typically 3-5 years)
+- Incorporate stress testing and scenario analysis
+- Be reviewed and approved by the board of directors at least annually
+
+11.2 Stress Testing
+---------------------
+Banks are required to conduct regular stress tests covering:
+- Macroeconomic downturn scenarios
+- Severe but plausible market stress events
+- Idiosyncratic stress (bank-specific events)
+- Reverse stress testing (identifying scenarios that would deplete
+  capital below minimum requirements)
+
+Results must inform capital planning decisions and be reported to
+FINMA upon request.
+
+11.3 Supervisory Review Process (Pillar 2)
+--------------------------------------------
+FINMA may impose institution-specific capital add-ons (Pillar 2
+requirements) based on its assessment of:
+- The quality and effectiveness of the ICAAP
+- Risk concentrations
+- Interest rate risk in the banking book
+- Model risk (for IRB and IMA banks)
+- Governance and risk management deficiencies
+- Other institution-specific risk factors
+
+These add-ons are communicated through FINMA assessment letters
+and are binding on the institution.
+
+=============================================================
+12. BASEL III IMPLEMENTATION IN SWITZERLAND
+=============================================================
+
+12.1 Historical Context
+-------------------------
+Switzerland was an early adopter of the Basel III framework:
+- Basel III capital requirements (CET1, AT1, T2, buffers): effective
+  1 January 2013, with phase-in through 2019
+- Leverage ratio disclosure: effective 2015; binding minimum: 2018
+- Liquidity Coverage Ratio (LCR): effective 2015
+- Net Stable Funding Ratio (NSFR): effective 2021
+
+12.2 Basel III Final (Basel 3.1) — Effective 1 January 2025
+--------------------------------------------------------------
+The Federal Council revised the CAO to implement the final Basel III
+standards (published by the BCBS in December 2017 and January 2019):
+
+Key changes effective 1 January 2025:
+- Revised Standardized Approach for Credit Risk (SA-BIS): more
+  granular risk weights, LTV-based treatment for real estate, new
+  exposure classes
+- Introduction of the output floor (50%, rising to 72.5% by 2030)
+- Replacement of the Advanced Measurement Approach for operational
+  risk with the Standardized Measurement Approach (SMA)
+- Revised market risk framework based on the Fundamental Review of
+  the Trading Book (FRTB)
+- Revised CVA risk framework
+- Updated leverage ratio exposure measurement
+- Revised standardized approach for counterparty credit risk (SA-CCR)
+
+12.3 FINMA Implementing Ordinances (Effective 1 January 2025)
+---------------------------------------------------------------
+FINMA issued five ordinances to implement the revised CAO:
+
+1. FINMA Ordinance on Credit Risks (CreO-FINMA)
+   - Replaces FINMA Circular 2017/7 "Credit risks — banks"
+   - Details SA-BIS risk weights, IRB requirements, CVA calculations
+
+2. FINMA Ordinance on Market Risks (MarO-FINMA)
+   - Replaces FINMA Circular 2008/20 "Market risks — banks"
+   - Implements revised standardized and model approaches for market
+     risk under the FRTB
+
+3. FINMA Ordinance on Trading Book and Banking Book and Eligible
+   Capital (TBEO-FINMA)
+   - Replaces FINMA Circular 2013/1 "Eligible capital — banks"
+   - Defines trading/banking book boundary, transfer rules, and
+     eligible capital classification
+
+4. FINMA Ordinance on Leverage Ratio and Operational Risks
+   (LROV-FINMA)
+   - Replaces FINMA Circular 2015/3 "Leverage ratio — banks" and
+     portions of Circular 2008/21 "Operational risks — banks"
+   - Specifies leverage ratio exposure calculations and SMA for
+     operational risk
+
+5. FINMA Ordinance on Disclosure Obligations (DisO-FINMA)
+   - Replaces FINMA Circular 2016/1 "Disclosure — banks"
+   - Defines updated disclosure tables on capital, risk, and other
+     prudential metrics
+
+12.4 Swiss Finish
+-------------------
+Switzerland has traditionally applied requirements that exceed the
+Basel minimums (the so-called "Swiss finish"). Key examples include:
+- Higher trigger thresholds for AT1 and T2 instruments (7% and 5%
+  CET1 respectively for systemically important banks)
+- More stringent leverage ratio requirements for SIBs
+- The sectoral countercyclical buffer for residential mortgages
+- More conservative real estate valuation rules (revaluation every
+  5 years under the 2025 revisions)
+- Additional gone-concern loss-absorbing capacity for SIBs
+
+=============================================================
+13. FINMA SUPERVISORY CATEGORIES AND CATEGORY-SPECIFIC REQUIREMENTS
+=============================================================
+
+FINMA classifies all supervised banks and securities firms into five
+supervisory categories based on measurable criteria: total assets,
+assets under management, privileged deposits, and required capital.
+The categorization determines the intensity of supervision and
+certain regulatory requirements.
+
+13.1 Category 1 — Global Systemically Important Banks (G-SIBs)
+-----------------------------------------------------------------
+Criteria: Extremely large, systemically important, and complex
+institutions with very high risk profiles.
+Current institutions: UBS Group AG (following the CS acquisition)
+
+Capital requirements (going concern):
+- Base: 4.5% CET1 + 1.5% AT1 = 6.0% Tier 1 (minimum)
+- Buffer: 8.5% of RWA (at least 5.5% in CET1, remainder in high-
+  trigger CoCos)
+- Additional surcharge based on systemic importance score
+- Total going-concern capital: up to 14.3% of RWA
+- Going-concern leverage ratio: up to 5.0%
+
+Gone-concern requirements:
+- 100% of going-concern requirements (i.e., matching amount)
+- Fulfilled primarily through bail-in bonds (TLAC-eligible debt)
+- FINMA may grant rebates for demonstrably improved resolvability
+
+13.2 Category 2 — Domestic Systemically Important Banks (D-SIBs)
+-------------------------------------------------------------------
+Criteria: Very important and complex institutions with high risk
+profiles.
+Current institutions: PostFinance AG, Raiffeisen Group, Zuercher
+Kantonalbank
+
+Capital requirements (going concern):
+- Base: 4.5% CET1 + 1.5% AT1 = 6.0% Tier 1 (minimum)
+- Buffer: 5.5% to 8.5% of RWA (depending on systemic importance)
+- Total going-concern capital: up to 12.86% of RWA
+- Going-concern leverage ratio: 4.5%
+
+Gone-concern requirements:
+- 40% of going-concern capital requirements
+- May be fulfilled with bail-in debt instruments
+
+13.3 Category 3 — Large Banks
+-------------------------------
+Criteria: Large and complex market participants with significant risk.
+Typically total assets above CHF 15 billion.
+Supervision intensity: Preventive; regular on-site inspections.
+
+Capital requirements:
+- Standard Basel III minimums (8% total capital ratio)
+- Capital buffer of up to 3.2% CET1 of RWA
+- Leverage ratio: 3.0% minimum
+- Full application of LCR, NSFR, and all CAO provisions
+
+13.4 Category 4 — Medium-Sized Banks
+--------------------------------------
+Criteria: Medium-sized institutions with moderate risk profiles.
+Typically total assets of CHF 1-15 billion.
+Supervision intensity: Based on quantitative indicators; event-driven.
+
+Capital requirements:
+- Standard Basel III minimums (8% total capital ratio)
+- Capital conservation buffer of 2.5% CET1 of RWA
+- Leverage ratio: 3.0% minimum
+- Eligible for simplified requirements under the Small Banks Regime
+  (SBR) if qualifying criteria are met
+
+13.5 Category 5 — Small Banks
+-------------------------------
+Criteria: Small institutions with low risk profiles.
+Total assets typically up to CHF 1 billion.
+Supervision intensity: Minimal; primarily based on quantitative data.
+
+Capital requirements:
+- Standard Basel III minimums apply, OR
+- Small Banks Regime (SBR) available under Art. 47a-47e CAO
+
+Small Banks Regime (SBR) eligibility criteria:
+- Simplified leverage ratio of at least 8.0%
+- Refinancing ratio (Refinanzierungsgrad) of at least 100%
+- Average Liquidity Coverage Ratio (LCR) of at least 110% over a
+  12-month assessment period
+
+SBR benefits:
+- No requirement to calculate risk-weighted assets (RWA)
+- No capital buffer or sectoral countercyclical buffer calculations
+- No NSFR compliance requirement
+- Simplified application of FINMA circulars
+- Reduced reporting and disclosure obligations
+- Exemption from FINMA Circular 2026/1 on nature-related financial
+  risks
+
+As of end-2024, approximately 55 institutions participated in the SBR.
+
+=============================================================
+14. RISK DIVERSIFICATION (LARGE EXPOSURES)
+=============================================================
+
+14.1 General Rule (Art. 96-112 CAO)
+--------------------------------------
+Banks must diversify their risks and avoid excessive concentration of
+exposures to individual counterparties or groups of connected
+counterparties. The standard large exposure limit is:
+
+- Maximum 25% of adjusted Tier 1 capital per counterparty or group
+  of connected counterparties (Art. 97 CAO)
+
+14.2 Enhanced Limits for SIBs
+-------------------------------
+Systemically important banks are subject to a tighter concentration
+limit:
+- Maximum 15% of Tier 1 capital for exposures to other systemically
+  important banks or financial institutions
+
+14.3 Exemptions and Special Treatments
+-----------------------------------------
+Certain exposures are exempt or subject to preferential treatment:
+- Exposures to the Swiss Confederation and SNB: exempt
+- Interbank exposures with maturities under 100 days: partially
+  exempt
+- Covered bonds under specific conditions
+- Exposures within a financial group (intra-group exemptions,
+  subject to conditions)
+
+=============================================================
+15. REPORTING AND DISCLOSURE OBLIGATIONS
+=============================================================
+
+15.1 Capital Adequacy Reporting to SNB (Art. 47a ff. CAO)
+-----------------------------------------------------------
+Banks must submit capital adequacy reports to the Swiss National Bank
+(SNB) at regular intervals:
+- Quarterly reporting of capital ratios, RWA, leverage ratio, and
+  liquidity metrics
+- Semi-annual consolidated capital statements for groups
+- The reporting framework was updated effective 1 January 2025 to
+  reflect the revised Basel III standards
+
+The SNB collects data on behalf of FINMA and publishes aggregate
+statistics.
+
+15.2 Public Disclosure Obligations (DisO-FINMA)
+--------------------------------------------------
+Banks must publicly disclose information on their capital adequacy,
+risk profile, and risk management practices. The disclosure
+obligations are specified in the FINMA Ordinance on Disclosure
+Obligations (DisO-FINMA), which replaced FINMA Circular 2016/1
+effective 1 January 2025.
+
+Disclosure requirements include:
+- Key Metrics Table (KM1): overview of capital ratios, leverage
+  ratio, LCR, and NSFR
+- Composition of regulatory capital (CC1, CC2 tables)
+- Risk-weighted assets by risk category
+- Credit risk exposures and risk weights (CR tables)
+- Market risk capital requirements
+- Operational risk capital requirements
+- Leverage ratio detailed breakdown (LR tables)
+- Liquidity metrics (LIQ tables)
+- Remuneration disclosures for significant institutions
+
+Disclosure frequency varies by supervisory category:
+- Category 1-2 banks: quarterly or semi-annual disclosure
+- Category 3 banks: semi-annual disclosure
+- Category 4 banks: annual disclosure
+- Category 5 banks / SBR institutions: annual disclosure of key
+  metrics (KM1) only
+
+15.3 Ad Hoc Disclosure
+-------------------------
+Banks must disclose material events that may significantly affect
+their capital adequacy or risk profile on a timely basis. FINMA may
+require additional disclosures in specific circumstances.
+
+=============================================================
+16. TRANSITIONAL PROVISIONS
+=============================================================
+
+16.1 Basel III Final Phase-In (2025-2030)
+-------------------------------------------
+The 2025 revision of the CAO includes transitional provisions to
+allow banks to adapt to the new requirements:
+
+Output floor phase-in:
+- 2025: 50%
+- 2026: 55%
+- 2027: 60%
+- 2028: 65%
+- 2029: 70%
+- 2030: 72.5% (fully phased in)
+
+Credit risk revised standardized approach:
+- New risk weights for real estate exposures apply immediately from
+  1 January 2025
+- Revaluation of real estate collateral: banks must complete
+  revaluation within 5 years of the effective date
+
+Operational risk (SMA):
+- The Standardized Measurement Approach applies from 1 January 2025
+- Banks must ensure loss databases meet minimum data requirements
+  (10 years of loss data); transitional relief may apply for
+  institutions building data history
+
+Market risk (FRTB):
+- The revised standardized approach and revised internal models
+  approach apply from 1 January 2025
+- Banks previously authorized for IMA must obtain renewed FINMA
+  authorization under the revised framework
+
+16.2 Historical Transitional Provisions
+-----------------------------------------
+The original CAO of 2012 included phase-in schedules for:
+- CET1 minimum ratio: 3.5% (2013) to 4.5% (2019)
+- Capital conservation buffer: 0.625% (2016) to 2.5% (2019)
+- Regulatory deductions: 20% (2014) to 100% (2018)
+- Tier 2 grandfathering of non-compliant instruments (expired 2022)
+These transitional provisions are now fully expired.
+
+16.3 Systemically Important Banks — Post-Credit Suisse Reforms
+-----------------------------------------------------------------
+Following the forced merger of Credit Suisse into UBS in March 2023,
+the Federal Council proposed amendments (June 2025) to strengthen
+the capital framework for systemically important banks:
+- Enhanced capital requirements for foreign participations at parent
+  company level
+- Strengthened recovery and resolution planning
+- Extended FINMA supervisory powers, including senior manager
+  accountability
+- Public consultation expected Q4 2025 / Q1 2026
+- Targeted implementation: 1 January 2027
+
+=============================================================
+17. KEY DEFINITIONS (Art. 1-15 CAO)
+=============================================================
+
+For the purposes of the CAO, the following terms are defined:
+
+- Risk-Weighted Assets (RWA): The sum of all on-balance-sheet and
+  off-balance-sheet exposures, each multiplied by the applicable
+  risk weight, used as the denominator for risk-based capital ratios.
+
+- Eligible Capital (Anrechenbare Eigenmittel): The total of CET1,
+  AT1, and T2 capital after all regulatory deductions.
+
+- Credit Conversion Factor (CCF): A factor applied to off-balance-
+  sheet exposures to determine their credit-equivalent amount for
+  capital purposes.
+
+- Exposure at Default (EAD): The expected gross exposure upon default
+  of a counterparty.
+
+- Counterparty Credit Risk: The risk of loss arising from a
+  counterparty's failure to meet obligations under a derivative or
+  securities financing transaction.
+
+- Financial Group: A group of undertakings whose activities are
+  predominantly in the financial sector and which is subject to
+  consolidated supervision.
+
+- Systemic Importance: Designation by the SNB and FINMA of an
+  institution whose distress or failure would pose significant
+  risk to the Swiss financial system and economy.
+
+=============================================================
+18. RELATED LEGISLATION AND CIRCULARS
+=============================================================
+
+The CAO operates within a broader regulatory framework:
+
+Primary legislation:
+- Federal Act on Banks and Savings Banks (BankA, SR 952.0)
+- Banking Ordinance (BankO, SR 952.02)
+- Financial Market Supervision Act (FINMASA, SR 956.1)
+- Financial Market Infrastructure Act (FMIA, SR 958.1)
+
+Key FINMA Ordinances (effective 1 January 2025):
+- FINMA Ordinance on Credit Risks (CreO-FINMA)
+- FINMA Ordinance on Market Risks (MarO-FINMA)
+- FINMA Ordinance on Trading and Banking Book (TBEO-FINMA)
+- FINMA Ordinance on Leverage Ratio and Operational Risks (LROV-FINMA)
+- FINMA Ordinance on Disclosure Obligations (DisO-FINMA)
+
+Key FINMA Circulars:
+- FINMA Circular 2017/1 "Corporate Governance — Banks"
+- FINMA Circular 2019/2 "Interest rate risks — Banks"
+- FINMA Circular 2023/1 "Operational risks and resilience — Banks"
+- FINMA Circular 2026/1 "Nature-related financial risks" (new)
+
+Related ordinance:
+- Liquidity Ordinance (LiqO, SR 952.06)
+
+=============================================================
+19. SUMMARY OF KEY RATIOS AND THRESHOLDS
+=============================================================
+
+Metric                          Minimum Requirement
+-------------------------------------------------
+CET1 ratio                      4.5% of RWA
+Tier 1 ratio                    6.0% of RWA
+Total capital ratio             8.0% of RWA
+Capital conservation buffer     2.5% CET1 of RWA
+Countercyclical buffer (max)    2.5% CET1 of RWA
+Leverage ratio                  3.0% (Tier 1 / exposure)
+SIB leverage ratio (D-SIB)     4.5%
+SBR simplified leverage ratio   8.0%
+Large exposure limit             25% of Tier 1 capital
+SIB large exposure limit        15% of Tier 1 capital
+Output floor (fully phased)     72.5% of SA-BIS RWA
+AT1 trigger (minimum)           5.125% CET1
+AT1 trigger (SIBs)              7.0% CET1
+
+=============================================================
+DOCUMENT INFORMATION
+=============================================================
+Document type: Regulatory knowledge base — reference document
+Jurisdiction: Switzerland
+Primary regulation: Capital Adequacy Ordinance (CAO / ERV), SR 952.03
+Regulatory authority: Swiss Financial Market Supervisory Authority
+(FINMA) and Swiss Federal Council
+Last significant amendment: 1 January 2025 (Basel III Final)
+This document is for informational purposes and does not constitute
+legal advice. Consult the official ordinance text and FINMA guidance
+for binding provisions.
+=============================================================

@@ -10,9 +10,10 @@ interface StageDetailProps {
   onUpload: (docId: string, file: File) => void
   onReset: (docId: string) => void
   uploading?: Set<string>
+  clientId: string
 }
 
-export function StageDetail({ stage, documentStates, onUpload, onReset, uploading }: StageDetailProps) {
+export function StageDetail({ stage, documentStates, onUpload, onReset, uploading, clientId }: StageDetailProps) {
   const stageDocIds = new Set(stage.documents.map((d) => d.id))
   const stageStates = documentStates.filter((s) => stageDocIds.has(s.documentId))
   const completedCount = stageStates.filter(
@@ -52,6 +53,7 @@ export function StageDetail({ stage, documentStates, onUpload, onReset, uploadin
                   onUpload={onUpload}
                   onReset={onReset}
                   isUploading={uploading?.has(doc.id)}
+                  clientId={clientId}
                 />
               ))}
             </div>

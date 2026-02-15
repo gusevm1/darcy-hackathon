@@ -1,0 +1,1173 @@
+================================================================================
+FINMA CIRCULAR 2018/3: OUTSOURCING -- BANKS AND INSURERS
+================================================================================
+Knowledge Base Document for Swiss Financial Regulatory Advisory Platform
+Document Reference: FINMA-RS 2018/3
+Original Title (DE): Rundschreiben 2018/3 Outsourcing -- Banken und Versicherer
+Date of Issue: 5 December 2017
+Entry into Force: 1 April 2018
+Last Amended: 1 January 2020 (partial revision, small banks regime)
+Supersedes: FINMA Circular 2008/7 "Outsourcing Banks" (20 November 2008)
+================================================================================
+
+TABLE OF CONTENTS
+--------------------------------------------------------------------------------
+I.    Purpose and Objective
+II.   Legal Basis
+III.  Scope and Addressees
+IV.   Definition of Outsourcing
+V.    Significant vs Non-Significant Outsourcing
+VI.   Functions That Cannot Be Outsourced
+VII.  Risk Assessment Before Outsourcing
+VIII. Due Diligence on Service Providers
+IX.   Selection, Instruction and Monitoring
+X.    Contractual Requirements (Minimum Clauses)
+XI.   Data Protection and Confidentiality
+XII.  Cloud Outsourcing Specific Requirements
+XIII. Cross-Border Outsourcing Considerations
+XIV.  Audit Rights and FINMA Access
+XV.   Sub-Outsourcing (Chain Outsourcing)
+XVI.  Business Continuity for Outsourced Functions
+XVII. Concentration Risk Management
+XVIII.Inventory and Documentation Requirements
+XIX.  FINMA Notification and Approval Requirements
+XX.   Monitoring and Control of Outsourced Activities
+XXI.  Exit Strategy and Transition Planning
+XXII. Specific Rules for IT Outsourcing
+XXIII.Outsourcing Within a Group or Conglomerate
+XXIV. Category-Specific Proportionality
+XXV.  Transitional Provisions
+XXVI. Interaction with Other FINMA Circulars
+XXVII.Practical Compliance Guidance
+--------------------------------------------------------------------------------
+
+================================================================================
+I. PURPOSE AND OBJECTIVE
+================================================================================
+
+FINMA Circular 2018/3 sets out the regulatory requirements applicable to
+outsourcing arrangements entered into by banks, securities dealers and
+insurance companies supervised by the Swiss Financial Market Supervisory
+Authority (FINMA). The circular defines the conditions under which
+regulated institutions may outsource significant functions to third-party
+service providers while maintaining adequate organizational structures
+and risk controls (Rz 1).
+
+The primary objectives of the circular are:
+
+  - To ensure that outsourcing does not impair the supervised
+    institution's ability to comply with financial market legislation
+  - To protect the interests of clients, policyholders and creditors
+  - To preserve FINMA's ability to exercise effective supervision
+    over outsourced functions
+  - To establish a principles-based framework that allows institutions
+    to implement outsourcing arrangements proportionate to their
+    business model and risk situation
+  - To replace the previous circular (FINMA-RS 2008/7) with a modernized
+    framework that accommodates technological developments, including
+    cloud computing
+
+The circular adopts a principles-based and technology-neutral approach,
+enabling institutions to use modern technologies such as cloud computing
+while maintaining appropriate risk management (Rz 1-2).
+
+================================================================================
+II. LEGAL BASIS
+================================================================================
+
+The circular derives its legal authority from several provisions of Swiss
+financial market legislation:
+
+  Banking sector:
+  - Federal Act on Banks and Savings Banks (Banking Act, BA),
+    Art. 3 para. 2 let. a -- requirement for proper organization
+  - Stock Exchange Act (SESTA), Art. 10 para. 2 let. a -- organizational
+    requirements for securities dealers
+  - Stock Exchange Ordinance (SESTO), Art. 19 -- outsourcing of functions
+
+  Insurance sector:
+  - Insurance Supervision Act (ISA), Art. 4 para. 2 let. j -- business plan
+    requirement for outsourcing of significant functions
+  - ISA Art. 5 para. 2 -- conditions for authorization
+  - ISA Art. 14 para. 3 -- organizational requirements
+  - ISA Art. 47 para. 2 -- outsourcing in insurance
+
+  General:
+  - Financial Market Supervision Act (FINMASA), Art. 7 para. 1 let. b --
+    FINMA's authority to issue circulars specifying the application
+    of financial market legislation (Rz 2)
+
+The circular constitutes binding supervisory practice and must be observed
+by all institutions within its scope. FINMA may take enforcement action
+in cases of non-compliance.
+
+================================================================================
+III. SCOPE AND ADDRESSEES
+================================================================================
+
+The circular applies to the following categories of supervised entities
+(Rz 3-4):
+
+  a) Banks with a registered office in Switzerland
+  b) Swiss branches of foreign banks
+  c) Securities dealers with a registered office in Switzerland
+  d) Swiss branches of foreign securities dealers
+  e) Insurance companies with a registered office in Switzerland
+  f) Swiss branches of foreign insurance companies that are required
+     to apply for an operating license or approval for individual
+     elements of their business plan within Switzerland
+
+Entities NOT in scope include:
+  - Fund management companies
+  - Asset managers of collective investment schemes
+  - Financial market infrastructures (FMIs)
+  - FinTech licensees (subject to separate proportionate requirements)
+  - Directly Subordinated Financial Intermediaries (DSFIs)
+
+The circular applies to all outsourcing arrangements regardless of
+whether the service provider is a regulated entity, an affiliate
+within the same group, or an unrelated third party (Rz 5-6).
+
+================================================================================
+IV. DEFINITION OF OUTSOURCING
+================================================================================
+
+Outsourcing within the meaning of the circular occurs when a supervised
+institution mandates a service provider to carry out independently and
+on an ongoing basis all or part of a function that is significant to
+the institution's business activities (Rz 4).
+
+Key elements of the definition:
+
+  1. MANDATING: The institution transfers the performance of a function
+     to another entity (the service provider)
+
+  2. INDEPENDENTLY: The service provider performs the function with a
+     degree of autonomy and self-direction
+
+  3. ONGOING BASIS: The arrangement is of a permanent or recurring
+     nature, not a one-off transaction
+
+  4. SIGNIFICANT FUNCTION: The function has a material effect on
+     compliance with the objectives and regulations of financial
+     market supervisory legislation (Rz 4)
+
+Outsourcing vs. Procurement:
+-----------------------------
+Not every engagement of an external service provider constitutes
+outsourcing within the meaning of the circular. The following are
+generally NOT considered outsourcing:
+
+  - One-time or project-based engagements (e.g., consulting mandates)
+  - Purchase of standardized products or services that do not
+    involve the transfer of a significant business function
+  - Procurement of utilities, office supplies or standard facility
+    management services
+  - Use of market data providers for publicly available information
+  - Engagement of legal counsel or external auditors for specific
+    mandates
+  - Use of interbank payment and settlement systems operated by
+    regulated financial market infrastructures
+
+The critical distinction lies in whether a "significant function" is
+being transferred to the service provider for independent and ongoing
+performance. If the function is not significant to the institution's
+regulatory compliance or business operations, the arrangement falls
+outside the scope of the circular (Rz 4-5).
+
+================================================================================
+V. SIGNIFICANT VS NON-SIGNIFICANT OUTSOURCING
+================================================================================
+
+The circular differentiates between outsourcing of significant functions
+and outsourcing of non-significant functions. The regulatory requirements
+apply in full only to the outsourcing of significant functions (Rz 4-5).
+
+Significant functions are those that have a material effect on compliance
+with the aims and regulations of financial market supervisory legislation.
+When assessing significance, institutions should consider:
+
+  - Whether the function directly supports the institution's core
+    business activities (e.g., lending, trading, insurance underwriting)
+  - Whether disruption of the function would materially impair the
+    institution's ability to operate or comply with regulatory obligations
+  - The volume and criticality of client data processed by the function
+  - The financial and reputational impact of a failure in the function
+  - Whether the function is part of the institution's internal control
+    framework
+
+Examples of potentially significant functions:
+  - Core banking system operations and IT infrastructure management
+  - Payment processing and transaction settlement
+  - Risk management calculations and reporting
+  - Compliance monitoring and AML transaction screening
+  - Client data storage and processing
+  - Actuarial and claims processing functions (insurance)
+  - Portfolio management and investment advisory functions
+  - Internal audit functions (subject to additional restrictions)
+
+Institutions must conduct a thorough assessment of significance before
+entering into any outsourcing arrangement and document the rationale
+for their classification decision (Rz 4-7).
+
+================================================================================
+VI. FUNCTIONS THAT CANNOT BE OUTSOURCED
+================================================================================
+
+Certain core functions may not be outsourced under any circumstances
+(Rz 8-13):
+
+  a) CORE BOARD FUNCTIONS: The governing body's functions of guidance,
+     supreme supervision and control cannot be outsourced. The board
+     of directors (or equivalent body) must retain responsibility for
+     setting strategy, overseeing risk management and ensuring
+     regulatory compliance.
+
+  b) CENTRAL EXECUTIVE MANAGEMENT FUNCTIONS: Key management decisions
+     and functions involving strategic direction of the institution
+     cannot be delegated to external service providers.
+
+  c) CLIENT RELATIONSHIP DECISIONS: The decision to accept or terminate
+     client relationships must be retained within the institution
+     (Rz 10).
+
+  d) CATEGORY 1-3 SPECIFIC RESTRICTIONS: Banks, securities dealers and
+     insurance companies in supervisory categories 1 to 3 must maintain
+     their own independent risk control and compliance functions as
+     separate organizational units. These functions cannot be fully
+     outsourced for institutions in these categories (Rz 11-13).
+
+  e) For institutions in categories 4 and 5, the requirement for
+     independent risk control and compliance functions is less strict.
+     These institutions may designate a member of executive management
+     to oversee risk control and compliance, but the core function must
+     still be governed internally (Rz 13.1-13.3).
+
+================================================================================
+VII. RISK ASSESSMENT BEFORE OUTSOURCING
+================================================================================
+
+Before entering into an outsourcing arrangement, the institution must
+conduct a comprehensive risk assessment. This assessment must cover
+(Rz 14-15):
+
+  a) OPERATIONAL RISK: Assessment of the risk that the service provider
+     fails to perform the outsourced function adequately, including
+     the risk of service interruptions and quality deterioration.
+
+  b) CONCENTRATION RISK: Evaluation of whether the outsourcing creates
+     an unacceptable concentration of dependencies on a single service
+     provider or a small number of providers.
+
+  c) LEGAL AND COMPLIANCE RISK: Analysis of the legal framework
+     governing the outsourcing relationship, including applicable law,
+     jurisdiction and enforceability of contractual provisions.
+
+  d) COUNTRY RISK: For cross-border outsourcing, assessment of the
+     political, legal and economic stability of the country where the
+     service provider is located.
+
+  e) DATA PROTECTION AND CONFIDENTIALITY RISK: Evaluation of risks
+     related to the protection of client data, banking secrecy and
+     insurance secrecy.
+
+  f) REPUTATIONAL RISK: Assessment of the potential reputational
+     impact if the outsourcing arrangement fails or results in
+     regulatory sanctions.
+
+  g) STRATEGIC RISK: Evaluation of the long-term implications of the
+     outsourcing, including the institution's ability to maintain
+     control over the outsourced function and to terminate or
+     transition the arrangement if necessary.
+
+The risk assessment must be documented, approved by the appropriate
+governance body (board or executive management, depending on the
+significance of the outsourcing) and reviewed periodically (Rz 14-16).
+
+================================================================================
+VIII. DUE DILIGENCE ON SERVICE PROVIDERS
+================================================================================
+
+The institution must conduct adequate due diligence on prospective
+service providers before entering into an outsourcing arrangement
+(Rz 16-17):
+
+  a) PROFESSIONAL COMPETENCE: Verify that the service provider possesses
+     the professional experience, technical expertise and organizational
+     capacity to perform the outsourced function reliably and to the
+     required standard.
+
+  b) FINANCIAL STABILITY: Assess the service provider's financial
+     soundness and ability to sustain operations over the term of the
+     outsourcing arrangement.
+
+  c) REGULATORY STATUS: Determine whether the service provider is subject
+     to regulatory supervision and, if so, verify its compliance record.
+
+  d) REPUTATION: Evaluate the service provider's market reputation,
+     track record and references from other clients.
+
+  e) SECURITY MEASURES: Verify that the service provider maintains
+     adequate information security, physical security and business
+     continuity measures.
+
+  f) SUBCONTRACTING PRACTICES: Understand the service provider's
+     approach to subcontracting and ensure that any subcontractors
+     meet the same standards.
+
+  g) LOCATION: Identify all locations where the outsourced function
+     will be performed and where data will be stored or processed.
+
+The level of due diligence should be proportionate to the significance
+and risk profile of the outsourcing arrangement (Rz 16-17).
+
+================================================================================
+IX. SELECTION, INSTRUCTION AND MONITORING
+================================================================================
+
+Section V.B of the circular addresses the ongoing obligations of the
+institution in relation to the service provider (Rz 16-21):
+
+  SELECTION (Rz 16-17):
+  - The institution must select the service provider based on its
+    professional experience and demonstrated competence
+  - The selection process must be documented and the rationale for
+    the choice of provider must be recorded
+
+  INSTRUCTION (Rz 17-18):
+  - The institution must provide clear instructions to the service
+    provider regarding the scope, quality and standards of the
+    outsourced function
+  - The institution must ensure that the service provider understands
+    and complies with all applicable regulatory requirements
+
+  MONITORING (Rz 19-21):
+  - The institution must designate an internal unit responsible for
+    monitoring and controlling the service provider
+  - The service provider's performance must be monitored and assessed
+    on an ongoing basis
+  - The outsourced function must be integrated into the institution's
+    internal control system (ICS)
+  - The main risks associated with the outsourcing must be systematically
+    identified, monitored, quantified and controlled
+  - Regular reporting on the service provider's performance must be
+    provided to the responsible governance bodies
+
+================================================================================
+X. CONTRACTUAL REQUIREMENTS (MINIMUM CLAUSES)
+================================================================================
+
+The outsourcing must be governed by a written contract or another form
+that allows for evidence to be provided in writing. In addition to
+identifying the parties and describing the outsourced function, the
+agreement must contain at least the following minimum elements
+(Rz 24-31):
+
+  1. SCOPE OF SERVICES: Clear and detailed description of the outsourced
+     function, including service levels, quality standards and
+     performance metrics (Rz 24).
+
+  2. RIGHT TO INSTRUCT AND CONTROL: The institution must retain the
+     contractual right to issue instructions to and exercise control
+     over the service provider in relation to the outsourced function
+     (Rz 24).
+
+  3. INFORMATION AND REPORTING: The service provider must be obligated
+     to provide the institution with all relevant information about the
+     performance of the outsourced function, including regular reports
+     and immediate notification of material incidents (Rz 24).
+
+  4. CONFIDENTIALITY AND DATA PROTECTION: The agreement must include
+     provisions ensuring the confidentiality and protection of all data
+     related to the outsourced function, including client data and
+     proprietary information (Rz 21).
+
+  5. AUDIT AND INSPECTION RIGHTS: The agreement must grant the
+     institution, its regulatory auditor and FINMA the contractual
+     right to inspect and audit all information relating to the
+     outsourced function at any time and without restriction (Rz 26-29).
+
+  6. SUBCONTRACTING: The agreement must require the service provider
+     to obtain the institution's prior approval before involving
+     subcontractors in the performance of significant functions.
+     Subcontractors must be bound by the same requirements (Rz 33-34).
+
+  7. SECURITY REQUIREMENTS: Where security-relevant functions are
+     outsourced, particularly in the area of IT, the institution and
+     the service provider must contractually agree on security
+     requirements (Rz 21).
+
+  8. BUSINESS CONTINUITY: The agreement must require the development
+     and maintenance of a contingency plan that allows the continuation
+     of the outsourced function in emergencies (Rz 21).
+
+  9. TERMINATION AND EXIT: The agreement must include provisions
+     governing the orderly termination of the outsourcing arrangement,
+     including transition periods, data migration and handover
+     procedures (Rz 18, 18.1).
+
+  10. LIABILITY: Clear allocation of responsibilities and liability
+      between the institution and the service provider.
+
+  11. GOVERNING LAW AND DISPUTE RESOLUTION: Specification of the
+      applicable law and dispute resolution mechanisms.
+
+  12. REGULATORY COMPLIANCE: The agreement must include measures to
+      ensure implementation of all requirements set out in the
+      circular, in particular margin nos. 21, 24, 26, 29, 30 and 31
+      (Rz 24-31).
+
+================================================================================
+XI. DATA PROTECTION AND CONFIDENTIALITY
+================================================================================
+
+The circular requires institutions to ensure that outsourcing
+arrangements do not compromise the confidentiality or integrity of
+client data or other protected information (Rz 21):
+
+  BANKING SECRECY (Art. 47 BA):
+  - Banking secrecy obligations continue to apply in full to
+    outsourced functions
+  - The service provider and its employees must be bound by
+    equivalent confidentiality obligations
+  - Transfer of client-identifying data must comply with applicable
+    banking secrecy requirements
+
+  INSURANCE SECRECY:
+  - For insurance companies, equivalent confidentiality obligations
+    apply under the Insurance Supervision Act
+
+  DATA PROTECTION:
+  - Outsourcing arrangements must comply with the Swiss Federal Act
+    on Data Protection (FADP) and, where applicable, the revised
+    FADP (revFADP) effective 1 September 2023
+  - For cross-border data transfers, the institution must ensure
+    adequate data protection in the receiving country
+
+  CLIENT DATA TRANSFERS (Rz 30):
+  - Mass transfers of client-identifying data must comply with
+    Annex 3 of FINMA Circular 2008/21 (Operational Risks -- Banks)
+  - The institution must ensure that client data can be retrieved
+    and repatriated at all times
+
+  Note: The circular itself does not provide detailed guidance on
+  banking secrecy or data protection matters, as these are governed
+  by separate legislation (BA Art. 47, FADP). Institutions must
+  ensure compliance with all applicable data protection laws
+  independently of the circular's requirements.
+
+================================================================================
+XII. CLOUD OUTSOURCING SPECIFIC REQUIREMENTS
+================================================================================
+
+FINMA Circular 2018/3 adopts a technology-neutral approach and does
+not contain specific provisions exclusively for cloud outsourcing.
+Cloud-based outsourcing arrangements are subject to the same general
+requirements as any other outsourcing arrangement (Rz 1-2).
+
+However, the following considerations are particularly relevant
+for cloud outsourcing:
+
+  APPLICABILITY:
+  - Use of cloud services (IaaS, PaaS, SaaS) that involve the
+    transfer of significant functions falls within scope of the
+    circular
+  - Institutions must assess whether the use of a particular cloud
+    service constitutes outsourcing of a significant function
+
+  DATA LOCATION:
+  - Institutions must know at all times where their data is stored
+    and processed
+  - For cross-border cloud deployments, the cross-border outsourcing
+    requirements apply (see Section XIII)
+
+  MULTI-TENANCY RISKS:
+  - Institutions must assess risks specific to shared cloud
+    infrastructure, including data segregation, security and
+    availability
+
+  AUDIT AND INSPECTION:
+  - The institution, its auditor and FINMA must be able to exercise
+    audit and inspection rights even when functions are hosted in
+    cloud environments
+  - Cloud providers must contractually commit to facilitating such
+    access
+
+  SUB-PROCESSING:
+  - Cloud providers' use of subcontractors and sub-processors must
+    comply with the sub-outsourcing requirements (see Section XV)
+  - Institutions must be informed of all subcontractors involved in
+    the cloud service delivery chain
+
+  SERVICE LEVEL AGREEMENTS:
+  - Cloud outsourcing contracts must include clear SLAs covering
+    availability, performance, incident response and data recovery
+
+  ENCRYPTION AND SECURITY:
+  - Where security-relevant functions are outsourced to the cloud,
+    agreed security requirements must be contractually stipulated
+    (Rz 21)
+
+  EXIT AND DATA PORTABILITY:
+  - Institutions must ensure the ability to migrate data and
+    functions away from the cloud provider in an orderly manner
+
+  Note: FINMA has published additional guidance on cloud outsourcing
+  through supervisory communications and the interaction with FINMA
+  Circular 2023/1 (Operational Risks and Resilience) which provides
+  more specific requirements for critical data in cloud environments.
+
+================================================================================
+XIII. CROSS-BORDER OUTSOURCING CONSIDERATIONS
+================================================================================
+
+The outsourcing of significant functions to a service provider in a
+foreign jurisdiction is permitted, subject to additional requirements
+(Rz 30-31):
+
+  a) ENFORCEMENT OF RIGHTS: The institution must explicitly ensure
+     that it, its regulatory auditor and FINMA can duly exercise and
+     enforce their inspection and audit rights in the foreign
+     jurisdiction (Rz 30).
+
+  b) RECOVERY AND RESOLUTION: The institution must ensure that the
+     outsourcing will not hinder a recovery or resolution in
+     Switzerland. Access to data stored abroad must remain possible
+     in Switzerland at all times for recovery and resolution purposes
+     (Rz 31).
+
+  c) LEGAL OPINION: Under the original 2008/7 circular, a formal legal
+     opinion on enforceability was required. The revised circular
+     2018/3 removed this formal requirement but institutions are still
+     expected to satisfy themselves regarding the enforceability of
+     their contractual rights (Rz 30).
+
+  d) COUNTRY RISK ASSESSMENT: The institution must conduct an
+     assessment of the legal, political and economic risks in the
+     country where the service provider is located and where data
+     will be stored or processed.
+
+  e) CLIENT DATA CROSS-BORDER TRANSFERS: Where mass client-identifying
+     data is transferred across borders, the institution must comply
+     with Annex 3 of FINMA Circular 2008/21 (Operational Risks --
+     Banks) (Rz 30).
+
+  f) DATA PROTECTION ADEQUACY: The institution must ensure that the
+     data protection regime in the receiving country provides an
+     adequate level of protection, consistent with Swiss data
+     protection law (FADP).
+
+  g) REGULATORY COOPERATION: Institutions should consider whether
+     effective regulatory cooperation mechanisms exist between FINMA
+     and the supervisory authority in the country where the service
+     provider is located.
+
+  h) POLITICAL AND SOVEREIGN RISK: Risk of government action in the
+     foreign jurisdiction that could restrict the institution's access
+     to data or the service provider's ability to perform the
+     outsourced function.
+
+================================================================================
+XIV. AUDIT RIGHTS AND FINMA ACCESS
+================================================================================
+
+The circular establishes comprehensive audit and inspection rights
+(Rz 26-29):
+
+  CONTRACTUAL AUDIT RIGHTS (Rz 26):
+  - The institution, its regulatory auditor and FINMA must have the
+    contractual right to inspect and audit all information relating
+    to the outsourced function at any time and without restriction
+  - This right extends to the service provider's premises, systems,
+    records and personnel involved in the outsourced function
+
+  SCOPE OF AUDIT RIGHTS:
+  - Access to all data, documents and records related to the
+    outsourced function
+  - Right to conduct on-site inspections at the service provider's
+    facilities
+  - Right to interview service provider personnel
+  - Access to the service provider's internal control systems and
+    audit reports
+  - Right to commission independent audits of the outsourced function
+
+  FINMA DIRECT ACCESS (Rz 27-28):
+  - If the service provider is not supervised by FINMA, the
+    institution and the service provider must agree on a contractual
+    obligation of the service provider to provide FINMA with all
+    information and documentation about the outsourced functions
+    necessary for FINMA's supervisory activities
+  - FINMA must be able to verify compliance with supervisory
+    regulations at the service provider level
+
+  DELEGATION OF AUDITS (Rz 29):
+  - The institution's regulatory audit firm may delegate auditing
+    tasks to the service provider's own audit firm, provided the
+    latter possesses the necessary qualifications
+  - Audit reports must be provided to FINMA on request
+
+  PRACTICAL CONSIDERATIONS:
+  - Institutions should ensure that audit clauses are operationally
+    effective, not merely contractual formalities
+  - For large cloud providers, institutions may need to accept
+    pooled audit mechanisms or rely on independent third-party audit
+    certifications (e.g., ISAE 3402/SOC 2 reports) as a complement
+    to direct audit rights
+  - The inability to exercise effective audit rights constitutes a
+    material impediment to outsourcing
+
+================================================================================
+XV. SUB-OUTSOURCING (CHAIN OUTSOURCING)
+================================================================================
+
+The circular addresses the involvement of subcontractors by the
+primary service provider (Rz 33-35):
+
+  NOTIFICATION AND APPROVAL (Rz 33):
+  - The institution must ensure that it is informed at an early stage
+    about the involvement or change of subcontractors performing
+    significant functions
+  - The institution must have the option of terminating the
+    outsourcing in an orderly manner if a subcontractor change is
+    unacceptable (Rz 18.1)
+
+  Note: The original 2018 version required prior approval for
+  subcontractors. The partial revision effective 1 January 2020
+  softened this to an early-stage notification requirement, providing
+  greater flexibility while maintaining institutional oversight
+  (Rz 33, as amended).
+
+  SAME REQUIREMENTS (Rz 34):
+  - Where subcontractors are involved in the performance of
+    significant functions, they must be bound by the same
+    requirements as the primary service provider
+  - This includes confidentiality, data protection, security,
+    audit rights and business continuity obligations
+
+  CHAIN RISK (Rz 35):
+  - The institution must assess and manage the risks arising from
+    sub-outsourcing chains
+  - The institution remains responsible for the outsourced function
+    regardless of the number of levels in the sub-outsourcing chain
+
+  INTRA-GROUP CONSIDERATIONS (Rz 22-23):
+  - With regard to the requirements set out in Rz 16-21 and 32-35,
+    relationships within a group or conglomerate may be considered
+    to the extent that the risks typically associated with outsourcing
+    are demonstrably absent or certain requirements are not relevant
+    or are met in some other way (Rz 22)
+
+================================================================================
+XVI. BUSINESS CONTINUITY FOR OUTSOURCED FUNCTIONS
+================================================================================
+
+The circular requires institutions to ensure business continuity for
+all outsourced significant functions (Rz 21):
+
+  CONTINGENCY PLANNING:
+  - The institution and the service provider must jointly develop a
+    contingency plan that allows the continuation of the outsourced
+    function in emergencies
+  - The contingency plan must be tested regularly and updated as
+    necessary
+
+  STANDARDS OF CARE:
+  - The service provider must apply the same degree of care and
+    attention to the outsourced function as the institution would
+    if performing the function itself
+
+  RECOVERY CAPABILITIES:
+  - The institution must maintain the ability to resume the
+    outsourced function internally or through an alternative service
+    provider within acceptable timeframes
+  - Recovery time objectives (RTOs) and recovery point objectives
+    (RPOs) for outsourced functions must be defined and agreed upon
+
+  INCIDENT MANAGEMENT:
+  - The service provider must immediately notify the institution of
+    any material incident affecting the outsourced function
+  - The institution must integrate outsourced functions into its
+    overall incident management and crisis response framework
+
+  TESTING:
+  - Business continuity plans for outsourced functions must be tested
+    at least annually
+  - The institution should participate in or observe the service
+    provider's business continuity tests
+
+  RESOLUTION PLANNING:
+  - The outsourcing must not hinder the recovery or resolution of
+    the institution in Switzerland (Rz 31)
+  - The institution must ensure that critical data and functions
+    remain accessible in a resolution scenario
+
+================================================================================
+XVII. CONCENTRATION RISK MANAGEMENT
+================================================================================
+
+Institutions must assess and manage concentration risk arising from
+outsourcing arrangements:
+
+  SINGLE PROVIDER CONCENTRATION:
+  - Over-reliance on a single service provider creates a significant
+    risk exposure
+  - Institutions should assess the consequences of a service provider
+    failure and the availability of alternative providers
+
+  SYSTEMIC CONCENTRATION:
+  - FINMA is aware of and monitors systemic concentration risks where
+    multiple supervised institutions outsource critical functions to
+    the same service provider
+  - Institutions should consider systemic dependencies when assessing
+    outsourcing risks
+
+  MITIGATION MEASURES:
+  - Diversification of service providers where feasible
+  - Maintenance of internal capabilities to resume outsourced functions
+  - Multi-vendor strategies for critical functions
+  - Contractual provisions for orderly termination and transition
+  - Regular assessment of the service provider landscape
+
+  RISK MONITORING:
+  - Concentration risk must be included in the institution's ongoing
+    risk assessment and reporting framework
+  - Material concentration risks must be reported to the governing body
+
+================================================================================
+XVIII. INVENTORY AND DOCUMENTATION REQUIREMENTS
+================================================================================
+
+The circular requires comprehensive documentation of all outsourcing
+arrangements (Rz 14-15):
+
+  OUTSOURCING INVENTORY:
+  - The institution must prepare and maintain an up-to-date inventory
+    of all outsourced functions at all times
+  - The inventory must contain:
+      * Description of each outsourced function
+      * Name and details of the service provider
+      * Identification of subcontractors performing significant functions
+      * Name of the service recipient (if different from the institution)
+      * Name of the internal unit responsible for monitoring and
+        controlling the outsourcing
+      * Classification of the function as significant or non-significant
+      * Location(s) where the function is performed and data is stored
+
+  DOCUMENTATION OF RISK ASSESSMENTS:
+  - All risk assessments conducted before and during outsourcing
+    arrangements must be documented
+  - Documentation must include the rationale for classification
+    decisions and risk mitigation measures
+
+  GOVERNANCE DOCUMENTATION:
+  - Board and management decisions regarding outsourcing must be
+    documented
+  - Internal policies and procedures for outsourcing governance must
+    be maintained
+
+  CONTRACTUAL DOCUMENTATION:
+  - All outsourcing agreements, amendments and related correspondence
+    must be maintained
+  - Service level reports and performance assessments must be documented
+
+  AVAILABILITY:
+  - The inventory and all related documentation must be available to
+    FINMA and the regulatory auditor upon request at all times
+
+================================================================================
+XIX. FINMA NOTIFICATION AND APPROVAL REQUIREMENTS
+================================================================================
+
+The circular does not impose a general obligation to notify FINMA
+or obtain prior approval before entering into outsourcing arrangements.
+However, certain notification obligations apply:
+
+  INSURANCE COMPANIES -- BUSINESS PLAN:
+  - For insurance companies, outsourcing of significant functions
+    forms part of the business plan under ISA Art. 4 para. 2 let. j
+  - Material changes to outsourcing arrangements may require amendment
+    of the business plan and FINMA approval
+
+  BANKS -- NO PRIOR APPROVAL:
+  - For banks and securities dealers, no prior FINMA approval is
+    required for outsourcing arrangements
+  - However, the institution must be prepared to provide FINMA with
+    information about its outsourcing arrangements at any time
+  - FINMA may request the outsourcing inventory and related
+    documentation as part of its supervisory activities
+
+  MATERIAL CHANGES:
+  - Institutions should inform FINMA of material changes to
+    outsourcing arrangements that could affect the institution's
+    risk profile or FINMA's ability to exercise supervision
+
+  SUPERVISORY REVIEW:
+  - FINMA may review outsourcing arrangements as part of regular
+    supervisory audits or targeted examinations
+  - The regulatory auditor must assess the institution's compliance
+    with the circular's requirements as part of its audit mandate
+
+================================================================================
+XX. MONITORING AND CONTROL OF OUTSOURCED ACTIVITIES
+================================================================================
+
+The institution bears full responsibility vis-a-vis FINMA for all
+outsourced functions (Rz 23). This responsibility cannot be delegated
+through outsourcing arrangements.
+
+  ONGOING MONITORING (Rz 19-21):
+  - An internal unit must be designated as responsible for monitoring
+    and controlling the service provider
+  - The service provider's performance must be monitored and assessed
+    on an ongoing basis against agreed service levels
+
+  INTEGRATION INTO ICS:
+  - The outsourced function must be integrated into the institution's
+    internal control system (ICS)
+  - Control activities for outsourced functions must be defined and
+    implemented
+  - Key risk indicators (KRIs) for outsourced functions must be
+    established
+
+  RISK MANAGEMENT:
+  - The main risks associated with the outsourcing must be
+    systematically identified, monitored, quantified and controlled
+  - Risk assessments must be updated periodically and when material
+    changes occur
+
+  REPORTING:
+  - Regular reporting on the outsourcing relationship must be
+    provided to the responsible governance bodies
+  - Material incidents and performance issues must be escalated
+    promptly
+
+  PERFORMANCE MANAGEMENT:
+  - Service level agreements must be monitored continuously
+  - Non-performance or underperformance must trigger remediation
+    measures, up to and including termination of the arrangement
+
+  GOVERNANCE:
+  - The board or its designated committee must exercise oversight
+    over the institution's outsourcing arrangements
+  - Executive management must ensure that adequate resources are
+    dedicated to outsourcing governance and monitoring
+
+================================================================================
+XXI. EXIT STRATEGY AND TRANSITION PLANNING
+================================================================================
+
+The circular requires institutions to maintain the ability to
+terminate outsourcing arrangements and transition functions in an
+orderly manner (Rz 18, 18.1):
+
+  EXIT CAPABILITY:
+  - The institution must ensure the ability to backsource the
+    outsourced function internally or transfer it to an alternative
+    service provider if the risk assessment necessitates an exit
+  - The exit strategy must be developed before or at the time of
+    entering into the outsourcing arrangement
+
+  CONTRACTUAL EXIT PROVISIONS:
+  - The outsourcing agreement must include provisions for orderly
+    termination, including:
+      * Adequate notice periods
+      * Transition assistance obligations of the service provider
+      * Data migration and handover procedures
+      * Continued service provision during the transition period
+      * Return or deletion of institution and client data
+
+  TRANSITION PLANNING:
+  - The institution must have a documented transition plan that can
+    be activated if the outsourcing arrangement is terminated
+  - The plan must include timelines, resource requirements and
+    risk mitigation measures for the transition period
+
+  TRIGGERS FOR EXIT:
+  - Material deterioration in the service provider's performance
+    or financial condition
+  - Unacceptable changes in the service provider's subcontracting
+    arrangements
+  - Regulatory concerns or enforcement actions
+  - Material breach of the outsourcing agreement
+  - Changes in the institution's business strategy
+
+  TESTING:
+  - Exit plans should be tested periodically to ensure their
+    feasibility and effectiveness
+
+================================================================================
+XXII. SPECIFIC RULES FOR IT OUTSOURCING
+================================================================================
+
+While the circular is technology-neutral, IT outsourcing is subject
+to particular attention given its significance for most supervised
+institutions (Rz 21):
+
+  SECURITY REQUIREMENTS:
+  - Where security-relevant functions are outsourced, particularly
+    in the area of IT, the institution and the service provider must
+    contractually agree on specific security requirements
+  - These requirements must cover information security, data integrity,
+    access controls, encryption and incident response
+
+  INTERACTION WITH FINMA CIRCULAR 2023/1:
+  - FINMA Circular 2023/1 (Operational Risks and Resilience -- Banks)
+    provides additional requirements for the management of ICT risks,
+    including outsourced IT functions
+  - Institutions must ensure compliance with both circulars when
+    outsourcing IT functions
+
+  IT-SPECIFIC CONSIDERATIONS:
+  - Data center location and security standards
+  - Network connectivity and redundancy
+  - Disaster recovery and backup arrangements
+  - Software licensing and intellectual property rights
+  - Change management and release procedures
+  - Vulnerability management and penetration testing
+  - Incident detection and response capabilities
+  - Capacity planning and scalability
+
+  CRITICAL IT FUNCTIONS:
+  - Core banking/insurance systems
+  - Payment processing systems
+  - Trading platforms and market access systems
+  - Client-facing digital channels
+  - Data warehousing and analytics platforms
+  - Cybersecurity monitoring and response
+
+  ONGOING TECHNOLOGY RISK ASSESSMENT:
+  - Institutions must continuously assess the technological risks
+    associated with outsourced IT functions, including the risk of
+    technological obsolescence and the service provider's commitment
+    to maintaining up-to-date technology
+
+================================================================================
+XXIII. OUTSOURCING WITHIN A GROUP OR CONGLOMERATE
+================================================================================
+
+The circular addresses intra-group outsourcing arrangements with
+specific proportionality provisions (Rz 22-23):
+
+  REDUCED REQUIREMENTS (Rz 22):
+  - With regard to the requirements set out in Rz 16-21 (selection,
+    instruction, monitoring) and Rz 32-35 (subcontracting), relationships
+    within the group or conglomerate may be considered to the extent
+    that the risks typically associated with outsourcing are demonstrably
+    absent or certain requirements are not relevant or are met in some
+    other way
+
+  CONDITIONS FOR REDUCED REQUIREMENTS:
+  - The institution must demonstrate that intra-group arrangements
+    benefit from group-wide governance, risk management and compliance
+    frameworks
+  - The risks typically associated with third-party outsourcing (e.g.,
+    misalignment of interests, information asymmetry) must be
+    demonstrably mitigated by the group relationship
+  - The institution must document its assessment and rationale for
+    applying reduced requirements
+
+  RETAINED OBLIGATIONS:
+  - Even within a group, the supervised institution remains fully
+    responsible vis-a-vis FINMA for the outsourced function (Rz 23)
+  - Audit and inspection rights for FINMA and the regulatory auditor
+    must be maintained
+  - Business continuity and exit planning requirements continue to
+    apply
+
+  LIMITATIONS:
+  - Intra-group outsourcing does not provide a blanket exemption
+    from the circular's requirements
+  - The institution must still conduct a risk assessment and maintain
+    appropriate controls
+
+================================================================================
+XXIV. CATEGORY-SPECIFIC PROPORTIONALITY
+================================================================================
+
+The circular applies a proportionate approach based on the institution's
+supervisory category (categories 1-5 as defined by FINMA):
+
+  CATEGORY 1-3 INSTITUTIONS (systemically important and large):
+  - Full application of all requirements
+  - Independent risk control and compliance functions must be maintained
+    as separate organizational units and cannot be fully outsourced
+    (Rz 11-13)
+  - More stringent expectations for risk assessment, monitoring and
+    governance of outsourcing arrangements
+  - Higher expectations for business continuity and exit planning
+
+  CATEGORY 4-5 INSTITUTIONS (medium and small):
+  - Proportionate application of requirements based on the institution's
+    size, complexity and risk profile
+  - Risk control and compliance may be overseen by a designated member
+    of executive management rather than an independent function
+    (Rz 13.1-13.3)
+  - Greater flexibility in the application of organizational
+    requirements
+
+  SMALL BANKS REGIME (partial revision effective 1 January 2020):
+  - The partial revision introduced additional proportionality
+    measures for small banks as part of the "small banks regime"
+  - Small banks that qualify for the regime benefit from simplified
+    requirements in certain areas
+  - The adjustments are reflected in the amended margin numbers
+    of the circular
+
+  INSURANCE COMPANIES:
+  - Insurance companies benefit from removal of the previous limitation
+    of two outsourced functions
+  - The circular applies the same principles-based approach as for
+    banks, with proportionate application based on the insurer's
+    supervisory category and risk profile
+
+================================================================================
+XXV. TRANSITIONAL PROVISIONS
+================================================================================
+
+The circular includes the following transitional provisions:
+
+  BANKS AND SECURITIES DEALERS:
+  - The provisions apply immediately to outsourcing arrangements
+    concluded or materially amended after 1 April 2018
+  - A five-year transition period (until 1 April 2023) was granted
+    for outsourcing arrangements already in place before 1 April 2018
+  - During the transition period, institutions were required to
+    review and amend existing agreements to comply with the new
+    requirements
+
+  INSURANCE COMPANIES:
+  - For insurance companies, the provisions apply immediately to
+    new licensing applications from 1 April 2018
+  - For existing insurance companies, changes are required only upon
+    regulatory modification of the business plan
+  - De facto, insurance companies were expected to align with the
+    circular's requirements within a reasonable timeframe
+
+  PARTIAL REVISION (1 January 2020):
+  - Amendments related to the small banks regime and subcontractor
+    notification took effect on 1 January 2020
+  - These amendments were applicable immediately upon entry into force
+
+================================================================================
+XXVI. INTERACTION WITH OTHER FINMA CIRCULARS
+================================================================================
+
+FINMA Circular 2018/3 must be read in conjunction with other relevant
+FINMA circulars and regulatory requirements:
+
+  FINMA CIRCULAR 2008/21 (Operational Risks -- Banks):
+  - Annex 3 contains specific requirements for mass transfers of
+    client-identifying data, which apply to cross-border outsourcing
+    (Rz 30)
+  - General operational risk management requirements complement the
+    outsourcing circular
+
+  FINMA CIRCULAR 2023/1 (Operational Risks and Resilience -- Banks):
+  - Provides updated requirements for operational risk management,
+    ICT risk, cyber risk and operational resilience
+  - Contains additional requirements for critical data management
+    and cloud computing
+  - Must be considered together with Circular 2018/3 for IT outsourcing
+
+  FINMA CIRCULAR 2017/1 (Corporate Governance -- Banks):
+  - Establishes governance requirements that apply to the oversight
+    of outsourcing arrangements
+
+  FINMA CIRCULAR 2008/24 (Supervision and Internal Control -- Banks):
+  - Internal control system requirements applicable to outsourced
+    functions
+
+  SWISS BANKING ACT AND BANKING ORDINANCE:
+  - Banking secrecy (Art. 47 BA) applies to outsourced functions
+  - Organizational requirements (Art. 3 BA) underpin the circular
+
+  FEDERAL ACT ON DATA PROTECTION (FADP):
+  - Data protection requirements apply independently to outsourcing
+    arrangements
+  - The revised FADP (effective 1 September 2023) introduces enhanced
+    requirements for data processing by third parties
+
+  INSURANCE SUPERVISION ACT (ISA):
+  - Business plan requirements for outsourcing (Art. 4 ISA)
+  - Organizational requirements (Art. 14 ISA)
+
+================================================================================
+XXVII. PRACTICAL COMPLIANCE GUIDANCE
+================================================================================
+
+The following practical guidance assists institutions in complying
+with the circular's requirements:
+
+  GOVERNANCE FRAMEWORK:
+  - Establish an outsourcing policy approved by the board of directors
+  - Define clear roles and responsibilities for outsourcing governance
+  - Implement a risk-based approach to outsourcing decision-making
+  - Ensure board-level oversight of significant outsourcing arrangements
+
+  PRE-OUTSOURCING PHASE:
+  - Conduct thorough risk assessment and due diligence
+  - Classify the function as significant or non-significant
+  - Document the business rationale and risk mitigation measures
+  - Obtain appropriate governance approvals
+
+  CONTRACTING PHASE:
+  - Negotiate agreements that meet all minimum contractual requirements
+  - Include all mandatory clauses (audit rights, confidentiality,
+    exit provisions, subcontracting controls)
+  - Engage legal counsel for complex or cross-border arrangements
+
+  OPERATIONAL PHASE:
+  - Designate internal monitoring responsibility
+  - Implement ongoing performance monitoring and risk assessment
+  - Maintain the outsourcing inventory
+  - Conduct regular reviews and audits
+  - Update risk assessments when material changes occur
+
+  EXIT/TRANSITION PHASE:
+  - Maintain and test exit plans
+  - Ensure data portability and migration readiness
+  - Manage transition risks proactively
+
+  COMMON COMPLIANCE CHALLENGES:
+  - Negotiating adequate audit rights with large technology providers
+  - Managing sub-outsourcing chains in cloud environments
+  - Maintaining up-to-date inventories across complex group structures
+  - Ensuring cross-border enforceability of contractual rights
+  - Balancing proportionality with comprehensive risk management
+
+================================================================================
+SUMMARY OF KEY MARGIN NUMBERS (Rz) REFERENCED
+================================================================================
+
+  Rz 1-2    Purpose, principles-based approach, technology neutrality
+  Rz 3-4    Scope, addressees, definition of outsourcing
+  Rz 4-5    Significant function definition and assessment
+  Rz 8-13   Functions that cannot be outsourced, restrictions by category
+  Rz 13.1-3 Proportionality for category 4-5 institutions
+  Rz 14-15  Risk assessment, inventory and documentation
+  Rz 16-17  Selection and due diligence on service providers
+  Rz 18     Exit capability and orderly termination
+  Rz 18.1   Right to terminate upon subcontractor changes
+  Rz 19-21  Monitoring, ICS integration, security, business continuity
+  Rz 22-23  Intra-group outsourcing, retained responsibility
+  Rz 24     Written agreement, minimum content, right to instruct
+  Rz 26     Audit and inspection rights
+  Rz 27-28  FINMA access to non-supervised service providers
+  Rz 29     Delegation of audit tasks
+  Rz 30     Cross-border outsourcing, enforceability of rights
+  Rz 31     Recovery and resolution, data access from abroad
+  Rz 32-35  Sub-outsourcing, subcontractor notification, same requirements
+
+================================================================================
+DOCUMENT METADATA
+================================================================================
+Source: FINMA Circular 2018/3 "Outsourcing -- Banks and Insurers"
+Issuing Authority: Swiss Financial Market Supervisory Authority (FINMA)
+Language of Original: German (Rundschreiben 2018/3)
+Official English Translation: Available on FINMA website
+Document Status: In force (as amended 1 January 2020)
+Related Circulars: FINMA-RS 2008/21, FINMA-RS 2023/1, FINMA-RS 2017/1
+Applicable Legislation: BA, SESTA, ISA, FINMASA, FADP
+================================================================================
+END OF DOCUMENT
+================================================================================

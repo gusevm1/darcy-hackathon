@@ -1,10 +1,11 @@
 'use client'
 
 import { useRef } from 'react'
-import { CheckCircle2, Loader2, RefreshCw, Upload, XCircle } from 'lucide-react'
+import { CheckCircle2, Eye, Loader2, RefreshCw, Upload, XCircle } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
+import { downloadDocument } from '@/lib/api/client-documents'
 import { statusConfig } from '@/lib/constants/status'
 import { cn } from '@/lib/utils'
 import type { ClientDocumentState, RequiredDocument } from '@/types'
@@ -15,12 +16,23 @@ interface DocumentItemProps {
   onUpload: (docId: string, file: File) => void
   onReset: (docId: string) => void
   isUploading?: boolean
+  clientId: string
 }
 
-export function DocumentItem({ document, state, onUpload, onReset, isUploading }: DocumentItemProps) {
+export function DocumentItem({ document, state, onUpload, onReset, isUploading, clientId }: DocumentItemProps) {
   const fileInputRef = useRef<HTMLInputElement>(null)
   const status = state?.status ?? 'not-started'
   const config = statusConfig[status]
+
+  const handleView = async () => {
+    try {
+      const blob = await downloadDocument(clientId, document.id)
+      const url = URL.createObjectURL(blob)
+      window.open(url, '_blank')
+    } catch {
+      // Download failed — ignore silently
+    }
+  }
 
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0]
@@ -72,6 +84,13 @@ export function DocumentItem({ document, state, onUpload, onReset, isUploading }
           accept=".pdf,.txt,.md,.csv,.doc,.docx"
           onChange={handleFileChange}
         />
+
+        {status !== 'not-started' && (
+          <Button variant="outline" size="sm" onClick={handleView}>
+            <Eye className="mr-1 h-3 w-3" />
+            View
+          </Button>
+        )}
 
         {status === 'not-started' && (
           <Button variant="outline" size="sm" onClick={triggerFilePicker} disabled={isUploading}>

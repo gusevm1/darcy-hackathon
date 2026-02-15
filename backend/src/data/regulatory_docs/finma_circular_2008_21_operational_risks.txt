@@ -1,0 +1,798 @@
+FINMA CIRCULAR 2008/21: OPERATIONAL RISKS -- BANKS
+====================================================
+
+1. OVERVIEW AND PURPOSE
+The FINMA Circular 2008/21 "Operational Risks -- Banks" (Rundschreiben 2008/21
+"Operationelle Risiken -- Banken") is a key regulatory instrument issued by the
+Swiss Financial Market Supervisory Authority (FINMA). It substantiates
+Articles 89-94 of the Capital Adequacy Ordinance (CAO / ERV) and sets out both
+basic qualitative requirements for the management of operational risks, and
+quantitative requirements for determining operational risk capital.
+
+The circular incorporates the "Principles for the Sound Management of
+Operational Risk" issued in June 2011 by the Basel Committee on Banking
+Supervision (BCBS), transposed into six thematic principles. The circular
+establishes that responsibility for the management of operational risks lies
+with top management and requires banks to have in place systematic approaches,
+systems and controls, reporting mechanisms, and IT infrastructure that
+appropriately identify, limit, and monitor these risks.
+
+Originally issued on 20 November 2008, the circular was partially revised
+with an effective date of 1 January 2015, and further amended through
+31 October 2019. It was ultimately superseded by FINMA Circular 2023/1
+"Operational Risks and Resilience -- Banks" effective 1 January 2024.
+
+NOTE: This document describes the provisions of Circular 2008/21 as last
+amended, which remained in force until 31 December 2023. Capital requirement
+provisions (margin nos. 3-116) continue to apply until the entry into force
+of the CAO revised as part of the final Basel III revision package.
+
+2. LEGAL BASIS
+- Federal Act on the Swiss Financial Market Supervisory Authority (FINMASA),
+  Art. 7 para. 1 let. b (authority to issue circulars)
+- Banking Act (BankA / BankG), Art. 3 et seq.
+- Banking Ordinance (BankO / BankV), Art. 12 (organizational requirements)
+- Stock Exchange and Securities Trading Act (SESTA / BEHG), Art. 19-20
+- Capital Adequacy Ordinance (CAO / ERV), Art. 89-94 (operational risks)
+- FINMA Circular 2008/10 "Self-regulation as a minimum standard"
+- Basel Committee on Banking Supervision, "Principles for the Sound
+  Management of Operational Risk" (June 2011)
+- Swiss Bankers Association (SBA) recommendations on BCM
+
+3. SCOPE OF APPLICATION
+The circular applies to:
+- Banks licensed under the Banking Act (BankA)
+- Securities dealers (now securities firms under FinIA)
+- Financial groups and conglomerates
+- Swiss branches of foreign banks
+
+The principle of proportionality governs the application of qualitative
+requirements: banks of supervisory categories 4 and 5 are deemed "small
+banks" and are exempted from certain provisions as specified in
+margin no. 119.
+
+FINMA may conduct institution-specific assessments based on type, scope,
+complexity, and risks to apply additional or modified requirements even
+for banks that would otherwise benefit from exemptions.
+
+4. DEFINITION AND TAXONOMY OF OPERATIONAL RISKS
+Operational risk is defined per Art. 89 CAO as:
+"The danger of losses occurring as a result of the inadequacy or failure
+of internal processes, people, or systems, or as a result of external
+events."
+
+This definition encompasses but is not limited to:
+- Legal risks and compliance failures
+- Fraud offences (internal and external)
+- Information technology failures
+- Business disruption events
+- Employment practices and workplace safety incidents
+- Damage to physical assets
+- Process management failures
+- Clients, products, and business practices failures
+
+Capital requirements shall apply to both expected and unexpected losses.
+Strategic risk and reputational risk are excluded from the operational
+risk definition for capital calculation purposes, but remain subject to
+general risk management requirements.
+
+4.1 Basel Event Type Categories (Appendix 2)
+The circular requires categorization of loss events in accordance with
+Appendix 2, which mirrors the Basel II event type classification:
+  (a) Internal fraud
+  (b) External fraud
+  (c) Employment practices and workplace safety
+  (d) Clients, products, and business practices
+  (e) Damage to physical assets
+  (f) Business disruption and system failures
+  (g) Execution, delivery, and process management
+
+5. STRUCTURE OF THE CIRCULAR
+The circular is organized as follows:
+
+  Chapter I:    Purpose (margin nos. 1-2)
+  Chapter II:   Scope (margin nos. 3-4)
+  Chapter III:  Quantitative Requirements (margin nos. 5-116)
+    - Section A: General provisions
+    - Section B: Basic Indicator Approach (BIA)
+    - Section C: Standardized Approach (SA)
+    - Section D: Institution-Specific Approach (AMA)
+  Chapter IV:   Qualitative Requirements (margin nos. 117-138)
+    - Section A: Principle of Proportionality (margin nos. 117-118)
+    - Section B: Basic Qualitative Requirements (margin nos. 119-136)
+      - Principle 1: Responsibilities (margin nos. 121-124)
+      - Principle 2: Framework and Control System (margin nos. 125-127)
+      - Principle 3: Identification, Mitigation and Monitoring
+                     (margin nos. 128-130)
+      - Principle 4: Internal and External Reporting (margin nos. 131-134)
+      - Principle 5: Technological Infrastructure (margin no. 135)
+      - Principle 6: Continuity in the Event of Business Interruptions
+                     (margin no. 136)
+    - Section C: Risk-specific Qualitative Requirements
+                 (margin nos. 137-138)
+  Chapter V:    Auditing and Assessment by Audit Firms (margin no. 139)
+  Appendix 1:   Business Line Mapping
+  Appendix 2:   Loss Event Type Classification
+  Appendix 3:   Handling of Electronic Client Identifying Data (CID)
+
+6. OPERATIONAL RISK MANAGEMENT FRAMEWORK
+
+6.1 Principle 1: Responsibilities (Margin Nos. 121-124)
+The governing body for overall management, supervision, and control (board
+of directors) must:
+- Approve and regularly review a framework for the management of
+  operational risks
+- Define the institution's risk appetite and risk tolerance for
+  operational risks
+- Ensure that senior management effectively implements operational risk
+  policies and procedures
+- Supervise management to verify that appropriate controls are in place
+
+Risk appetite is defined as the deliberate acceptance of specific individual
+"risks with wide-ranging implications" by the board of directors. This risk
+appetite must be restricted by means of tolerance limits.
+
+Senior management (executive board / Geschaeftsleitung) is responsible for:
+- Implementing the operational risk framework approved by the board
+- Translating the framework into specific policies and procedures
+- Establishing clear lines of responsibility for managing operational risks
+- Ensuring adequate resources are allocated to operational risk management
+- Reporting regularly to the board on the operational risk profile
+
+An independent organisational unit responsible for managing operational risks
+shall be designated (margin no. 123). This unit is responsible for proactive
+management measures resulting from a forward-looking perspective (e.g.
+emerging risks) and recommending action items to senior management
+(margin no. 124).
+
+6.2 Principle 2: Framework and Control System (Margin Nos. 125-127)
+Banks must establish and maintain a comprehensive operational risk management
+framework (framework concept) that includes:
+- Policies and procedures for identifying, assessing, monitoring, and
+  controlling/mitigating operational risks
+- A clearly defined governance structure with well-defined roles and
+  responsibilities at all levels
+- Risk assessment tools and methodologies
+- Internal controls and compliance functions
+- Integration of operational risk management into the overall risk
+  management framework
+- Adequate documentation of all policies, processes, and procedures
+
+The framework must be appropriate to the nature, scale, and complexity of
+the bank's activities and be subject to regular review and updating.
+
+Specific operational risks with far-reaching implications must be managed
+and controlled more comprehensively and intensely than set out by the
+basic qualitative requirements. Executive management must situationally
+define and implement additional risk-specific measures or tighten existing
+measures.
+
+6.3 Principle 3: Identification, Mitigation and Monitoring (Margin Nos. 128-130)
+Banks must implement processes and systems to:
+- Systematically identify operational risks across all activities and
+  business lines
+- Assess the potential impact and likelihood of identified risks
+- Develop and implement measures to mitigate significant risks
+- Continuously monitor operational risk exposures and loss events
+- Maintain operational risk databases and loss event records
+- Conduct regular self-assessments and scenario analyses
+- Use key risk indicators (KRIs) to provide early warning of
+  changing risk profiles
+
+Methods for allocating capital for operational risks to major business
+lines must be established, creating incentives to improve the management
+of operational risks throughout the institution.
+
+6.4 Principle 4: Internal and External Reporting (Margin Nos. 131-134)
+Banks must establish comprehensive reporting mechanisms for operational risks:
+- Regular internal reports to the board of directors and senior management
+  on the operational risk profile
+- Timely escalation of significant operational risk events
+- External reporting to FINMA as required
+- Reporting to auditors and other relevant stakeholders
+- Reports on the status of the operational risk management framework
+- Trend analyses and key risk indicator dashboards
+
+The scope and frequency of reporting must be appropriate to the size and
+complexity of the institution and the nature of its operational risk
+exposures.
+
+7. IT RISK MANAGEMENT REQUIREMENTS
+
+7.1 Principle 5: Technological Infrastructure (Margin No. 135)
+Banks must maintain appropriate IT infrastructure that supports the
+identification, limitation, and monitoring of operational risks. This
+principle requires:
+
+- An overview of the IT network environment and systems landscape
+- Systematic processes for identifying and assessing IT risks
+- Appropriate monitoring and mitigation measures for IT risks
+- Safeguards against business disruption from IT failures
+- Adequate IT security measures
+- Capacity planning and performance monitoring
+- Regular testing of IT systems and infrastructure
+
+Banks must develop and maintain a concept addressing:
+(a) Comprehensive mapping of the IT environment, including hardware,
+    software, networks, and data centres
+(b) Identification and classification of IT assets by criticality
+(c) Systematic assessment of IT risks, including threats and
+    vulnerabilities
+(d) Implementation of IT controls proportionate to identified risks
+(e) Monitoring of IT operations and security events
+(f) Incident detection and response capabilities for IT events
+
+7.2 Cybersecurity Requirements
+The circular (as amended in 2017) introduced specific provisions on
+cyber risk management within Principle 5:
+- Banks must develop concepts for identifying and responding to
+  cyber attacks
+- Cyber-attack identification and response protocols must be established
+- Regular testing of cyber defences is required
+- Banks must implement monitoring capabilities for detecting cyber
+  intrusions and anomalous behaviour
+- Scenario analysis on cyber threats shall be conducted
+- Incident response plans specific to cyber events must be maintained
+
+Further guidance on cyber risk reporting is provided in FINMA Guidance
+05/2020, which specifies reporting obligations under Art. 29(2) FINMASA
+for significant cyber attacks.
+
+7.3 Change Management
+IT change management processes must ensure that:
+- Changes to IT systems are properly authorized, tested, and documented
+- Impact assessments are conducted before implementing changes
+- Rollback procedures are available in case of failed changes
+- Production environments are protected from unauthorized changes
+- Version control and configuration management are maintained
+- Post-implementation reviews are conducted
+
+8. DATA MANAGEMENT AND PROTECTION
+
+8.1 Appendix 3: Handling of Electronic Client Identifying Data (CID)
+Appendix 3 of the circular sets out nine principles and corresponding
+specifications on the proper management of risks related to the
+confidentiality of electronic personal data of natural persons ("private
+clients") whose banking business is managed in or from Switzerland.
+
+These principles are principally tailored to the risk of events relating
+to the confidentiality of mass client data when using electronic systems.
+
+8.2 Categories of Client Identifying Data (CID)
+The circular distinguishes three categories of CID:
+
+(a) Direct CID: All unique identifiers that allow the direct identification
+    of a client, including names, signatures, email addresses, physical
+    addresses, and company identifiers.
+
+(b) Indirect CID: Information that identifies clients only when combined
+    with other data, such as passport numbers, social security numbers,
+    account numbers, card numbers, and IP addresses.
+
+(c) Potentially Indirect CID: Data enabling identification only with
+    additional context and special circumstances, including birth dates,
+    nationality, professional qualifications, and transaction data.
+
+8.3 Nine Principles for CID Protection (Appendix 3)
+
+Principle 1 -- Governance:
+Banks must systematically identify, limit, and monitor risks in connection
+with the confidentiality of electronic client data. The board of directors
+shall supervise management to ensure effective implementation of procedures
+for safeguarding confidentiality of electronic client data. Management
+shall entrust an independent entity as a controlling function to establish
+and maintain a framework for safeguarding confidentiality of electronic
+client data.
+
+Principle 2 -- Data Inventory and Classification:
+Banks must maintain a comprehensive inventory of CID, including
+classification by sensitivity level (direct, indirect, potentially
+indirect). The location of all CID must be documented, and data flows
+must be mapped.
+
+Principle 3 -- Access Management:
+Access to CID must be clearly regulated with a role- and task-specific
+authorisation system. Access should occur only on a strict need-to-know /
+need-to-have basis. Cross-functional and cross-border access must be
+subject to enhanced controls.
+
+Principle 4 -- Security Standards for Infrastructure and Technology:
+Security standards for infrastructure and technology applied for the
+protection of CID confidentiality must adequately reflect the complexity
+and risk exposure of the bank. Standards must safeguard the protection
+of CID:
+- At endpoints (personal computers, notebooks, portable storage devices,
+  smartphones)
+- During transfer (within networks or between different locations)
+- In storage (databases, archives, backups)
+
+If CID is stored abroad or if access to CID is possible from abroad,
+FINMA requires appropriate protection (e.g. anonymisation, encryption,
+or pseudonymisation) in addition to compliance with the Data Protection
+Act.
+
+Principle 5 -- Employee Awareness and Training:
+Banks shall ensure that employees handling CID are aware of their
+obligations regarding data confidentiality. Regular training and
+awareness programmes must be provided.
+
+Principle 6 -- Logging and Monitoring:
+Access to and processing of CID must be logged and monitored. Anomalous
+access patterns or unauthorized data transfers must be detected and
+investigated promptly.
+
+Principle 7 -- Outsourcing of CID Processing:
+When selecting providers of outsourcing services that will process CID,
+confidentiality must be a decisive criterion and an integral component
+of the underlying due diligence. The bank shall continue to be ultimately
+responsible for CID during the entire life cycle of the outsourced
+services. Requirements are mandatory for all types of activities that
+involve access to mass CID, including third-party providers of IT
+services, support for installation and maintenance of externally
+developed IT platforms, hosting of applications, and similar services.
+(See also FINMA Circular 2018/3 "Outsourcing -- Banks".)
+
+Principle 8 -- CID Incident Management and Communication:
+Banks shall introduce pre-defined processes to react swiftly in case of
+CID-related incidents. This includes:
+- A clear strategy of communication (to FINMA, law enforcement authorities,
+  and media) in case of severe CID incidents
+- Analysis and reporting of exceptions, incidents, supervision and
+  inspection results to top management
+- Formalised processes to identify CID-related incidents and reaction
+  schemes communicated to all relevant positions within the bank
+
+Principle 9 -- Risks Arising from Cross-Border Activities:
+Banks must identify and manage risks related to the cross-border
+transmission and storage of CID, including compliance with applicable
+data protection regulations in relevant jurisdictions.
+
+9. BUSINESS CONTINUITY MANAGEMENT (BCM)
+
+9.1 Principle 6: Continuity in Event of Business Interruptions (Margin No. 136)
+This principle establishes requirements for business continuity management.
+FINMA Circular 2008/10 "Self-regulation as a minimum standard" recognises
+the SBA (Swiss Bankers Association) recommendations for BCM as a minimum
+standard. The circular states that where the risk of business disruption
+constitutes an "operational risk with wide-ranging implications," the
+implementation of further-reaching qualitative measures is expected.
+
+Banks must establish and maintain:
+- Business Impact Analysis (BIA) identifying critical business processes
+  and supporting resources
+- Business Continuity Plans (BCP) for maintaining or restoring critical
+  operations in the event of disruption
+- Recovery strategies aligned with defined recovery time objectives (RTO)
+  and recovery point objectives (RPO)
+- Regular testing and exercising of BCM plans against severe but
+  plausible scenarios
+- Crisis management structures and communication plans
+- Defined escalation procedures for business disruption events
+
+9.2 Disaster Recovery Planning
+Banks must establish disaster recovery plans (DRP) as part of their
+overall BCM framework. Key requirements include:
+- Identification of critical IT systems and infrastructure components
+- Definition of recovery time objectives (RTO) and recovery point
+  objectives (RPO) for each critical system
+- Establishment of alternative processing sites or arrangements
+- Regular backup of critical data and testing of restoration procedures
+- Documentation of recovery procedures
+- Regular testing and updating of disaster recovery plans
+- Coordination between business continuity and disaster recovery
+  planning
+
+10. OUTSOURCING OF OPERATIONAL FUNCTIONS
+
+The management of operational risks related to outsourcing is addressed
+in the circular in conjunction with FINMA Circular 2018/3 "Outsourcing
+-- Banks" (formerly Circular 2008/7). Key principles include:
+
+- The bank retains ultimate responsibility for outsourced operational
+  functions and their associated risks
+- Outsourcing decisions must include a thorough risk assessment
+- Service level agreements must include provisions for operational
+  risk management, reporting, and audit rights
+- Banks must ensure that outsourced activities are subject to
+  appropriate internal controls
+- Contingency plans must exist for critical outsourced services
+- Due diligence must be conducted on service providers, with
+  confidentiality as a decisive criterion for CID-related activities
+- Ongoing monitoring and periodic review of outsourcing arrangements
+  are required
+
+For outsourcing involving access to mass CID (client identifying data),
+the requirements under Appendix 3 Principle 7 apply with full force
+(see section 8.3 above).
+
+11. TECHNOLOGY RISK ASSESSMENT
+
+Banks must conduct regular and systematic assessments of technology-
+related risks. This includes:
+- Identifying technology dependencies across all business lines
+- Assessing single points of failure in IT infrastructure
+- Evaluating the adequacy of IT controls relative to the risk profile
+- Assessing vendor and third-party technology risks
+- Reviewing IT project risks, including implementation and
+  integration risks
+- Evaluating emerging technology risks and their potential impact
+- Documenting technology risk assessments and remediation plans
+- Integrating technology risk into the overall operational risk
+  management framework
+
+The IT risk concept required under Principle 5 must be regularly reviewed
+and updated to reflect changes in the technology landscape, threat
+environment, and business activities.
+
+12. PHYSICAL SECURITY
+
+While not addressed as a standalone principle, physical security is
+encompassed within the operational risk management framework as part
+of the Basel event type "Damage to physical assets." Banks must:
+- Protect physical premises housing critical IT infrastructure and
+  data centres
+- Implement access controls for sensitive areas
+- Establish environmental controls (fire, flood, power) for critical
+  facilities
+- Include physical security threats in business continuity planning
+- Ensure physical security measures are proportionate to the risks
+
+13. EMPLOYEE RISK (FRAUD, ERRORS, AND MISCONDUCT)
+
+Operational risks relating to employees are addressed under the Basel
+event types "Internal fraud" and "Employment practices and workplace
+safety." The circular requires banks to:
+- Implement controls to prevent and detect internal fraud
+- Establish clear codes of conduct and ethical standards
+- Screen employees in sensitive positions
+- Implement segregation of duties and dual-control principles
+- Monitor employee activities where warranted by the risk profile
+- Establish whistleblowing and incident reporting mechanisms
+- Conduct investigations into suspected fraud or misconduct
+- Address employee errors through process improvement and training
+
+Under Appendix 3 Principle 5, employees handling CID must receive
+specific training on data confidentiality obligations.
+
+14. LEGAL RISK MANAGEMENT
+
+Legal risk is explicitly included within the definition of operational
+risk. Banks must:
+- Identify and assess legal risks arising from their activities
+- Ensure compliance with applicable laws and regulations
+- Monitor changes in the legal and regulatory environment
+- Assess the adequacy of contractual arrangements
+- Maintain provisions for legal risks as appropriate
+- Report significant legal risks to the board of directors and
+  senior management
+- Include legal risks in the operational risk reporting framework
+
+Risks arising from cross-border financial services (margin nos. 136.2-
+136.5) require particular attention, including:
+- Identification of jurisdictional risks
+- Assessment of regulatory compliance risks in relevant jurisdictions
+- Management of risks related to cross-border data flows
+- Designation of external asset managers as "partners" requiring
+  careful selection and instruction
+
+15. REPORTING REQUIREMENTS
+
+15.1 Internal Reporting
+Banks must establish internal reporting processes that provide the board
+of directors and senior management with:
+- Regular updates on the operational risk profile
+- Reports on loss events and near-misses
+- Key risk indicator (KRI) dashboards and trend analyses
+- Status reports on risk mitigation measures
+- Results of self-assessments and scenario analyses
+- BCM testing results
+- IT risk and cybersecurity status reports
+
+Reporting frequency and granularity must be appropriate to the size
+and complexity of the institution.
+
+15.2 External Reporting to FINMA
+Banks must report to FINMA:
+- Significant operational risk events as required under FINMASA
+- Cyber attacks of significance per FINMA Guidance 05/2020 and
+  Art. 29(2) FINMASA
+- Severe CID-related incidents as per Appendix 3 Principle 8
+- Capital adequacy reports including operational risk capital
+  requirements
+- Information requested by FINMA in the course of supervisory
+  activities
+
+15.3 Auditing (Margin No. 139)
+Audit firms are to audit compliance with the provisions of the circular
+according to FINMA Circular 13/3 "Auditing" and capture the findings
+of their audit procedures in the audit report.
+
+16. INCIDENT MANAGEMENT AND ESCALATION
+
+Banks must establish incident management processes that include:
+- Clear definitions of operational risk incidents and severity levels
+- Defined escalation paths depending on incident severity
+- Rapid response procedures for critical incidents
+- Root cause analysis for significant events
+- Corrective action tracking and implementation
+- Lessons learned processes to prevent recurrence
+- Communication protocols for internal and external stakeholders
+
+For CID-related incidents specifically, Appendix 3 Principle 8 requires:
+- Pre-defined processes for swift reaction
+- A clear communication strategy covering FINMA, law enforcement,
+  and media
+- Reporting of exceptions and incidents to top management
+- Formal incident identification processes and reaction schemes
+
+17. OPERATIONAL RISK CAPITAL CALCULATION (MARGIN NOS. 3-116)
+
+17.1 General Provisions
+The circular specifies three approaches for determining capital
+requirements for operational risks, as set out in Articles 89-94 CAO.
+Capital requirements apply to both expected and unexpected losses.
+
+Every bank must have principles for allocating its business activities
+to the standardised business lines listed in margin no. 23 and
+Appendix 1.
+
+17.2 Basic Indicator Approach (BIA) -- Art. 90 CAO
+Under the Basic Indicator Approach:
+- Capital requirement = 15% (alpha factor) x average positive annual
+  gross income over the preceding three years
+- Gross income (GI) is defined as net interest income plus net
+  non-interest income
+- Only years with positive GI are included in the average
+- This is the simplest approach, available to all banks
+
+FINMA may require individual increases of capital requirements if a
+determination based exclusively on the BIA would lead to
+inappropriately low capital requirements due to low earnings
+indicators (GI).
+
+17.3 Standardized Approach (SA) -- Art. 93 CAO
+Under the Standardized Approach:
+- The bank's activities are allocated to eight standardised business
+  lines (as per margin no. 23 and Appendix 1):
+    (1) Corporate Finance
+    (2) Trading and Sales
+    (3) Retail Banking
+    (4) Commercial Banking
+    (5) Payment and Settlement
+    (6) Agency Services
+    (7) Asset Management
+    (8) Retail Brokerage
+- For each business line and each of the three preceding years, an
+  earnings indicator (GI) is determined and multiplied by the relevant
+  beta factor:
+    Corporate Finance:       18%
+    Trading and Sales:       18%
+    Retail Banking:          12%
+    Commercial Banking:      15%
+    Payment and Settlement:  18%
+    Agency Services:         15%
+    Asset Management:        12%
+    Retail Brokerage:        12%
+- The capital requirement is the three-year average of the sum of
+  capital requirements across all business lines (negative contributions
+  from individual business lines may offset positive contributions
+  within a given year, but negative annual totals are set to zero)
+
+Use of the Standardized Approach requires FINMA notification and
+fulfilment of qualifying criteria, including adequate governance and
+risk management systems.
+
+17.4 Institution-Specific Approach / Advanced Measurement Approach (AMA)
+The AMA allows banks to quantify capital requirements for operational
+risk according to their own procedure, subject to FINMA approval and
+stringent qualifying criteria:
+
+- Internal measurement systems must be based on a minimum five-year
+  observation period of internal loss data (three years upon initial
+  implementation)
+- Loss data must be systematically collected and mapped to business
+  lines (margin no. 23) and event types (Appendix 2)
+- The measurement system must incorporate internal loss data, relevant
+  external loss data, scenario analyses, and business environment and
+  internal control factors
+- The system must capture the major drivers of risk affecting the
+  shape of the tail of the loss distribution
+- Risk mitigation through insurance may be recognised up to a maximum
+  of 20% of the total operational risk capital requirement
+- The AMA must be deeply embedded in the bank's risk management
+  processes ("use test")
+- Regular validation and back-testing of the model are required
+- Independent review by internal audit
+
+Floor requirement: For banks using the AMA, minimum capital requirements
+at the overall bank level (taking into account deductions from eligible
+capital) cannot be lower than 80% of the requirements under the
+Basel I minimum standard.
+
+17.5 Combined Use of Approaches
+Banks may, with FINMA approval, use a combination of approaches
+(partial use). For example, the AMA may be used for certain business
+lines while the Standardized Approach is used for others, subject to
+specific conditions and timelines for full implementation.
+
+18. CATEGORY-SPECIFIC AND PROPORTIONALITY REQUIREMENTS
+
+18.1 Principle of Proportionality (Margin Nos. 117-118)
+The qualitative requirements described in Chapter IV are to be
+implemented depending on the bank's size. Banks of supervisory
+categories 4 and 5 are deemed "small banks." Margin no. 119 specifies
+the margin numbers from which small banks shall be exempted.
+
+18.2 Supervisory Categories and Differentiated Requirements
+FINMA assigns supervised institutions to categories 1 through 5 based
+on criteria including total assets, assets under management, privileged
+deposits, and capital requirements:
+
+  Category 1: Systemically important banks (e.g. UBS, Credit Suisse)
+    - Full application of all provisions
+    - Additional requirements for systemically important functions
+    - Recovery and resolution planning requirements
+    - Most stringent IT and cyber risk requirements
+
+  Category 2: Large banks
+    - Full application of all qualitative requirements
+    - Comprehensive operational risk management infrastructure expected
+
+  Category 3: Medium-sized banks
+    - Full application of all qualitative requirements
+    - Proportionate implementation expected
+
+  Categories 4-5: Small banks
+    - Exemption from certain margin numbers as specified in margin no. 119
+    - Reduced reporting and documentation requirements
+    - Simplified risk assessment processes permitted
+    - Core risk management principles still apply
+
+18.3 Risk-Specific Qualitative Requirements (Margin Nos. 137-138)
+For specific operational risks "with wide-ranging implications," FINMA
+expects enhanced management and control measures beyond the basic
+qualitative requirements. Executive management must define and implement
+additional, risk-specific measures or tighten existing measures on a
+situational basis. This applies particularly to:
+- IT and cyber risks of systemic significance
+- Risks from concentration of outsourced services
+- Cross-border operational risks
+- Risks from handling mass client data
+
+19. RELATIONSHIP TO OTHER FINMA CIRCULARS AND REGULATIONS
+
+FINMA Circular 2008/21 operates within a broader regulatory framework:
+- FINMA Circular 2008/10 "Self-regulation as a minimum standard":
+  Recognises SBA recommendations (including BCM) as minimum standards
+- FINMA Circular 2017/1 "Corporate Governance -- Banks":
+  Establishes governance requirements relevant to operational risk oversight
+- FINMA Circular 2018/3 "Outsourcing -- Banks":
+  Detailed requirements for outsourcing arrangements
+- FINMA Circular 2013/3 "Auditing":
+  Framework for regulatory audits of operational risk compliance
+- FINMA Guidance 05/2020:
+  Cyber attack reporting obligations under Art. 29(2) FINMASA
+- FINMA Circular 2008/24 "Supervision and internal control":
+  Internal control system requirements complementing operational risk
+  management
+
+20. TRANSITION TO FINMA CIRCULAR 2023/1
+
+FINMA completely revised Circular 2008/21 with the publication of
+Circular 2023/1 "Operational Risks and Resilience -- Banks" on
+7 December 2022 (effective 1 January 2024). Key changes include:
+
+- Introduction of a new Chapter V on Operational Resilience, requiring
+  institutions to define disruption tolerances for critical functions
+  approved by the board of directors
+- Enhanced ICT risk management requirements (Principle 2), aligned with
+  BCBS papers on operational resilience and IT risk
+- Expanded cyber risk management (Principle 3), including mandatory
+  scenario analysis and enhanced testing requirements
+- Critical data risk management (Principle 4) expanded beyond CID to
+  cover all data of crucial significance regarding confidentiality,
+  integrity, and availability
+- BCM provisions (Principle 6) now directly regulated rather than
+  relying on SBA minimum standards
+- Capital requirements transferred to the revised CAO under Basel III
+  implementation
+
+Transition periods under Circular 2023/1:
+- General requirements: two years from entry into force
+- Inventory requirements: one year from entry into force
+
+21. KEY DEFINITIONS
+
+Operational Risk: The danger of losses occurring as a result of the
+inadequacy or failure of internal processes, people, or systems, or as
+a result of external events (Art. 89 CAO).
+
+Client Identifying Data (CID): Electronic personal data of natural
+persons (private clients) whose banking business is managed in or from
+Switzerland.
+
+Direct CID: All unique identifiers that allow the direct identification
+of a client (names, signatures, email addresses, physical addresses).
+
+Indirect CID: Information that identifies clients only when combined
+with other data (passport numbers, account numbers, card numbers).
+
+Potentially Indirect CID: Data enabling identification only with
+additional context (birth dates, nationality, transaction data).
+
+Small Banks: Banks of supervisory categories 4 and 5, eligible for
+proportionate application of certain requirements.
+
+Gross Income (GI): Net interest income plus net non-interest income,
+used as the earnings indicator for BIA and SA capital calculations.
+
+Risk Appetite: The deliberate acceptance of specific individual
+operational risks with wide-ranging implications by the board of
+directors.
+
+Risk Tolerance: Quantitative and qualitative limits restricting
+the risk appetite set by the board of directors.
+
+Operational Risk with Wide-Ranging Implications: A risk that, if
+materialised, could have significant impact on the institution's
+financial position, reputation, or ability to continue operations.
+
+22. COMPLIANCE CHECKLIST FOR SUPERVISED INSTITUTIONS
+
+Banks subject to Circular 2008/21 must ensure compliance with:
+[ ] Board-approved operational risk management framework (Principle 1)
+[ ] Defined risk appetite and risk tolerance (Principle 1)
+[ ] Independent operational risk management function (Principle 1)
+[ ] Comprehensive framework and control system (Principle 2)
+[ ] Systematic risk identification and assessment (Principle 3)
+[ ] Operational risk monitoring and mitigation (Principle 3)
+[ ] Internal and external reporting mechanisms (Principle 4)
+[ ] Adequate IT infrastructure and risk management (Principle 5)
+[ ] Cyber risk identification and response capabilities (Principle 5)
+[ ] BCM plans tested against severe but plausible scenarios (Principle 6)
+[ ] Disaster recovery plans with defined RTO/RPO (Principle 6)
+[ ] CID governance framework (Appendix 3, Principle 1)
+[ ] CID inventory and classification (Appendix 3, Principle 2)
+[ ] CID access management on need-to-know basis (Appendix 3, Principle 3)
+[ ] CID infrastructure security standards (Appendix 3, Principle 4)
+[ ] CID employee training and awareness (Appendix 3, Principle 5)
+[ ] CID logging and monitoring (Appendix 3, Principle 6)
+[ ] CID outsourcing due diligence and controls (Appendix 3, Principle 7)
+[ ] CID incident management and communication (Appendix 3, Principle 8)
+[ ] Cross-border CID risk management (Appendix 3, Principle 9)
+[ ] Appropriate capital calculation approach (BIA, SA, or AMA)
+[ ] Business line mapping per Appendix 1
+[ ] Loss event categorisation per Appendix 2
+[ ] Regulatory audit compliance per FINMA Circular 13/3
+
+23. ENFORCEMENT AND SANCTIONS
+
+Non-compliance with the provisions of Circular 2008/21 may result in:
+- Supervisory measures under FINMASA Art. 29-37, including:
+  - Orders to remedy deficiencies within a specified timeframe
+  - Restrictions on business activities
+  - Appointment of an investigating agent
+  - Revocation of authorisation in severe cases
+- Capital add-ons for inadequate operational risk management
+- Enhanced supervisory intensity and increased audit requirements
+- Publication of supervisory measures (naming and shaming)
+
+24. REFERENCES AND SOURCE DOCUMENTS
+
+- FINMA Circular 2008/21 "Operational Risks -- Banks" (last amended
+  31 October 2019)
+- Capital Adequacy Ordinance (CAO / ERV), Art. 89-94
+- Banking Act (BankA), Art. 3 et seq.
+- Banking Ordinance (BankO), Art. 12
+- FINMASA, Art. 7 para. 1 let. b, Art. 29-37
+- Basel Committee on Banking Supervision, "Principles for the Sound
+  Management of Operational Risk" (June 2011)
+- Basel Committee on Banking Supervision, "Principles for Operational
+  Resilience" (March 2021)
+- FINMA Circular 2023/1 "Operational Risks and Resilience -- Banks"
+  (successor circular, effective 1 January 2024)
+- FINMA Circular 2018/3 "Outsourcing -- Banks"
+- FINMA Circular 2013/3 "Auditing"
+- FINMA Circular 2008/10 "Self-regulation as a minimum standard"
+- FINMA Guidance 05/2020 (Cyber attack reporting)
+- Swiss Bankers Association (SBA) Recommendations for BCM

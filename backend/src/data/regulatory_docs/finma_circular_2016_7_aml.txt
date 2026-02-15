@@ -1,0 +1,1008 @@
+FINMA CIRCULAR 2016/7: VIDEO AND ONLINE IDENTIFICATION
+Due Diligence Obligations under the Swiss AML Framework
+Including AMLA, AMLO, AMLO-FINMA, and CDB 20
+
+Last revised: Comprehensive overview incorporating amendments through 2025
+
+================================================================================
+1. OVERVIEW OF THE SWISS AML FRAMEWORK
+================================================================================
+
+1.1 Regulatory Architecture
+
+Switzerland's anti-money laundering (AML) regime is built on a layered regulatory
+architecture comprising federal legislation, executive ordinances, supervisory
+ordinances, and self-regulatory standards. The principal instruments are:
+
+(a) Federal Act on Combating Money Laundering and Terrorist Financing (AMLA)
+    - Formal citation: Geldwaeschereigesetz (GwG), SR 955.0
+    - Primary federal statute establishing due diligence obligations for all
+      financial intermediaries and the supervisory framework for enforcement.
+    - Key articles: Art. 2 (scope), Art. 3 (customer identification), Art. 4
+      (beneficial ownership), Art. 5 (renewal of identification), Art. 6
+      (nature and purpose of business relationship), Art. 7 (record keeping),
+      Art. 9 (reporting to MROS), Art. 10 (asset freezing).
+
+(b) Anti-Money Laundering Ordinance (AMLO)
+    - Formal citation: Geldwaeschereiverordnung (GwV), SR 955.01
+    - Federal Council ordinance implementing AMLA at the operational level.
+    - Specifies identification thresholds, documentation standards, and
+      procedural details for due diligence obligations.
+
+(c) FINMA Anti-Money Laundering Ordinance (AMLO-FINMA)
+    - Formal citation: Geldwaeschereiverordnung-FINMA (GwV-FINMA), SR 955.033.0
+    - FINMA supervisory ordinance applicable to all FINMA-supervised financial
+      intermediaries (banks, securities firms, fund management companies,
+      insurance companies in life insurance, FinTech license holders, DLT
+      trading facilities, and directly supervised financial intermediaries).
+    - Key articles: Art. 3-12 (identification and verification), Art. 13-15
+      (risk categorization and enhanced due diligence), Art. 16-19 (PEP and
+      correspondent banking), Art. 20-21 (transaction monitoring and reporting),
+      Art. 22-27 (internal organization, training, and documentation).
+
+(d) Agreement on the Swiss Banks' Code of Conduct with Regard to the Exercise
+    of Due Diligence (CDB 20)
+    - Adopted by the Swiss Bankers Association (SBA), effective January 1, 2020.
+    - Material provisions (Art. 1-57) have ordinance status pursuant to Art. 35
+      AMLO-FINMA and apply to all FINMA-supervised financial intermediaries.
+    - Prescribes standardized identification and beneficial ownership procedures,
+      including the use of Forms A (beneficial owner declaration for natural
+      persons), K (controlling person declaration for legal entities), R
+      (declaration for trusts), S (declaration for foundations), and T
+      (declaration for life insurance).
+    - Maximum penalty for violations: CHF 10 million, enforced by the CDB
+      Supervisory Board with oversight by statutory auditors.
+
+(e) Swiss Criminal Code (SCC)
+    - Art. 305bis SCC: Criminalizes money laundering, defined as any act suited
+      to frustrate the identification of the origin, the tracing, or the
+      forfeiture of assets which the perpetrator knows or must assume originate
+      from a felony or a qualified tax offence (exceeding CHF 300,000 per
+      tax period).
+    - Art. 305ter SCC: Criminalizes insufficient diligence in financial
+      transactions (the "lack of due diligence" offence).
+
+1.2 Scope of Application
+
+AMLA applies to "financial intermediaries" as defined in Art. 2 AMLA:
+
+- Prudentially supervised entities (Art. 2 para. 2): Banks, securities firms,
+  fund management companies, asset managers of collective investment schemes,
+  custodian banks, DLT trading facilities, insurance institutions in life
+  insurance, and FinTech license holders under Art. 1b Banking Act.
+
+- Non-prudentially supervised entities (Art. 2 para. 3): Persons who on a
+  professional basis accept, hold on deposit, or help to invest or transfer
+  third-party assets, including money changers, payment service providers,
+  precious metal dealers (for cash transactions exceeding CHF 15,000), and
+  virtual asset service providers.
+
+Since August 1, 2021, service providers enabling the transfer of virtual
+currencies to third parties are subject to AMLA if they maintain permanent
+business relationships (FINMA distinguishes payment tokens, utility tokens,
+and asset tokens accordingly).
+
+1.3 International Standards Alignment
+
+Switzerland implements the Financial Action Task Force (FATF) 40 Recommendations.
+The most recent FATF mutual evaluation (2016) rated Switzerland "compliant" or
+"largely compliant" on 31 of 40 recommendations. The next comprehensive FATF
+evaluation is scheduled for 2027/2028.
+
+================================================================================
+2. CUSTOMER DUE DILIGENCE OBLIGATIONS
+================================================================================
+
+2.1 General Duty (Art. 3 AMLA / Art. 3-12 AMLO-FINMA)
+
+Financial intermediaries must exercise due diligence in all dealings with
+customers. The core CDD obligations are:
+
+(a) Identify the contracting party (Art. 3 AMLA).
+(b) Identify the beneficial owner of assets (Art. 4 AMLA).
+(c) Ascertain the nature and purpose of the business relationship (Art. 6 AMLA).
+(d) Conduct ongoing monitoring of the business relationship.
+(e) Maintain adequate records (Art. 7 AMLA).
+
+These obligations must be fulfilled at the establishment of a business
+relationship and renewed whenever doubts arise during the relationship
+(Art. 5 AMLA).
+
+2.2 Timing of Due Diligence
+
+CDD must be performed:
+- Before or at the time of establishing a business relationship.
+- Before executing cash transactions exceeding CHF 15,000 (or CHF 25,000 for
+  money exchange transactions at bank counters under CDB 20).
+- When there is suspicion of money laundering or terrorist financing.
+- When doubts arise about the identity of the contracting party or beneficial
+  owner.
+
+2.3 Risk-Based Approach
+
+The Swiss AML framework adopts a risk-based approach as recommended by the FATF.
+The scope and depth of CDD measures depend on the money laundering risk
+represented by the contracting partner (Art. 6 AMLA). Lower-risk relationships
+may be subject to simplified due diligence, while higher-risk relationships
+require enhanced due diligence (see Section 8 below).
+
+================================================================================
+3. CUSTOMER IDENTIFICATION REQUIREMENTS
+================================================================================
+
+3.1 Identification of Natural Persons (Art. 3 AMLA / Art. 44 AMLO-FINMA)
+
+When the contracting party is a natural person, the financial intermediary must
+collect and verify the following data:
+
+- Surname and first name(s)
+- Date of birth
+- Nationality
+- Domicile address (residential address)
+- Type, number, and issuing country of the identification document
+
+Verification is performed on the basis of a document of evidentiary value,
+typically a valid passport or identity card issued by a government authority.
+
+3.2 Identification of Legal Entities (Art. 3 AMLA / Art. 45-46 AMLO-FINMA)
+
+For legal entities, the financial intermediary must collect:
+- Name or company name
+- Registered office address
+- Legal form
+- Names of the authorized signatories and the power of representation
+
+Verification is based on an extract from the commercial register or equivalent
+documents of evidentiary value. The financial intermediary must also verify
+the authority of the person acting on behalf of the legal entity by means
+of a power of attorney or equivalent documentation.
+
+3.3 Identification of Controlling Persons (CDB 20, Art. 20)
+
+Under CDB 20, banks must identify any natural person holding 25 percent or more
+of a legal entity or partnership. If no such individual holds 25 percent or more,
+the most senior managing director (e.g., CEO or chairman of the board) must be
+identified as the controlling person. The contracting party must confirm the
+name, first names, and actual domicile address of the controlling person in
+writing or by using Form K.
+
+3.4 Identification Thresholds
+
+- Business relationships (account openings, fiduciary mandates, etc.):
+  Identification required regardless of amount.
+- Cash transactions without a business relationship: Identification required
+  for transactions at or above CHF 15,000 (Art. 3 para. 2 AMLA).
+- Currency exchange at bank counters: Identification required for amounts
+  at or above CHF 25,000 (CDB 20, Art. 51).
+
+================================================================================
+4. VERIFICATION OF IDENTITY
+================================================================================
+
+4.1 Face-to-Face Verification (Art. 44 AMLO-FINMA)
+
+The standard method of identity verification requires the physical presence of
+the contracting party. The financial intermediary must:
+
+(a) Inspect the original identification document (passport or identity card).
+(b) Verify the document's authenticity by examining security features.
+(c) Compare the photograph on the document with the person present.
+(d) Record the relevant data from the identification document.
+(e) Take a copy of the identification document.
+
+The financial intermediary may delegate the identification to a third party
+(e.g., a correspondent bank or a regulated financial intermediary) under
+Art. 39-43 AMLO-FINMA, provided that the delegating intermediary retains
+responsibility for the correct performance of CDD.
+
+4.2 Identification by Correspondence (Art. 48-49 AMLO-FINMA)
+
+Where a business relationship is established by correspondence (i.e., without
+face-to-face contact and without the use of video or online identification),
+the financial intermediary must obtain a certified copy of the identification
+document. The certification must be performed by a notary, a supervised
+financial intermediary, or another person authorized under applicable law.
+Additional corroborating measures include:
+- A first payment from an account in the customer's name at a bank subject
+  to equivalent AML regulation.
+- Verification of the customer's residential address.
+
+================================================================================
+5. VIDEO AND ONLINE IDENTIFICATION (FINMA CIRCULAR 2016/7)
+================================================================================
+
+5.1 Purpose and Scope of Circular 2016/7
+
+FINMA Circular 2016/7, first issued in March 2016 and titled "Video and Online
+Identification," defines the conditions under which financial intermediaries may
+establish business relationships with natural persons remotely, without requiring
+physical presence, while maintaining compliance with the AMLA and AMLO-FINMA.
+
+The Circular applies to all FINMA-supervised financial intermediaries, including
+banks, securities firms, insurance companies, fund management companies, and
+asset managers of collective investment schemes.
+
+The Circular provides two distinct digital onboarding channels:
+(a) Video identification (Section A, margin nos. 11-22)
+(b) Online identification (Section B, margin nos. 23-34)
+
+Both channels are placed on equal regulatory footing with traditional face-to-face
+identification, provided the specified requirements are met.
+
+5.2 Video Identification Procedure (Margin Nos. 11-22)
+
+Video identification involves a live audio-visual meeting between the contracting
+party and the financial intermediary (or its authorized representative).
+
+Pre-Meeting Requirements:
+- The financial intermediary must collect the data required by Art. 44 and
+  Art. 60 AMLO-FINMA prior to the video identification meeting.
+- The data collected must be reviewed during the video meeting using appropriate
+  technical tools or specific questions.
+- The financial intermediary must verify the data against the identification
+  documents presented during the meeting.
+
+Consent and Recording:
+- Prior to the video meeting, the financial intermediary must obtain the
+  contracting party's explicit agreement (consent) to perform a video
+  identification.
+- The contracting party must consent to an audio recording of the meeting.
+- FINMA requires a simple audio recording; a full video recording is not
+  mandatory.
+
+Technical and Quality Requirements:
+- The picture and audio quality must be adequate to enable unambiguous
+  identification of the contracting party.
+- The financial intermediary shall use adequate technical tools that allow
+  the transmission as well as the reading and decryption of data in the
+  machine-readable zone (MRZ) of the identification document.
+- The financial intermediary can use technical aids to compensate for poor
+  lighting, especially when taking photographs required for identification.
+
+Document Verification:
+- The identification document must be inspected during the video meeting.
+- The financial intermediary must note any prominent signs indicating a
+  forged or altered document.
+- The data provided during onboarding must be compared with the data
+  appearing in the identification documents.
+
+Documentation and Archiving:
+- Each video identification process must be fully documented.
+- Photographs of the identification document and the contracting party must
+  be filed and archived.
+- The audio recording must be retained alongside the documentation.
+- All records must be retained for at least 10 years (Art. 7 para. 3 AMLA).
+
+5.3 Online Identification Procedure (Margin Nos. 23-34)
+
+Online identification is a fully automated process that does not require a live
+video meeting. It was introduced in the original Circular and significantly
+expanded in the 2021 revision.
+
+Original Framework:
+- Initially, online identification required a money transfer from an account at
+  a Swiss bank or, following the first revision, from a bank in Liechtenstein or
+  an FATF member state with equivalent AML standards.
+
+Biometric Passport Data (2021 Revision):
+- The revised Circular (effective May 2021) permits fully automated online
+  identification using biometric passports.
+- The contracting party scans the passport chip data via a smartphone
+  application, transmitting personal details and the biometric photograph to
+  the financial intermediary.
+- Both authenticity and integrity of the chip data must be verified.
+- Certificate sources: Swiss Federal Office of Information Technology, Systems
+  and Telecommunication (FOITT) provides certificates for Swiss passports;
+  the International Civil Aviation Organization (ICAO) master lists apply
+  to international biometric passports.
+
+Additional Requirements for Online Identification:
+- In addition to MRZ decryption and at least two security feature checks, the
+  Circular requires:
+  (a) ID certification by a supervised financial intermediary, notary, or Swiss-
+      qualified lawyer; OR
+  (b) Use of biometric passport chip scanning (post-2021 revision).
+- Residential address verification through at least one of the following methods:
+  (a) Postal delivery to the declared address.
+  (b) Tax or utility bill.
+  (c) Public register verification.
+  (d) Trusted database consultation.
+  (e) Geolocation verification.
+
+Beneficial Ownership Declarations:
+- For online onboarding, the beneficial ownership declaration (Form A or
+  equivalent) may be completed electronically using a qualified electronic
+  signature from a Swiss certification service provider, or alternatively
+  through other electronic procedures meeting regulatory standards.
+
+5.4 Use of Third-Party Service Providers
+
+The 2021 revision clarifies the rules on delegation:
+- When financial intermediaries engage other financial intermediaries for
+  identification duties, those intermediaries may subsequently engage
+  specialized third-party service providers for technical aspects of the
+  identification process.
+- This chaining of delegation was previously prohibited under the original
+  Circular.
+- The delegating financial intermediary retains full regulatory responsibility
+  for the correctness of the identification, regardless of delegation.
+
+5.5 Security Safeguards
+
+FINMA maintains that additional safeguards beyond biometric data are necessary
+to prevent abuse, citing:
+- Uncertainties in automatic facial recognition technology.
+- Suspicious activity reports involving forged identification documents used
+  in digital onboarding contexts.
+- The need for human oversight in the video identification channel.
+
+5.6 Proposed 2026 Revision
+
+In December 2025, FINMA launched a consultation on a proposed partial revision
+of Circular 2016/7, with the consultation period running until February 27, 2026.
+The proposed revisions aim to update the Circular in light of technological
+developments and practical experience gained since the 2021 revision.
+
+================================================================================
+6. BENEFICIAL OWNERSHIP DETERMINATION
+================================================================================
+
+6.1 Duty to Identify the Beneficial Owner (Art. 4 AMLA)
+
+The financial intermediary must identify the beneficial owner with the due
+diligence required in the circumstances and verify its identity in order to
+ensure that it knows who the beneficial owner is (Art. 4 para. 1 AMLA).
+
+The beneficial owner is the natural person who ultimately controls the assets
+or on whose behalf a transaction is being conducted. The concept differs from
+the "contracting party" (the person entering into the business relationship).
+
+6.2 Verification of Beneficial Ownership (2023 AMLA Revision)
+
+As of January 1, 2023, the AMLA revision shifted the obligation from merely
+"ascertaining" the beneficial owner to explicitly "verifying" the beneficial
+owner's identity. Key requirements:
+
+(a) A risk-based approach prevails for the verification of the beneficial
+    owner's identity.
+(b) The financial intermediary cannot solely rely on a written and signed
+    declaration by the contracting party regarding the beneficial owner
+    (e.g., Form A). It must critically examine the plausibility of such
+    declaration.
+(c) Multiple sources should be consulted: client profiles, public records,
+    commercial registers, and external databases.
+(d) For natural persons in standard-risk categories, the intermediary should
+    confirm consistency between the contracting party's statements and
+    available information.
+(e) For legal entities, verification should include internal company documents
+    such as share registers, beneficial owner notifications, and corporate
+    governance documentation.
+
+6.3 CDB 20 Beneficial Ownership Procedures
+
+Under CDB 20, banks must collect a written declaration of beneficial ownership
+for all new business relationships involving account openings or securities
+transactions, using the following standardized forms:
+
+- Form A: Declaration of beneficial ownership by natural persons.
+- Form K: Declaration of controlling person for operating legal entities.
+- Form R: Declaration for trusts (identifying the settlor, trustee, protector,
+  and beneficiaries).
+- Form S: Declaration for foundations.
+- Form T: Declaration for life insurance policies (identifying the policyholder
+  and beneficiaries).
+
+6.4 Ongoing Monitoring of Beneficial Ownership
+
+The financial intermediary must update beneficial ownership information
+whenever:
+- Doubts arise about the accuracy of the existing declaration.
+- There are indications of a change in beneficial ownership.
+- As part of the periodic review of the business relationship (see Section 17).
+
+================================================================================
+7. POLITICALLY EXPOSED PERSONS (PEP) HANDLING
+================================================================================
+
+7.1 Definition of PEP
+
+Under Art. 2a AMLA, politically exposed persons include:
+
+(a) Foreign PEPs: Persons entrusted with prominent public functions abroad
+    (heads of state, senior politicians, senior government officials, military
+    leaders, heads of state-owned enterprises, senior judicial officials).
+(b) Domestic PEPs: Persons entrusted with prominent public functions in
+    Switzerland at the federal level.
+(c) PEPs in international organizations: Persons entrusted with prominent
+    functions in intergovernmental organizations.
+(d) Close associates and family members of the above.
+
+7.2 Identification of PEP Status
+
+Financial intermediaries must determine whether the contracting party, the
+beneficial owner, or the authorized representative is a PEP. This determination
+must be made:
+- At the establishment of the business relationship.
+- Periodically during the relationship.
+- Whenever there are indications of a change in PEP status.
+
+Methods include internal and external database screening, media searches, and
+direct inquiries to the customer.
+
+7.3 Enhanced Due Diligence for PEPs (Art. 13-15 AMLO-FINMA)
+
+Business relationships with PEPs are automatically classified as higher-risk.
+The following enhanced measures apply:
+
+(a) Senior management approval is required for the establishment and
+    continuation of business relationships with PEPs.
+(b) The source of wealth and the source of funds must be established.
+(c) Enhanced ongoing monitoring must be conducted throughout the relationship.
+(d) Periodic reviews must be performed at least annually (historically required
+    annually; now part of a comprehensive periodic review framework following
+    the 2023 AMLA revision).
+(e) The business relationship must be documented in detail, including the
+    rationale for maintaining the relationship.
+
+7.4 Deactivation of PEP Status
+
+A foreign PEP who has left a public function may be reclassified as non-PEP
+after a waiting period, provided a risk assessment supports the reclassification.
+The SBA and AMLO-FINMA do not prescribe a fixed waiting period but require
+a documented risk-based assessment.
+
+================================================================================
+8. ENHANCED DUE DILIGENCE TRIGGERS AND PROCEDURES
+================================================================================
+
+8.1 Criteria for Higher-Risk Business Relationships (Art. 13 AMLO-FINMA)
+
+Financial intermediaries must define internal criteria indicating business
+relationships with higher risks (Art. 13 para. 1 AMLO-FINMA). The following
+criteria are specified in AMLO-FINMA or must be considered:
+
+(a) Domicile or business operations in a country designated by FATF as "High
+    Risk" or "Non-cooperative."
+(b) Business relationships with PEPs or their close associates.
+(c) Complex structures involving domicile companies, particularly:
+    - Domicile companies combined with other domicile companies.
+    - Domicile companies combined with enterprises.
+    - Domicile companies combined with shareholders holding shares on a
+      fiduciary basis.
+    - Structures in non-transparent jurisdictions.
+    - Structures lacking reasonable business justification.
+    - Structures created for short-term asset investments.
+    Note: The combination of only two horizontal domicile companies may already
+    suffice to constitute a complex structure classified as high-risk.
+(d) Correspondent banking relationships (see Section 12).
+(e) Cash-intensive businesses.
+(f) Transactions with no apparent economic purpose.
+(g) Unusual transaction patterns inconsistent with the customer profile.
+(h) Business relationships involving countries with known deficiencies in AML
+    controls as identified by FINMA communications.
+
+8.2 Enhanced Due Diligence Procedures (Art. 15 AMLO-FINMA)
+
+When a higher-risk business relationship or transaction is identified, the
+financial intermediary must:
+
+(a) Obtain additional information on the nature and purpose of the business
+    relationship (Art. 15 para. 1 AMLO-FINMA).
+(b) Gather information on the source of wealth and the source of funds.
+(c) Check the plausibility of the information obtained and carefully document
+    the results (Art. 15 para. 1 AMLO-FINMA).
+(d) If increased risks are confirmed, apply extended clarification obligations
+    (Art. 15 para. 2 AMLO-FINMA).
+(e) Escalate to senior management or the AML compliance function for review
+    and decision on the continuation of the business relationship.
+
+Means of conducting enhanced due diligence include (Art. 16 AMLO-FINMA):
+- Seeking oral or written explanations from the client or beneficial owner.
+- Conducting on-site visits.
+- Consulting publicly available sources and information.
+- Making inquiries with reliable persons or sources.
+
+================================================================================
+9. SANCTIONS SCREENING OBLIGATIONS
+================================================================================
+
+9.1 Legal Basis
+
+Financial intermediaries in Switzerland are subject to:
+(a) The Federal Act on the Implementation of International Sanctions
+    (Embargo Act, EmbA, SR 946.231).
+(b) Specific sanctions ordinances adopted by the Federal Council implementing
+    UN Security Council resolutions and autonomous Swiss sanctions.
+(c) Art. 6 para. 2 lit. d AMLA, which requires reporting when customer data
+    match terrorist lists provided by FINMA, the Federal Gaming Board, or SROs.
+
+9.2 Screening Obligations
+
+Financial intermediaries must:
+- Screen all contracting parties, beneficial owners, and authorized
+  representatives against applicable sanctions lists at the establishment
+  of the business relationship.
+- Conduct ongoing screening against updated sanctions lists.
+- Screen against the SECO (State Secretariat for Economic Affairs) sanctions
+  lists, which implement UN Security Council sanctions and Swiss autonomous
+  sanctions.
+- Screen against FINMA-communicated lists of designated persons and entities.
+
+9.3 Consequences of a Match
+
+If a match is detected:
+- The financial intermediary must immediately freeze the assets in accordance
+  with the applicable sanctions ordinance and Art. 10 AMLA.
+- SECO must be notified without delay.
+- The financial intermediary must not execute any transactions involving the
+  frozen assets until instructed otherwise by SECO.
+- A suspicious activity report to MROS may also be required depending on the
+  circumstances.
+
+================================================================================
+10. TRANSACTION MONITORING REQUIREMENTS
+================================================================================
+
+10.1 General Obligation (Art. 20 AMLO-FINMA)
+
+Financial intermediaries must monitor business relationships and transactions
+to identify those involving increased risk. Art. 20 para. 2 AMLO-FINMA requires
+banks and other larger financial intermediaries to operate a computer-based
+(IT) transaction monitoring system.
+
+10.2 Scope of Transaction Monitoring
+
+The transaction monitoring system must be designed to detect:
+(a) Transactions that are unusual in terms of their type, volume, or frequency
+    relative to the customer's profile.
+(b) Transactions with no apparent economic or lawful purpose.
+(c) Patterns that may indicate money laundering, terrorist financing, or other
+    criminal activity.
+(d) Transactions involving high-risk countries or jurisdictions.
+(e) Transactions exceeding certain thresholds as defined in internal policies.
+
+10.3 Response to Alerts (Art. 20 para. 3 AMLO-FINMA)
+
+When an alert is generated by the transaction monitoring system or otherwise,
+the financial intermediary must:
+(a) Conduct additional due diligence on the relevant business relationship or
+    transaction without undue delay.
+(b) Clarify the economic background and purpose of the transaction.
+(c) Document the results of the clarification.
+(d) Escalate to the AML compliance function if the clarification does not
+    adequately resolve the concerns.
+(e) Consider filing a suspicious activity report with MROS if a reasonable
+    suspicion of money laundering or terrorist financing persists.
+
+10.4 Calibration and Adequacy
+
+The transaction monitoring system must be:
+- Calibrated to the specific risk profile and business activities of the
+  financial intermediary.
+- Subject to regular review and recalibration to ensure continued
+  effectiveness.
+- Documented, with clear escalation procedures and thresholds defined in
+  internal policies.
+
+================================================================================
+11. SUSPICIOUS ACTIVITY REPORTING (SAR) TO MROS
+================================================================================
+
+11.1 Reporting Obligation (Art. 9 AMLA)
+
+A financial intermediary must report to the Money Laundering Reporting Office
+Switzerland (MROS) when it knows or has reasonable grounds to suspect that:
+
+(a) Assets involved in a business relationship are the proceeds of a felony
+    or a qualified tax misdemeanour (exceeding CHF 300,000 per tax period).
+(b) Assets are connected to money laundering.
+(c) Assets are connected to a criminal or terrorist organization.
+(d) Assets serve to finance terrorism.
+(e) Assets are subject to the power of disposal of a criminal or terrorist
+    organization.
+
+Note: There is no automatic reporting requirement for large cash transactions
+in Switzerland (unlike some other jurisdictions). The reporting obligation is
+triggered solely by reasonable suspicion.
+
+11.2 Reporting Procedure
+
+- Reports must be filed with MROS electronically through the goAML platform.
+- The report must contain all information relevant to the suspicion, including
+  customer identification data, details of the suspicious transactions, and
+  the reasons for the suspicion.
+- The financial intermediary must not inform the customer that a report has
+  been filed (tipping-off prohibition).
+
+11.3 Asset Freezing Upon Reporting (Art. 10 AMLA)
+
+Upon filing a SAR, the financial intermediary must immediately freeze the
+assets that are the subject of the report. The freeze remains in effect until
+MROS or a prosecution authority issues further instructions, or until 5 working
+days have elapsed without MROS forwarding the report to a prosecution authority.
+
+11.4 Termination of Business Relationship
+
+The financial intermediary may terminate a reported business relationship if
+MROS fails to notify the intermediary within 40 working days that the
+information has been forwarded to a prosecution authority. This 40-day
+window was introduced in the 2021 AMLA revision.
+
+11.5 Penalties for Non-Reporting
+
+Failure to comply with the reporting obligation under Art. 9 AMLA constitutes
+a criminal offence:
+- Intentional non-reporting: Fines up to CHF 500,000.
+- Negligent non-reporting: Fines up to CHF 150,000.
+
+FINMA may additionally impose enforcement measures including occupational bans
+of up to five years and confiscation of profits from supervisory violations.
+
+================================================================================
+12. CORRESPONDENT BANKING DUE DILIGENCE
+================================================================================
+
+12.1 Prohibition on Shell Bank Relationships (Art. 8b AMLO-FINMA)
+
+Financial intermediaries are prohibited from establishing or maintaining
+correspondent banking relationships with foreign shell banks that lack a
+genuine physical presence and are not part of a consolidated supervised
+financial group.
+
+12.2 Enhanced Due Diligence for Correspondent Banking
+
+Correspondent banking relationships are classified as higher-risk under
+Art. 13 AMLO-FINMA. Financial intermediaries must:
+
+(a) Gather sufficient information about the respondent institution to
+    understand fully the nature of its business.
+(b) Determine the reputation of the respondent institution and the quality
+    of its supervision.
+(c) Assess the respondent institution's AML/CFT controls.
+(d) Obtain senior management approval for new correspondent banking
+    relationships.
+(e) Document the respective responsibilities of each institution.
+(f) Ensure that the respondent institution has performed adequate CDD on
+    its own customers having direct access to accounts of the correspondent.
+
+12.3 Payable-Through Accounts
+
+Financial intermediaries must exercise particular care with payable-through
+accounts, ensuring that the respondent institution:
+- Has verified the identity of, and performed ongoing due diligence on, the
+  customers having direct access to the correspondent's accounts.
+- Is able to provide relevant CDD information upon request.
+
+================================================================================
+13. RECORD KEEPING REQUIREMENTS
+================================================================================
+
+13.1 General Record-Keeping Obligation (Art. 7 AMLA)
+
+Financial intermediaries must prepare supporting documents on the transactions
+carried out and on the clarifications required under the AMLA in such a way
+that competent third parties (including FINMA auditors and prosecution
+authorities) can form a reliable judgment on:
+(a) The transactions and business relationships.
+(b) Compliance with AMLA obligations.
+
+13.2 Retention Period
+
+All AML-related records must be retained for at least 10 years after:
+(a) Termination of the business relationship, or
+(b) Completion of the transaction (for one-off transactions without a
+    continuing business relationship).
+
+This 10-year retention period applies to (Art. 7 para. 3 AMLA):
+- Customer identification documents and copies.
+- Beneficial ownership declarations (Forms A, K, R, S, T).
+- Transaction records and supporting documentation.
+- Results of due diligence inquiries and clarifications.
+- Internal risk assessments and categorizations.
+- Correspondence related to CDD and suspicious activity.
+- Audio recordings from video identification procedures.
+- Minutes and documentation of enhanced due diligence procedures.
+
+13.3 Periodic Update of Records (Art. 7 para. 1bis AMLA)
+
+Since the 2023 AMLA revision, financial intermediaries must periodically check
+their records to ensure they are up to date and update them if necessary.
+The periodicity, scope, and type of checking and updating must be based on
+the risk posed by the customer (risk-based approach).
+
+================================================================================
+14. TRAINING AND AWARENESS OBLIGATIONS
+================================================================================
+
+14.1 General Training Requirement (Art. 23 AMLO-FINMA)
+
+Financial intermediaries must ensure that their staff receive adequate training
+on AML/CFT matters. Training must cover:
+
+(a) The legal framework (AMLA, AMLO, AMLO-FINMA, CDB 20, and applicable
+    SRO regulations).
+(b) Internal AML policies, procedures, and controls.
+(c) Customer identification and verification procedures.
+(d) Recognition of suspicious transactions and behavior.
+(e) Reporting obligations and internal escalation procedures.
+(f) Sanctions screening and compliance.
+(g) Sector-specific risks relevant to the institution's business activities.
+
+14.2 Scope and Frequency
+
+- All employees involved in client-facing activities, transaction processing,
+  or compliance functions must receive AML training.
+- Training must be provided at the time of hiring and refreshed periodically
+  (typically annually, though the frequency should be risk-based).
+- Training content must be updated to reflect changes in regulations,
+  typologies, and institutional risk assessments.
+
+14.3 Documentation
+
+Training activities must be documented, including:
+- Training content and materials.
+- Dates and duration of training sessions.
+- Attendance records.
+- Assessment results (where applicable).
+
+================================================================================
+15. INTERNAL ORGANIZATION OF AML COMPLIANCE
+================================================================================
+
+15.1 AML Compliance Function (Art. 24-26 AMLO-FINMA)
+
+Financial intermediaries must establish an adequate internal organization for
+AML compliance, including:
+
+(a) Designation of an AML Officer / AML Unit:
+    - One or more qualified persons must be designated as the AML unit
+      responsible for supporting and advising line managers and management in
+      the implementation of the AMLO-FINMA (Art. 24 para. 1 AMLO-FINMA).
+    - The AML unit must have sufficient independence, resources, and authority
+      to perform its functions effectively.
+
+(b) Internal Directives:
+    - Financial intermediaries must issue internal directives covering all
+      aspects of AML compliance, including risk criteria, CDD procedures,
+      escalation processes, monitoring parameters, and reporting obligations
+      (Art. 25 AMLO-FINMA).
+    - Since the 2023 AMLA revision, internal directives must also address
+      the criteria for risk-based, periodic checks to ensure customer data
+      remain up to date.
+
+(c) Risk Analysis (Art. 25 para. 2 AMLO-FINMA):
+    - The financial intermediary must conduct and maintain a comprehensive AML
+      risk analysis. This is an important tool for strategic management to
+      identify and minimize risks, determine relevant risk criteria, and
+      allocate resources appropriately.
+    - The risk analysis must be updated periodically and whenever material
+      changes occur in the business or risk environment.
+
+15.2 Global Risk Management (Art. 6 AMLO-FINMA)
+
+Financial intermediaries with foreign affiliates must establish robust oversight
+mechanisms, including:
+
+(a) An AML office or independent task force providing periodic risk analysis
+    on a consolidated basis.
+(b) Annual standardized reports on branches and group companies.
+(c) Regular internal on-site inspections of foreign branches and group
+    companies.
+(d) Autonomous, timely notification from affiliates regarding substantial
+    changes in legal or reputational risk.
+(e) Sample preparation of individual business relationships for monitoring.
+
+15.3 Internal Controls and Auditing
+
+- The internal audit function or an equivalent body must periodically review
+  the adequacy and effectiveness of AML controls.
+- Statutory auditors review CDB compliance as part of their regulatory audit.
+- FINMA may conduct direct on-site inspections of AML compliance.
+
+================================================================================
+16. RISK CATEGORIZATION OF BUSINESS RELATIONSHIPS
+================================================================================
+
+16.1 Risk Categorization Framework (Art. 13 AMLO-FINMA)
+
+Financial intermediaries must classify each business relationship according to
+the risk of money laundering and terrorist financing. The classification
+determines the level of due diligence and monitoring applied.
+
+Typical risk categories include:
+(a) Standard risk (normal due diligence).
+(b) Higher risk (enhanced due diligence required).
+(c) Prohibited (relationships that may not be established or must be
+    terminated, e.g., shell banks).
+
+16.2 Risk Factors
+
+Risk categorization must take into account at least the following factors:
+
+Country/geographic risk:
+- FATF-designated high-risk or non-cooperative jurisdictions.
+- Countries subject to sanctions.
+- Countries with known deficiencies in AML/CFT systems.
+
+Customer risk:
+- PEP status.
+- Complex or opaque ownership structures.
+- Cash-intensive businesses.
+- Non-profit organizations (specific terrorism financing risk).
+- Virtual asset service providers.
+
+Product/service risk:
+- Products enabling anonymous transactions.
+- Correspondent banking services.
+- Private banking and wealth management.
+- Trade finance.
+
+Delivery channel risk:
+- Non-face-to-face business relationships.
+- Relationships established through intermediaries.
+
+16.3 Documentation of Risk Categorization
+
+The risk categorization of each business relationship must be documented and
+maintained in the customer file. Changes in risk categorization must be
+recorded with supporting rationale.
+
+================================================================================
+17. PERIODIC REVIEW REQUIREMENTS
+================================================================================
+
+17.1 2023 AMLA Revision: Mandatory Periodic Reviews
+
+The 2023 AMLA revision introduced mandatory periodic reviews of all customer
+data, irrespective of whether doubts or triggering events have arisen.
+Previously, reviews occurred only when doubts emerged or, for PEPs, annually.
+
+17.2 Risk-Based Frequency
+
+The law mandates a risk-based approach to the frequency and scope of periodic
+reviews:
+- Higher-risk relationships: More frequent reviews (e.g., annually for PEPs,
+  every 2-3 years for other higher-risk clients).
+- Standard-risk relationships: Reviews at longer intervals. KYC questionnaires
+  should typically be resubmitted every 7 to 10 years at a minimum.
+- Lower-risk relationships: Less frequent reviews, though all relationships
+  must be reviewed periodically.
+
+17.3 Scope of Periodic Reviews
+
+Periodic reviews should include:
+(a) Verification that customer identification data remain current and accurate.
+(b) Confirmation or update of beneficial ownership information.
+(c) Review of the nature and purpose of the business relationship.
+(d) Reassessment of the risk categorization.
+(e) Review of transaction activity against the customer's profile.
+(f) Screening against current sanctions lists and PEP databases.
+(g) Update of internal documentation as necessary.
+
+17.4 Trigger-Based Reviews (Art. 5 AMLA)
+
+In addition to periodic reviews, financial intermediaries must renew
+identification and CDD whenever:
+- Doubts arise about the identity of the contracting party or beneficial owner.
+- There are indications of material changes in the customer's circumstances.
+- Unusual or suspicious transactions are detected.
+- There is a change in applicable regulations or risk assessments.
+
+================================================================================
+18. ENFORCEMENT AND SUPERVISORY FRAMEWORK
+================================================================================
+
+18.1 FINMA Supervision
+
+FINMA supervises AML compliance by prudentially regulated financial
+intermediaries through:
+- Regular regulatory audits conducted by licensed audit firms.
+- Direct on-site inspections (particularly for higher-risk institutions or
+  following material events).
+- Review of audit reports and internal control assessments.
+- Enforcement proceedings for identified violations.
+
+18.2 Self-Regulatory Organizations (SROs)
+
+Financial intermediaries not directly supervised by FINMA must affiliate with
+a recognized SRO (e.g., VQF, PolyReg, OAR-G). SROs:
+- Issue their own AML regulations, which must be consistent with AMLO-FINMA
+  and approved by FINMA.
+- Conduct audits of their affiliated members.
+- Impose sanctions for non-compliance.
+- Report material findings to FINMA.
+
+18.3 Penalties and Enforcement Measures
+
+FINMA has a range of enforcement tools:
+- Administrative proceedings and orders.
+- Publication of enforcement decisions ("naming and shaming").
+- Occupational bans of up to five years.
+- Confiscation of profits obtained through supervisory violations.
+- Withdrawal of licenses in severe cases.
+
+Criminal penalties under AMLA:
+- Art. 37 AMLA: Intentional violation of reporting obligation — fine up to
+  CHF 500,000.
+- Art. 37 AMLA: Negligent violation — fine up to CHF 150,000.
+
+Criminal penalties under SCC:
+- Art. 305bis SCC: Money laundering — imprisonment of up to five years or
+  a monetary penalty.
+- Art. 305ter SCC: Insufficient diligence in financial transactions —
+  imprisonment of up to one year or a monetary penalty.
+
+================================================================================
+19. KEY REGULATORY DEVELOPMENTS AND TIMELINE
+================================================================================
+
+19.1 Major Milestones
+
+1977:  First CDB adopted by the Swiss Bankers Association.
+1998:  AMLA enacted (SR 955.0).
+2010:  AMLO-FINMA issued, replacing the former SFBC Anti-Money Laundering
+       Ordinance.
+2016:  FINMA Circular 2016/7 issued (March 2016), introducing video and online
+       identification.
+2020:  CDB 20 enters into force (January 1, 2020), replacing CDB 16.
+       Revised AMLO-FINMA enters into force (January 1, 2020), including
+       updated Art. 6 (global risk management), Art. 13 (high-risk criteria
+       including FATF-listed countries and complex domicile structures).
+2021:  Revised AMLA adopted (March 2021), introducing:
+       - Explicit beneficial owner verification obligation.
+       - Duty to regularly update customer data.
+       - Extended MROS processing timeline (40-day termination window).
+       Revised FINMA Circular 2016/7 enters into force (May 2021), introducing
+       biometric passport chip scanning for online identification.
+2023:  Revised AMLA and AMLO enter into force (January 1, 2023), implementing
+       the 2021 amendments including:
+       - Mandatory beneficial owner verification (risk-based approach).
+       - Mandatory periodic review of customer data.
+       - Updated controls on precious metals.
+       - Enhanced transparency for high-risk associations.
+2024:  Federal Council submits dispatch on Transparency of Legal Entities Act
+       (TLEA) to Parliament (May 2024), proposing:
+       - A central beneficial ownership register.
+       - New due diligence obligations for advisory activities.
+2025:  Revised AMLA adopted (September 2025), broadening scope to include
+       "advisors" subject to certain due diligence obligations.
+       FINMA launches consultation on partial revision of Circular 2016/7
+       (December 2025).
+2026:  Consultation on revised Circular 2016/7 open until February 27, 2026.
+
+================================================================================
+20. CROSS-REFERENCES AND RELATED REGULATIONS
+================================================================================
+
+20.1 Related FINMA Circulars
+
+- FINMA Circular 2008/21: Operational risks — banks (includes AML-relevant
+  internal control requirements).
+- FINMA Circular 2017/1: Corporate governance — banks (includes requirements
+  for compliance functions relevant to AML).
+
+20.2 Related Federal Legislation
+
+- Banking Act (BA, SR 952.0): Licensing and prudential requirements for banks.
+- Financial Institutions Act (FinIA, SR 954.1): Licensing and supervision of
+  asset managers, fund management companies, and securities firms.
+- Financial Market Supervision Act (FINMASA, SR 956.1): Establishes FINMA's
+  mandate and enforcement powers.
+- Embargo Act (EmbA, SR 946.231): Framework for implementing international
+  sanctions.
+- Federal Act on the Freezing and Restitution of Illicit Assets Held Abroad
+  (FIAA, SR 196.1).
+
+20.3 International Standards
+
+- FATF 40 Recommendations on Money Laundering and Terrorist Financing.
+- Wolfsberg Group principles (relevant for correspondent banking).
+- EU Anti-Money Laundering Directives (relevant for cross-border equivalence
+  assessments).
+
+================================================================================
+END OF DOCUMENT
+================================================================================
+
+Document prepared for the Swiss regulatory knowledge base.
+Covers FINMA Circular 2016/7, AMLA, AMLO, AMLO-FINMA, and CDB 20.

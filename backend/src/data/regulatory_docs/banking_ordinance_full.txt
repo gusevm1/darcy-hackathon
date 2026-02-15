@@ -1,0 +1,1046 @@
+SWISS BANKING ORDINANCE (BankO / BankV) -- FULL REFERENCE
+==========================================================
+Verordnung ueber die Banken und Sparkassen (Bankenverordnung, BankV)
+SR 952.02 | Enacted: 30 April 2014 | In force: 1 January 2015 (latest revision: 1 January 2025)
+Issued by: Swiss Federal Council
+
+================================================================================
+1. OVERVIEW AND RELATIONSHIP TO THE BANKING ACT
+================================================================================
+
+1.1 Purpose
+
+The Banking Ordinance (BankO, SR 952.02) is the principal implementing ordinance
+of the Federal Act on Banks and Savings Banks (BankA / BankG, SR 952.0). While the
+Banking Act establishes the overarching framework for bank licensing, supervision,
+and depositor protection in Switzerland, the Banking Ordinance provides the
+detailed rules and technical specifications required for the Act's application.
+
+1.2 Subject Matter (Art. 1 BankO)
+
+The BankO governs, for banks and persons as defined in Art. 1b BankA:
+  (a) Requirements for obtaining a license to operate;
+  (b) Organizational requirements;
+  (c) Accounting and financial reporting requirements.
+
+For banks specifically, the BankO additionally governs:
+  (d) The deposit insurance scheme;
+  (e) The transfer and liquidation of dormant assets.
+
+For systemically important banks, the BankO also addresses:
+  (f) Contingency planning, recovery, and resolution.
+
+1.3 Scope of Application (Art. 2 BankO)
+
+The BankO applies to banks, persons pursuant to Art. 1b BankA (fintech license
+holders), private bankers, and savings banks. All of these entities are subject
+to the detailed provisions elaborated in the BankO.
+
+1.4 Hierarchy of Norms
+
+The regulatory hierarchy for Swiss banking is:
+  - Banking Act (BankA / BankG, SR 952.0) -- federal statute
+  - Banking Ordinance (BankO / BankV, SR 952.02) -- Federal Council ordinance
+  - Capital Adequacy Ordinance (CAO / ERV, SR 952.03) -- Federal Council ordinance
+  - Liquidity Ordinance (LiqO / LiqV, SR 952.06) -- Federal Council ordinance
+  - FINMA Ordinances and Circulars -- supervisory authority regulations
+  - Self-regulation recognized by FINMA (e.g., CDB, esisuisse)
+
+================================================================================
+2. LICENSING PROVISIONS (Art. 1-14 BankO)
+================================================================================
+
+2.1 Definition of Banks (Art. 2 BankO)
+
+Banks are entities that are primarily active in the financial sector and that:
+  (a) Accept deposits from the public on a commercial basis; or
+  (b) Refinance themselves from multiple sources to provide financing to an
+      indeterminate number of persons or companies.
+
+2.2 Non-Banks (Art. 3 BankO)
+
+Art. 3 BankO defines what constitutes a non-bank, clarifying the boundary between
+regulated and unregulated entities. Entities that do not meet the criteria for
+banks or Art. 1b persons fall outside the scope of mandatory licensing under the
+Banking Act, subject to the exceptions in Art. 5 and Art. 6 BankO.
+
+2.3 Essential Group Companies (Art. 3a BankO)
+
+Art. 3a BankO defines essential group companies as those whose activities are of
+material importance for the continuation of systemically important functions.
+This designation carries consequences for consolidated supervision and emergency
+planning.
+
+2.4 Financial Sector Activity (Art. 4 BankO)
+
+Art. 4 BankO clarifies what constitutes activity in the financial sector. An
+entity is deemed to be primarily active in the financial sector if a significant
+portion of its revenue is derived from financial services, including deposit-taking,
+lending, securities trading, fund management, or payment services.
+
+2.5 Licensing Requirement
+
+Under Art. 3 para. 1 BankA, any entity that accepts deposits from the public on
+a commercial basis or publicly solicits such deposits requires a banking license
+from FINMA. The BankO provides the detailed criteria for determining when these
+thresholds are met (see Art. 5 and Art. 6 BankO).
+
+================================================================================
+3. DEFINITION OF PUBLIC DEPOSITS (Art. 5 BankO)
+================================================================================
+
+3.1 General Definition
+
+Art. 5 para. 1 BankO defines public deposits (Publikumseinlagen) as all
+liabilities to customers, except those specified in paragraphs 2 and 3 of
+the same article. This is a broad, inclusive definition: any obligation to
+repay funds received from the public is presumed to be a deposit unless it
+falls within one of the enumerated exceptions.
+
+3.2 Excluded Entities (Art. 5 para. 2 BankO)
+
+Deposits from the following categories of persons or entities do NOT qualify
+as public deposits:
+  (a) Domestic and foreign banks or other state-supervised financial entities;
+  (b) Qualified shareholders holding significant ownership stakes in the debtor;
+  (c) Persons economically or familially connected to qualified shareholders;
+  (d) Institutional investors with professional treasury operations;
+  (e) Active and retired employees of the entity depositing with their employer;
+  (f) Non-profit associations, foundations, or cooperatives not active in the
+      financial sector, pursuing non-commercial or mutual-aid purposes, provided
+      the deposit term is at least six months.
+
+3.3 Excluded Instruments and Transactions (Art. 5 para. 3 BankO)
+
+The following are also excluded from the definition of public deposits:
+  (a) Funds representing contractual consideration or security deposits (e.g.,
+      performance bonds, rental deposits);
+  (b) Bonds and other standardized mass-issued debt instruments, provided
+      proper investor disclosure has been made (prospectus obligation);
+  (c) Non-interest-bearing settlement account balances used exclusively for
+      settlement of client transactions in precious metals or securities,
+      provided the settlement period does not exceed 60 days;
+  (d) Funds connected to life insurance contracts or occupational pension
+      arrangements;
+  (e) Small prepayment amounts received for future delivery of goods or services,
+      provided no interest is paid;
+  (f) Funds whose repayment is guaranteed by a licensed Swiss bank.
+
+3.4 Crypto-Based Assets (Art. 5a BankO)
+
+Art. 5a BankO addresses the treatment of crypto-based assets. Custody of
+crypto-based assets may constitute deposit-taking depending on how the
+assets are held. If the custodian holds crypto assets on a collective
+(omnibus) basis without segregation, the obligation to return equivalent
+assets may qualify as a deposit. Individual segregated custody of crypto
+assets, where the assets are held separately and can be individually
+attributed to each client, does not constitute deposit-taking.
+
+================================================================================
+4. COMMERCIAL OPERATION AND ADVERTISING (Art. 6-7b BankO)
+================================================================================
+
+4.1 Commercial Operation (Art. 6 BankO)
+
+A person operates on a commercial basis within the meaning of Art. 1 para. 2
+BankA if that person:
+  (a) Continuously accepts deposits from more than 20 persons; or
+  (b) Publicly solicits the acceptance of deposits, even if fewer than 20
+      deposits result from such solicitation.
+
+4.2 Regulatory Sandbox Exception (Art. 6 para. 2-4 BankO)
+
+The regulatory sandbox allows entities to accept deposits from the public
+without any license, provided ALL of the following conditions are met:
+  (a) The total aggregate amount of deposits accepted does not exceed
+      CHF 1 million;
+  (b) The deposits do not bear interest and are not otherwise remunerated;
+  (c) The deposits are not invested or lent to third parties;
+  (d) Depositors are informed before making a deposit that:
+      - The entity is not supervised by FINMA;
+      - The deposits are not covered by the deposit insurance scheme.
+
+This sandbox provision was introduced on 1 January 2019 and is designed to
+allow early-stage fintech businesses to test their models without the cost
+and burden of a full licensing process. Once the CHF 1 million threshold
+is breached, the entity must obtain either a fintech license (Art. 1b BankA)
+or a full banking license.
+
+4.3 Advertising (Art. 7 BankO)
+
+Art. 7 BankO specifies when an entity is deemed to publicly solicit deposits.
+Public solicitation includes advertising through any medium (print, online,
+broadcast, or other channels) aimed at attracting deposit funds from the
+public.
+
+4.4 Information and Disclosure Obligations (Art. 7a-7b BankO)
+
+Art. 7a BankO sets out information obligations that entities accepting deposits
+must fulfill, including disclosure of the entity's regulatory status.
+Art. 7b BankO prohibits misleading representations regarding the entity's
+regulatory status, activities, or the nature of deposits.
+
+================================================================================
+5. EXCEPTIONS FROM LICENSING -- FINTECH LICENSE AND SANDBOX
+================================================================================
+
+5.1 Fintech License (Art. 1b BankA, implemented by Art. 14a-14g BankO)
+
+The fintech license (also known as the "banking license light" or "innovation
+license") was introduced on 1 January 2019 through Art. 1b BankA. It permits
+the acceptance of public deposits up to CHF 100 million, subject to the
+following restrictions:
+  - Deposits may NOT be invested;
+  - Deposits may NOT bear interest or be otherwise remunerated;
+  - Deposits must be held in readily available form.
+
+The fintech license is designed for innovative financial service providers
+such as payment processors, crypto custodians, crowdfunding platforms, and
+other businesses that accept client funds without engaging in traditional
+credit intermediation or maturity transformation.
+
+5.2 Organizational Requirements for Fintech License Holders (Art. 14a-14g BankO)
+
+Art. 14a: Legal form, seat, and actual management must be in Switzerland.
+          Eligible legal forms include AG, GmbH, or cooperative.
+
+Art. 14b: Business scope must be clearly defined and limited to activities
+          consistent with the fintech license.
+
+Art. 14c: Business management must be conducted from Switzerland by at least
+          two qualified persons (dual control principle).
+
+Art. 14d: Governance organs (board of directors) with at least three members
+          for an AG; members must be fit and proper.
+
+Art. 14e: Compliance function and risk management must be established,
+          proportionate to the size and complexity of the business.
+
+Art. 14f: Deposit custody requirements, ensuring client deposits are held
+          in a secure and identifiable manner.
+
+Art. 14g: Conflicts of interest must be identified, managed, and disclosed
+          through written policies.
+
+5.3 Sandbox (Art. 6 para. 2-4 BankO)
+
+See Section 4.2 above. The sandbox is not a license but an exemption from the
+licensing requirement. It allows acceptance of up to CHF 1 million in public
+deposits from an unlimited number of depositors, provided the conditions
+described in Art. 6 para. 2-4 BankO are met.
+
+5.4 Transition Pathways
+
+  Sandbox --> Fintech License: When deposits exceed CHF 1 million or the entity
+  wishes to scale beyond sandbox constraints.
+
+  Fintech License --> Full Banking License: When deposits exceed CHF 100 million,
+  or the entity wishes to invest deposits, pay interest, or engage in lending.
+
+================================================================================
+6. MINIMUM CAPITAL REQUIREMENTS (Art. 15-17a BankO)
+================================================================================
+
+6.1 New Banks (Art. 15 BankO)
+
+Art. 15 BankO establishes the minimum capital requirements for newly licensed
+banks. The minimum fully paid-up capital for a new bank is CHF 10 million.
+This capital must be:
+  - Composed of qualifying equity (share capital or cooperative capital);
+  - Fully paid up at the time of licensing;
+  - Not encumbered or pledged;
+  - Available for unrestricted use by the bank.
+
+FINMA may require higher initial capitalization depending on:
+  - The scope, nature, and complexity of the planned activities;
+  - The bank's risk profile;
+  - Projected balance sheet growth;
+  - International activities.
+
+6.2 Conversions (Art. 16 BankO)
+
+Art. 16 BankO addresses the minimum capital requirements for entities that
+convert from another legal form into a bank. The CHF 10 million minimum
+applies, but FINMA may consider existing capital and reserves when assessing
+compliance.
+
+6.3 Exceptions (Art. 17 BankO)
+
+Art. 17 BankO provides that FINMA may, in specific cases, set a lower minimum
+capital requirement if the entity's risk profile and business model justify
+reduced capitalization. This exception is narrowly applied and typically
+limited to niche or specialized institutions.
+
+6.4 Fintech License Holders (Art. 17a BankO)
+
+Art. 17a BankO establishes the minimum capital for fintech license holders
+(Art. 1b BankA persons):
+  - Minimum capital: CHF 300,000; or
+  - 5% of accepted public deposits, whichever is higher.
+
+The capital must be:
+  - Fully paid up and maintained at all times;
+  - Composed of qualifying capital (equity, retained earnings);
+  - Not encumbered or pledged.
+
+Example calculations:
+  - At CHF 5 million in deposits:  5% = CHF 250,000 --> minimum CHF 300,000
+  - At CHF 10 million in deposits: 5% = CHF 500,000
+  - At CHF 50 million in deposits: 5% = CHF 2,500,000
+  - At CHF 100 million in deposits: 5% = CHF 5,000,000
+
+Note: Fintech license holders are NOT subject to the Capital Adequacy Ordinance
+(CAO) Basel III requirements that apply to full banks. Instead, the BankO's own
+minimum capital provisions apply directly.
+
+================================================================================
+7. ORGANIZATIONAL REQUIREMENTS (Art. 8-14 BankO)
+================================================================================
+
+7.1 Information on Persons and Stakeholders (Art. 8-8a BankO)
+
+Art. 8 BankO requires banks to provide FINMA with comprehensive information on
+all persons with significant roles, including board members, executive management,
+qualified shareholders, and beneficial owners. Documentation must include CVs,
+criminal record extracts, debt enforcement extracts, and proof of professional
+qualifications.
+
+Art. 8a BankO requires immediate notification to FINMA of any changes in material
+facts relating to key persons or qualified shareholders.
+
+7.2 Business Scope (Art. 9 BankO)
+
+Art. 9 BankO requires that the bank's business scope be clearly defined in its
+articles of association and organizational regulations. The business plan must
+describe the planned activities, target markets, and risk appetite.
+
+7.3 Business Management (Art. 10 BankO)
+
+Art. 10 BankO establishes that:
+  - Business management must be conducted effectively from Switzerland;
+  - At least two qualified persons must be responsible for day-to-day management
+    (dual control principle);
+  - Management personnel must be fit and proper, possessing adequate professional
+    qualifications and offering a guarantee of proper business conduct (Gewaehr
+    fuer einwandfreie Geschaeftstaetigkeit).
+
+7.4 Governing Bodies (Art. 11 BankO)
+
+Art. 11 BankO sets requirements for the bank's organs:
+  - Board of directors: minimum three members, majority independent;
+  - The chairman of the board may not simultaneously serve as CEO;
+  - Board committees required depending on size (audit committee mandatory;
+    risk committee, compensation committee for larger institutions);
+  - Board members must demonstrate individual and collective fitness and propriety.
+
+7.5 Function Separation and Risk Management (Art. 12 BankO)
+
+Art. 12 BankO mandates:
+  - Clear organizational separation of lending, trading, asset management, and
+    settlement/back-office functions;
+  - An effective risk management framework with adequate authority and independence;
+  - An internal control system (ICS) built on the three-lines-of-defense model:
+    (1) Business units -- risk ownership;
+    (2) Risk management and compliance -- independent oversight;
+    (3) Internal audit -- independent assurance, reporting directly to the board.
+
+7.6 Qualified Participations (Art. 13 BankO)
+
+Art. 13 BankO requires notification and FINMA approval for qualified participations
+(10% or more of capital or voting rights). Changes in qualified participations
+must be notified to FINMA prior to their taking effect. FINMA may object to a
+participation that jeopardizes the proper and sound management of the bank.
+
+7.7 Private Bankers (Art. 14 BankO)
+
+Art. 14 BankO contains specific provisions for private bankers organized as
+partnerships, addressing their particular governance and liability structures.
+
+================================================================================
+8. PROPER BUSINESS CONDUCT
+================================================================================
+
+8.1 Guarantee of Proper Business Conduct (Gewaehr)
+
+The Gewaehr requirement is a central principle of Swiss banking regulation.
+Under Art. 3 para. 2 let. c BankA (implemented by the BankO), all persons
+entrusted with the management, supervision, or control of a bank must offer a
+guarantee of proper business conduct. This encompasses:
+  - Good reputation (unbescholten);
+  - Adequate professional qualifications and experience;
+  - Absence of criminal convictions for financial crimes;
+  - Absence of pending criminal or regulatory proceedings;
+  - Adequate financial standing (no personal over-indebtedness).
+
+8.2 Ongoing Obligation
+
+The Gewaehr requirement is not merely a licensing condition but an ongoing
+obligation. Banks must immediately notify FINMA if any key person no longer
+meets the fit-and-proper standards. FINMA may require the removal of
+individuals who fail to maintain the required standards.
+
+8.3 Conflicts of Interest
+
+Banks must establish written policies to identify, manage, and disclose
+conflicts of interest. Transactions with related parties must be conducted at
+arm's length and documented. Board members and executives must disclose all
+outside activities and financial interests.
+
+================================================================================
+9. ONGOING LICENSING CONDITIONS
+================================================================================
+
+9.1 Continuous Compliance
+
+A banking license is subject to continuous compliance with all licensing
+conditions. FINMA monitors compliance through:
+  - Regular supervisory reviews;
+  - On-site inspections (planned and ad hoc);
+  - Regulatory audit reports;
+  - Thematic reviews and data collections.
+
+9.2 Material Changes Requiring FINMA Notification (Art. 8a BankO)
+
+Banks must notify FINMA before implementing material changes, including:
+  - Changes to the board of directors or executive management;
+  - Changes in qualified participations (10% or more);
+  - Significant changes to the business model or scope of activities;
+  - Outsourcing of material business functions;
+  - Opening or closing of branches (domestic or foreign);
+  - Changes to the articles of association.
+
+9.3 FINMA Enforcement Powers
+
+If licensing conditions are no longer met, FINMA may:
+  - Issue binding orders requiring remediation;
+  - Impose conditions or restrictions on the license;
+  - Appoint a supervisory agent (Beauftragter) to oversee the bank;
+  - Restrict specific business activities;
+  - Revoke the banking license as a last resort.
+
+================================================================================
+10. REPORTING AND DISCLOSURE OBLIGATIONS
+================================================================================
+
+10.1 Regulatory Reporting
+
+Banks must submit regular reports to FINMA and the Swiss National Bank (SNB):
+  - Monthly: Liquidity reporting (LCR, NSFR) for certain categories of banks;
+  - Quarterly: Capital adequacy reporting, large exposure reports;
+  - Semi-annually: Balance sheet data, income statement data, interest rate
+    risk in the banking book;
+  - Annually: Audited annual financial statements, regulatory audit report,
+    annual report.
+
+10.2 Ad Hoc Reporting
+
+Banks must report material events to FINMA without delay, including:
+  - Significant operational incidents (cybersecurity breaches, system failures);
+  - Significant financial losses or unexpected risk exposures;
+  - Changes in management, board, or qualified participations;
+  - Regulatory actions or investigations by foreign authorities;
+  - Material litigation or legal proceedings.
+
+10.3 Publication Obligations (Art. 32, Art. 41 BankO)
+
+Banks must publish their annual financial statements and, where applicable,
+consolidated financial statements. The publication requirements are designed
+to ensure transparency for depositors, investors, and the public. FINMA may
+specify additional disclosure requirements through circulars.
+
+10.4 Fintech License Holders
+
+Fintech license holders (Art. 1b persons) have proportionately reduced reporting
+obligations, including annual audited financial statements, deposit volume reports,
+and material change notifications.
+
+================================================================================
+11. ACCOUNTING STANDARDS (Art. 25-42 BankO)
+================================================================================
+
+11.1 Individual Financial Statements (Art. 25-32 BankO)
+
+Art. 25 BankO: Banks must prepare annual financial statements comprising a
+balance sheet, income statement, cash flow statement, and notes. The statements
+must comply with the applicable accounting framework.
+
+Art. 26 BankO: Foundations and principles of accounting. Financial statements
+must provide a reliable assessment of the bank's net assets, financial position,
+and results (true and fair view principle for statutory individual accounts).
+The principle of prudence applies.
+
+Art. 27 BankO: Valuation and recognition rules, including provisions for the
+valuation of financial instruments, loans, real estate, participations, and
+intangible assets. Banks may form hidden reserves (stille Reserven) to
+strengthen their resilience, a feature specific to Swiss accounting practice.
+
+Art. 28 BankO: Minimum structure (Mindestgliederung) of the balance sheet and
+income statement. Banks must follow the prescribed format for presenting their
+financial statements, ensuring comparability across the banking sector.
+
+Art. 29 BankO: Management report requirements for the fiscal year.
+
+Art. 30 BankO: Content of the annual report, including qualitative disclosures
+on the bank's activities, risk management, and governance.
+
+Art. 31 BankO: Interim financial statements. Banks may be required to prepare
+semi-annual or quarterly interim statements depending on their size and
+supervisory category.
+
+Art. 32 BankO: Publication requirements for individual financial statements.
+
+11.2 Consolidated Financial Statements (Art. 33-41 BankO)
+
+Art. 33 BankO: Banks that control one or more entities must prepare consolidated
+financial statements.
+
+Art. 34 BankO: Obligation to prepare consolidated statements applies to all
+banks that are parent companies of a group.
+
+Art. 35 BankO: Exceptions from the obligation to prepare consolidated statements
+(e.g., for small groups meeting certain thresholds).
+
+Art. 36 BankO: Facilitations for certain types of groups.
+
+Art. 37 BankO: Minimum structure for consolidated financial statements.
+
+Art. 38-39 BankO: Consolidated management report and annual report content.
+
+Art. 40 BankO: Interim consolidated statements.
+
+Art. 41 BankO: Publication of consolidated financial statements.
+
+11.3 Internationally Recognized Standards (Art. 28 para. 2 BankO)
+
+Banks may apply internationally recognized accounting standards (IFRS or
+US GAAP) for their consolidated financial statements and for supplementary
+individual financial statements prepared according to the true-and-fair-view
+principle. However, statutory individual financial statements must follow the
+Banking Ordinance's own accounting framework.
+
+11.4 FINMA Accounting Ordinance (FINMA-AO)
+
+The FINMA Accounting Ordinance (FINMA-RV, SR 952.024.1) provides further
+detail on the preparation, structure, and publication of financial statements.
+It implements the BankO's accounting provisions and specifies disclosure
+requirements regarding capital, liquidity, interest rate risk, remuneration,
+and corporate governance.
+
+11.5 Implementation Provisions (Art. 42 BankO)
+
+Art. 42 BankO authorizes FINMA to issue detailed regulations on accounting
+matters, including the FINMA Accounting Ordinance and related circulars
+(notably FINMA Circular 2020/1 "Accounting - banks").
+
+================================================================================
+12. AUDIT REQUIREMENTS
+================================================================================
+
+12.1 Regulatory Audit
+
+All banks must appoint a FINMA-recognized audit firm as their regulatory
+auditor. The regulatory audit covers:
+  - Compliance with licensing conditions;
+  - Organizational adequacy and internal controls;
+  - Capital adequacy and risk management;
+  - AML/KYC compliance;
+  - Compliance with FINMA circulars and ordinances.
+
+The regulatory audit report is submitted directly to FINMA and forms a
+central element of ongoing supervision.
+
+12.2 Financial Audit
+
+In addition to the regulatory audit, banks are subject to an ordinary
+financial audit under the Swiss Code of Obligations (CO). The financial audit
+covers the accuracy and completeness of the annual financial statements.
+
+12.3 Audit for Fintech License Holders
+
+Fintech license holders (Art. 1b persons) are also subject to annual audit
+by a FINMA-recognized audit firm, but the scope is proportionately reduced
+compared to full banks, reflecting their simpler business models.
+
+12.4 Special Audits
+
+FINMA may order special audits at any time to investigate specific matters
+of concern. The costs of special audits are typically borne by the audited
+institution.
+
+================================================================================
+13. DEPOSITOR PROTECTION PROVISIONS (Art. 42a-43 BankO)
+================================================================================
+
+13.1 Overview
+
+The Swiss depositor protection system is governed by Art. 37a-37h BankA and
+implemented through Art. 42a-43 BankO. The system aims to protect small
+depositors in the event of a bank insolvency.
+
+13.2 Privileged Deposits (Art. 42a BankO)
+
+Art. 42a BankO defines privileged deposits as those deposits that receive
+preferential treatment in bank insolvency proceedings. Privileged deposits
+are placed in the second bankruptcy class (zweite Konkursklasse) and are
+paid out before general unsecured claims.
+
+Privileged deposits include:
+  - Savings deposits;
+  - Current account balances;
+  - Fixed-term deposits;
+  - Custody account balances held in cash;
+  - Deposits in Pillar 3a and vested benefits accounts (subject to separate
+    treatment under Art. 42d BankO).
+
+13.3 Privileged Amount (Art. 42b BankO)
+
+Art. 42b BankO specifies that the privileged amount per depositor per bank
+is CHF 100,000. To determine the privileged amount:
+  - Individual balances across all accounts of the same depositor are summed;
+  - Accrued interest in the depositor's favor is included;
+  - Outstanding obligations (mortgages, loans, overdrafts) are NOT netted
+    against the deposit balance for the purpose of determining the privileged
+    amount.
+
+13.4 Privileged Depositors (Art. 42c BankO)
+
+Art. 42c BankO defines privileged depositors as the contracting parties
+entitled under the claim relationship with the bank, as recorded in the
+bank's ledgers at the time a protective measure is ordered. Joint accounts
+are treated as a single deposit per joint holder unless the bank's records
+clearly attribute separate portions to each holder.
+
+13.5 Pillar 3a and Vested Benefits (Art. 42d BankO)
+
+Art. 42d BankO provides that deposits in Pillar 3a accounts and vested
+benefits accounts (Freizuegigkeitskonten) receive separate privileged
+treatment up to an additional CHF 100,000 per depositor, above and beyond
+the general CHF 100,000 privilege. This effectively doubles the protection
+for individuals with both ordinary deposits and pension deposits at the
+same bank.
+
+13.6 Deposit Insurance -- esisuisse (Art. 42e-43 BankO)
+
+Art. 42e BankO: Self-regulation of the deposit insurance system. All banks
+licensed in Switzerland must be members of esisuisse, the Swiss banks' and
+securities firms' deposit protection association.
+
+Art. 42f BankO: Cash loans to the deposit protection provider. Banks must
+be prepared to provide cash loans to esisuisse in the event of a member
+bank's insolvency.
+
+Art. 42g-42h BankO: Preparatory measures. Banks must maintain collateral
+consisting of assets located in Switzerland equivalent to at least 125%
+of their total privileged deposits. This ensures that sufficient assets
+are available domestically to satisfy depositor claims in insolvency.
+
+Art. 42i BankO: Depositor list and summary statement. Banks must be able
+to produce, at short notice, a complete list of all depositors and their
+privileged deposit amounts.
+
+Art. 43 BankO: Payout plan. In the event of a bank insolvency, the deposit
+protection scheme pays out privileged deposits up to CHF 100,000 per
+depositor. The system-wide coverage limit for esisuisse contributions is
+CHF 6 billion. The payout must be completed within 20 working days of
+the bankruptcy order.
+
+13.7 Exclusion for Fintech License Holders
+
+Fintech license holders (Art. 1b persons) are NOT members of esisuisse and
+are NOT covered by the deposit insurance scheme. Deposits with fintech
+license holders are therefore not insured. Fintech license holders must
+clearly inform clients of this fact before accepting deposits.
+
+================================================================================
+14. CAPITAL ADEQUACY CROSS-REFERENCES
+================================================================================
+
+14.1 Capital Adequacy Ordinance (CAO / ERV, SR 952.03)
+
+The detailed capital adequacy requirements for Swiss banks are not contained
+in the BankO itself but in the separate Capital Adequacy Ordinance (CAO),
+which implements Basel III standards in Switzerland. The BankO establishes
+the minimum capital for licensing purposes (Art. 15 BankO: CHF 10 million),
+while the CAO imposes ongoing risk-based capital requirements.
+
+14.2 Key CAO Requirements
+
+  - Common Equity Tier 1 (CET1): minimum 4.5% of risk-weighted assets (RWA);
+  - Tier 1 capital: minimum 6% of RWA;
+  - Total capital: minimum 8% of RWA;
+  - Capital conservation buffer: 2.5% of RWA;
+  - Countercyclical capital buffer: as determined by the Swiss National Bank;
+  - Leverage ratio: minimum 3%.
+
+14.3 FINMA TBTF Requirements
+
+Systemically important banks (too-big-to-fail institutions) face additional
+capital surcharges under Art. 9-10 BankA and the implementing provisions
+of the CAO, including going-concern and gone-concern capital requirements.
+
+================================================================================
+15. LIQUIDITY CROSS-REFERENCES
+================================================================================
+
+15.1 Liquidity Ordinance (LiqO / LiqV, SR 952.06)
+
+The Liquidity Ordinance implements the Basel III liquidity framework in
+Switzerland and applies to all licensed banks. Key requirements include:
+
+  - Liquidity Coverage Ratio (LCR): minimum 100%, ensuring that banks hold
+    sufficient high-quality liquid assets to cover net cash outflows over a
+    30-day stress scenario;
+  - Net Stable Funding Ratio (NSFR): minimum 100%, ensuring stable long-term
+    funding relative to the liquidity profile of assets;
+  - Intraday liquidity management obligations;
+  - Liquidity stress testing requirements;
+  - Emergency liquidity planning.
+
+15.2 Fintech License Holders and Liquidity
+
+Fintech license holders (Art. 1b persons) are not subject to the LiqO.
+However, under Art. 14f BankO they must ensure that client deposits are held
+in readily available form, which imposes a de facto liquidity requirement.
+
+================================================================================
+16. LARGE EXPOSURE LIMITS
+================================================================================
+
+16.1 Framework
+
+Large exposure rules are primarily set out in the Capital Adequacy Ordinance
+(CAO), with cross-references in the BankO and FINMA circulars. A large
+exposure arises when the overall position vis-a-vis a single counterparty
+or a group of related counterparties reaches or exceeds 10% of the bank's
+eligible capital.
+
+16.2 Key Limits
+
+  - Single counterparty limit: 25% of eligible capital (general rule);
+  - Exposures to other banks (interbank): subject to specific thresholds;
+  - Exposures to central counterparties: specific treatment under CAO;
+  - Group-internal exposures: must comply with limits unless exempted by FINMA.
+
+16.3 Reporting
+
+Large exposures must be reported to FINMA on a quarterly basis. Breaches of
+large exposure limits must be reported immediately and rectified within a
+timeframe agreed with FINMA.
+
+================================================================================
+17. RISK DIVERSIFICATION REQUIREMENTS
+================================================================================
+
+17.1 General Principle
+
+The risk diversification rules (Risikoverteilung) aim to prevent excessive
+concentration of risk. Banks must avoid dependence on a single counterparty,
+sector, or geographic region. The CAO sets quantitative limits, while FINMA
+circulars provide qualitative guidance.
+
+17.2 Concentration Risk Management
+
+Banks must implement:
+  - Policies and limits for counterparty concentration risk;
+  - Sector and geographic diversification guidelines;
+  - Regular monitoring and reporting of concentration risk;
+  - Stress testing for concentrated exposures.
+
+17.3 Related Counterparties
+
+Exposures to economically connected counterparties must be aggregated for the
+purpose of applying large exposure and risk diversification limits. The CAO
+defines the criteria for determining when counterparties are related.
+
+================================================================================
+18. CONSOLIDATED SUPERVISION (Art. 21-24a BankO)
+================================================================================
+
+18.1 Financial Groups (Art. 21 BankO)
+
+Art. 21 BankO defines the concept of economic unity and mutual support
+obligation within financial groups. A financial group exists when two or
+more entities active in the financial sector are under common control or
+management.
+
+18.2 Group Companies (Art. 22 BankO)
+
+Art. 22 BankO defines which entities are considered group companies for the
+purpose of consolidated supervision. This includes subsidiaries, affiliated
+companies, and other entities under common control.
+
+18.3 Scope of Consolidated Supervision (Art. 23 BankO)
+
+Art. 23 BankO establishes that FINMA's group supervision covers all group
+companies active in the financial sector. FINMA may:
+  - Fully include all financial sector group companies in consolidated
+    supervision;
+  - Partially include certain companies;
+  - Exclude companies that are demonstrably independent and immaterial.
+
+18.4 Content of Consolidated Supervision (Art. 24 BankO)
+
+Art. 24 BankO specifies that consolidated supervision encompasses:
+  - Consolidated capital adequacy (group-level CAO compliance);
+  - Consolidated liquidity (group-level LiqO compliance);
+  - Consolidated risk diversification and large exposure limits;
+  - Group-level organizational requirements and internal controls;
+  - Group-level risk management framework.
+
+18.5 Art. 1b Persons in Groups (Art. 24a BankO)
+
+Art. 24a BankO addresses the treatment of fintech license holders that are
+part of a financial group, specifying the extent to which they are subject
+to consolidated supervision.
+
+================================================================================
+19. FOREIGN BANK BRANCHES IN SWITZERLAND
+================================================================================
+
+19.1 Legal Framework
+
+Foreign banks wishing to establish a branch in Switzerland must obtain FINMA
+authorization under Art. 2 BankA and the BankO provisions on cross-border
+matters (Art. 18-20 BankO), as well as the Foreign Banks Ordinance
+(FBO-FINMA, SR 952.111).
+
+19.2 Additional Authorization (Art. 18 BankO)
+
+Art. 18 BankO requires that foreign banks obtain additional authorization
+from FINMA for their Swiss operations. The conditions include:
+  - The foreign bank must be adequately supervised in its home jurisdiction;
+  - The home-country supervisor must have no objection to the Swiss operations;
+  - The foreign bank must designate persons responsible for the Swiss branch
+    who meet fit-and-proper requirements;
+  - Adequate organizational arrangements specific to the Swiss branch.
+
+19.3 Reciprocity (Art. 19 BankO)
+
+Art. 19 BankO addresses reciprocity rights. FINMA considers whether Swiss
+banks enjoy equivalent access in the foreign bank's home jurisdiction when
+assessing applications from foreign banks.
+
+19.4 Depositor Protection for Foreign Bank Branches
+
+Deposits with Swiss branches of foreign banks are generally covered by the
+Swiss deposit insurance scheme (esisuisse) if the branch is a member.
+However, the extent of coverage may depend on the home-country deposit
+protection regime and applicable bilateral agreements.
+
+================================================================================
+20. SWISS BANK OPERATIONS ABROAD
+================================================================================
+
+20.1 Notification of Foreign Activities (Art. 20 BankO)
+
+Art. 20 BankO requires Swiss banks to notify FINMA before commencing business
+activities abroad, whether through branches, subsidiaries, representative
+offices, or other forms of presence.
+
+20.2 Notification Content
+
+The notification must include:
+  - Description of the planned foreign activities;
+  - Jurisdiction and legal form of the foreign presence;
+  - Assessment of the regulatory requirements in the host jurisdiction;
+  - Risk assessment for the foreign operations;
+  - Organizational measures to ensure compliance in the host jurisdiction.
+
+20.3 FINMA Oversight
+
+FINMA retains supervisory authority over a Swiss bank's foreign operations as
+part of consolidated supervision. FINMA may require that foreign operations
+meet standards equivalent to those applicable in Switzerland and may cooperate
+with host-country supervisors under memoranda of understanding (MoUs).
+
+================================================================================
+21. FINTECH-SPECIFIC PROVISIONS
+================================================================================
+
+21.1 Summary of Fintech Regulatory Framework
+
+The BankO contains several provisions specifically addressing fintech:
+
+  Art. 5a BankO -- Crypto-based assets: Defines the treatment of crypto asset
+  custody in the context of the deposit-taking definition.
+
+  Art. 6 para. 2-4 BankO -- Regulatory sandbox: Exemption from licensing for
+  entities accepting up to CHF 1 million in deposits under specified conditions.
+
+  Art. 14a-14g BankO -- Organizational requirements for fintech license holders
+  (Art. 1b BankA persons).
+
+  Art. 17a BankO -- Minimum capital for fintech license holders (CHF 300,000
+  or 5% of deposits).
+
+  Art. 24a BankO -- Treatment of fintech license holders in consolidated
+  supervision.
+
+21.2 Key Differences: Fintech License vs. Full Banking License
+
+  Feature                    | Fintech License         | Full Banking License
+  ---------------------------+-------------------------+---------------------
+  Legal basis                | Art. 1b BankA           | Art. 1 BankA
+  Deposit limit              | CHF 100 million         | No limit
+  Investment of deposits     | Prohibited              | Permitted
+  Interest on deposits       | Prohibited              | Permitted
+  Minimum capital            | CHF 300,000 or 5%       | CHF 10 million
+  CAO/Basel III applicable   | No                      | Yes
+  LiqO applicable            | No                      | Yes
+  Deposit insurance          | Not covered (esisuisse) | Covered (esisuisse)
+  Lending                    | Not permitted           | Permitted
+  Organizational complexity  | Proportionate/reduced   | Full banking governance
+  Application timeline       | 3-6 months              | 12-24 months
+  Supervisory intensity      | Moderate                | Full
+
+21.3 Client Disclosure for Fintech License Holders
+
+Fintech license holders must inform all clients clearly and prominently,
+before accepting deposits, that:
+  (a) The entity is not a bank;
+  (b) Deposits are NOT covered by the Swiss deposit insurance scheme;
+  (c) Deposits will not be invested or bear interest.
+
+================================================================================
+22. TRANSITIONAL AND FINAL PROVISIONS
+================================================================================
+
+22.1 Entry into Force
+
+The Banking Ordinance of 30 April 2014 entered into force on 1 January 2015.
+It replaced the previous Banking Ordinance of 17 May 1972.
+
+22.2 Fintech Provisions
+
+The fintech-related provisions (sandbox exemption in Art. 6 para. 2-4 BankO;
+organizational requirements in Art. 14a-14g BankO; capital requirements in
+Art. 17a BankO) entered into force on 1 January 2019.
+
+22.3 Depositor Protection Revisions
+
+The depositor protection provisions (Art. 42a-43 BankO) have been revised
+multiple times, most recently with the changes effective 1 January 2023
+implementing enhanced payout procedures and the requirement for banks to
+maintain 125% collateral coverage of privileged deposits in Swiss-located
+assets.
+
+22.4 Transitional Provisions
+
+The BankO contains transitional provisions (in appendices) granting existing
+institutions reasonable periods to comply with new requirements introduced
+by ordinance revisions. Key transitional arrangements have included:
+  - Phase-in periods for new capital requirements;
+  - Grace periods for organizational restructuring;
+  - Transitional timelines for compliance with amended accounting standards.
+
+22.5 Relationship to Other Ordinances
+
+The BankO must be read in conjunction with:
+  - Capital Adequacy Ordinance (CAO, SR 952.03);
+  - Liquidity Ordinance (LiqO, SR 952.06);
+  - FINMA Banking Insolvency Ordinance (BIO-FINMA);
+  - FINMA Accounting Ordinance (FINMA-AO / FINMA-RV);
+  - Foreign Banks Ordinance (FBO-FINMA, SR 952.111);
+  - FINMA Circular 2015/2 "Liquidity risks -- banks";
+  - FINMA Circular 2017/1 "Corporate governance -- banks";
+  - FINMA Circular 2020/1 "Accounting -- banks";
+  - FINMA Circular 2019/1 "Risk diversification -- banks".
+
+================================================================================
+23. KEY ARTICLE INDEX
+================================================================================
+
+Art. 1     Subject matter and scope
+Art. 2     Definition of banks
+Art. 3     Non-banks
+Art. 3a    Essential group companies
+Art. 4     Financial sector activity
+Art. 5     Public deposits (Publikumseinlagen) -- definition and exceptions
+Art. 5a    Crypto-based assets
+Art. 6     Commercial operation; regulatory sandbox (para. 2-4)
+Art. 7     Advertising / public solicitation
+Art. 7a    Information obligations
+Art. 7b    Misleading representations
+Art. 8     Details on persons and stakeholders
+Art. 8a    Changes in material facts
+Art. 9     Business scope
+Art. 10    Business management
+Art. 11    Governing bodies (organs)
+Art. 12    Function separation and risk management
+Art. 13    Qualified participations
+Art. 14    Private bankers
+Art. 14a   Fintech: legal form, seat, management
+Art. 14b   Fintech: business scope
+Art. 14c   Fintech: business management
+Art. 14d   Fintech: governing bodies
+Art. 14e   Fintech: compliance and risk management
+Art. 14f   Fintech: deposit custody
+Art. 14g   Fintech: conflicts of interest
+Art. 15    Minimum capital for new banks (CHF 10 million)
+Art. 16    Minimum capital for conversions
+Art. 17    Exceptions to minimum capital
+Art. 17a   Minimum capital for fintech license holders
+Art. 18    Additional authorization (foreign banks)
+Art. 19    Reciprocity
+Art. 20    Notification of foreign activities
+Art. 21    Financial groups -- economic unity
+Art. 22    Group companies
+Art. 23    Scope of group/conglomerate supervision
+Art. 24    Content of consolidated supervision
+Art. 24a   Art. 1b persons in groups
+Art. 25    Annual financial statements
+Art. 26    Accounting foundations and principles
+Art. 27    Valuation and recognition
+Art. 28    Minimum structure of financial statements
+Art. 29    Management report
+Art. 30    Annual report content
+Art. 31    Interim financial statements
+Art. 32    Publication of individual statements
+Art. 33-41 Consolidated financial statements
+Art. 42    Implementation provisions (accounting)
+Art. 42a   Privileged deposits -- definition
+Art. 42b   Privileged deposits -- amount (CHF 100,000)
+Art. 42c   Privileged depositors -- definition
+Art. 42d   Pillar 3a and vested benefits
+Art. 42e   Deposit insurance self-regulation (esisuisse)
+Art. 42f   Cash loans to deposit protection provider
+Art. 42g   Preparatory measures -- general
+Art. 42h   Preparatory measures -- special (125% collateral)
+Art. 42i   Depositor list and summary statement
+Art. 43    Payout plan
+
+================================================================================
+REFERENCES
+================================================================================
+
+Primary legislation:
+- Federal Act on Banks and Savings Banks (BankA / BankG), SR 952.0
+- Banking Ordinance (BankO / BankV), SR 952.02
+
+Related ordinances:
+- Capital Adequacy Ordinance (CAO / ERV), SR 952.03
+- Liquidity Ordinance (LiqO / LiqV), SR 952.06
+- Foreign Banks Ordinance (FBO-FINMA), SR 952.111
+- FINMA Accounting Ordinance (FINMA-RV), SR 952.024.1
+- FINMA Banking Insolvency Ordinance (BIO-FINMA)
+
+Key FINMA Circulars:
+- FINMA Circular 2015/2 "Liquidity risks -- banks"
+- FINMA Circular 2017/1 "Corporate governance -- banks"
+- FINMA Circular 2019/1 "Risk diversification -- banks"
+- FINMA Circular 2020/1 "Accounting -- banks"
+- FINMA Circular 2008/3 "Public deposits at non-banks"
+
+Self-regulation:
+- CDB (Agreement on Due Diligence by Banks)
+- esisuisse (Swiss deposit insurance scheme)
+
+Official sources:
+- FINMA: www.finma.ch
+- Swiss National Bank (SNB): www.snb.ch
+- Systematic Collection of Federal Law: www.fedlex.admin.ch
+- Lawbrary (SR 952.02): lawbrary.ch/law/cc/952_02/BankV/
+
+================================================================================
+END OF DOCUMENT
+================================================================================

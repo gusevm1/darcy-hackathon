@@ -83,6 +83,7 @@ export function RoadmapVisualization({
             onUpload={onUpload}
             onReset={onReset}
             uploading={uploading}
+            clientId={client.id}
           />
         )}
       </ScrollArea>
