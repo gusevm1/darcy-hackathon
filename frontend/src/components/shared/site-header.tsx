@@ -18,9 +18,7 @@ export function SiteHeader() {
       <div className="container mx-auto flex h-14 items-center px-4">
         <Link href="/" className="mr-6 flex items-center gap-2">
           <Building2 className="h-5 w-5" />
-          <span className="hidden font-semibold sm:inline-block">
-            {siteConfig.shortName}
-          </span>
+          <span className="hidden font-semibold sm:inline-block">{siteConfig.shortName}</span>
         </Link>
 
         <nav className="hidden flex-1 items-center gap-1 md:flex">
@@ -30,7 +28,7 @@ export function SiteHeader() {
               href={item.href}
               className={cn(
                 'text-muted-foreground hover:text-foreground rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                pathname.startsWith(item.href) && 'text-foreground bg-accent',
+                pathname.startsWith(item.href) && 'text-foreground bg-accent'
               )}
             >
               {item.label}
@@ -54,7 +52,7 @@ export function SiteHeader() {
                     href={item.href}
                     className={cn(
                       'text-muted-foreground hover:text-foreground rounded-md px-3 py-2 text-sm font-medium transition-colors',
-                      pathname.startsWith(item.href) && 'text-foreground bg-accent',
+                      pathname.startsWith(item.href) && 'text-foreground bg-accent'
                     )}
                   >
                     {item.label}

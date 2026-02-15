@@ -6,10 +6,7 @@ import { FolderTree, Upload } from 'lucide-react'
 
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import type {
-  FileTreeClientFolder,
-  FileTreeDocument,
-} from '@/types/assistant'
+import type { FileTreeClientFolder, FileTreeDocument } from '@/types/assistant'
 
 import { FileTreeNode } from './file-tree-node'
 import { StatusLegend } from './status-legend'
@@ -37,28 +34,22 @@ export function FileTree({
   const scrollAreaRef = useRef<HTMLDivElement>(null)
   const fileInputRef = useRef<HTMLInputElement>(null)
 
-  const registerRef = useCallback(
-    (docId: string, el: HTMLDivElement | null) => {
-      if (el) {
-        docRefs.current.set(docId, el)
-      } else {
-        docRefs.current.delete(docId)
-      }
-    },
-    [],
-  )
+  const registerRef = useCallback((docId: string, el: HTMLDivElement | null) => {
+    if (el) {
+      docRefs.current.set(docId, el)
+    } else {
+      docRefs.current.delete(docId)
+    }
+  }, [])
 
   useEffect(() => {
     if (highlightedDocumentId) {
       const el = docRefs.current.get(highlightedDocumentId)
-      const viewport = scrollAreaRef.current?.querySelector(
-        '[data-slot="scroll-area-viewport"]',
-      )
+      const viewport = scrollAreaRef.current?.querySelector('[data-slot="scroll-area-viewport"]')
       if (el && viewport) {
         const elRect = el.getBoundingClientRect()
         const vpRect = viewport.getBoundingClientRect()
-        const offset =
-          elRect.top - vpRect.top - vpRect.height / 2 + elRect.height / 2
+        const offset = elRect.top - vpRect.top - vpRect.height / 2 + elRect.height / 2
         viewport.scrollBy({ top: offset, behavior: 'smooth' })
       }
     }
@@ -91,11 +82,7 @@ export function FileTree({
   }
 
   return (
-    <div
-      className="flex h-full flex-col"
-      onDragOver={handleDragOver}
-      onDrop={handleDrop}
-    >
+    <div className="flex h-full flex-col" onDragOver={handleDragOver} onDrop={handleDrop}>
       <div className="flex items-center justify-between border-b px-4 py-3">
         <div className="flex items-center gap-2">
           <FolderTree className="text-muted-foreground h-4 w-4" />

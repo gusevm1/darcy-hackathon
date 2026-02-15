@@ -16,7 +16,7 @@ const welcomeMessage: ChatMessage = {
   id: 'welcome',
   role: 'assistant',
   content:
-    'Hello! I\'m your FINMA compliance assistant. I can help you navigate the licensing process, review document status, and answer questions about regulatory requirements. Try asking about **AML/KYC policies**, **capital requirements**, or the **status** of your applications.',
+    "Hello! I'm your FINMA compliance assistant. I can help you navigate the licensing process, review document status, and answer questions about regulatory requirements. Try asking about **AML/KYC policies**, **capital requirements**, or the **status** of your applications.",
   citations: [],
   timestamp: new Date(),
 }
@@ -37,7 +37,7 @@ export function useChatSessions(clientsState: Client[]) {
 
   const activeChat = useMemo(
     () => chats.find((c) => c.id === activeChatId) ?? chats[0],
-    [chats, activeChatId],
+    [chats, activeChatId]
   )
   const messages = activeChat.messages
 
@@ -77,11 +77,7 @@ export function useChatSessions(clientsState: Client[]) {
       }
 
       const matched = matchCannedResponse(trimmed)
-      const citations = resolveCitations(
-        matched.citationDocIds,
-        clientsState,
-        licenseDefinitions,
-      )
+      const citations = resolveCitations(matched.citationDocIds, clientsState, licenseDefinitions)
 
       const assistantMsg: ChatMessage = {
         id: generateId(),
@@ -95,8 +91,7 @@ export function useChatSessions(clientsState: Client[]) {
         prev.map((chat) => {
           if (chat.id !== activeChatId) return chat
 
-          const isFirstUserMessage =
-            !chat.messages.some((m) => m.role === 'user')
+          const isFirstUserMessage = !chat.messages.some((m) => m.role === 'user')
           return {
             ...chat,
             messages: [...chat.messages, userMsg, assistantMsg],
@@ -105,10 +100,10 @@ export function useChatSessions(clientsState: Client[]) {
               : chat.title,
             updatedAt: new Date(),
           }
-        }),
+        })
       )
     },
-    [clientsState, activeChatId],
+    [clientsState, activeChatId]
   )
 
   return {

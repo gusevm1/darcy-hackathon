@@ -2,8 +2,8 @@
 
 import { Construction } from 'lucide-react'
 
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { ChatArea } from '@/components/shared/assistant/chat-area'
+import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert'
 import { useOnboardingChat } from '@/hooks/use-onboarding-chat'
 
 export function OnboardingChat() {
@@ -23,8 +23,8 @@ export function OnboardingChat() {
           <Construction className="h-4 w-4" />
           <AlertTitle>Under Construction</AlertTitle>
           <AlertDescription>
-            This onboarding flow is a preview. Full AI-powered onboarding with
-            document generation is coming soon.
+            This onboarding flow is a preview. Full AI-powered onboarding with document generation
+            is coming soon.
           </AlertDescription>
         </Alert>
       </div>

@@ -5,11 +5,7 @@ import { useCallback, useMemo, useState } from 'react'
 import { clients } from '@/data/clients'
 import { licenseDefinitions } from '@/data/license-stages'
 import { buildFileTree } from '@/lib/build-file-tree'
-import type {
-  DocumentPreview,
-  FileTreeClientFolder,
-  FileTreeDocument,
-} from '@/types/assistant'
+import type { DocumentPreview, FileTreeClientFolder, FileTreeDocument } from '@/types/assistant'
 
 import { useDocumentPreview } from './use-document-preview'
 import { useFileTree } from './use-file-tree'
@@ -73,9 +69,7 @@ function buildInternalKBTree(): FileTreeClientFolder[] {
     {
       id: 'templates',
       name: 'Templates',
-      docs: [
-        { id: 'kb-7', name: 'Risk Management Framework Template' },
-      ],
+      docs: [{ id: 'kb-7', name: 'Risk Management Framework Template' }],
     },
   ]
 
@@ -118,10 +112,7 @@ export function useKnowledgeState() {
     handlePreviewOpenChange,
   } = useDocumentPreview()
 
-  const clientTree = useMemo(
-    () => buildFileTree(clients, licenseDefinitions),
-    [],
-  )
+  const clientTree = useMemo(() => buildFileTree(clients, licenseDefinitions), [])
   const generalTree = useMemo(() => buildGeneralInfoTree(), [])
   const internalTree = useMemo(() => buildInternalKBTree(), [])
 
@@ -139,9 +130,7 @@ export function useKnowledgeState() {
   const handleDocumentClick = useCallback(
     (doc: FileTreeDocument) => {
       const definition = licenseDefinitions.find((d) =>
-        d.stages.some((s) =>
-          s.documents.some((dd) => dd.id === doc.documentId),
-        ),
+        d.stages.some((s) => s.documents.some((dd) => dd.id === doc.documentId))
       )
       const preview: DocumentPreview = {
         documentId: doc.documentId,
@@ -159,7 +148,7 @@ export function useKnowledgeState() {
       setPreviewDocument(preview)
       setPreviewOpen(true)
     },
-    [setPreviewDocument, setPreviewOpen],
+    [setPreviewDocument, setPreviewOpen]
   )
 
   const handleUploadFile = useCallback(() => {}, [])

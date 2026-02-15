@@ -7,11 +7,7 @@ import { MessageSquare, MessageSquarePlus, Send } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import type {
-  ChatMessage as ChatMessageType,
-  ChatSession,
-  Citation,
-} from '@/types/assistant'
+import type { ChatMessage as ChatMessageType, ChatSession, Citation } from '@/types/assistant'
 
 import { ChatHistoryDropdown } from './chat-history-dropdown'
 import { ChatMessage } from './chat-message'
@@ -44,9 +40,7 @@ export function ChatArea({
   const bottomRef = useRef<HTMLDivElement>(null)
 
   useEffect(() => {
-    const viewport = scrollAreaRef.current?.querySelector(
-      '[data-slot="scroll-area-viewport"]',
-    )
+    const viewport = scrollAreaRef.current?.querySelector('[data-slot="scroll-area-viewport"]')
     if (viewport) {
       viewport.scrollTo({ top: viewport.scrollHeight, behavior: 'smooth' })
     }
@@ -89,11 +83,7 @@ export function ChatArea({
       <ScrollArea ref={scrollAreaRef} className="min-h-0 flex-1 p-4">
         <div className="space-y-4" role="log" aria-live="polite">
           {messages.map((msg) => (
-            <ChatMessage
-              key={msg.id}
-              message={msg}
-              onCitationClick={onCitationClick}
-            />
+            <ChatMessage key={msg.id} message={msg} onCitationClick={onCitationClick} />
           ))}
           <div ref={bottomRef} />
         </div>

@@ -23,8 +23,8 @@ export function SourceList({ citations, onCitationClick }: SourceListProps) {
               className="text-muted-foreground hover:text-foreground cursor-pointer text-left text-xs transition-colors"
               onClick={() => onCitationClick?.(citation)}
             >
-              [{citation.index}] {citation.documentName} —{' '}
-              {citation.clientName} / {citation.stageName}
+              [{citation.index}] {citation.documentName} — {citation.clientName} /{' '}
+              {citation.stageName}
             </button>
           </li>
         ))}

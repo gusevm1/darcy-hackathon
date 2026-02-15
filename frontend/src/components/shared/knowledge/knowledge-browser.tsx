@@ -1,8 +1,8 @@
 'use client'
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { DocumentPreviewSheet } from '@/components/shared/assistant/document-preview-sheet'
 import { FileTree } from '@/components/shared/assistant/file-tree'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useKnowledgeState } from '@/hooks/use-knowledge-state'
 
 export function KnowledgeBrowser() {

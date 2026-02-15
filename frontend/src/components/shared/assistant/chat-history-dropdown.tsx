@@ -60,14 +60,12 @@ export function ChatHistoryDropdown({
             key={chat.id}
             className={cn(
               'flex flex-col items-start gap-0.5',
-              chat.id === activeChatId && 'bg-accent',
+              chat.id === activeChatId && 'bg-accent'
             )}
             onClick={() => onSelectChat(chat.id)}
           >
             <span className="truncate text-sm font-medium">{chat.title}</span>
-            <span className="text-muted-foreground text-xs">
-              {relativeTime(chat.updatedAt)}
-            </span>
+            <span className="text-muted-foreground text-xs">{relativeTime(chat.updatedAt)}</span>
           </DropdownMenuItem>
         ))}
       </DropdownMenuContent>

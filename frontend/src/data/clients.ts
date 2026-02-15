@@ -1,9 +1,10 @@
 import type { Client, ClientDocumentState } from '@/types'
+
 import { licenseDefinitions } from './license-stages'
 
 function buildDocumentStates(
   licenseType: string,
-  currentStageIndex: number,
+  currentStageIndex: number
 ): ClientDocumentState[] {
   const definition = licenseDefinitions.find((d) => d.type === licenseType)
   if (!definition) return []

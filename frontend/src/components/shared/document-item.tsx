@@ -1,6 +1,6 @@
 'use client'
 
-import { Upload, RefreshCw } from 'lucide-react'
+import { RefreshCw, Upload } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
@@ -15,12 +15,7 @@ interface DocumentItemProps {
   onReset: (docId: string) => void
 }
 
-export function DocumentItem({
-  document,
-  state,
-  onUpload,
-  onReset,
-}: DocumentItemProps) {
+export function DocumentItem({ document, state, onUpload, onReset }: DocumentItemProps) {
   const status = state?.status ?? 'not-started'
   const config = statusConfig[status]
 
@@ -30,25 +25,18 @@ export function DocumentItem({
         <p className="text-sm font-medium leading-tight">{document.name}</p>
         <p className="text-muted-foreground text-xs">{document.description}</p>
         {state?.fileName && (
-          <p className="text-muted-foreground truncate text-xs">
-            File: {state.fileName}
-          </p>
+          <p className="text-muted-foreground truncate text-xs">File: {state.fileName}</p>
         )}
       </div>
       <div className="flex shrink-0 items-center gap-2">
-        <Badge
-          variant="secondary"
-          className={cn('text-xs', config.className)}
-        >
+        <Badge variant="secondary" className={cn('text-xs', config.className)}>
           {config.label}
         </Badge>
         {status === 'not-started' && (
           <Button
             variant="outline"
             size="sm"
-            onClick={() =>
-              onUpload(document.id, `${document.id}-${Date.now()}.pdf`)
-            }
+            onClick={() => onUpload(document.id, `${document.id}-${Date.now()}.pdf`)}
           >
             <Upload className="mr-1 h-3 w-3" />
             Upload
@@ -58,9 +46,7 @@ export function DocumentItem({
           <Button
             variant="outline"
             size="sm"
-            onClick={() =>
-              onUpload(document.id, `${document.id}-${Date.now()}.pdf`)
-            }
+            onClick={() => onUpload(document.id, `${document.id}-${Date.now()}.pdf`)}
           >
             <RefreshCw className="mr-1 h-3 w-3" />
             Replace

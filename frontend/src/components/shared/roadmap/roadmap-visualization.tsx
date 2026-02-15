@@ -1,5 +1,8 @@
 'use client'
 
+import { StageDetail } from '@/components/shared/stage-detail'
+import { TimelineStepper } from '@/components/shared/timeline-stepper'
+import { ScrollArea } from '@/components/ui/scroll-area'
 import {
   Select,
   SelectContent,
@@ -7,9 +10,6 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import { ScrollArea } from '@/components/ui/scroll-area'
-import { StageDetail } from '@/components/shared/stage-detail'
-import { TimelineStepper } from '@/components/shared/timeline-stepper'
 import type { Client, ClientDocumentState, LicenseDefinition } from '@/types'
 
 interface RoadmapVisualizationProps {

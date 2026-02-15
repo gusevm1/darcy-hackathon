@@ -4,14 +4,12 @@ import type { Citation } from '@/types/assistant'
 export function resolveCitations(
   docIds: string[],
   clients: Client[],
-  licenseDefinitions: LicenseDefinition[],
+  licenseDefinitions: LicenseDefinition[]
 ): Citation[] {
   return docIds
     .map((docId, idx) => {
       for (const client of clients) {
-        const definition = licenseDefinitions.find(
-          (d) => d.type === client.licenseType,
-        )
+        const definition = licenseDefinitions.find((d) => d.type === client.licenseType)
         if (!definition) continue
 
         for (const stage of definition.stages) {

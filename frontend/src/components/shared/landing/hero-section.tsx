@@ -12,12 +12,11 @@ export function HeroSection() {
         <span className="text-3xl font-bold tracking-tight">FINMA Comply</span>
       </div>
       <h1 className="max-w-3xl text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-        Swiss Financial Licensing,{' '}
-        <span className="text-primary">Simplified</span>
+        Swiss Financial Licensing, <span className="text-primary">Simplified</span>
       </h1>
       <p className="text-muted-foreground mt-6 max-w-2xl text-lg sm:text-xl">
-        AI-powered compliance management for Swiss financial license procurement.
-        From onboarding to approval, we guide you through every step.
+        AI-powered compliance management for Swiss financial license procurement. From onboarding to
+        approval, we guide you through every step.
       </p>
       <div className="mt-10 flex flex-col gap-4 sm:flex-row">
         <Button asChild size="lg" className="gap-2">

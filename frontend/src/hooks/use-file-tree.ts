@@ -10,9 +10,7 @@ export function useFileTree() {
     initialClients.forEach((c) => set.add(c.id))
     return set
   })
-  const [highlightedDocumentId, setHighlightedDocumentId] = useState<
-    string | null
-  >(null)
+  const [highlightedDocumentId, setHighlightedDocumentId] = useState<string | null>(null)
 
   const highlightTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)
 

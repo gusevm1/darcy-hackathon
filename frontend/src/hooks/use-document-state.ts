@@ -1,11 +1,11 @@
 'use client'
 
-import { useState, useCallback } from 'react'
+import { useCallback, useState } from 'react'
+
 import type { ClientDocumentState } from '@/types'
 
 export function useDocumentState(initialStates: ClientDocumentState[]) {
-  const [documentStates, setDocumentStates] =
-    useState<ClientDocumentState[]>(initialStates)
+  const [documentStates, setDocumentStates] = useState<ClientDocumentState[]>(initialStates)
 
   const uploadDocument = useCallback((docId: string, fileName: string) => {
     setDocumentStates((prev) =>
@@ -17,8 +17,8 @@ export function useDocumentState(initialStates: ClientDocumentState[]) {
               fileName,
               uploadedAt: new Date().toISOString(),
             }
-          : s,
-      ),
+          : s
+      )
     )
   }, [])
 
@@ -30,8 +30,8 @@ export function useDocumentState(initialStates: ClientDocumentState[]) {
               documentId: s.documentId,
               status: 'not-started' as const,
             }
-          : s,
-      ),
+          : s
+      )
     )
   }, [])
 

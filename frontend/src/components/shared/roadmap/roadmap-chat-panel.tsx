@@ -2,12 +2,7 @@
 
 import { ChatArea } from '@/components/shared/assistant/chat-area'
 import { DocumentPreviewSheet } from '@/components/shared/assistant/document-preview-sheet'
-import type {
-  ChatMessage,
-  ChatSession,
-  Citation,
-  DocumentPreview,
-} from '@/types/assistant'
+import type { ChatMessage, ChatSession, Citation, DocumentPreview } from '@/types/assistant'
 
 interface RoadmapChatPanelProps {
   title: string

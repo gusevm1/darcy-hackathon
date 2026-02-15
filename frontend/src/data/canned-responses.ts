@@ -55,8 +55,7 @@ export const fallbackResponse: CannedResponse = {
 export function matchCannedResponse(input: string): CannedResponse {
   const lower = input.toLowerCase()
   return (
-    cannedResponses.find((r) =>
-      r.keywords.some((keyword) => lower.includes(keyword)),
-    ) ?? fallbackResponse
+    cannedResponses.find((r) => r.keywords.some((keyword) => lower.includes(keyword))) ??
+    fallbackResponse
   )
 }

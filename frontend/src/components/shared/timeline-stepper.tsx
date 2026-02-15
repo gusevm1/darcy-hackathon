@@ -12,10 +12,7 @@ interface TimelineStepperProps {
   onSelectStage: (index: number) => void
 }
 
-function getStageStatus(
-  stageIndex: number,
-  currentStageIndex: number,
-): StageStatus {
+function getStageStatus(stageIndex: number, currentStageIndex: number): StageStatus {
   if (stageIndex < currentStageIndex) return 'completed'
   if (stageIndex === currentStageIndex) return 'in-progress'
   return 'not-started'
@@ -45,21 +42,15 @@ export function TimelineStepper({
                 <div
                   className={cn(
                     'flex h-10 w-10 shrink-0 items-center justify-center rounded-full border-2 text-sm font-medium transition-all',
-                    status === 'completed' &&
-                      'border-primary bg-primary text-primary-foreground',
+                    status === 'completed' && 'border-primary bg-primary text-primary-foreground',
                     status === 'in-progress' &&
                       'border-primary text-primary animate-pulse ring-2 ring-primary/20',
-                    status === 'not-started' &&
-                      'border-muted-foreground/30 text-muted-foreground',
+                    status === 'not-started' && 'border-muted-foreground/30 text-muted-foreground',
                     isSelected && 'ring-primary/40 ring-2',
-                    'group-hover:ring-primary/40 group-hover:ring-2 cursor-pointer',
+                    'group-hover:ring-primary/40 group-hover:ring-2 cursor-pointer'
                   )}
                 >
-                  {status === 'completed' ? (
-                    <Check className="h-4 w-4" />
-                  ) : (
-                    index + 1
-                  )}
+                  {status === 'completed' ? <Check className="h-4 w-4" /> : index + 1}
                 </div>
                 <span
                   className={cn(
@@ -67,7 +58,7 @@ export function TimelineStepper({
                     status === 'completed' && 'text-foreground font-medium',
                     status === 'in-progress' && 'text-primary font-medium',
                     status === 'not-started' && 'text-muted-foreground',
-                    isSelected && 'font-semibold',
+                    isSelected && 'font-semibold'
                   )}
                 >
                   {stage.shortName}
@@ -81,7 +72,7 @@ export function TimelineStepper({
                       'h-0.5 w-8 sm:w-12',
                       index < currentStageIndex
                         ? 'bg-primary'
-                        : 'border-muted-foreground/30 border-t-2 border-dashed',
+                        : 'border-muted-foreground/30 border-t-2 border-dashed'
                     )}
                   />
                 </div>

@@ -18,7 +18,7 @@ interface ChatMessageProps {
 function renderContent(
   content: string,
   citations: Citation[],
-  onCitationClick?: (citation: Citation) => void,
+  onCitationClick?: (citation: Citation) => void
 ) {
   const parts = content.split(/(\[\d+\])/)
   return parts.map((part, i) => {
@@ -27,13 +27,7 @@ function renderContent(
       const index = parseInt(match[1], 10)
       const citation = citations.find((c) => c.index === index)
       if (citation) {
-        return (
-          <CitationBadge
-            key={i}
-            citation={citation}
-            onCitationClick={onCitationClick}
-          />
-        )
+        return <CitationBadge key={i} citation={citation} onCitationClick={onCitationClick} />
       }
     }
     // Handle markdown bold and newlines
@@ -53,42 +47,34 @@ function renderContent(
   })
 }
 
-export const ChatMessage = memo(function ChatMessage({ message, onCitationClick }: ChatMessageProps) {
+export const ChatMessage = memo(function ChatMessage({
+  message,
+  onCitationClick,
+}: ChatMessageProps) {
   const isUser = message.role === 'user'
 
   return (
-    <div
-      className={cn('flex gap-3', isUser ? 'flex-row-reverse' : 'flex-row')}
-    >
+    <div className={cn('flex gap-3', isUser ? 'flex-row-reverse' : 'flex-row')}>
       <div
         className={cn(
           'flex h-8 w-8 shrink-0 items-center justify-center rounded-full',
-          isUser ? 'bg-primary text-primary-foreground' : 'bg-muted',
+          isUser ? 'bg-primary text-primary-foreground' : 'bg-muted'
         )}
       >
-        {isUser ? (
-          <User className="h-4 w-4" />
-        ) : (
-          <Bot className="h-4 w-4" />
-        )}
+        {isUser ? <User className="h-4 w-4" /> : <Bot className="h-4 w-4" />}
       </div>
 
       <div
         className={cn(
           'max-w-[80%] rounded-lg px-4 py-3 text-sm',
-          isUser
-            ? 'bg-primary text-primary-foreground'
-            : 'bg-muted text-foreground',
+          isUser ? 'bg-primary text-primary-foreground' : 'bg-muted text-foreground'
         )}
       >
         <div className="leading-relaxed">
           {renderContent(message.content, message.citations, onCitationClick)}
         </div>
         {!isUser && message.citations.length > 0 && (
-          <SourceList
-            citations={message.citations}
-            onCitationClick={onCitationClick}
-          />
+          <SourceList citations={message.citations} onCitationClick={onCitationClick} />
         )}
       </div>
     </div>

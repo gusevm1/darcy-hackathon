@@ -15,37 +15,26 @@ interface UseRoadmapStateOptions {
 }
 
 export function useRoadmapState({ role }: UseRoadmapStateOptions) {
-  const [selectedClientId, setSelectedClientId] = useState<string>(
-    allClients[0]?.id ?? '',
-  )
+  const [selectedClientId, setSelectedClientId] = useState<string>(allClients[0]?.id ?? '')
   const [selectedStageIndex, setSelectedStageIndex] = useState<number>(-1)
 
   const client = useMemo(
     () => allClients.find((c) => c.id === selectedClientId) ?? allClients[0],
-    [selectedClientId],
+    [selectedClientId]
   )
 
   const definition = useMemo(
     () => licenseDefinitions.find((d) => d.type === client.licenseType),
-    [client.licenseType],
+    [client.licenseType]
   )
 
-  const activeStageIndex =
-    selectedStageIndex >= 0 ? selectedStageIndex : client.currentStageIndex
+  const activeStageIndex = selectedStageIndex >= 0 ? selectedStageIndex : client.currentStageIndex
 
-  const { documentStates, uploadDocument, resetDocument } = useDocumentState(
-    client.documentStates,
-  )
+  const { documentStates, uploadDocument, resetDocument } = useDocumentState(client.documentStates)
 
   const clientsForChat = useMemo(() => [client], [client])
-  const {
-    chats,
-    activeChatId,
-    messages,
-    createNewChat,
-    switchChat,
-    sendMessage,
-  } = useChatSessions(clientsForChat)
+  const { chats, activeChatId, messages, createNewChat, switchChat, sendMessage } =
+    useChatSessions(clientsForChat)
 
   const {
     previewDocument,
@@ -61,9 +50,7 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
       for (const stage of definition.stages) {
         const doc = stage.documents.find((d) => d.id === citation.documentId)
         if (doc) {
-          const state = documentStates.find(
-            (ds) => ds.documentId === doc.id,
-          )
+          const state = documentStates.find((ds) => ds.documentId === doc.id)
           setPreviewDocument({
             documentId: doc.id,
             documentName: doc.name,
@@ -82,7 +69,7 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
         }
       }
     },
-    [client, definition, documentStates, setPreviewDocument, setPreviewOpen],
+    [client, definition, documentStates, setPreviewDocument, setPreviewOpen]
   )
 
   const handleSelectClient = useCallback((clientId: string) => {

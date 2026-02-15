@@ -44,10 +44,7 @@ export function useOnboardingChat() {
         sessionIdRef.current = sessionId
       }
 
-      const response = await sendOnboardingMessage(
-        sessionIdRef.current,
-        trimmed,
-      )
+      const response = await sendOnboardingMessage(sessionIdRef.current, trimmed)
 
       const assistantMsg: ChatMessage = {
         id: generateId(),
@@ -62,8 +59,7 @@ export function useOnboardingChat() {
       const errorMsg: ChatMessage = {
         id: generateId(),
         role: 'assistant',
-        content:
-          'Sorry, I encountered an error processing your request. Please try again.',
+        content: 'Sorry, I encountered an error processing your request. Please try again.',
         citations: [],
         timestamp: new Date(),
       }

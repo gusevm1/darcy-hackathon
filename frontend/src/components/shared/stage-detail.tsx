@@ -1,7 +1,7 @@
 'use client'
 
-import { Progress } from '@/components/ui/progress'
 import { DocumentItem } from '@/components/shared/document-item'
+import { Progress } from '@/components/ui/progress'
 import type { ClientDocumentState, LicenseStage } from '@/types'
 
 interface StageDetailProps {
@@ -11,26 +11,14 @@ interface StageDetailProps {
   onReset: (docId: string) => void
 }
 
-export function StageDetail({
-  stage,
-  documentStates,
-  onUpload,
-  onReset,
-}: StageDetailProps) {
+export function StageDetail({ stage, documentStates, onUpload, onReset }: StageDetailProps) {
   const stageDocIds = new Set(stage.documents.map((d) => d.id))
-  const stageStates = documentStates.filter((s) =>
-    stageDocIds.has(s.documentId),
-  )
-  const completedCount = stageStates.filter(
-    (s) => s.status === 'approved',
-  ).length
+  const stageStates = documentStates.filter((s) => stageDocIds.has(s.documentId))
+  const completedCount = stageStates.filter((s) => s.status === 'approved').length
   const totalCount = stage.documents.length
-  const progress =
-    totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0
+  const progress = totalCount > 0 ? Math.round((completedCount / totalCount) * 100) : 0
 
-  const categories = Array.from(
-    new Set(stage.documents.map((d) => d.category)),
-  )
+  const categories = Array.from(new Set(stage.documents.map((d) => d.category)))
 
   return (
     <div className="space-y-6">
@@ -46,9 +34,7 @@ export function StageDetail({
       </div>
 
       {categories.map((category) => {
-        const categoryDocs = stage.documents.filter(
-          (d) => d.category === category,
-        )
+        const categoryDocs = stage.documents.filter((d) => d.category === category)
         return (
           <div key={category} className="space-y-3">
             <h4 className="text-muted-foreground text-sm font-medium uppercase tracking-wide">
@@ -59,9 +45,7 @@ export function StageDetail({
                 <DocumentItem
                   key={doc.id}
                   document={doc}
-                  state={documentStates.find(
-                    (s) => s.documentId === doc.id,
-                  )}
+                  state={documentStates.find((s) => s.documentId === doc.id)}
                   onUpload={onUpload}
                   onReset={onReset}
                 />

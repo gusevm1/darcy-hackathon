@@ -15,22 +15,19 @@ export const fintechDefinition: LicenseDefinition = {
         {
           id: 'fintech-1-1',
           name: 'Fintech business model description',
-          description:
-            'Detailed description of the fintech product, service, and business model.',
+          description: 'Detailed description of the fintech product, service, and business model.',
           category: 'Corporate',
         },
         {
           id: 'fintech-1-2',
           name: 'Regulatory sandbox assessment',
-          description:
-            'Assessment of eligibility for FINMA regulatory sandbox provisions.',
+          description: 'Assessment of eligibility for FINMA regulatory sandbox provisions.',
           category: 'Compliance',
         },
         {
           id: 'fintech-1-3',
           name: 'Pre-consultation correspondence',
-          description:
-            'Record of all pre-consultation communications with FINMA.',
+          description: 'Record of all pre-consultation communications with FINMA.',
           category: 'Corporate',
         },
       ],
@@ -39,21 +36,18 @@ export const fintechDefinition: LicenseDefinition = {
       id: 'fintech-2',
       name: 'Application Preparation',
       shortName: 'Preparation',
-      description:
-        'Preparation of the simplified application package for a fintech license.',
+      description: 'Preparation of the simplified application package for a fintech license.',
       documents: [
         {
           id: 'fintech-2-1',
           name: 'Simplified business plan',
-          description:
-            'Business plan tailored to fintech license requirements.',
+          description: 'Business plan tailored to fintech license requirements.',
           category: 'Corporate',
         },
         {
           id: 'fintech-2-2',
           name: 'Proof of capital (CHF 300K)',
-          description:
-            'Evidence of minimum required capital of CHF 300,000.',
+          description: 'Evidence of minimum required capital of CHF 300,000.',
           category: 'Financial',
         },
         {
@@ -65,8 +59,7 @@ export const fintechDefinition: LicenseDefinition = {
         {
           id: 'fintech-2-4',
           name: 'Organizational structure',
-          description:
-            'Overview of organizational setup and key personnel.',
+          description: 'Overview of organizational setup and key personnel.',
           category: 'Corporate',
         },
         {
@@ -78,8 +71,7 @@ export const fintechDefinition: LicenseDefinition = {
         {
           id: 'fintech-2-6',
           name: 'IT security concept',
-          description:
-            'Information security architecture and controls documentation.',
+          description: 'Information security architecture and controls documentation.',
           category: 'Compliance',
         },
       ],
@@ -88,42 +80,36 @@ export const fintechDefinition: LicenseDefinition = {
       id: 'fintech-3',
       name: 'Formal Submission',
       shortName: 'Submission',
-      description:
-        'Official filing of the fintech license application with FINMA.',
+      description: 'Official filing of the fintech license application with FINMA.',
       documents: [
         {
           id: 'fintech-3-1',
           name: 'FINMA fintech application form',
-          description:
-            'Official FINMA application form for fintech license.',
+          description: 'Official FINMA application form for fintech license.',
           category: 'Corporate',
         },
         {
           id: 'fintech-3-2',
           name: 'Notarized articles of association',
-          description:
-            'Final articles of association certified by a Swiss notary.',
+          description: 'Final articles of association certified by a Swiss notary.',
           category: 'Corporate',
         },
         {
           id: 'fintech-3-3',
           name: 'Client deposit protection concept',
-          description:
-            'Framework for protecting client deposits up to CHF 100 million.',
+          description: 'Framework for protecting client deposits up to CHF 100 million.',
           category: 'Compliance',
         },
         {
           id: 'fintech-3-4',
           name: 'Investor information document',
-          description:
-            'Document informing investors about risks and deposit protection.',
+          description: 'Document informing investors about risks and deposit protection.',
           category: 'Compliance',
         },
         {
           id: 'fintech-3-5',
           name: 'Outsourcing agreements',
-          description:
-            'Agreements governing any outsourced business functions.',
+          description: 'Agreements governing any outsourced business functions.',
           category: 'Corporate',
         },
       ],
@@ -132,21 +118,18 @@ export const fintechDefinition: LicenseDefinition = {
       id: 'fintech-4',
       name: 'Completeness Check',
       shortName: 'Completeness',
-      description:
-        'FINMA reviews the submission for completeness and may request clarifications.',
+      description: 'FINMA reviews the submission for completeness and may request clarifications.',
       documents: [
         {
           id: 'fintech-4-1',
           name: 'FINMA acknowledgment',
-          description:
-            'Official confirmation of application receipt from FINMA.',
+          description: 'Official confirmation of application receipt from FINMA.',
           category: 'Corporate',
         },
         {
           id: 'fintech-4-2',
           name: 'Clarification responses',
-          description:
-            'Responses to FINMA requests for additional information.',
+          description: 'Responses to FINMA requests for additional information.',
           category: 'Corporate',
         },
       ],
@@ -155,28 +138,24 @@ export const fintechDefinition: LicenseDefinition = {
       id: 'fintech-5',
       name: 'In-Depth Review',
       shortName: 'Review',
-      description:
-        'FINMA assesses technology risks, AML compliance, and operational readiness.',
+      description: 'FINMA assesses technology risks, AML compliance, and operational readiness.',
       documents: [
         {
           id: 'fintech-5-1',
           name: 'Technology risk assessment',
-          description:
-            'Comprehensive assessment of technology-related risks.',
+          description: 'Comprehensive assessment of technology-related risks.',
           category: 'Compliance',
         },
         {
           id: 'fintech-5-2',
           name: 'AML compliance review docs',
-          description:
-            'Documentation for FINMA AML compliance review.',
+          description: 'Documentation for FINMA AML compliance review.',
           category: 'Compliance',
         },
         {
           id: 'fintech-5-3',
           name: 'Operational readiness confirmation',
-          description:
-            'Confirmation that all operational systems are ready for launch.',
+          description: 'Confirmation that all operational systems are ready for launch.',
           category: 'Corporate',
         },
       ],
@@ -185,8 +164,7 @@ export const fintechDefinition: LicenseDefinition = {
       id: 'fintech-6',
       name: 'Decision & License Grant',
       shortName: 'Decision',
-      description:
-        'FINMA issues the fintech license decision and any operating conditions.',
+      description: 'FINMA issues the fintech license decision and any operating conditions.',
       documents: [
         {
           id: 'fintech-6-1',
@@ -197,15 +175,13 @@ export const fintechDefinition: LicenseDefinition = {
         {
           id: 'fintech-6-2',
           name: 'Operating conditions',
-          description:
-            'Conditions and restrictions attached to the fintech license.',
+          description: 'Conditions and restrictions attached to the fintech license.',
           category: 'Compliance',
         },
         {
           id: 'fintech-6-3',
           name: 'Commercial register entry',
-          description:
-            'Confirmation of entry in the Swiss commercial register.',
+          description: 'Confirmation of entry in the Swiss commercial register.',
           category: 'Corporate',
         },
       ],

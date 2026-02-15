@@ -5,12 +5,7 @@ export type LicenseType =
   | 'fund-management'
   | 'insurance'
 
-export type DocumentStatus =
-  | 'not-started'
-  | 'uploaded'
-  | 'under-review'
-  | 'approved'
-  | 'rejected'
+export type DocumentStatus = 'not-started' | 'uploaded' | 'under-review' | 'approved' | 'rejected'
 
 export type StageStatus = 'not-started' | 'in-progress' | 'completed'
 

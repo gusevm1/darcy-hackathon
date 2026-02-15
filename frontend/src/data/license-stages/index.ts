@@ -14,8 +14,6 @@ export const licenseDefinitions: LicenseDefinition[] = [
   insuranceDefinition,
 ]
 
-export function getLicenseDefinition(
-  type: string,
-): LicenseDefinition | undefined {
+export function getLicenseDefinition(type: string): LicenseDefinition | undefined {
   return licenseDefinitions.find((d) => d.type === type)
 }
