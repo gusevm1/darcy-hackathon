@@ -1,9 +1,12 @@
 'use client'
 
-import { useCallback, useMemo, useRef, useState } from 'react'
+import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
 import { type ClientContext, streamConsultChat } from '@/lib/api/consult'
 import type { ChatMessage, ChatSession } from '@/types/assistant'
+
+const STORAGE_KEY = 'darcy-chat-sessions'
+const ACTIVE_CHAT_KEY = 'darcy-active-chat'
 
 function generateId() {
   return crypto.randomUUID()
@@ -28,11 +31,59 @@ function createDefaultChat(): ChatSession {
   }
 }
 
+const isBrowser = typeof window !== 'undefined'
+
+function loadChatsFromStorage(): ChatSession[] {
+  if (!isBrowser) return [createDefaultChat()]
+  try {
+    const raw = localStorage.getItem(STORAGE_KEY)
+    if (!raw) return [createDefaultChat()]
+    const parsed = JSON.parse(raw) as ChatSession[]
+    return parsed.map((chat) => ({
+      ...chat,
+      createdAt: new Date(chat.createdAt),
+      updatedAt: new Date(chat.updatedAt),
+      messages: chat.messages.map((m) => ({
+        ...m,
+        timestamp: new Date(m.timestamp),
+      })),
+    }))
+  } catch {
+    return [createDefaultChat()]
+  }
+}
+
+function saveChatsToStorage(chats: ChatSession[]) {
+  if (!isBrowser) return
+  try {
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(chats))
+  } catch {
+    // Storage full or unavailable — silently ignore
+  }
+}
+
 export function useChatSessions(clientId?: string, clientContext?: ClientContext) {
-  const [chats, setChats] = useState<ChatSession[]>(() => [createDefaultChat()])
-  const [activeChatId, setActiveChatId] = useState('default')
+  const [chats, setChats] = useState<ChatSession[]>(loadChatsFromStorage)
+  const [activeChatId, setActiveChatId] = useState(() => {
+    if (!isBrowser) return 'default'
+    return localStorage.getItem(ACTIVE_CHAT_KEY) ?? 'default'
+  })
   const [isLoading, setIsLoading] = useState(false)
   const abortRef = useRef<AbortController | null>(null)
+
+  // Persist chats to localStorage whenever they change
+  useEffect(() => {
+    saveChatsToStorage(chats)
+  }, [chats])
+
+  // Persist active chat ID
+  useEffect(() => {
+    try {
+      localStorage.setItem(ACTIVE_CHAT_KEY, activeChatId)
+    } catch {
+      // ignore
+    }
+  }, [activeChatId])
 
   const activeChat = useMemo(
     () => chats.find((c) => c.id === activeChatId) ?? chats[0],
