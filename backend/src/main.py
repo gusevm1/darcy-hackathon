@@ -34,8 +34,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     logger.info("Client database initialized")
 
     await client_store.seed_demo_client()
-    await client_store.seed_fintech_client()
-    logger.info("Demo clients seeded")
+    logger.info("Demo client seeded")
 
     await seed_demo_documents()
     logger.info("Demo documents seeded")

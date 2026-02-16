@@ -131,59 +131,6 @@ async def seed_demo_client() -> None:
     await save_client(demo)
 
 
-FINTECH_CLIENT_ID = "sarah-weber"
-
-
-async def seed_fintech_client() -> None:
-    """Create the NovaPay Solutions demo client if not already present."""
-    from src.services.checklist_templates import get_checklist_for_pathway
-
-    existing = await get_client(FINTECH_CLIENT_ID)
-    if existing is not None:
-        return
-
-    checklist = get_checklist_for_pathway("finma_fintech")
-    # Mark first 8 items as complete, next 3 as in_progress
-    for i, item in enumerate(checklist):
-        if i < 8:
-            item.status = "complete"
-        elif i < 11:
-            item.status = "in_progress"
-
-    fintech = Client(
-        id=FINTECH_CLIENT_ID,
-        company_name="NovaPay Solutions GmbH",
-        contact_name="Sarah Weber",
-        contact_email="s.weber@novapay.ch",
-        status="in_progress",
-        pathway="finma_fintech",
-        finma_license_type="fintech",
-        current_stage_index=1,
-        legal_structure="GmbH",
-        establishment_canton="Zug",
-        has_swiss_office=True,
-        has_swiss_director=True,
-        business_description=(
-            "Digital payment platform for crypto-to-fiat conversions "
-            "and e-money services targeting retail and SME customers."
-        ),
-        services=["payment_services", "e_money", "crypto_exchange"],
-        handles_fiat=True,
-        handles_client_assets=False,
-        client_types=["retail", "sme"],
-        existing_capital_chf=800_000,
-        minimum_capital_chf=300_000,
-        has_aml_officer=True,
-        aml_officer_swiss_resident=True,
-        has_external_auditor=False,
-        has_aml_kyc_policies=True,
-        has_transaction_monitoring=True,
-        has_sanctions_screening=False,
-        checklist=checklist,
-    )
-    await save_client(fintech)
-
-
 async def delete_client(client_id: str) -> bool:
     db = await get_db()
     try:
