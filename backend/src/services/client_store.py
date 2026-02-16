@@ -81,6 +81,31 @@ async def update_client(client_id: str, updates: dict[str, Any]) -> Client | Non
     return updated
 
 
+DEMO_CLIENT_ID = "thomas-muller"
+
+
+async def seed_demo_client() -> None:
+    """Create the Thomas Müller demo client if not already present."""
+    existing = await get_client(DEMO_CLIENT_ID)
+    if existing is not None:
+        return
+    demo = Client(
+        id=DEMO_CLIENT_ID,
+        company_name="Alpine Digital Bank AG",
+        contact_name="Thomas Müller",
+        contact_email="thomas.muller@alpinedigital.ch",
+        status="in_progress",
+        pathway="finma_banking",
+        finma_license_type="banking",
+        current_stage_index=2,
+        legal_structure="AG",
+        establishment_canton="Zurich",
+        has_swiss_office=True,
+        has_swiss_director=True,
+    )
+    await save_client(demo)
+
+
 async def delete_client(client_id: str) -> bool:
     db = await _get_db()
     try:

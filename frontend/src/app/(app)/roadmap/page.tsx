@@ -1,5 +1,7 @@
 'use client'
 
+import { Loader2 } from 'lucide-react'
+
 import { RoadmapChatPanel } from '@/components/shared/roadmap/roadmap-chat-panel'
 import { RoadmapLayout } from '@/components/shared/roadmap/roadmap-layout'
 import { RoadmapVisualization } from '@/components/shared/roadmap/roadmap-visualization'
@@ -7,6 +9,14 @@ import { useRoadmapState } from '@/hooks/use-roadmap-state'
 
 export default function RoadmapPage() {
   const state = useRoadmapState({ role: 'consultant' })
+
+  if (state.loading) {
+    return (
+      <div className="flex h-full items-center justify-center">
+        <Loader2 className="text-muted-foreground h-8 w-8 animate-spin" />
+      </div>
+    )
+  }
 
   return (
     <RoadmapLayout

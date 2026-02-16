@@ -31,6 +31,9 @@ class FlaggedItem(BaseModel):
 class Client(BaseModel):
     id: str
     company_name: str = ""
+    contact_name: str = ""
+    contact_email: str = ""
+    current_stage_index: int = 0
     created_at: datetime = Field(default_factory=datetime.utcnow)
     updated_at: datetime = Field(default_factory=datetime.utcnow)
     status: Literal["intake", "in_progress", "under_review", "approved", "blocked"] = (

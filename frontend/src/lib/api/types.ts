@@ -40,6 +40,10 @@ export interface ApiClient {
   company_name: string
   status: string
   pathway: string | null
+  finma_license_type: string | null
+  contact_name: string
+  contact_email: string
+  current_stage_index: number
   created_at: string
   updated_at: string
 }

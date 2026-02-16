@@ -2,14 +2,8 @@
 
 import { useCallback, useRef, useState } from 'react'
 
-import { clients as initialClients } from '@/data/clients'
-
 export function useFileTree() {
-  const [expandedNodes, setExpandedNodes] = useState<Set<string>>(() => {
-    const set = new Set<string>()
-    initialClients.forEach((c) => set.add(c.id))
-    return set
-  })
+  const [expandedNodes, setExpandedNodes] = useState<Set<string>>(() => new Set<string>())
   const [highlightedDocumentId, setHighlightedDocumentId] = useState<string | null>(null)
 
   const highlightTimerRef = useRef<ReturnType<typeof setTimeout> | null>(null)

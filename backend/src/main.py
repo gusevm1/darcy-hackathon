@@ -26,6 +26,9 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     await client_store.init_db()
     logger.info("Client database initialized")
 
+    await client_store.seed_demo_client()
+    logger.info("Demo client seeded")
+
     try:
         await rag_service.init()
         logger.info("RAG service initialized")

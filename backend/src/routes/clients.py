@@ -18,6 +18,10 @@ class ClientCreateRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     company_name: str = ""
+    contact_name: str | None = None
+    contact_email: str | None = None
+    current_stage_index: int | None = None
+    finma_license_type: str | None = None
     business_description: str | None = None
     legal_structure: Literal["AG", "GmbH", "other"] | None = None
     establishment_canton: str | None = None
@@ -34,6 +38,10 @@ class ClientUpdateRequest(BaseModel):
     model_config = ConfigDict(extra="forbid")
 
     company_name: str | None = None
+    contact_name: str | None = None
+    contact_email: str | None = None
+    current_stage_index: int | None = None
+    finma_license_type: str | None = None
     business_description: str | None = None
     legal_structure: Literal["AG", "GmbH", "other"] | None = None
     establishment_canton: str | None = None
@@ -58,6 +66,10 @@ class ClientListItem(BaseModel):
     company_name: str
     status: str
     pathway: str | None
+    finma_license_type: str | None = None
+    contact_name: str = ""
+    contact_email: str = ""
+    current_stage_index: int = 0
     created_at: str
     updated_at: str
 
@@ -93,6 +105,10 @@ async def list_clients(
             company_name=c.company_name,
             status=c.status,
             pathway=c.pathway,
+            finma_license_type=c.finma_license_type,
+            contact_name=c.contact_name,
+            contact_email=c.contact_email,
+            current_stage_index=c.current_stage_index,
             created_at=c.created_at.isoformat(),
             updated_at=c.updated_at.isoformat(),
         )

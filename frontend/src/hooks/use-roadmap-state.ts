@@ -1,13 +1,13 @@
 'use client'
 
-import { useCallback, useMemo, useState } from 'react'
+import { useCallback, useEffect, useMemo, useState } from 'react'
 
-import { clients as allClients } from '@/data/clients'
 import { licenseDefinitions } from '@/data/license-stages'
 import type { ClientContext } from '@/lib/api/consult'
 import type { Citation } from '@/types/assistant'
 
 import { useChatSessions } from './use-chat-sessions'
+import { useClients } from './use-clients'
 import { useDocumentPreview } from './use-document-preview'
 import { useDocumentState } from './use-document-state'
 
@@ -16,27 +16,36 @@ interface UseRoadmapStateOptions {
 }
 
 export function useRoadmapState({ role }: UseRoadmapStateOptions) {
-  const [selectedClientId, setSelectedClientId] = useState<string>(allClients[0]?.id ?? '')
+  const { clients: allClients, loading } = useClients()
+  const [selectedClientId, setSelectedClientId] = useState<string>('')
   const [selectedStageIndex, setSelectedStageIndex] = useState<number>(-1)
+
+  // Set default selected client when clients load
+  useEffect(() => {
+    if (allClients.length > 0 && !selectedClientId) {
+      setSelectedClientId(allClients[0].id)
+    }
+  }, [allClients, selectedClientId])
 
   const client = useMemo(
     () => allClients.find((c) => c.id === selectedClientId) ?? allClients[0],
-    [selectedClientId]
+    [allClients, selectedClientId]
   )
 
   const definition = useMemo(
-    () => licenseDefinitions.find((d) => d.type === client.licenseType),
-    [client.licenseType]
+    () => (client ? licenseDefinitions.find((d) => d.type === client.licenseType) : undefined),
+    [client]
   )
 
-  const activeStageIndex = selectedStageIndex >= 0 ? selectedStageIndex : client.currentStageIndex
+  const activeStageIndex = selectedStageIndex >= 0 ? selectedStageIndex : (client?.currentStageIndex ?? 0)
 
   const { documentStates, uploadDocument, resetDocument, uploading } = useDocumentState(
-    client.documentStates,
-    client.id
+    client?.documentStates ?? [],
+    client?.id ?? ''
   )
 
   const clientContext = useMemo((): ClientContext => {
+    if (!client) return { name: '', company: '', licenseType: 'banking', currentStageName: '', documentSummary: '' }
     const stageName = definition?.stages[client.currentStageIndex]?.name ?? 'Unknown'
     const approved = client.documentStates.filter((d) => d.status === 'approved').length
     const total = client.documentStates.length
@@ -50,7 +59,7 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
   }, [client, definition])
 
   const { chats, activeChatId, messages, createNewChat, switchChat, sendMessage, isLoading } =
-    useChatSessions(client.id, clientContext)
+    useChatSessions(client?.id ?? '', clientContext)
 
   const {
     previewDocument,
@@ -62,7 +71,7 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
 
   const handleCitationClick = useCallback(
     (citation: Citation) => {
-      if (!definition) return
+      if (!definition || !client) return
       for (const stage of definition.stages) {
         const doc = stage.documents.find((d) => d.id === citation.documentId)
         if (doc) {
@@ -117,5 +126,6 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
     handleCitationClick,
     selectedClientId,
     handleSelectClient,
+    loading,
   }
 }

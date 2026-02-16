@@ -2,7 +2,6 @@
 
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
-import { clients as staticClients } from '@/data/clients'
 import { licenseDefinitions } from '@/data/license-stages'
 import {
   downloadDocument,
@@ -14,6 +13,7 @@ import { buildFileTree } from '@/lib/build-file-tree'
 import type { Client } from '@/types'
 import type { DocumentPreview, FileTreeClientFolder, FileTreeDocument } from '@/types/assistant'
 
+import { useClients } from './use-clients'
 import { useDocumentPreview } from './use-document-preview'
 import { useFileTree } from './use-file-tree'
 
@@ -80,11 +80,12 @@ function buildInternalKBTreeFromDocs(docs: KBDocument[]): FileTreeClientFolder[]
 
 export function useKnowledgeState() {
   const [activeTab, setActiveTab] = useState<KnowledgeTab>('clients')
+  const { clients: fetchedClients } = useClients()
   const [kbDocs, setKbDocs] = useState<KBDocument[]>([])
   const [kbLoading, setKbLoading] = useState(false)
-  const [liveClients, setLiveClients] = useState<Client[]>(staticClients)
+  const [liveClients, setLiveClients] = useState<Client[]>([])
 
-  const { expandedNodes, highlightedDocumentId, toggleNode } = useFileTree()
+  const { expandedNodes, setExpandedNodes, highlightedDocumentId, toggleNode } = useFileTree()
 
   const {
     previewDocument,
@@ -94,12 +95,25 @@ export function useKnowledgeState() {
     handlePreviewOpenChange,
   } = useDocumentPreview()
 
+  // Initialize liveClients from fetched clients and auto-expand client nodes
+  useEffect(() => {
+    if (fetchedClients.length > 0) {
+      setLiveClients(fetchedClients)
+      setExpandedNodes((prev) => {
+        const next = new Set(prev)
+        fetchedClients.forEach((c) => next.add(c.id))
+        return next
+      })
+    }
+  }, [fetchedClients, setExpandedNodes])
+
   // Sync client document states with backend
   useEffect(() => {
+    if (fetchedClients.length === 0) return
     let cancelled = false
     async function syncClients() {
       const updated = await Promise.all(
-        staticClients.map(async (client) => {
+        fetchedClients.map(async (client) => {
           try {
             const backendDocs = await listClientDocuments(client.id)
             const backendMap = new Map(backendDocs.map((d) => [d.document_id, d]))
@@ -125,7 +139,7 @@ export function useKnowledgeState() {
     }
     syncClients()
     return () => { cancelled = true }
-  }, [])
+  }, [fetchedClients])
 
   useEffect(() => {
     let cancelled = false
