@@ -136,6 +136,15 @@ async def update_client(client_id: str, body: ClientUpdateRequest) -> Client:
     return client
 
 
+@router.delete("/{client_id}")
+async def delete_client(client_id: str) -> dict[str, bool]:
+    """Delete a client by ID."""
+    deleted = await client_store.delete_client(client_id)
+    if not deleted:
+        raise HTTPException(status_code=404, detail="Client not found")
+    return {"deleted": True}
+
+
 @router.patch("/{client_id}/checklist/{item_id}")
 async def update_checklist_item(
     client_id: str, item_id: str, body: ChecklistItemUpdate
