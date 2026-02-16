@@ -67,7 +67,9 @@ export function buildInternalKBTreeFromDocs(docs: KBDocument[]): FileTreeClientF
 
 export function buildRegulatoryTreeFromDocs(docs: KBDocument[]): FileTreeClientFolder[] {
   // Filter to only regulatory docs (not internal knowledge)
-  const regulatoryDocs = docs.filter((d) => !d.source.startsWith('internal:'))
+  const regulatoryDocs = docs.filter(
+    (d) => !d.source.startsWith('internal:') && !d.source.startsWith('client:'),
+  )
 
   const grouped = new Map<string, KBDocument[]>()
   for (const doc of regulatoryDocs) {

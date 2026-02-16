@@ -86,11 +86,13 @@ async def seed_demo_client() -> None:
         return
 
     checklist = get_checklist_for_pathway("finma_banking")
-    # Mark first 15 items as complete, next 5 as in_progress
+    # Stage 1 fully done + most of Stage 2 = ~20 complete
+    # Stage 2 stragglers + Stage 3 early items = ~8 in_progress
+    # Stages 4-6 = ~10 not_started
     for i, item in enumerate(checklist):
-        if i < 15:
+        if i < 20:
             item.status = "complete"
-        elif i < 20:
+        elif i < 28:
             item.status = "in_progress"
 
     demo = Client(

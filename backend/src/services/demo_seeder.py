@@ -25,14 +25,262 @@ def _make_pdf(title: str, body: str) -> bytes:
 
 
 # ---------------------------------------------------------------------------
-# Document content
+# Document content — Stage 1 (Pre-Consultation), Stage 2 (Application
+# Preparation), Stage 3 (Formal Submission)
 # ---------------------------------------------------------------------------
 
 _DOCUMENTS: list[dict[str, str]] = [
+    # ── Stage 1: Pre-Consultation (6 docs, all verified) ──
+    {
+        "document_id": "banking-1-1",
+        "file_name": "Preliminary_Business_Concept_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - Preliminary Business Concept",
+        "status": "verified",
+        "body": (
+            "Confidential - For FINMA Pre-Consultation\n"
+            "Date: June 2025 | Version 1.0\n\n"
+            "1. Executive Summary\n"
+            "Alpine Digital Bank AG (ADB) proposes to establish a fully licensed "
+            "digital bank in Switzerland under Art. 3 of the Banking Act (BankA). "
+            "The bank will serve both institutional and retail clients with CHF "
+            "and EUR deposit products, secured lending, and digital payment "
+            "solutions.\n\n"
+            "2. Target Market\n"
+            "Primary: Swiss-based SMEs requiring digital treasury management.\n"
+            "Secondary: Retail customers seeking a mobile-first banking experience.\n"
+            "Addressable market: Approx. 600,000 Swiss SMEs and 3.5M digitally "
+            "active adults. Year 3 target: 5,000 retail and 200 SME clients.\n\n"
+            "3. Technology Platform\n"
+            "Cloud-native architecture on Swiss-hosted infrastructure (FINMA "
+            "Circular 2018/3 compliant). Core banking powered by Temenos Transact "
+            "with custom API layer. Mobile and web applications using biometric "
+            "authentication and end-to-end encryption.\n\n"
+            "4. Governance Structure\n"
+            "Board of Directors: 5 members with expertise in banking, risk, "
+            "technology, legal, and compliance. Executive Committee: CEO, CFO, "
+            "CRO, COO, Head of Compliance. Three lines of defense model from "
+            "inception.\n\n"
+            "5. Capitalization\n"
+            "Proposed initial capital: CHF 12M (exceeding CHF 10M minimum under "
+            "Art. 4 BankA). Primary shareholder: Mueller Holding AG (45%), "
+            "Dr. Sabine Vogel (25%), Swiss Innovation Capital AG (20%), "
+            "management team (10%).\n\n"
+            "6. Regulatory Approach\n"
+            "Full banking license under Art. 3 BankA required due to planned "
+            "deposit-taking and lending activities. FinTech license (Art. 1b) not "
+            "applicable given lending component and projected deposits exceeding "
+            "CHF 100M by Year 3."
+        ),
+    },
+    {
+        "document_id": "banking-1-2",
+        "file_name": "Regulatory_Classification_Memo_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - Regulatory Classification Memo",
+        "status": "verified",
+        "body": (
+            "Prepared by: Dr. S. Keller, JayBee Consulting\n"
+            "Date: June 2025 | Ref: ADB-REG-001\n\n"
+            "1. Purpose\n"
+            "This memo analyzes the applicable regulatory framework for Alpine "
+            "Digital Bank AG and confirms that a full banking license under "
+            "Art. 3 BankA is the appropriate authorization pathway.\n\n"
+            "2. Legal Analysis\n"
+            "2.1 Deposit-Taking: ADB intends to accept public deposits exceeding "
+            "CHF 100M within 3 years. This activity constitutes professional "
+            "deposit-taking under Art. 1a BankO and requires a banking license.\n\n"
+            "2.2 Lending Activity: ADB plans to offer secured SME lending. "
+            "Combined with deposit-taking, this triggers the full banking license "
+            "requirement. The FinTech license under Art. 1b BankA is excluded "
+            "because (a) deposits will exceed CHF 100M, and (b) the lending "
+            "component falls outside the FinTech license scope.\n\n"
+            "2.3 Payment Services: Digital payment processing is ancillary to "
+            "the banking relationship and does not trigger separate licensing "
+            "under FinIA, provided services are limited to client-account-based "
+            "payments.\n\n"
+            "3. Regulatory Requirements\n"
+            "Minimum capital: CHF 10M (Art. 4 BankA).\n"
+            "Organizational requirements: FINMA Circular 2017/1 (Corporate "
+            "Governance), adequate risk management, three lines of defense.\n"
+            "AML/CFT: AMLA compliance, SRO membership or direct FINMA supervision.\n"
+            "Depositor protection: esisuisse membership required.\n\n"
+            "4. Conclusion\n"
+            "Full banking license under Art. 3 BankA is the sole viable pathway "
+            "given ADB's planned business model. Pre-consultation with FINMA is "
+            "recommended before formal application submission."
+        ),
+    },
+    {
+        "document_id": "banking-1-3",
+        "file_name": "Shareholder_Structure_Overview_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - Shareholder Structure Overview",
+        "status": "verified",
+        "body": (
+            "Confidential | Date: July 2025\n"
+            "Prepared for FINMA Pre-Consultation\n\n"
+            "1. Share Capital\n"
+            "Registered share capital: CHF 10,000,000\n"
+            "Number of shares: 10,000 registered shares at CHF 1,000 par value\n"
+            "Capital reserves: CHF 2,000,000\n"
+            "Total equity at inception: CHF 12,000,000\n\n"
+            "2. Shareholder Register\n"
+            "Shareholder 1: Mueller Holding AG\n"
+            "  Shares: 4,500 (45%) | Type: Qualified participation\n"
+            "  UBO: Thomas Mueller, Swiss national, Zurich\n"
+            "  Source of funds: Operating profits from fintech consulting\n\n"
+            "Shareholder 2: Dr. Sabine Vogel\n"
+            "  Shares: 2,500 (25%) | Type: Qualified participation\n"
+            "  Swiss national, former Senior Partner at McKinsey Zurich\n"
+            "  Source of funds: Personal savings and consulting income\n\n"
+            "Shareholder 3: Swiss Innovation Capital AG\n"
+            "  Shares: 2,000 (20%) | Type: Qualified participation\n"
+            "  Swiss venture capital fund, regulated by FINMA\n"
+            "  UBOs: Fund investors (details in Annex)\n\n"
+            "Shareholder 4: Management Pool\n"
+            "  Shares: 1,000 (10%) | Type: Below qualified threshold\n"
+            "  Held by 4 executive managers (CEO 4%, CFO 3%, CRO 2%, COO 1%)\n\n"
+            "3. Group Structure\n"
+            "No subsidiary or parent company relationships. Mueller Holding AG "
+            "is a standalone Swiss company with no foreign controlling interests. "
+            "Swiss Innovation Capital AG is a domestically regulated fund with "
+            "no single investor exceeding 15% of fund assets.\n\n"
+            "4. Shareholder Agreements\n"
+            "Tag-along and drag-along rights for minority shareholders. Board "
+            "nomination rights: Mueller Holding AG (2 seats), Dr. Vogel (1 seat), "
+            "Swiss Innovation Capital (1 seat), independent (1 seat)."
+        ),
+    },
+    {
+        "document_id": "banking-1-4",
+        "file_name": "Pre_Consultation_Meeting_Request_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - Pre-Consultation Meeting Request",
+        "status": "verified",
+        "body": (
+            "Alpine Digital Bank AG (in formation)\n"
+            "c/o Mueller Holding AG\n"
+            "Bahnhofstrasse 42, 8001 Zurich\n\n"
+            "FINMA - Swiss Financial Market Supervisory Authority\n"
+            "Laupenstrasse 27, 3003 Bern\n\n"
+            "Date: 5 July 2025\n"
+            "Re: Request for Pre-Consultation Meeting - Banking License\n\n"
+            "Dear Sir or Madam,\n\n"
+            "We hereby request a pre-consultation meeting regarding our planned "
+            "application for a banking license under Art. 3 of the Banking Act "
+            "(BankA) for Alpine Digital Bank AG.\n\n"
+            "Proposed Agenda:\n"
+            "1. Presentation of the business concept and target market\n"
+            "2. Discussion of the regulatory classification (full banking license "
+            "   vs. FinTech license)\n"
+            "3. Overview of the proposed governance and organizational structure\n"
+            "4. Capital plan and shareholder structure\n"
+            "5. Technology platform and outsourcing arrangements\n"
+            "6. Timeline and next steps\n\n"
+            "Proposed Attendees (Applicant Side):\n"
+            "- Thomas Mueller, Founder and proposed Board Chair\n"
+            "- Dr. Sabine Vogel, proposed Board Member\n"
+            "- Stefan Fischer, proposed CEO\n"
+            "- Dr. S. Keller, JayBee Consulting (regulatory advisor)\n\n"
+            "We have attached the following documents for your preliminary review:\n"
+            "- Preliminary Business Concept (banking-1-1)\n"
+            "- Regulatory Classification Memo (banking-1-2)\n"
+            "- Shareholder Structure Overview (banking-1-3)\n\n"
+            "We are available for a meeting at your earliest convenience and "
+            "suggest the week of 21 July 2025. Please confirm a suitable date.\n\n"
+            "Yours faithfully,\n"
+            "Thomas Mueller\n"
+            "Founder, Alpine Digital Bank AG (in formation)"
+        ),
+    },
+    {
+        "document_id": "banking-1-5",
+        "file_name": "Preliminary_Capital_Funding_Concept_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - Preliminary Capital & Funding Concept",
+        "status": "verified",
+        "body": (
+            "Confidential | Date: July 2025\n"
+            "Prepared for FINMA Pre-Consultation\n\n"
+            "1. Capital Structure\n"
+            "Total proposed capitalization: CHF 12,000,000\n"
+            "Share capital: CHF 10,000,000 (10,000 shares at CHF 1,000)\n"
+            "Capital reserves: CHF 2,000,000\n"
+            "This exceeds the CHF 10M minimum under Art. 4 BankA by 20%.\n\n"
+            "2. CET1 Projections\n"
+            "Year 1: CET1 ratio 18.1% (RWA CHF 62M, capital CHF 11.2M)\n"
+            "Year 2: CET1 ratio 13.5% (RWA CHF 95M, capital CHF 12.8M)\n"
+            "Year 3: CET1 ratio 12.6% (RWA CHF 130M, capital CHF 16.4M)\n"
+            "All years exceed the 10.5% minimum plus 1.5% Pillar 2 add-on.\n\n"
+            "3. Escrow Arrangements\n"
+            "Capital commitments will be deposited into an escrow account at "
+            "Credit Suisse (Schweiz) AG prior to formal application submission. "
+            "Funds released only upon FINMA license approval.\n\n"
+            "4. Funding Sources\n"
+            "Mueller Holding AG (CHF 5.4M): Operating profits from existing "
+            "fintech consulting business. Audited financials available.\n"
+            "Dr. Sabine Vogel (CHF 3.0M): Personal savings. Bank statements "
+            "available for source-of-funds verification.\n"
+            "Swiss Innovation Capital AG (CHF 2.4M): Regulated fund capital. "
+            "Fund documentation and FINMA registration available.\n"
+            "Management Pool (CHF 1.2M): Personal savings of executives.\n\n"
+            "5. Contingency Capital\n"
+            "Mueller Holding AG has provided a letter of intent to inject up to "
+            "CHF 5M additional capital within 90 days should capital ratios "
+            "approach the regulatory buffer threshold (12% CET1).\n\n"
+            "6. Dividend Policy\n"
+            "No dividends planned for the first 3 years. All retained earnings "
+            "to be reinvested to support balance sheet growth and maintain "
+            "capital adequacy above FINMA requirements."
+        ),
+    },
+    {
+        "document_id": "banking-1-6",
+        "file_name": "Pre_Consultation_Meeting_Minutes_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - Pre-Consultation Meeting Minutes",
+        "status": "verified",
+        "body": (
+            "FINMA Pre-Consultation Meeting\n"
+            "Date: 22 July 2025 | Location: FINMA offices, Bern\n"
+            "Duration: 2 hours\n\n"
+            "Attendees:\n"
+            "FINMA: M. Brunner (Section Head, Banking Authorizations), "
+            "A. Weber (Senior Analyst)\n"
+            "Applicant: T. Mueller, Dr. S. Vogel, S. Fischer, Dr. S. Keller\n\n"
+            "1. Business Concept Discussion\n"
+            "FINMA acknowledged the business concept as coherent. Noted that "
+            "the digital banking market is becoming competitive and requested "
+            "detailed differentiation analysis in the formal business plan. "
+            "Emphasized the need for realistic revenue projections with "
+            "sensitivity analysis.\n\n"
+            "2. Regulatory Classification\n"
+            "FINMA confirmed that a full banking license under Art. 3 BankA "
+            "is the correct pathway given the deposit-taking and lending "
+            "activities. FinTech license not applicable.\n\n"
+            "3. Governance Feedback\n"
+            "FINMA requested that the Board include at least two members with "
+            "direct banking supervisory experience. Current proposed composition "
+            "may require supplementary expertise.\n\n"
+            "4. Capital and Funding\n"
+            "CHF 12M capitalization noted positively. FINMA requested formal "
+            "escrow confirmation and detailed source-of-funds documentation "
+            "for all shareholders with the formal application.\n\n"
+            "5. Action Items\n"
+            "- Prepare comprehensive 3-year business plan with sensitivity analysis\n"
+            "- Ensure Board composition meets fit-and-proper requirements\n"
+            "- Engage FINMA-recognized audit firm\n"
+            "- Prepare complete AML/KYC framework\n"
+            "- Submit formal application via EHP within 6 months\n\n"
+            "6. Timeline\n"
+            "FINMA indicated a 4-6 month processing time for the formal "
+            "application, provided all documentation is complete. Target "
+            "application submission: Q3 2025. Expected decision: Q1 2026.\n\n"
+            "Minutes prepared by: Dr. S. Keller, JayBee Consulting\n"
+            "Approved by: T. Mueller, S. Fischer"
+        ),
+    },
+    # ── Stage 2: Application Preparation (8 docs, all verified) ──
     {
         "document_id": "banking-2-1",
         "file_name": "Business_Plan_3Year_Alpine_Digital_Bank.pdf",
         "title": "Alpine Digital Bank AG - Business Plan (3-Year Projection)",
+        "status": "verified",
         "body": (
             "Confidential - For FINMA Review Only\n"
             "Date: August 2025 | Version 2.1\n\n"
@@ -98,6 +346,7 @@ _DOCUMENTS: list[dict[str, str]] = [
         "document_id": "banking-2-3",
         "file_name": "Organizational_Regulations_Alpine_Digital_Bank.pdf",
         "title": "Alpine Digital Bank AG - Organizational Regulations",
+        "status": "verified",
         "body": (
             "Approved by the Board of Directors on 15 August 2025\n"
             "Version 1.2 (Draft for FINMA Review)\n\n"
@@ -152,6 +401,7 @@ _DOCUMENTS: list[dict[str, str]] = [
         "document_id": "banking-2-4",
         "file_name": "Organizational_Chart_Alpine_Digital_Bank.pdf",
         "title": "Alpine Digital Bank AG - Organizational Chart",
+        "status": "verified",
         "body": (
             "Version 1.1 | Date: September 2025\n"
             "Prepared for FINMA Banking License Application\n\n"
@@ -208,6 +458,7 @@ _DOCUMENTS: list[dict[str, str]] = [
         "document_id": "banking-2-5",
         "file_name": "Capital_Plan_and_Proof_Alpine_Digital_Bank.pdf",
         "title": "Alpine Digital Bank AG - Capital Plan & Proof of Capital",
+        "status": "verified",
         "body": (
             "Confidential | Date: September 2025\n"
             "Prepared for FINMA Banking License Application\n\n"
@@ -256,6 +507,7 @@ _DOCUMENTS: list[dict[str, str]] = [
         "document_id": "banking-2-6",
         "file_name": "Board_Fit_and_Proper_Dossiers_Alpine_Digital_Bank.pdf",
         "title": "Alpine Digital Bank AG - Board of Directors Fit & Proper Dossiers",
+        "status": "verified",
         "body": (
             "Confidential | Date: September 2025\n"
             "Submitted under FINMA Circular 2018/3 (Outsourcing) and FINMA "
@@ -312,6 +564,7 @@ _DOCUMENTS: list[dict[str, str]] = [
         "document_id": "banking-2-8",
         "file_name": "Risk_Management_Framework_Alpine_Digital_Bank.pdf",
         "title": "Alpine Digital Bank AG - Risk Management Framework",
+        "status": "verified",
         "body": (
             "Version 1.0 | Date: September 2025\n"
             "Approved by the Risk Committee on 12 September 2025\n\n"
@@ -375,6 +628,7 @@ _DOCUMENTS: list[dict[str, str]] = [
         "document_id": "banking-2-9",
         "file_name": "Internal_Control_System_Alpine_Digital_Bank.pdf",
         "title": "Alpine Digital Bank AG - Internal Control System (ICS)",
+        "status": "verified",
         "body": (
             "Version 1.0 | Date: October 2025\n"
             "Prepared in accordance with FINMA Circular 2017/1\n\n"
@@ -438,6 +692,7 @@ _DOCUMENTS: list[dict[str, str]] = [
         "document_id": "banking-2-10",
         "file_name": "AML_KYC_Policy_Alpine_Digital_Bank.pdf",
         "title": "Alpine Digital Bank AG - AML/KYC Policy & Procedures",
+        "status": "verified",
         "body": (
             "Version 2.0 | Date: September 2025\n"
             "Based on AMLA (SR 955.0) and FINMA Circular 2016/7\n\n"
@@ -504,6 +759,168 @@ _DOCUMENTS: list[dict[str, str]] = [
             "Art. 7."
         ),
     },
+    # ── Stage 3: Formal Submission (3 docs, mixed status) ──
+    {
+        "document_id": "banking-3-1",
+        "file_name": "FINMA_Application_Form_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - FINMA Banking License Application Form",
+        "status": "uploaded",
+        "body": (
+            "FINMA Form: Application for a Banking License\n"
+            "Under Art. 3 of the Banking Act (BankA)\n"
+            "Submitted via EHP Portal | Date: 1 November 2025\n\n"
+            "Section 1: Applicant Information\n"
+            "Company name: Alpine Digital Bank AG (in formation)\n"
+            "Legal form: Aktiengesellschaft (AG)\n"
+            "Registered office: Bahnhofstrasse 42, 8001 Zurich\n"
+            "Commercial register: Pending (CHE-XXX.XXX.XXX)\n"
+            "Contact: Thomas Mueller, thomas.muller@alpinedigital.ch\n\n"
+            "Section 2: License Type Requested\n"
+            "Full banking license under Art. 3 BankA for deposit-taking, lending, "
+            "and payment services.\n\n"
+            "Section 3: Business Activities\n"
+            "3.1 Deposit-taking (CHF and EUR)\n"
+            "3.2 Secured lending to SMEs and retail clients\n"
+            "3.3 Digital payment processing\n"
+            "3.4 No proprietary trading or asset management activities\n\n"
+            "Section 4: Capital\n"
+            "Share capital: CHF 10,000,000\n"
+            "Total equity: CHF 12,000,000\n"
+            "Escrow confirmation: Credit Suisse ref. CH93-0070-0110-0075-4321-8\n\n"
+            "Section 5: Governance\n"
+            "Board of Directors: 5 members (see Annex: Fit & Proper Dossiers)\n"
+            "Executive Committee: 5 members (CEO, CFO, CRO, COO, Head of Compliance)\n\n"
+            "Section 6: Qualified Participants\n"
+            "Mueller Holding AG: 85% (UBO: Thomas Mueller)\n"
+            "Werner Kraft: 7.5% | Dr. Eva Richter: 5% | Martin Schwarz: 2.5%\n\n"
+            "Section 7: Audit Firm\n"
+            "Regulatory auditor: KPMG AG, Zurich\n"
+            "Engagement letter dated: 25 October 2025\n\n"
+            "Section 8: AML/CFT\n"
+            "AML compliance officer: Kathrin Brunner\n"
+            "SRO membership: Application pending with VQF\n\n"
+            "Section 9: Outsourcing\n"
+            "Core banking: Temenos (Switzerland) AG\n"
+            "Cloud hosting: Swisscom (Swiss data centers)\n"
+            "No material functions outsourced abroad.\n\n"
+            "Section 10: Annexes Submitted\n"
+            "[Annex A] Business Plan — submitted\n"
+            "[Annex B] Articles of Association — submitted\n"
+            "[Annex C] Organizational Regulations — submitted\n"
+            "[Annex D] Fit & Proper Dossiers — submitted\n"
+            "[Annex E] Capital Plan & Escrow Confirmation — submitted\n"
+            "[Annex F] AML/KYC Framework — submitted\n"
+            "[Annex G] Risk Management Framework — submitted\n"
+            "[Annex H] Audit Engagement Letter — submitted\n\n"
+            "Section 11: Declaration\n"
+            "The undersigned confirms that all information provided is true, "
+            "complete, and accurate to the best of their knowledge.\n\n"
+            "Thomas Mueller, Founder and proposed Board Chair\n"
+            "Date: 1 November 2025"
+        ),
+    },
+    {
+        "document_id": "banking-3-2",
+        "file_name": "Notarized_Articles_of_Association_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - Notarized Articles of Association",
+        "status": "verified",
+        "body": (
+            "NOTARIZED ARTICLES OF ASSOCIATION\n"
+            "Alpine Digital Bank AG\n"
+            "Notary: Dr. iur. Markus Frei, Zurich\n"
+            "Notarization date: 20 October 2025\n"
+            "Ref: URK-2025-4872\n\n"
+            "Article 1: Company Name and Registered Office\n"
+            "Under the name Alpine Digital Bank AG, a corporation (Aktiengesellschaft) "
+            "is established pursuant to Art. 620 et seq. of the Swiss Code of "
+            "Obligations, with its registered office in Zurich.\n\n"
+            "Article 2: Purpose\n"
+            "The purpose of the company is the operation of a bank within the "
+            "meaning of the Swiss Banking Act (BankA). In particular, the company "
+            "accepts deposits from the public, grants loans and credits, and "
+            "provides payment transaction services. The company may engage in all "
+            "activities that are directly or indirectly related to its purpose.\n\n"
+            "Article 3: Share Capital\n"
+            "The share capital amounts to CHF 10,000,000 divided into 10,000 "
+            "registered shares with a par value of CHF 1,000 each. The shares "
+            "are fully paid up.\n\n"
+            "Article 4: Transfer Restrictions\n"
+            "The transfer of registered shares requires the approval of the Board "
+            "of Directors. The Board may refuse approval only for important reasons "
+            "as defined by law and these articles.\n\n"
+            "Article 5: Board of Directors\n"
+            "The Board of Directors shall consist of three to seven members elected "
+            "by the General Meeting. Board members serve for a term of three years "
+            "and may be re-elected.\n\n"
+            "Article 6: Signatory Authority\n"
+            "The Board of Directors determines the signatory authority. At least one "
+            "person authorized to sign must be domiciled in Switzerland.\n\n"
+            "Article 7: General Meeting\n"
+            "The annual General Meeting is held within six months of the close of "
+            "the financial year. Extraordinary meetings may be called by the Board.\n\n"
+            "Article 8: Financial Year and Reporting\n"
+            "The financial year runs from 1 January to 31 December. Annual financial "
+            "statements are prepared in accordance with Swiss GAAP.\n\n"
+            "Article 9: Dissolution\n"
+            "The company may be dissolved by resolution of the General Meeting "
+            "in accordance with applicable law.\n\n"
+            "CERTIFICATION\n"
+            "I, Dr. iur. Markus Frei, public notary of the Canton of Zurich, "
+            "hereby certify that these Articles of Association were adopted by "
+            "the founders on 20 October 2025 and that the signatures of all "
+            "founders have been duly verified."
+        ),
+    },
+    {
+        "document_id": "banking-3-3",
+        "file_name": "Audit_Firm_Engagement_KPMG_Alpine_Digital_Bank.pdf",
+        "title": "Alpine Digital Bank AG - KPMG Audit Engagement Letter",
+        "status": "verified",
+        "body": (
+            "KPMG AG\n"
+            "Badenerstrasse 172, 8036 Zurich\n\n"
+            "Alpine Digital Bank AG (in formation)\n"
+            "Bahnhofstrasse 42, 8001 Zurich\n\n"
+            "Date: 25 October 2025\n"
+            "Re: Acceptance of Regulatory Audit Mandate\n\n"
+            "Dear Mr. Mueller,\n\n"
+            "Further to our discussions, we are pleased to confirm that KPMG AG, "
+            "Zurich, accepts the mandate as regulatory auditor (Pruefgesellschaft) "
+            "for Alpine Digital Bank AG pursuant to Art. 18 BankA and FINMA "
+            "Circular 2013/3.\n\n"
+            "Scope of Engagement:\n"
+            "1. Annual regulatory audit per FINMA requirements\n"
+            "2. Annual financial audit per Swiss GAAP\n"
+            "3. Special audits as required by FINMA\n"
+            "4. Support during the licensing process\n\n"
+            "Independence Declaration:\n"
+            "We confirm that KPMG AG and its engagement team are independent from "
+            "Alpine Digital Bank AG, its shareholders, and its management in "
+            "accordance with the Swiss Code of Obligations Art. 728, the Swiss "
+            "Audit Oversight Act, and FINMA requirements. No conflicts of interest "
+            "have been identified.\n\n"
+            "Engagement Team:\n"
+            "Lead Partner: Dr. Martin Kessler, Licensed Audit Expert\n"
+            "Banking Specialist: Sarah Hofmann, CPA\n"
+            "IT Audit Lead: Philippe Roth\n\n"
+            "Audit Plan:\n"
+            "Upon FINMA license approval, the first regulatory audit will cover "
+            "the period from license date to 31 December of the first full "
+            "financial year. The audit plan will be submitted to the Audit "
+            "Committee within 60 days of license approval.\n\n"
+            "Fee Estimate:\n"
+            "Year 1 (including licensing support): CHF 180,000\n"
+            "Ongoing annual regulatory and financial audit: CHF 120,000-150,000\n\n"
+            "This engagement is subject to KPMG's standard terms and conditions, "
+            "a copy of which is enclosed.\n\n"
+            "We look forward to supporting Alpine Digital Bank AG through the "
+            "licensing process and beyond.\n\n"
+            "Yours faithfully,\n"
+            "Dr. Martin Kessler\n"
+            "Partner, Banking Audit\n"
+            "KPMG AG, Zurich"
+        ),
+    },
 ]
 
 
@@ -514,6 +931,7 @@ async def seed_demo_documents() -> None:
     """
     for doc_spec in _DOCUMENTS:
         document_id = doc_spec["document_id"]
+        status = doc_spec.get("status", "verified")
 
         existing = await document_store.get_document(CLIENT_ID, document_id)
         if existing is not None:
@@ -522,7 +940,7 @@ async def seed_demo_documents() -> None:
 
         pdf_bytes = _make_pdf(doc_spec["title"], doc_spec["body"])
 
-        doc = await document_store.store_file(
+        await document_store.store_file(
             client_id=CLIENT_ID,
             document_id=document_id,
             file_name=doc_spec["file_name"],
@@ -530,14 +948,15 @@ async def seed_demo_documents() -> None:
             content_type="application/pdf",
         )
 
-        await document_store.update_status(
-            client_id=CLIENT_ID,
-            document_id=document_id,
-            status="verified",
-            verification_result="Auto-verified demo document",
-            verified_at=datetime.now(UTC).isoformat(),
-        )
+        if status == "verified":
+            await document_store.update_status(
+                client_id=CLIENT_ID,
+                document_id=document_id,
+                status="verified",
+                verification_result="Auto-verified demo document",
+                verified_at=datetime.now(UTC).isoformat(),
+            )
 
-        logger.info("Seeded demo document: %s", document_id)
+        logger.info("Seeded demo document: %s (status=%s)", document_id, status)
 
     logger.info("Demo document seeding complete")
