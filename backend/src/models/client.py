@@ -50,6 +50,7 @@ class Client(BaseModel):
     # Regulatory Pathway
     pathway: (
         Literal[
+            "sro",
             "finma_banking",
             "finma_fintech",
             "finma_securities",
