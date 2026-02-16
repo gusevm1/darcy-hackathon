@@ -29,6 +29,10 @@ export function HeroSection() {
           <Link href="/roadmap">View Roadmap</Link>
         </Button>
       </div>
+      <p className="text-muted-foreground mt-8 max-w-2xl text-xs">
+        This is a demonstration environment for mock companies. Do not upload real client data. For
+        production use, we recommend a locally-hosted deployment with TLS encryption.
+      </p>
     </section>
   )
 }

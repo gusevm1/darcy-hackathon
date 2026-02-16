@@ -1,8 +1,7 @@
-import { BookOpen, Info, MessageSquare, Route } from 'lucide-react'
+import { BookOpen, MessageSquare, Route } from 'lucide-react'
 
 import { FeatureCard } from '@/components/shared/landing/feature-card'
 import { HeroSection } from '@/components/shared/landing/hero-section'
-import { Alert, AlertDescription } from '@/components/ui/alert'
 
 const features = [
   {
@@ -39,19 +38,6 @@ export default function LandingPage() {
               <FeatureCard key={feature.title} {...feature} />
             ))}
           </div>
-        </div>
-      </section>
-      <section className="border-t px-4 py-6">
-        <div className="mx-auto max-w-3xl">
-          <Alert variant="default" className="bg-muted/30">
-            <Info className="h-4 w-4" />
-            <AlertDescription className="text-muted-foreground text-xs">
-              This is a demonstration environment for mock companies.
-              Do not upload real client data. For production use, we
-              recommend a locally-hosted deployment with TLS encryption.
-              Contact us for enterprise setup.
-            </AlertDescription>
-          </Alert>
         </div>
       </section>
     </div>
