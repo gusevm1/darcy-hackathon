@@ -6,7 +6,6 @@ from datetime import UTC, datetime
 from fpdf import FPDF
 
 from src.services import document_store
-from src.services.document_ingestion import ingest_client_document
 
 logger = logging.getLogger(__name__)
 
@@ -539,7 +538,6 @@ async def seed_demo_documents() -> None:
             verified_at=datetime.now(UTC).isoformat(),
         )
 
-        chunks = await ingest_client_document(doc)
-        logger.info("Seeded demo document: %s (%d chunks)", document_id, chunks)
+        logger.info("Seeded demo document: %s", document_id)
 
     logger.info("Demo document seeding complete")
