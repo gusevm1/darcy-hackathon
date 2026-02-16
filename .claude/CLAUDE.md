@@ -157,16 +157,42 @@ sudo docker compose down && sudo docker compose up -d --build
 ```
 Use `--build` whenever `requirements.txt`, `Dockerfile`, or source files change.
 
+If seed data changed (demo documents, EHP comments, checklist), use `-v` to wipe volumes for a clean re-seed:
+```bash
+sudo docker compose down -v && sudo docker compose up -d --build
+```
+Startup takes ~60s when re-seeding (17 docs need OpenAI embedding calls).
+
+### API Authentication
+Most API endpoints (except `/health`) require an API key. The key is stored in `backend/.env` on the EC2 instance:
+```bash
+ssh -i ~/.ssh/darcy-hackathon-key.pem ubuntu@18.195.13.46 "grep '^API_KEY=' /home/ubuntu/darcy-hackathon/backend/.env"
+```
+Pass it via the `X-API-Key` header:
+```bash
+curl -s -H "X-API-Key: <key>" http://18.195.13.46/api/...
+```
+
 ### Verify Deployment
 ```bash
-# Health check
+# Health check (no auth required)
 curl -s http://18.195.13.46/health
 
-# Check indexed documents (expect 10)
-curl -s http://18.195.13.46/api/kb/documents | python3 -m json.tool
+# Read the API key from EC2
+API_KEY=$(ssh -i ~/.ssh/darcy-hackathon-key.pem ubuntu@18.195.13.46 \
+  "grep '^API_KEY=' /home/ubuntu/darcy-hackathon/backend/.env | cut -d= -f2")
+
+# Check client documents (expect 17: 6 Stage 1 + 8 Stage 2 + 3 Stage 3)
+curl -s -H "X-API-Key: $API_KEY" http://18.195.13.46/api/client-documents/thomas-muller | python3 -m json.tool
+
+# Check EHP comments for a document
+curl -s -H "X-API-Key: $API_KEY" http://18.195.13.46/api/ehp/thomas-muller/banking-2-8 | python3 -m json.tool
+
+# Check KB documents
+curl -s -H "X-API-Key: $API_KEY" http://18.195.13.46/api/kb/documents | python3 -m json.tool
 
 # Test search
-curl -s -X POST http://18.195.13.46/api/kb/search \
+curl -s -H "X-API-Key: $API_KEY" -X POST http://18.195.13.46/api/kb/search \
   -H "Content-Type: application/json" \
   -d '{"query": "test query", "top_k": 3}' | python3 -m json.tool
 ```
