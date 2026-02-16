@@ -14,7 +14,12 @@ from src.routes.health import router as health_router
 from src.routes.kb import router as kb_router
 from src.routes.onboard import router as onboard_router
 from src.services import client_store, ehp_store, rag_service
-from src.services.document_ingestion import seed_client_docs, seed_regulatory_docs
+from src.services.demo_seeder import seed_demo_documents
+from src.services.document_ingestion import (
+    seed_client_docs,
+    seed_internal_knowledge,
+    seed_regulatory_docs,
+)
 
 logger = logging.getLogger(__name__)
 
@@ -32,6 +37,9 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     await client_store.seed_fintech_client()
     logger.info("Demo clients seeded")
 
+    await seed_demo_documents()
+    logger.info("Demo documents seeded")
+
     await ehp_store.seed_demo_ehp_comments()
     logger.info("Demo EHP comments seeded")
 
@@ -42,6 +50,8 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
         logger.info("Regulatory docs seeded")
         await seed_client_docs()
         logger.info("Client documents indexed")
+        await seed_internal_knowledge()
+        logger.info("Internal knowledge seeded")
     except Exception:
         logger.exception("Failed to initialize RAG service (Qdrant may not be running)")
 

@@ -1,5 +1,6 @@
 'use client'
 
+import { useSearchParams } from 'next/navigation'
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { licenseDefinitions } from '@/data/license-stages'
@@ -17,16 +18,22 @@ interface UseRoadmapStateOptions {
 
 export function useRoadmapState({ role }: UseRoadmapStateOptions) {
   const { clients: allClients, loading } = useClients()
+  const searchParams = useSearchParams()
+  const clientParam = searchParams.get('client')
   const [selectedClientId, setSelectedClientId] = useState<string>('')
   const [selectedStageIndex, setSelectedStageIndex] = useState<number>(-1)
 
   // Set default selected client when clients load
   useEffect(() => {
     if (allClients.length > 0 && !selectedClientId) {
+      // Prefer URL param if it matches an existing client
+      const paramClient = clientParam
+        ? allClients.find((c) => c.id === clientParam)
+        : null
       // eslint-disable-next-line react-hooks/set-state-in-effect -- initializes from async data
-      setSelectedClientId(allClients[0].id)
+      setSelectedClientId(paramClient ? paramClient.id : allClients[0].id)
     }
-  }, [allClients, selectedClientId])
+  }, [allClients, selectedClientId, clientParam])
 
   const client = useMemo(
     () => allClients.find((c) => c.id === selectedClientId) ?? allClients[0],

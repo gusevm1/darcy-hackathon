@@ -37,6 +37,7 @@ select = ["E", "F", "I", "N", "UP", "B", "SIM"]
 "src/services/claude_agent.py" = ["E501"]
 "src/services/consultant_agent.py" = ["E501"]
 "src/services/ehp_store.py" = ["E501"]
+"src/services/demo_seeder.py" = ["E501"]
 "src/services/ehp_generator.py" = ["E501"]
 "src/routes/*.py" = ["B008"]  # FastAPI uses Depends/Query in default args
 
@@ -52,6 +53,10 @@ ignore_missing_imports = true
 
 [[tool.mypy.overrides]]
 module = "pypdf"
+ignore_missing_imports = true
+
+[[tool.mypy.overrides]]
+module = "fpdf"
 ignore_missing_imports = true
 
 [tool.pytest.ini_options]

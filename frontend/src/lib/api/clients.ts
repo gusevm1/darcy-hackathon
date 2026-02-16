@@ -45,7 +45,7 @@ export function apiClientToClient(ac: ApiClient): Client {
 
 export async function listClients(): Promise<PaginatedResponse<ApiClient>> {
   const url = resolveUrl('/api/clients')
-  const res = await fetch(url)
+  const res = await fetch(url, { cache: 'no-store' })
   if (!res.ok) throw new Error('Failed to fetch clients')
   return res.json()
 }

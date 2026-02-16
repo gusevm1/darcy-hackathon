@@ -9,7 +9,7 @@ import {
 } from '@/lib/api/client-documents'
 import { searchKB } from '@/lib/api/kb'
 import { buildFileTree } from '@/lib/build-file-tree'
-import { buildGeneralInfoTree, buildInternalKBTreeFromDocs } from '@/lib/tree-builders'
+import { buildInternalKBTreeFromDocs, buildRegulatoryTreeFromDocs } from '@/lib/tree-builders'
 import type { Client } from '@/types'
 import type { DocumentPreview, FileTreeDocument } from '@/types/assistant'
 
@@ -84,7 +84,7 @@ export function useKnowledgeState() {
   }, [fetchedClients])
 
   const clientTree = useMemo(() => buildFileTree(liveClients, licenseDefinitions), [liveClients])
-  const generalTree = useMemo(() => buildGeneralInfoTree(), [])
+  const generalTree = useMemo(() => buildRegulatoryTreeFromDocs(kbDocs), [kbDocs])
   const internalTree = useMemo(() => buildInternalKBTreeFromDocs(kbDocs), [kbDocs])
 
   const activeTree = useMemo(() => {
@@ -159,7 +159,7 @@ export function useKnowledgeState() {
               prev?.documentId === doc.documentId ? { ...prev, content: baseContent } : prev
             )
           })
-      } else if (doc.clientId === 'internal-kb') {
+      } else if (doc.clientId === 'internal-kb' || doc.clientId === 'regulatory-kb') {
         // Internal KB tab: search for the document content by title
         searchKB(doc.name, 1)
           .then((results) => {

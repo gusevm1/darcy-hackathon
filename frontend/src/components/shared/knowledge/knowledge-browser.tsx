@@ -132,7 +132,7 @@ export function KnowledgeBrowser() {
           <TabsList>
             <TabsTrigger value="clients">Client Dossiers</TabsTrigger>
             <TabsTrigger value="general">Regulatory Library</TabsTrigger>
-            <TabsTrigger value="internal">FINMA Requirements</TabsTrigger>
+            <TabsTrigger value="internal">Internal Knowledge</TabsTrigger>
           </TabsList>
         </div>
 

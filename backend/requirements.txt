@@ -10,6 +10,7 @@ aiosqlite>=0.20.0
 python-multipart>=0.0.18
 pypdf>=5.0.0
 tenacity>=9.0.0
+fpdf2>=2.8.0
 
 # Dev / test
 pytest>=8.0

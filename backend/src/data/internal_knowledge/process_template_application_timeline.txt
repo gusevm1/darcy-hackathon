@@ -1,0 +1,89 @@
+JayBee Consulting AG — Standard Banking License Application Timeline
+Version 2.4 | Last Updated: January 2026
+Applicable to: Art. 3 BankA (Full Banking License) Applications
+
+Total estimated duration: 7–14 months (typical: 10 months)
+
+════════════════════════════════════════════════════
+PHASE 1: PRE-CONSULTATION (4–6 weeks)
+════════════════════════════════════════════════════
+Week 1–2:   Internal assessment — evaluate client readiness, identify gaps
+Week 2–3:   Prepare pre-consultation dossier (executive summary, business model, governance overview)
+Week 3–4:   Submit pre-consultation request to FINMA Banking Division
+Week 4–6:   Pre-consultation meeting at FINMA (Bern) + follow-up Q&A
+
+Key Milestones:
+- Pre-consultation meeting confirmed by FINMA
+- Written summary of FINMA feedback received
+- Gap analysis completed based on FINMA input
+
+Tip: The pre-consultation is non-binding but sets the tone for the entire application. Present a polished, concise dossier — FINMA forms its initial impression here.
+
+Typical Delays: FINMA scheduling (2–3 week lead time for meetings)
+
+════════════════════════════════════════════════════
+PHASE 2: APPLICATION PREPARATION (8–12 weeks)
+════════════════════════════════════════════════════
+Week 1–4:   Draft core application documents:
+            - Business plan (3-year projections)
+            - Organizational structure & governance
+            - AML/CFT framework
+            - Risk management framework
+            - IT security concept
+Week 4–8:   Board member fit & proper dossiers (see Board CV Checklist)
+Week 6–10:  Capital proof documentation (bank confirmations, auditor letters)
+Week 8–12:  Internal review, legal sign-off, final quality assurance
+
+Key Milestones:
+- All board member dossiers assembled and reviewed
+- Capital proof documentation secured
+- AML framework completed and internally validated
+- Complete application package ready for submission
+
+Tip: Start bank confirmation letters in Week 1 — they are the most common source of delays. Always prepare contingency documentation in parallel.
+
+Typical Delays: Bank confirmation letters (2–6 weeks), candidate background checks for foreign nationals (4–8 weeks)
+
+════════════════════════════════════════════════════
+PHASE 3: FORMAL SUBMISSION (1–2 weeks)
+════════════════════════════════════════════════════
+Week 1:     Final completeness check against FINMA requirements catalogue
+Week 1:     Submit via FINMA portal (EHP — Erhebungs- und Gesuchsplattform)
+Week 1–2:   FINMA acknowledges receipt, assigns case officer
+
+Key Milestones:
+- Application submitted and receipt confirmed
+- Case officer assigned and initial contact made
+
+Tip: Submit on a Monday or Tuesday — applications submitted late in the week may not be acknowledged until the following week, which can affect deadline calculations.
+
+════════════════════════════════════════════════════
+PHASE 4: FINMA REVIEW (3–6 months)
+════════════════════════════════════════════════════
+Month 1–2:  Initial review — FINMA checks completeness, may request clarifications
+Month 2–4:  Substantive review — detailed assessment of all application components
+Month 3–5:  Follow-up questions (Rückfragen) — typically 1–3 rounds
+Month 4–6:  Internal FINMA decision-making process
+
+Key Milestones:
+- Completeness confirmed by FINMA (no missing documents)
+- First round of follow-up questions received and answered
+- All follow-up rounds closed
+
+Tip: Respond to FINMA questions within 10 business days. Fast, thorough responses signal professionalism and can shorten the review period by weeks.
+
+Typical Delays: Multiple rounds of follow-up questions (each round adds 2–4 weeks), FINMA resource constraints during peak periods (Q4, Q1)
+
+════════════════════════════════════════════════════
+PHASE 5: DECISION & CONDITIONS (2–4 weeks)
+════════════════════════════════════════════════════
+Week 1–2:   FINMA issues draft decision with conditions (Auflagen)
+Week 2–3:   Review conditions, negotiate where possible
+Week 3–4:   Final license decision issued
+
+Key Milestones:
+- Draft decision received
+- Conditions reviewed and accepted/negotiated
+- Banking license granted (Verfügung)
+
+Tip: Most licenses are granted with conditions (Auflagen). Typical conditions include: hiring specific compliance staff within 6 months, implementing IT controls before commencing operations, or submitting an updated business plan within 90 days. Negotiate unrealistic deadlines early.

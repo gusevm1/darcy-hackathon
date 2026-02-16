@@ -1,0 +1,25 @@
+Subject: URGENT: UBS Escrow Confirmation — Helvetia Digital AG (Ref: BL-2025-5102)
+From: Thomas Richter <t.richter@jaybee-consulting.ch>
+To: Team Banking Licenses <banking-team@jaybee-consulting.ch>
+Date: 3 December 2025, 08:30 CET
+
+Team,
+
+The UBS escrow confirmation letter for Helvetia Digital AG's capital proof is now 3 weeks overdue. FINMA's submission deadline is 20 December, which leaves us 12 business days. This is a critical-path item — without the capital proof, the entire application stalls.
+
+Actions taken so far:
+- I escalated directly to our UBS Corporate Banking relationship manager (R. Meier) yesterday. He confirmed the escrow account is fully funded (CHF 10M) but the confirmation letter is stuck in their internal compliance review.
+- UBS has committed to issuing the letter by 10 December at the latest.
+
+Contingency plan (in case UBS misses the 10 Dec date):
+1. Prepare an alternative capital proof package using: (a) audited bank statements showing the escrow balance, (b) a signed attestation from UBS confirming the funds, and (c) the client's auditor confirmation letter.
+2. Draft a cover letter to FINMA explaining the delay and providing the interim documentation.
+3. Request a 2-week extension from the FINMA case officer (Anna Weber) — she has been receptive to reasonable extension requests in the past.
+
+Lessons learned: In future applications, request the bank confirmation letter at least 6 weeks before the FINMA deadline, not 4. Also, always have the alternative documentation package ready as a parallel workstream from day one.
+
+Please confirm receipt and let me know if you have questions.
+
+Thomas Richter
+Partner — Banking & FinTech Practice
+JayBee Consulting AG

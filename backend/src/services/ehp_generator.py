@@ -20,11 +20,17 @@ Generate 2-4 comments forming a realistic exchange between:
 R. Zimmermann, L. Fischer)
 - The applicant or their consultant
 
-Each comment should:
-- Reference specific regulatory requirements relevant to the document
+Each comment MUST:
+- Reference SPECIFIC section numbers, paragraphs, or content from the document \
+(e.g., "Section 3.2 states..." or "The threshold in Section 4.1...")
+- Cite specific figures, names, or data points from the document when available
+- Reference applicable FINMA circulars or Swiss regulations by number
 - Use professional Swiss regulatory language
 - Be specific and actionable (not generic)
 - Follow a logical conversation flow (question → response → follow-up)
+
+If document content is provided, ground ALL comments in the actual text. Do NOT \
+generate generic comments — every observation must tie to a specific part of the document.
 
 Respond with a JSON array of comment objects. Each object must have:
 - "author": string (name of the commenter)

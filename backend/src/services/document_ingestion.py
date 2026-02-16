@@ -9,6 +9,16 @@ from src.services import document_store, rag_service
 logger = logging.getLogger(__name__)
 
 REGULATORY_DOCS_DIR = Path(__file__).parent.parent / "data" / "regulatory_docs"
+INTERNAL_KNOWLEDGE_DIR = Path(__file__).parent.parent / "data" / "internal_knowledge"
+
+# Category mapping for internal knowledge display names
+INTERNAL_CATEGORIES: dict[str, str] = {
+    "email_aml_rejection_resolution": "Email Archives",
+    "email_capital_proof_delay": "Email Archives",
+    "finma_partner_contacts": "FINMA Contacts",
+    "process_template_board_cv_checklist": "Process Templates",
+    "process_template_application_timeline": "Process Templates",
+}
 
 
 def _parse_file(path: Path) -> str:
@@ -85,6 +95,34 @@ async def ingest_client_document(doc: ClientDocument) -> int:
     return await rag_service.ingest_document(
         text, doc_id, title, source, client_id=doc.client_id
     )
+
+
+async def seed_internal_knowledge() -> None:
+    """Seed internal consultant knowledge into the KB."""
+    if not INTERNAL_KNOWLEDGE_DIR.exists():
+        logger.warning("Internal knowledge dir not found: %s", INTERNAL_KNOWLEDGE_DIR)
+        return
+
+    existing = await rag_service.list_documents()
+    existing_ids = {d["doc_id"] for d in existing}
+
+    for path in sorted(INTERNAL_KNOWLEDGE_DIR.glob("*.txt")):
+        stem = path.stem
+        doc_id = f"internal-{stem}"
+        if doc_id in existing_ids:
+            logger.info("Already indexed: %s", path.name)
+            continue
+
+        text = _parse_file(path)
+        title = stem.replace("_", " ").title()
+        category = INTERNAL_CATEGORIES.get(stem, "General")
+        source = f"internal:{category}"
+
+        await rag_service.ingest_document(text, doc_id, title, source)
+        logger.info("Seeded internal knowledge: %s", path.name)
+
+    await rag_service.rebuild_bm25_corpus()
+    logger.info("Internal knowledge seeding complete")
 
 
 async def seed_client_docs() -> None:

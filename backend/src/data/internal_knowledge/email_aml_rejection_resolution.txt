@@ -1,0 +1,42 @@
+Subject: RE: Alpine Fiduciaire — FINMA AML Framework Rejection (Ref: BL-2025-4471)
+From: Dr. Sarah Keller <s.keller@jaybee-consulting.ch>
+To: Marcus Hoffmann <m.hoffmann@jaybee-consulting.ch>
+Date: 12 November 2025, 09:14 CET
+
+Marcus,
+
+Good news — I spoke with Dr. Hans Brunner at FINMA's Banking Division yesterday afternoon regarding the Alpine Fiduciaire rejection. He clarified that the reviewer (M. Brunner, no relation) flagged the AML framework primarily because the enhanced due diligence (EDD) procedures did not explicitly address PEP identification for indirect beneficial owners in multi-layered corporate structures.
+
+Specifically, the rejection references Circular 2016/7 (Video and online identification), but the real issue is compliance with Art. 13–15 of the Anti-Money Laundering Ordinance (AMLO-FINMA) and the requirement under FINMA Circular 2011/1 for documented risk-based EDD triggers.
+
+Here's what we need to revise:
+1. Add an explicit PEP screening step for ALL beneficial owners identified through the control chain, not only direct shareholders above the 25% threshold.
+2. Include a documented escalation matrix specifying when enhanced verification is required (country risk, transaction patterns, source of funds).
+3. Reference the Wolfsberg Group PEP guidance in the framework appendix — FINMA has been citing this as best practice since Q2 2025.
+
+I recommend we schedule a working session with Alpine's compliance officer this week to walk through the revisions. Turnaround for resubmission should be 10–15 business days.
+
+Best regards,
+Dr. Sarah Keller
+Senior Consultant — Regulatory Affairs
+JayBee Consulting AG
+
+---
+
+Subject: Alpine Fiduciaire — FINMA AML Framework Rejection (Ref: BL-2025-4471)
+From: Marcus Hoffmann <m.hoffmann@jaybee-consulting.ch>
+To: Dr. Sarah Keller <s.keller@jaybee-consulting.ch>
+Date: 11 November 2025, 16:42 CET
+
+Sarah,
+
+We received the formal rejection letter from FINMA this morning for Alpine Fiduciaire's AML/CFT framework submission. The reviewer (M. Brunner) noted deficiencies in the enhanced due diligence section, particularly around PEP screening and beneficial ownership verification for complex structures.
+
+This is the second time we've seen this type of rejection in Q4. Could you reach out to your contact in the Banking Division to get clarity on what exactly they expect? The written feedback is quite vague.
+
+I've attached the rejection letter and our original submission for reference.
+
+Regards,
+Marcus Hoffmann
+AML Specialist
+JayBee Consulting AG
