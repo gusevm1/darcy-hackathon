@@ -30,8 +30,6 @@ export function buildFileTree(
             return [result]
           })
 
-          if (documents.length === 0) return null
-
           return {
             type: 'stage' as const,
             stageId: stage.id,
@@ -39,17 +37,17 @@ export function buildFileTree(
             children: documents,
           }
         })
-        .filter((s): s is FileTreeStageFolder => s !== null)
 
-      if (stageFolders.length === 0) return null
-
-      return {
-        type: 'client' as const,
+      const folder: FileTreeClientFolder = {
+        type: 'client',
         clientId: client.id,
         name: client.company,
         company: client.company,
         children: stageFolders,
+        completedItems: client.completedItems,
+        totalItems: client.totalItems,
       }
+      return folder
     })
     .filter((c): c is FileTreeClientFolder => c !== null)
 }

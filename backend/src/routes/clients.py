@@ -72,6 +72,8 @@ class ClientListItem(BaseModel):
     current_stage_index: int = 0
     created_at: str
     updated_at: str
+    completed_items: int = 0
+    total_items: int = 0
 
 
 class ChecklistItemUpdate(BaseModel):
@@ -111,6 +113,10 @@ async def list_clients(
             current_stage_index=c.current_stage_index,
             created_at=c.created_at.isoformat(),
             updated_at=c.updated_at.isoformat(),
+            completed_items=sum(
+                1 for item in c.checklist if item.status == "complete"
+            ),
+            total_items=len(c.checklist),
         )
         for c in clients
     ]

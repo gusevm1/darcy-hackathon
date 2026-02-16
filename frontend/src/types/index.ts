@@ -48,6 +48,8 @@ export interface Client {
   documentStates: ClientDocumentState[]
   startDate: string
   contactEmail: string
+  completedItems?: number
+  totalItems?: number
 }
 
 export interface EHPComment {

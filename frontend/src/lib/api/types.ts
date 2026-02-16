@@ -46,6 +46,8 @@ export interface ApiClient {
   current_stage_index: number
   created_at: string
   updated_at: string
+  completed_items: number
+  total_items: number
 }
 
 // --- Pagination (matching backend pagination.py) ---

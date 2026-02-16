@@ -122,6 +122,13 @@ export const FileTreeNode = memo(
             <Folder className="text-muted-foreground h-4 w-4 shrink-0" />
           )}
           <span className="truncate font-medium">{node.name}</span>
+          {node.type === 'client' &&
+            (node as FileTreeClientFolder).totalItems != null &&
+            (node as FileTreeClientFolder).totalItems! > 0 && (
+              <span className="ml-auto shrink-0 text-xs text-muted-foreground">
+                {(node as FileTreeClientFolder).completedItems}/{(node as FileTreeClientFolder).totalItems}
+              </span>
+            )}
         </div>
         {isExpanded && (
           <div>

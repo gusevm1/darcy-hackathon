@@ -25,6 +25,8 @@ export interface FileTreeClientFolder {
   name: string
   company: string
   children: FileTreeStageFolder[]
+  completedItems?: number
+  totalItems?: number
 }
 
 export interface Citation {

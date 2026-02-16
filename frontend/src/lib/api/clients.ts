@@ -38,6 +38,8 @@ export function apiClientToClient(ac: ApiClient): Client {
     documentStates: buildDefaultDocumentStates(licenseType),
     startDate: ac.created_at.split('T')[0],
     contactEmail: ac.contact_email,
+    completedItems: ac.completed_items,
+    totalItems: ac.total_items,
   }
 }
 
