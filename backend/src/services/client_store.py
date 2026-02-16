@@ -1,9 +1,12 @@
 """SQLite-backed client storage."""
 
+import logging
 from typing import Any
 
 from src.models.client import Client
 from src.services.db import DB_PATH, get_db
+
+logger = logging.getLogger(__name__)
 
 
 async def init_db() -> None:
@@ -39,17 +42,18 @@ async def get_client(client_id: str) -> Client | None:
 async def list_clients(skip: int = 0, limit: int = 50) -> tuple[list[Client], int]:
     db = await get_db()
     try:
-        count_cursor = await db.execute("SELECT COUNT(*) FROM clients")
-        count_row = await count_cursor.fetchone()
-        total = count_row[0] if count_row else 0
-
         cursor = await db.execute(
             "SELECT data FROM clients ORDER BY rowid DESC LIMIT ? OFFSET ?",
             (limit, skip),
         )
         rows = await cursor.fetchall()
-        clients = [Client.model_validate_json(row[0]) for row in rows]
-        return clients, total
+        clients: list[Client] = []
+        for row in rows:
+            try:
+                clients.append(Client.model_validate_json(row[0]))
+            except Exception:
+                logger.warning("Skipping malformed client row: %s", row[0][:80])
+        return clients, len(clients)
     finally:
         await db.close()
 

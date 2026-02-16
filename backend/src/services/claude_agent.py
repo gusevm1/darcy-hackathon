@@ -372,9 +372,16 @@ async def _execute_tool(
         client.pathway = pathway
         client.checklist = get_checklist_for_pathway(pathway)
         if pathway.startswith("finma"):
-            parts = pathway.split("_", 1)
-            if len(parts) > 1:
-                client.finma_license_type = parts[1]
+            license_map = {
+                "finma_banking": "banking",
+                "finma_fintech": "fintech",
+                "finma_securities": "securities_firm",
+                "finma_fund_management": "fund_management",
+                "finma_insurance": "insurance",
+            }
+            lt = license_map.get(pathway)
+            if lt is not None:
+                client.finma_license_type = lt  # type: ignore[assignment]
         client.status = "in_progress"
         client.updated_at = datetime.now(UTC)
         await client_store.save_client(client)
