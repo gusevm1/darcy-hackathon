@@ -3,10 +3,7 @@
 import { useCallback, useEffect, useMemo, useState } from 'react'
 
 import { licenseDefinitions } from '@/data/license-stages'
-import {
-  downloadDocument,
-  listDocuments as listClientDocuments,
-} from '@/lib/api/client-documents'
+import { listDocuments as listClientDocuments } from '@/lib/api/client-documents'
 import { searchKB } from '@/lib/api/kb'
 import { buildFileTree } from '@/lib/build-file-tree'
 import { buildInternalKBTreeFromDocs, buildRegulatoryTreeFromDocs } from '@/lib/tree-builders'
@@ -176,17 +173,22 @@ export function useKnowledgeState() {
             )
           })
       } else if (doc.clientId) {
-        // Client tab: download actual file
-        downloadDocument(doc.clientId, doc.documentId)
-          .then((blob) => blob.text())
-          .then((text) => {
-            setPreviewDocument((prev) => (prev?.documentId === doc.documentId ? { ...prev, content: text } : prev))
+        // Client tab: retrieve text content from KB (documents are indexed in Qdrant)
+        searchKB(doc.name, 1)
+          .then((results) => {
+            const text =
+              results.length > 0
+                ? results[0].text
+                : 'Document content not yet indexed. Please try again after the document has been processed.'
+            setPreviewDocument((prev) =>
+              prev?.documentId === doc.documentId ? { ...prev, content: text } : prev,
+            )
           })
           .catch(() => {
             setPreviewDocument((prev) =>
               prev?.documentId === doc.documentId
                 ? { ...prev, content: 'Failed to load document content.' }
-                : prev
+                : prev,
             )
           })
       }
