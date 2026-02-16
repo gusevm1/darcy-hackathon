@@ -3,12 +3,12 @@
 import tempfile
 from pathlib import Path
 
-from fastapi import APIRouter, HTTPException, Query, UploadFile
+from fastapi import APIRouter, Depends, HTTPException, Query, UploadFile
 from pydantic import BaseModel
 
 from src.models.pagination import PaginatedResponse
-from src.services import rag_service
 from src.services.document_ingestion import _parse_pdf
+from src.services.rag_service import RAGService, content_hash, get_rag_service
 
 router = APIRouter(prefix="/api/kb", tags=["knowledge-base"])
 
@@ -47,9 +47,12 @@ class DocumentDeleteResponse(BaseModel):
 
 
 @router.post("/search")
-async def search_kb(body: KBSearchRequest) -> list[KBSearchResult]:
+async def search_kb(
+    body: KBSearchRequest,
+    rag: RAGService = Depends(get_rag_service),
+) -> list[KBSearchResult]:
     """Search the knowledge base."""
-    results = await rag_service.search(body.query, body.top_k)
+    results = await rag.search(body.query, body.top_k)
     return [
         KBSearchResult(
             text=str(r.get("text", "")),
@@ -67,6 +70,7 @@ async def upload_document(
     file: UploadFile,
     title: str = "",
     source: str = "",
+    rag: RAGService = Depends(get_rag_service),
 ) -> DocumentUploadResponse:
     """Upload a document to the knowledge base."""
     if not file.filename:
@@ -103,12 +107,12 @@ async def upload_document(
                 status_code=400, detail="File is not valid UTF-8 text"
             ) from err
 
-    doc_id = rag_service.content_hash(text)
+    doc_id = content_hash(text)
     if not title:
         title = file.filename.rsplit(".", 1)[0].replace("_", " ").title()
     if not source:
         source = file.filename
-    chunks = await rag_service.ingest_document(text, doc_id, title, source)
+    chunks = await rag.ingest_document(text, doc_id, title, source)
     return DocumentUploadResponse(doc_id=doc_id, title=title, chunks=chunks)
 
 
@@ -116,9 +120,10 @@ async def upload_document(
 async def list_documents(
     skip: int = Query(0, ge=0),
     limit: int = Query(50, ge=1, le=100),
+    rag: RAGService = Depends(get_rag_service),
 ) -> PaginatedResponse[KBDocument]:
     """List all indexed documents."""
-    docs = await rag_service.list_documents()
+    docs = await rag.list_documents()
     total = len(docs)
     page = docs[skip : skip + limit]
     items = [
@@ -133,7 +138,10 @@ async def list_documents(
 
 
 @router.delete("/documents/{doc_id}")
-async def delete_document(doc_id: str) -> DocumentDeleteResponse:
+async def delete_document(
+    doc_id: str,
+    rag: RAGService = Depends(get_rag_service),
+) -> DocumentDeleteResponse:
     """Remove a document and its chunks from the knowledge base."""
-    await rag_service.delete_document(doc_id)
+    await rag.delete_document(doc_id)
     return DocumentDeleteResponse(status="deleted", doc_id=doc_id)

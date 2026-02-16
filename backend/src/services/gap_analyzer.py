@@ -3,14 +3,11 @@
 from src.models.client import Client, Gap, GapAnalysis, NextStep
 
 
-def analyze_gaps(client: Client) -> GapAnalysis:
-    """Analyze a client's readiness for their chosen licensing pathway."""
-    pathway = client.pathway or "undetermined"
+def _check_core_fields(client: Client) -> tuple[list[Gap], list[str]]:
+    """Check company name, legal structure, Swiss presence, description, services."""
     gaps: list[Gap] = []
-    next_steps: list[NextStep] = []
-    critical_blockers: list[str] = []
+    blockers: list[str] = []
 
-    # Check core fields
     if not client.company_name:
         gaps.append(
             Gap(
@@ -30,9 +27,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
                 severity="missing",
             )
         )
-        critical_blockers.append(
-            "Legal structure must be determined before application"
-        )
+        blockers.append("Legal structure must be determined before application")
 
     if client.has_swiss_office is None:
         gaps.append(
@@ -52,7 +47,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
                 severity="missing",
             )
         )
-        critical_blockers.append("Swiss office is mandatory")
+        blockers.append("Swiss office is mandatory")
 
     if client.has_swiss_director is None:
         gaps.append(
@@ -72,7 +67,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
                 severity="missing",
             )
         )
-        critical_blockers.append("Swiss-resident director is mandatory")
+        blockers.append("Swiss-resident director is mandatory")
 
     if client.business_description is None:
         gaps.append(
@@ -94,19 +89,16 @@ def analyze_gaps(client: Client) -> GapAnalysis:
             )
         )
 
-    # Pathway-specific checks
-    if pathway == "undetermined":
-        gaps.append(
-            Gap(
-                category="governance",
-                field_or_item="pathway",
-                description="Regulatory pathway not yet determined",
-                severity="needs_review",
-            )
-        )
-        critical_blockers.append("Regulatory pathway must be determined to proceed")
+    return gaps, blockers
 
-    # Capital checks
+
+def _check_capital(
+    client: Client, pathway: str
+) -> tuple[list[Gap], list[str]]:
+    """Check general and pathway-specific capital requirements."""
+    gaps: list[Gap] = []
+    blockers: list[str] = []
+
     if (
         client.minimum_capital_chf is not None
         and client.existing_capital_chf is not None
@@ -121,7 +113,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
                     severity="missing",
                 )
             )
-            critical_blockers.append(
+            blockers.append(
                 f"Capital shortfall of CHF {shortfall:,} must be addressed"
             )
     elif client.minimum_capital_chf is not None and client.existing_capital_chf is None:
@@ -134,7 +126,40 @@ def analyze_gaps(client: Client) -> GapAnalysis:
             )
         )
 
-    # Compliance checks
+    pathway_capital: dict[str, tuple[int, str]] = {
+        "finma_banking": (10_000_000, "Banking license requires CHF 10M minimum"),
+        "finma_securities": (1_500_000, "Securities Firm requires CHF 1.5M minimum"),
+        "finma_fund_management": (
+            1_000_000,
+            "Fund Management requires CHF 1M minimum",
+        ),
+    }
+    if pathway in pathway_capital:
+        min_capital, label = pathway_capital[pathway]
+        if (
+            client.existing_capital_chf is not None
+            and client.existing_capital_chf < min_capital
+        ):
+            shortfall = min_capital - client.existing_capital_chf
+            gaps.append(
+                Gap(
+                    category="capital",
+                    field_or_item="existing_capital_chf",
+                    description=(f"{label}. Shortfall: CHF {shortfall:,}"),
+                    severity="missing",
+                )
+            )
+            blockers.append(
+                f"Capital shortfall of CHF {shortfall:,} for {pathway}"
+            )
+
+    return gaps, blockers
+
+
+def _check_compliance(client: Client) -> list[Gap]:
+    """Check AML officer, auditor, KYC policies, monitoring, sanctions."""
+    gaps: list[Gap] = []
+
     compliance_fields = {
         "has_aml_officer": "AML compliance officer not appointed",
         "has_external_auditor": "External auditor not engaged",
@@ -174,35 +199,27 @@ def analyze_gaps(client: Client) -> GapAnalysis:
             )
         )
 
-    # Pathway-specific capital checks
-    _pathway_capital: dict[str, tuple[int, str]] = {
-        "finma_banking": (10_000_000, "Banking license requires CHF 10M minimum"),
-        "finma_securities": (1_500_000, "Securities Firm requires CHF 1.5M minimum"),
-        "finma_fund_management": (
-            1_000_000,
-            "Fund Management requires CHF 1M minimum",
-        ),
-    }
-    if pathway in _pathway_capital:
-        min_capital, label = _pathway_capital[pathway]
-        if (
-            client.existing_capital_chf is not None
-            and client.existing_capital_chf < min_capital
-        ):
-            shortfall = min_capital - client.existing_capital_chf
-            gaps.append(
-                Gap(
-                    category="capital",
-                    field_or_item="existing_capital_chf",
-                    description=(f"{label}. Shortfall: CHF {shortfall:,}"),
-                    severity="missing",
-                )
-            )
-            critical_blockers.append(
-                f"Capital shortfall of CHF {shortfall:,} for {pathway}"
-            )
+    return gaps
 
-    # Fund Management specific checks
+
+def _check_pathway_specific(
+    pathway: str,
+) -> tuple[list[Gap], list[str]]:
+    """Check pathway-specific governance requirements (fund mgmt, insurance)."""
+    gaps: list[Gap] = []
+    blockers: list[str] = []
+
+    if pathway == "undetermined":
+        gaps.append(
+            Gap(
+                category="governance",
+                field_or_item="pathway",
+                description="Regulatory pathway not yet determined",
+                severity="needs_review",
+            )
+        )
+        blockers.append("Regulatory pathway must be determined to proceed")
+
     if pathway == "finma_fund_management":
         gaps.append(
             Gap(
@@ -216,7 +233,6 @@ def analyze_gaps(client: Client) -> GapAnalysis:
             )
         )
 
-    # Insurance specific checks
     if pathway == "finma_insurance":
         gaps.append(
             Gap(
@@ -230,12 +246,13 @@ def analyze_gaps(client: Client) -> GapAnalysis:
             )
         )
 
-    # Checklist gap analysis
-    total_items = len(client.checklist)
-    completed_items = sum(1 for item in client.checklist if item.status == "complete")
-    blocked_items = [item for item in client.checklist if item.status == "blocked"]
-    not_started = [item for item in client.checklist if item.status == "not_started"]
+    return gaps, blockers
 
+
+def _check_checklist(client: Client) -> list[Gap]:
+    """Flag blocked checklist items as gaps."""
+    gaps: list[Gap] = []
+    blocked_items = [item for item in client.checklist if item.status == "blocked"]
     for item in blocked_items:
         gaps.append(
             Gap(
@@ -245,17 +262,25 @@ def analyze_gaps(client: Client) -> GapAnalysis:
                 severity="needs_review",
             )
         )
+    return gaps
 
-    # Unresolved flags
-    for flag in client.flags:
-        if not flag.resolved and flag.severity == "critical":
-            critical_blockers.append(f"Unresolved critical flag: {flag.reason}")
 
-    # Generate next steps
+def _check_unresolved_flags(client: Client) -> list[str]:
+    """Return critical blockers from unresolved flags."""
+    return [
+        f"Unresolved critical flag: {flag.reason}"
+        for flag in client.flags
+        if not flag.resolved and flag.severity == "critical"
+    ]
+
+
+def _generate_next_steps(client: Client, pathway: str) -> list[NextStep]:
+    """Generate prioritized next steps based on gaps."""
+    steps: list[NextStep] = []
     priority = 1
 
     if pathway == "undetermined":
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action="Complete intake to determine regulatory pathway (SRO vs FINMA)",
@@ -267,7 +292,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     if not client.company_name or client.legal_structure is None:
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action=(
@@ -282,7 +307,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     if client.has_swiss_office is not True:
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action="Establish Swiss office address",
@@ -293,7 +318,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     if client.has_swiss_director is not True:
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action="Appoint at least one Swiss-resident director",
@@ -304,7 +329,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     if not client.has_aml_officer:
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action="Appoint qualified AML compliance officer",
@@ -316,7 +341,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     if not client.has_aml_kyc_policies:
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action="Draft AML/KYC policies and procedures",
@@ -329,7 +354,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     if not client.has_external_auditor:
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action="Engage FINMA-recognized external auditor",
@@ -341,7 +366,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     if not client.has_transaction_monitoring:
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action="Implement transaction monitoring system",
@@ -354,7 +379,7 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     if not client.has_sanctions_screening:
-        next_steps.append(
+        steps.append(
             NextStep(
                 priority=priority,
                 action="Implement sanctions screening (SECO, UN, EU lists)",
@@ -366,14 +391,14 @@ def analyze_gaps(client: Client) -> GapAnalysis:
         priority += 1
 
     # Add not-started checklist items as next steps
-    for item in not_started[:5]:  # Top 5 not-started items
-        # Skip if depends_on items aren't complete
+    not_started = [item for item in client.checklist if item.status == "not_started"]
+    for item in not_started[:5]:
         deps_met = all(
             any(ci.id == dep and ci.status == "complete" for ci in client.checklist)
             for dep in item.depends_on
         )
         if deps_met or not item.depends_on:
-            next_steps.append(
+            steps.append(
                 NextStep(
                     priority=priority,
                     action=item.item,
@@ -384,6 +409,38 @@ def analyze_gaps(client: Client) -> GapAnalysis:
             )
             priority += 1
 
+    return steps
+
+
+def analyze_gaps(client: Client) -> GapAnalysis:
+    """Analyze a client's readiness for their chosen licensing pathway."""
+    pathway = client.pathway or "undetermined"
+    gaps: list[Gap] = []
+    critical_blockers: list[str] = []
+
+    # Per-category checks
+    core_gaps, core_blockers = _check_core_fields(client)
+    gaps.extend(core_gaps)
+    critical_blockers.extend(core_blockers)
+
+    pathway_gaps, pathway_blockers = _check_pathway_specific(pathway)
+    gaps.extend(pathway_gaps)
+    critical_blockers.extend(pathway_blockers)
+
+    capital_gaps, capital_blockers = _check_capital(client, pathway)
+    gaps.extend(capital_gaps)
+    critical_blockers.extend(capital_blockers)
+
+    gaps.extend(_check_compliance(client))
+    gaps.extend(_check_checklist(client))
+    critical_blockers.extend(_check_unresolved_flags(client))
+
+    # Next steps
+    next_steps = _generate_next_steps(client, pathway)
+
+    # Readiness score
+    total_items = len(client.checklist)
+    completed_items = sum(1 for item in client.checklist if item.status == "complete")
     readiness = completed_items / total_items if total_items > 0 else 0.0
 
     return GapAnalysis(

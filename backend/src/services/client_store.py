@@ -1,20 +1,9 @@
 """SQLite-backed client storage."""
 
-from pathlib import Path
 from typing import Any
 
-import aiosqlite
-
 from src.models.client import Client
-
-DB_PATH = Path(__file__).parent.parent.parent / "data" / "clients.db"
-
-
-async def _get_db() -> aiosqlite.Connection:
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    db = await aiosqlite.connect(str(DB_PATH))
-    db.row_factory = aiosqlite.Row
-    return db
+from src.services.db import DB_PATH, get_db
 
 
 async def init_db() -> None:
@@ -24,7 +13,7 @@ async def init_db() -> None:
 
 
 async def save_client(client: Client) -> None:
-    db = await _get_db()
+    db = await get_db()
     try:
         await db.execute(
             "INSERT OR REPLACE INTO clients (id, data) VALUES (?, ?)",
@@ -36,7 +25,7 @@ async def save_client(client: Client) -> None:
 
 
 async def get_client(client_id: str) -> Client | None:
-    db = await _get_db()
+    db = await get_db()
     try:
         cursor = await db.execute("SELECT data FROM clients WHERE id = ?", (client_id,))
         row = await cursor.fetchone()
@@ -48,7 +37,7 @@ async def get_client(client_id: str) -> Client | None:
 
 
 async def list_clients(skip: int = 0, limit: int = 50) -> tuple[list[Client], int]:
-    db = await _get_db()
+    db = await get_db()
     try:
         count_cursor = await db.execute("SELECT COUNT(*) FROM clients")
         count_row = await count_cursor.fetchone()
@@ -107,7 +96,7 @@ async def seed_demo_client() -> None:
 
 
 async def delete_client(client_id: str) -> bool:
-    db = await _get_db()
+    db = await get_db()
     try:
         cursor = await db.execute("DELETE FROM clients WHERE id = ?", (client_id,))
         await db.commit()

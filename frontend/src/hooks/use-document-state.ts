@@ -5,47 +5,14 @@ import { useCallback, useEffect, useState } from 'react'
 import { toast } from 'sonner'
 
 import {
-  type BackendDocument,
   listDocuments,
   uploadDocument,
   deleteDocument as apiDeleteDocument,
   verifyDocument,
 } from '@/lib/api/client-documents'
-import type { ClientDocumentState, DocumentStatus } from '@/types'
-
-function backendStatusToFrontend(status: string): DocumentStatus {
-  switch (status) {
-    case 'pending':
-      return 'pending'
-    case 'verified':
-      return 'verified'
-    case 'rejected':
-      return 'rejected'
-    case 'error':
-      return 'error'
-    default:
-      return 'uploaded'
-  }
-}
-
-function mergeBackendDocs(
-  localStates: ClientDocumentState[],
-  backendDocs: BackendDocument[]
-): ClientDocumentState[] {
-  const backendMap = new Map(backendDocs.map((d) => [d.document_id, d]))
-  return localStates.map((s) => {
-    const bd = backendMap.get(s.documentId)
-    if (bd) {
-      return {
-        documentId: s.documentId,
-        status: backendStatusToFrontend(bd.status),
-        fileName: bd.file_name,
-        uploadedAt: bd.uploaded_at,
-      }
-    }
-    return s
-  })
-}
+import { backendStatusToFrontend, mergeBackendDocs } from '@/lib/mappers'
+import { validateUploadFile } from '@/lib/validation'
+import type { ClientDocumentState } from '@/types'
 
 export function useDocumentState(initialStates: ClientDocumentState[], clientId: string) {
   const [documentStates, setDocumentStates] = useState<ClientDocumentState[]>(initialStates)
@@ -70,6 +37,11 @@ export function useDocumentState(initialStates: ClientDocumentState[], clientId:
 
   const handleUpload = useCallback(
     async (docId: string, file: File) => {
+      const check = validateUploadFile(file)
+      if (!check.valid) {
+        toast.error(check.error)
+        return
+      }
       setUploading((prev) => new Set(prev).add(docId))
       // Optimistic local update
       setDocumentStates((prev) =>

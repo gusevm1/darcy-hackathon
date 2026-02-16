@@ -1,91 +1,24 @@
 'use client'
 
-import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
+import { useCallback, useMemo, useRef, useState } from 'react'
 
 import { toast } from 'sonner'
 
 import { type ClientContext, streamConsultChat } from '@/lib/api/consult'
+import { createSSECallbacks } from '@/lib/sse-callbacks'
+import { validateChatMessage } from '@/lib/validation'
 import type { ChatMessage, ChatSession } from '@/types/assistant'
 
-const STORAGE_KEY = 'darcy-chat-sessions'
-const ACTIVE_CHAT_KEY = 'darcy-active-chat'
+import { useChatStorage, welcomeMessage } from './use-chat-storage'
 
 function generateId() {
   return crypto.randomUUID()
 }
 
-const welcomeMessage: ChatMessage = {
-  id: 'welcome',
-  role: 'assistant',
-  content:
-    "Hello! I'm your FINMA compliance assistant. I can help you navigate the licensing process, review document status, and answer questions about regulatory requirements. Try asking about **AML/KYC policies**, **capital requirements**, or the **status** of your applications.",
-  citations: [],
-  timestamp: new Date(),
-}
-
-function createDefaultChat(): ChatSession {
-  return {
-    id: 'default',
-    title: 'Welcome',
-    messages: [welcomeMessage],
-    createdAt: new Date(),
-    updatedAt: new Date(),
-  }
-}
-
-const isBrowser = typeof window !== 'undefined'
-
-function loadChatsFromStorage(): ChatSession[] {
-  if (!isBrowser) return [createDefaultChat()]
-  try {
-    const raw = localStorage.getItem(STORAGE_KEY)
-    if (!raw) return [createDefaultChat()]
-    const parsed = JSON.parse(raw) as ChatSession[]
-    return parsed.map((chat) => ({
-      ...chat,
-      createdAt: new Date(chat.createdAt),
-      updatedAt: new Date(chat.updatedAt),
-      messages: chat.messages.map((m) => ({
-        ...m,
-        timestamp: new Date(m.timestamp),
-      })),
-    }))
-  } catch {
-    return [createDefaultChat()]
-  }
-}
-
-function saveChatsToStorage(chats: ChatSession[]) {
-  if (!isBrowser) return
-  try {
-    localStorage.setItem(STORAGE_KEY, JSON.stringify(chats))
-  } catch {
-    // Storage full or unavailable — silently ignore
-  }
-}
-
 export function useChatSessions(clientId?: string, clientContext?: ClientContext) {
-  const [chats, setChats] = useState<ChatSession[]>(loadChatsFromStorage)
-  const [activeChatId, setActiveChatId] = useState(() => {
-    if (!isBrowser) return 'default'
-    return localStorage.getItem(ACTIVE_CHAT_KEY) ?? 'default'
-  })
+  const { chats, setChats, activeChatId, setActiveChatId } = useChatStorage()
   const [isLoading, setIsLoading] = useState(false)
   const abortRef = useRef<AbortController | null>(null)
-
-  // Persist chats to localStorage whenever they change
-  useEffect(() => {
-    saveChatsToStorage(chats)
-  }, [chats])
-
-  // Persist active chat ID
-  useEffect(() => {
-    try {
-      localStorage.setItem(ACTIVE_CHAT_KEY, activeChatId)
-    } catch {
-      // ignore
-    }
-  }, [activeChatId])
 
   const activeChat = useMemo(
     () => chats.find((c) => c.id === activeChatId) ?? chats[0],
@@ -109,16 +42,25 @@ export function useChatSessions(clientId?: string, clientContext?: ClientContext
     }
     setChats((prev) => [newChat, ...prev])
     setActiveChatId(newChat.id)
-  }, [])
+  }, [setChats, setActiveChatId])
 
-  const switchChat = useCallback((chatId: string) => {
-    setActiveChatId(chatId)
-  }, [])
+  const switchChat = useCallback(
+    (chatId: string) => {
+      setActiveChatId(chatId)
+    },
+    [setActiveChatId]
+  )
 
   const sendMessage = useCallback(
     async (content: string) => {
       const trimmed = content.trim()
       if (!trimmed || isLoading) return
+
+      const check = validateChatMessage(trimmed)
+      if (!check.valid) {
+        toast.error(check.error)
+        return
+      }
 
       const userMsg: ChatMessage = {
         id: generateId(),
@@ -162,40 +104,26 @@ export function useChatSessions(clientId?: string, clientContext?: ClientContext
           .slice(-10)
           .map((m) => ({ role: m.role, content: m.content }))
 
+        const callbacks = createSSECallbacks(
+          placeholderId,
+          (updater) =>
+            setChats((prev) =>
+              prev.map((chat) => {
+                if (chat.id !== activeChatId) return chat
+                return {
+                  ...chat,
+                  messages: chat.messages.map((m) =>
+                    m.id === placeholderId ? { ...m, content: updater(m.content) } : m
+                  ),
+                }
+              })
+            ),
+          'Consult',
+        )
+
         await streamConsultChat(
           trimmed,
-          {
-            onText(chunk) {
-              setChats((prev) =>
-                prev.map((chat) => {
-                  if (chat.id !== activeChatId) return chat
-                  return {
-                    ...chat,
-                    messages: chat.messages.map((m) =>
-                      m.id === placeholderId ? { ...m, content: m.content + chunk } : m
-                    ),
-                  }
-                })
-              )
-            },
-            onError(err) {
-              setChats((prev) =>
-                prev.map((chat) => {
-                  if (chat.id !== activeChatId) return chat
-                  return {
-                    ...chat,
-                    messages: chat.messages.map((m) =>
-                      m.id === placeholderId
-                        ? { ...m, content: 'Sorry, I encountered an error. Please try again.' }
-                        : m
-                    ),
-                  }
-                })
-              )
-              console.error('Consult SSE error:', err)
-              toast.error('Chat connection error. Please try again.')
-            },
-          },
+          callbacks,
           clientId,
           clientContext,
           abortRef.current.signal,
@@ -220,7 +148,7 @@ export function useChatSessions(clientId?: string, clientContext?: ClientContext
         abortRef.current = null
       }
     },
-    [activeChatId, clientId, clientContext, isLoading]
+    [activeChatId, clientId, clientContext, isLoading, activeChat.messages, setChats]
   )
 
   return {

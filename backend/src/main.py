@@ -40,6 +40,9 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     except Exception:
         logger.exception("Failed to initialize RAG service (Qdrant may not be running)")
 
+    # Store default RAGService instance on app state for DI
+    app.state.rag_service = rag_service._default_instance  # noqa: SLF001
+
     yield
 
 

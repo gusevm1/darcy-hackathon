@@ -2,37 +2,27 @@
 
 import { ChatArea } from '@/components/shared/assistant/chat-area'
 import { DocumentPreviewSheet } from '@/components/shared/assistant/document-preview-sheet'
-import type { ChatMessage, ChatSession, Citation, DocumentPreview } from '@/types/assistant'
+import { useRoadmap } from '@/contexts/roadmap-context'
 
 interface RoadmapChatPanelProps {
   title: string
-  messages: ChatMessage[]
-  chats: ChatSession[]
-  activeChatId: string
-  onSendMessage: (content: string) => void
-  onCitationClick: (citation: Citation) => void
-  onNewChat: () => void
-  onSelectChat: (chatId: string) => void
-  previewDocument: DocumentPreview | null
-  previewOpen: boolean
-  onPreviewOpenChange: (open: boolean) => void
-  isLoading?: boolean
 }
 
-export function RoadmapChatPanel({
-  title,
-  messages,
-  chats,
-  activeChatId,
-  onSendMessage,
-  onCitationClick,
-  onNewChat,
-  onSelectChat,
-  previewDocument,
-  previewOpen,
-  onPreviewOpenChange,
-  isLoading,
-}: RoadmapChatPanelProps) {
+export function RoadmapChatPanel({ title }: RoadmapChatPanelProps) {
+  const {
+    messages,
+    chats,
+    activeChatId,
+    sendMessage,
+    handleCitationClick,
+    createNewChat,
+    switchChat,
+    previewDocument,
+    previewOpen,
+    handlePreviewOpenChange,
+    isLoading,
+  } = useRoadmap()
+
   return (
     <div className="flex h-full flex-col">
       <ChatArea
@@ -40,17 +30,17 @@ export function RoadmapChatPanel({
         messages={messages}
         chats={chats}
         activeChatId={activeChatId}
-        onSendMessage={onSendMessage}
-        onCitationClick={onCitationClick}
-        onNewChat={onNewChat}
-        onSelectChat={onSelectChat}
+        onSendMessage={sendMessage}
+        onCitationClick={handleCitationClick}
+        onNewChat={createNewChat}
+        onSelectChat={switchChat}
         placeholder="Ask about this client's compliance status..."
         isLoading={isLoading}
       />
       <DocumentPreviewSheet
         document={previewDocument}
         open={previewOpen}
-        onOpenChange={onPreviewOpenChange}
+        onOpenChange={handlePreviewOpenChange}
       />
     </div>
   )

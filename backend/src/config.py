@@ -8,8 +8,10 @@ class Settings(BaseSettings):
     host: str = "0.0.0.0"
     port: int = 8000
     frontend_url: str = "http://localhost:3000"
+    cors_origins: str = ""  # Comma-separated origins; falls back to defaults
     api_key: str = ""  # If set, all non-health endpoints require this key
     anthropic_api_key: str = Field(min_length=1)
+    agent_model: str = "claude-sonnet-4-5-20250929"
 
     # Qdrant
     qdrant_url: str = "http://localhost:6333"

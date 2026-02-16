@@ -7,11 +7,10 @@ from datetime import UTC, datetime
 from typing import Any
 
 import anthropic
-from tenacity import retry, stop_after_attempt, wait_exponential
 
-from src.config import settings
 from src.models.client import Client, FlaggedItem
 from src.services import client_store, document_store, rag_service
+from src.services.agent_tool_loop import run_tool_loop
 from src.services.gap_analyzer import analyze_gaps
 
 logger = logging.getLogger(__name__)
@@ -401,65 +400,11 @@ async def run_consultant_turn(
     messages: list[anthropic.types.MessageParam] = list(conversation_history)  # type: ignore[arg-type]
     messages.append({"role": "user", "content": user_message})
 
-    api_client = anthropic.AsyncAnthropic(
-        api_key=settings.anthropic_api_key, timeout=120.0
-    )
-
-    @retry(
-        stop=stop_after_attempt(2),
-        wait=wait_exponential(multiplier=1, min=2, max=8),
-        reraise=True,
-    )
-    async def _call_claude(
-        msgs: list[anthropic.types.MessageParam],
-    ) -> anthropic.types.Message:
-        return await api_client.messages.create(
-            model="claude-sonnet-4-5-20250929",
-            max_tokens=4096,
-            system=system,
-            tools=TOOLS,
-            messages=msgs,
-        )
-
-    # Tool-use loop
-    max_iterations = 10
-    for _ in range(max_iterations):
-        response = await _call_claude(messages)
-
-        assistant_text = ""
-        tool_calls: list[tuple[str, str, dict[str, Any]]] = []
-
-        for block in response.content:
-            if block.type == "text":
-                assistant_text += block.text
-                yield json.dumps({"type": "text", "content": block.text})
-            elif block.type == "tool_use":
-                tool_calls.append((block.id, block.name, block.input))
-                yield json.dumps(
-                    {
-                        "type": "tool_use",
-                        "tool": block.name,
-                        "input": block.input,
-                    }
-                )
-
-        if not tool_calls:
-            break
-
-        # Execute tools
-        messages.append({"role": "assistant", "content": response.content})
-
-        tool_results: list[dict[str, Any]] = []
-        for tool_id, tool_name, tool_input in tool_calls:
-            result = await _execute_tool(tool_name, tool_input)
-            tool_results.append(
-                {
-                    "type": "tool_result",
-                    "tool_use_id": tool_id,
-                    "content": result,
-                }
-            )
-
-        messages.append({"role": "user", "content": tool_results})  # type: ignore[typeddict-item]
-
-    yield json.dumps({"type": "done"})
+    async for event_json in run_tool_loop(
+        messages=messages,
+        system=system,
+        tools=TOOLS,
+        execute_tool=_execute_tool,
+        max_tokens=4096,
+    ):
+        yield event_json

@@ -7,82 +7,23 @@ import {
   downloadDocument,
   listDocuments as listClientDocuments,
 } from '@/lib/api/client-documents'
-import { listDocuments, searchKB } from '@/lib/api/kb'
-import type { KBDocument } from '@/lib/api/types'
+import { searchKB } from '@/lib/api/kb'
 import { buildFileTree } from '@/lib/build-file-tree'
+import { buildGeneralInfoTree, buildInternalKBTreeFromDocs } from '@/lib/tree-builders'
 import type { Client } from '@/types'
-import type { DocumentPreview, FileTreeClientFolder, FileTreeDocument } from '@/types/assistant'
+import type { DocumentPreview, FileTreeDocument } from '@/types/assistant'
 
 import { useClients } from './use-clients'
 import { useDocumentPreview } from './use-document-preview'
 import { useFileTree } from './use-file-tree'
+import { useKBDocuments } from './use-kb-documents'
 
 type KnowledgeTab = 'clients' | 'general' | 'internal'
-
-function buildGeneralInfoTree(): FileTreeClientFolder[] {
-  return licenseDefinitions.map((def) => ({
-    type: 'client' as const,
-    clientId: def.type,
-    name: def.label,
-    company: def.legalBasis,
-    children: def.stages.map((stage) => ({
-      type: 'stage' as const,
-      stageId: stage.id,
-      name: stage.name,
-      children: stage.documents.map((doc) => ({
-        type: 'document' as const,
-        documentId: doc.id,
-        name: doc.name,
-        fileName: `${doc.id}.pdf`,
-        status: 'approved' as const,
-        clientId: def.type,
-        clientName: def.label,
-        stageId: stage.id,
-        stageName: stage.name,
-      })),
-    })),
-  }))
-}
-
-function buildInternalKBTreeFromDocs(docs: KBDocument[]): FileTreeClientFolder[] {
-  const grouped = new Map<string, KBDocument[]>()
-  for (const doc of docs) {
-    const source = doc.source || 'Other'
-    if (!grouped.has(source)) grouped.set(source, [])
-    grouped.get(source)!.push(doc)
-  }
-
-  return [
-    {
-      type: 'client' as const,
-      clientId: 'internal-kb',
-      name: 'Internal Knowledge Base',
-      company: 'FINMA Comply',
-      children: Array.from(grouped.entries()).map(([source, sourceDocs]) => ({
-        type: 'stage' as const,
-        stageId: source.toLowerCase().replace(/\s+/g, '-'),
-        name: source,
-        children: sourceDocs.map((doc) => ({
-          type: 'document' as const,
-          documentId: doc.doc_id,
-          name: doc.title,
-          fileName: `${doc.doc_id}.pdf`,
-          status: 'approved' as const,
-          clientId: 'internal-kb',
-          clientName: 'Internal Knowledge Base',
-          stageId: source.toLowerCase().replace(/\s+/g, '-'),
-          stageName: source,
-        })),
-      })),
-    },
-  ]
-}
 
 export function useKnowledgeState() {
   const [activeTab, setActiveTab] = useState<KnowledgeTab>('clients')
   const { clients: fetchedClients } = useClients()
-  const [kbDocs, setKbDocs] = useState<KBDocument[]>([])
-  const [kbLoading, setKbLoading] = useState(false)
+  const { kbDocs, kbLoading } = useKBDocuments()
   const [liveClients, setLiveClients] = useState<Client[]>([])
 
   const { expandedNodes, setExpandedNodes, highlightedDocumentId, toggleNode } = useFileTree()
@@ -95,9 +36,10 @@ export function useKnowledgeState() {
     handlePreviewOpenChange,
   } = useDocumentPreview()
 
-  // Initialize liveClients from fetched clients and auto-expand client nodes
+  // Sync fetched clients into local state for live updates
   useEffect(() => {
     if (fetchedClients.length > 0) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- syncs external async data into local state
       setLiveClients(fetchedClients)
       setExpandedNodes((prev) => {
         const next = new Set(prev)
@@ -140,25 +82,6 @@ export function useKnowledgeState() {
     syncClients()
     return () => { cancelled = true }
   }, [fetchedClients])
-
-  useEffect(() => {
-    let cancelled = false
-    async function fetchDocs() {
-      setKbLoading(true)
-      try {
-        const result = await listDocuments(0, 100)
-        if (!cancelled) setKbDocs(result.items)
-      } catch (err) {
-        console.error('Failed to fetch KB documents:', err)
-      } finally {
-        if (!cancelled) setKbLoading(false)
-      }
-    }
-    fetchDocs()
-    return () => {
-      cancelled = true
-    }
-  }, [])
 
   const clientTree = useMemo(() => buildFileTree(liveClients, licenseDefinitions), [liveClients])
   const generalTree = useMemo(() => buildGeneralInfoTree(), [])

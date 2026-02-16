@@ -5,6 +5,8 @@ import { useCallback, useRef, useState } from 'react'
 import { toast } from 'sonner'
 
 import { startOnboarding, streamOnboardingChat } from '@/lib/api/onboard'
+import { createSSECallbacks } from '@/lib/sse-callbacks'
+import { validateChatMessage } from '@/lib/validation'
 import type { ChatMessage } from '@/types/assistant'
 
 function generateId() {
@@ -30,6 +32,12 @@ export function useOnboardingChat() {
     async (content: string) => {
       const trimmed = content.trim()
       if (!trimmed || isLoading) return
+
+      const check = validateChatMessage(trimmed)
+      if (!check.valid) {
+        toast.error(check.error)
+        return
+      }
 
       const userMsg: ChatMessage = {
         id: generateId(),
@@ -59,29 +67,21 @@ export function useOnboardingChat() {
 
         abortRef.current = new AbortController()
 
+        const callbacks = createSSECallbacks(
+          placeholderId,
+          (updater) =>
+            setMessages((prev) =>
+              prev.map((m) =>
+                m.id === placeholderId ? { ...m, content: updater(m.content) } : m,
+              ),
+            ),
+          'Onboarding',
+        )
+
         await streamOnboardingChat(
           sessionIdRef.current,
           trimmed,
-          {
-            onText(chunk) {
-              setMessages((prev) =>
-                prev.map((m) =>
-                  m.id === placeholderId ? { ...m, content: m.content + chunk } : m,
-                ),
-              )
-            },
-            onError(err) {
-              setMessages((prev) =>
-                prev.map((m) =>
-                  m.id === placeholderId
-                    ? { ...m, content: 'Sorry, I encountered an error. Please try again.' }
-                    : m,
-                ),
-              )
-              console.error('Onboarding SSE error:', err)
-              toast.error('Chat connection error. Please try again.')
-            },
-          },
+          callbacks,
           abortRef.current.signal,
         )
       } catch {

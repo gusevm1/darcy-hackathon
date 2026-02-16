@@ -10,37 +10,23 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select'
-import type { Client, ClientDocumentState, LicenseDefinition } from '@/types'
+import { useRoadmap } from '@/contexts/roadmap-context'
 
-interface RoadmapVisualizationProps {
-  client: Client
-  definition: LicenseDefinition | undefined
-  selectedStageIndex: number
-  onSelectStage: (index: number) => void
-  documentStates: ClientDocumentState[]
-  onUpload: (docId: string, file: File) => void
-  onReset: (docId: string) => void
-  uploading?: Set<string>
-  showClientSelector?: boolean
-  clients?: Client[]
-  selectedClientId?: string
-  onSelectClient?: (clientId: string) => void
-}
+export function RoadmapVisualization() {
+  const {
+    client,
+    definition,
+    selectedStageIndex,
+    setSelectedStageIndex,
+    documentStates,
+    uploadDocument,
+    resetDocument,
+    uploading,
+    clients,
+    selectedClientId,
+    handleSelectClient,
+  } = useRoadmap()
 
-export function RoadmapVisualization({
-  client,
-  definition,
-  selectedStageIndex,
-  onSelectStage,
-  documentStates,
-  onUpload,
-  onReset,
-  uploading,
-  showClientSelector,
-  clients,
-  selectedClientId,
-  onSelectClient,
-}: RoadmapVisualizationProps) {
   if (!definition) return null
 
   const stage = definition.stages[selectedStageIndex]
@@ -48,8 +34,8 @@ export function RoadmapVisualization({
   return (
     <div className="flex h-full flex-col">
       <div className="space-y-4 border-b px-6 py-4">
-        {showClientSelector && clients && onSelectClient && (
-          <Select value={selectedClientId} onValueChange={onSelectClient}>
+        {clients && handleSelectClient && (
+          <Select value={selectedClientId} onValueChange={handleSelectClient}>
             <SelectTrigger className="w-full max-w-xs">
               <SelectValue placeholder="Select a client" />
             </SelectTrigger>
@@ -72,7 +58,7 @@ export function RoadmapVisualization({
           stages={definition.stages}
           currentStageIndex={client.currentStageIndex}
           selectedStageIndex={selectedStageIndex}
-          onSelectStage={onSelectStage}
+          onSelectStage={setSelectedStageIndex}
         />
       </div>
       <ScrollArea className="flex-1 p-6">
@@ -80,8 +66,8 @@ export function RoadmapVisualization({
           <StageDetail
             stage={stage}
             documentStates={documentStates}
-            onUpload={onUpload}
-            onReset={onReset}
+            onUpload={uploadDocument}
+            onReset={resetDocument}
             uploading={uploading}
             clientId={client.id}
           />

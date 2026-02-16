@@ -6,8 +6,8 @@ from pathlib import Path
 import aiosqlite
 
 from src.models.client import ClientDocument
+from src.services.db import get_db
 
-DB_PATH = Path(__file__).parent.parent.parent / "data" / "clients.db"
 UPLOAD_DIR = Path(__file__).parent.parent.parent / "data" / "client_uploads"
 
 
@@ -17,15 +17,8 @@ def _upload_path(client_id: str, filename: str) -> Path:
     return UPLOAD_DIR / client_id / safe_name
 
 
-async def _get_db() -> aiosqlite.Connection:
-    DB_PATH.parent.mkdir(parents=True, exist_ok=True)
-    db = await aiosqlite.connect(str(DB_PATH))
-    db.row_factory = aiosqlite.Row
-    return db
-
-
 async def save_document(doc: ClientDocument) -> None:
-    db = await _get_db()
+    db = await get_db()
     try:
         await db.execute(
             """INSERT OR REPLACE INTO client_documents
@@ -53,7 +46,7 @@ async def save_document(doc: ClientDocument) -> None:
 
 
 async def get_document(client_id: str, document_id: str) -> ClientDocument | None:
-    db = await _get_db()
+    db = await get_db()
     try:
         cursor = await db.execute(
             "SELECT * FROM client_documents WHERE client_id = ? AND document_id = ?",
@@ -68,7 +61,7 @@ async def get_document(client_id: str, document_id: str) -> ClientDocument | Non
 
 
 async def get_document_by_id(doc_id: str) -> ClientDocument | None:
-    db = await _get_db()
+    db = await get_db()
     try:
         cursor = await db.execute(
             "SELECT * FROM client_documents WHERE id = ?", (doc_id,)
@@ -82,7 +75,7 @@ async def get_document_by_id(doc_id: str) -> ClientDocument | None:
 
 
 async def list_documents(client_id: str) -> list[ClientDocument]:
-    db = await _get_db()
+    db = await get_db()
     try:
         cursor = await db.execute(
             "SELECT * FROM client_documents WHERE client_id = ?"
@@ -97,7 +90,7 @@ async def list_documents(client_id: str) -> list[ClientDocument]:
 
 async def list_all_client_ids() -> list[str]:
     """Return all distinct client IDs that have uploaded documents."""
-    db = await _get_db()
+    db = await get_db()
     try:
         cursor = await db.execute("SELECT DISTINCT client_id FROM client_documents")
         rows = await cursor.fetchall()
@@ -114,7 +107,7 @@ async def delete_document(client_id: str, document_id: str) -> bool:
     file_path = Path(doc.file_path)
     if file_path.exists():
         file_path.unlink(missing_ok=True)
-    db = await _get_db()
+    db = await get_db()
     try:
         cursor = await db.execute(
             "DELETE FROM client_documents WHERE client_id = ? AND document_id = ?",
@@ -133,7 +126,7 @@ async def update_status(
     verification_result: str | None = None,
     verified_at: str | None = None,
 ) -> ClientDocument | None:
-    db = await _get_db()
+    db = await get_db()
     try:
         await db.execute(
             """UPDATE client_documents

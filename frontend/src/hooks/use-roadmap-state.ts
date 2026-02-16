@@ -23,6 +23,7 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
   // Set default selected client when clients load
   useEffect(() => {
     if (allClients.length > 0 && !selectedClientId) {
+      // eslint-disable-next-line react-hooks/set-state-in-effect -- initializes from async data
       setSelectedClientId(allClients[0].id)
     }
   }, [allClients, selectedClientId])

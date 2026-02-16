@@ -64,7 +64,7 @@ async def verify_document(doc: ClientDocument, expected_name: str) -> ClientDocu
         )
         async def _verify_with_claude() -> anthropic.types.Message:
             return await api_client.messages.create(
-                model="claude-sonnet-4-5-20250929",
+                model=settings.agent_model,
                 max_tokens=512,
                 system=VERIFY_SYSTEM,
                 messages=[

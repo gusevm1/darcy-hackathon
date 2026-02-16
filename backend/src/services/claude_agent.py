@@ -1,17 +1,15 @@
 """Claude tool-use agent for client onboarding conversations."""
 
-import json
 import logging
 from collections.abc import AsyncIterator
 from datetime import UTC, datetime
 from typing import Any
 
 import anthropic
-from tenacity import retry, stop_after_attempt, wait_exponential
 
-from src.config import settings
 from src.models.client import Client
 from src.services import client_store, rag_service
+from src.services.agent_tool_loop import run_tool_loop
 from src.services.checklist_templates import get_checklist_for_pathway
 
 logger = logging.getLogger(__name__)
@@ -407,73 +405,37 @@ async def run_onboarding_turn(client: Client, user_message: str) -> AsyncIterato
     for msg in client.conversation_history:
         messages.append({"role": msg["role"], "content": msg["content"]})  # type: ignore[typeddict-item]
 
-    api_client = anthropic.AsyncAnthropic(
-        api_key=settings.anthropic_api_key, timeout=120.0
-    )
+    # Mutable ref so the closure always sees the latest client
+    client_ref: list[Client] = [client]
 
-    @retry(
-        stop=stop_after_attempt(2),
-        wait=wait_exponential(multiplier=1, min=2, max=8),
-        reraise=True,
-    )
-    async def _call_claude(
-        msgs: list[anthropic.types.MessageParam],
-    ) -> anthropic.types.Message:
-        return await api_client.messages.create(
-            model="claude-sonnet-4-5-20250929",
-            max_tokens=2048,
-            system=SYSTEM_PROMPT,
-            tools=TOOLS,
-            messages=msgs,
+    async def _exec(tool_name: str, tool_input: dict[str, Any]) -> str:
+        client_ref[0], result = await _execute_tool(
+            client_ref[0], tool_name, tool_input
         )
+        return result
 
-    # Tool-use loop
-    max_iterations = 10
-    for _ in range(max_iterations):
-        response = await _call_claude(messages)
+    assistant_text = ""
+    async for event_json in run_tool_loop(
+        messages=messages,
+        system=SYSTEM_PROMPT,
+        tools=TOOLS,
+        execute_tool=_exec,
+        max_tokens=2048,
+    ):
+        # Track assistant text for conversation history
+        import json as _json
 
-        # Process response content
-        assistant_text = ""
-        tool_calls: list[tuple[str, str, dict[str, Any]]] = []
+        try:
+            evt = _json.loads(event_json)
+            if evt.get("type") == "text":
+                assistant_text += evt.get("content", "")
+        except ValueError:
+            pass
+        yield event_json
 
-        for block in response.content:
-            if block.type == "text":
-                assistant_text += block.text
-                yield json.dumps({"type": "text", "content": block.text})
-            elif block.type == "tool_use":
-                tool_calls.append((block.id, block.name, block.input))
-                yield json.dumps(
-                    {
-                        "type": "tool_use",
-                        "tool": block.name,
-                        "input": block.input,
-                    }
-                )
-
-        if not tool_calls:
-            # No tools called — conversation turn is done
-            if assistant_text:
-                client.conversation_history.append(
-                    {"role": "assistant", "content": assistant_text}
-                )
-                await client_store.save_client(client)
-            break
-
-        # Execute tools and continue
-        # Add assistant message with tool use blocks
-        messages.append({"role": "assistant", "content": response.content})
-
-        tool_results: list[dict[str, Any]] = []
-        for tool_id, tool_name, tool_input in tool_calls:
-            client, result = await _execute_tool(client, tool_name, tool_input)
-            tool_results.append(
-                {
-                    "type": "tool_result",
-                    "tool_use_id": tool_id,
-                    "content": result,
-                }
-            )
-
-        messages.append({"role": "user", "content": tool_results})  # type: ignore[typeddict-item]
-
-    yield json.dumps({"type": "done"})
+    # Persist assistant reply to conversation history
+    if assistant_text:
+        client_ref[0].conversation_history.append(
+            {"role": "assistant", "content": assistant_text}
+        )
+        await client_store.save_client(client_ref[0])

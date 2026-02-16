@@ -12,6 +12,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { useKnowledgeState } from '@/hooks/use-knowledge-state'
 import { searchKB } from '@/lib/api/kb'
 import type { KBSearchResult } from '@/lib/api/types'
+import { validateSearchQuery } from '@/lib/validation'
 
 export function KnowledgeBrowser() {
   const {
@@ -38,6 +39,11 @@ export function KnowledgeBrowser() {
       const q = searchQuery.trim()
       if (!q) {
         setSearchResults([])
+        return
+      }
+      const check = validateSearchQuery(q)
+      if (!check.valid) {
+        toast.error(check.error)
         return
       }
       setIsSearching(true)

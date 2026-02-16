@@ -64,6 +64,12 @@ backend/.mypy_cache/
 # ruff
 backend/.ruff_cache/
 
+# runtime data (SQLite, uploads)
+backend/data/
+
+# === Refactoring / handoff notes ===
+HANDOFF_*.md
+
 # === Shared / OS ===
 .DS_Store
 *.pem
