@@ -1,11 +1,12 @@
 'use client'
 
 import { useState } from 'react'
-import { CheckCircle2, Clock, Send } from 'lucide-react'
+import { CheckCircle2, Clock, Send, Sparkles } from 'lucide-react'
 
 import { Avatar, AvatarFallback } from '@/components/ui/avatar'
 import { Button } from '@/components/ui/button'
 import { Textarea } from '@/components/ui/textarea'
+import { addComment, resolveComment } from '@/lib/api/ehp'
 import { cn } from '@/lib/utils'
 import type { EHPComment } from '@/types'
 
@@ -58,21 +59,59 @@ function formatDate(timestamp: string): string {
 interface EHPCommentThreadProps {
   comments: EHPComment[]
   documentName: string
+  clientId: string
+  documentId: string
+  onCommentAdded?: (comment: EHPComment) => void
+  onCommentToggled?: (commentId: string, resolved: boolean) => void
 }
 
 export function EHPCommentThread({
   comments,
   documentName,
+  clientId,
+  documentId,
+  onCommentAdded,
+  onCommentToggled,
 }: EHPCommentThreadProps) {
   const [replyText, setReplyText] = useState('')
+  const [sending, setSending] = useState(false)
 
   const unresolvedCount = comments.filter((c) => !c.resolved).length
+
+  const handleReply = async () => {
+    const trimmed = replyText.trim()
+    if (!trimmed || sending) return
+
+    setSending(true)
+    try {
+      const comment = await addComment(clientId, documentId, {
+        author: 'Consultant',
+        role: 'consultant',
+        content: trimmed,
+      })
+      onCommentAdded?.(comment)
+      setReplyText('')
+    } catch {
+      // Silently fail — could add toast
+    } finally {
+      setSending(false)
+    }
+  }
+
+  const handleToggleResolve = async (commentId: string) => {
+    try {
+      const updated = await resolveComment(commentId)
+      onCommentToggled?.(commentId, updated.resolved)
+    } catch {
+      // Silently fail
+    }
+  }
 
   return (
     <div className="space-y-3">
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
-          <span className="text-xs font-semibold uppercase tracking-wider text-muted-foreground">
+          <span className="text-muted-foreground text-xs font-semibold uppercase tracking-wider">
             EHP Comments
           </span>
           {unresolvedCount > 0 && (
@@ -94,7 +133,7 @@ export function EHPCommentThread({
                 'rounded-lg border p-3 text-sm',
                 comment.resolved
                   ? 'border-muted bg-muted/30'
-                  : 'border-border bg-background'
+                  : 'border-border bg-background',
               )}
             >
               <div className="flex items-start gap-2.5">
@@ -103,7 +142,7 @@ export function EHPCommentThread({
                     className={cn(
                       'text-[10px] font-semibold',
                       config.bgColor,
-                      config.color
+                      config.color,
                     )}
                   >
                     {getInitials(comment.author)}
@@ -118,15 +157,36 @@ export function EHPCommentThread({
                       className={cn(
                         'rounded px-1.5 py-0.5 text-[10px] font-medium',
                         config.bgColor,
-                        config.color
+                        config.color,
                       )}
                     >
                       {config.label}
                     </span>
-                    {comment.resolved && (
-                      <CheckCircle2 className="h-3 w-3 text-emerald-500" />
+                    {comment.ai_generated && (
+                      <span className="text-muted-foreground flex items-center gap-0.5 text-[10px] italic">
+                        <Sparkles className="h-2.5 w-2.5" />
+                        simulated
+                      </span>
                     )}
-                    <span className="ml-auto text-[10px] text-muted-foreground">
+                    <button
+                      onClick={() => handleToggleResolve(comment.id)}
+                      className="ml-auto flex items-center gap-0.5"
+                      title={
+                        comment.resolved
+                          ? 'Mark as unresolved'
+                          : 'Mark as resolved'
+                      }
+                    >
+                      <CheckCircle2
+                        className={cn(
+                          'h-3 w-3',
+                          comment.resolved
+                            ? 'text-emerald-500'
+                            : 'text-muted-foreground/40 hover:text-emerald-400',
+                        )}
+                      />
+                    </button>
+                    <span className="text-muted-foreground text-[10px]">
                       {formatDate(comment.timestamp)}
                     </span>
                   </div>
@@ -135,7 +195,7 @@ export function EHPCommentThread({
                       'text-xs leading-relaxed',
                       comment.resolved
                         ? 'text-muted-foreground'
-                        : 'text-foreground'
+                        : 'text-foreground',
                     )}
                   >
                     {comment.content}
@@ -160,8 +220,8 @@ export function EHPCommentThread({
           size="sm"
           variant="outline"
           className="shrink-0 self-end"
-          disabled={!replyText.trim()}
-          onClick={() => setReplyText('')}
+          disabled={!replyText.trim() || sending}
+          onClick={handleReply}
         >
           <Send className="h-3 w-3" />
         </Button>

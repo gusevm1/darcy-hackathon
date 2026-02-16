@@ -130,9 +130,9 @@ export function KnowledgeBrowser() {
       >
         <div className="border-b px-6">
           <TabsList>
-            <TabsTrigger value="clients">Client Folders</TabsTrigger>
-            <TabsTrigger value="general">General Information</TabsTrigger>
-            <TabsTrigger value="internal">Internal Knowledge</TabsTrigger>
+            <TabsTrigger value="clients">Client Dossiers</TabsTrigger>
+            <TabsTrigger value="general">Regulatory Library</TabsTrigger>
+            <TabsTrigger value="internal">FINMA Requirements</TabsTrigger>
           </TabsList>
         </div>
 

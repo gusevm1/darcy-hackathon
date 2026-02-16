@@ -9,10 +9,11 @@ from src.middleware.cors import add_cors
 from src.routes.client_documents import router as client_documents_router
 from src.routes.clients import router as clients_router
 from src.routes.consult import router as consult_router
+from src.routes.ehp import router as ehp_router
 from src.routes.health import router as health_router
 from src.routes.kb import router as kb_router
 from src.routes.onboard import router as onboard_router
-from src.services import client_store, rag_service
+from src.services import client_store, ehp_store, rag_service
 from src.services.document_ingestion import seed_client_docs, seed_regulatory_docs
 
 logger = logging.getLogger(__name__)
@@ -28,7 +29,11 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     logger.info("Client database initialized")
 
     await client_store.seed_demo_client()
-    logger.info("Demo client seeded")
+    await client_store.seed_fintech_client()
+    logger.info("Demo clients seeded")
+
+    await ehp_store.seed_demo_ehp_comments()
+    logger.info("Demo EHP comments seeded")
 
     try:
         await rag_service.init()
@@ -46,7 +51,7 @@ async def lifespan(app: FastAPI) -> AsyncGenerator[None, None]:
     yield
 
 
-app = FastAPI(title="Darcy Hackathon API", version="0.2.0", lifespan=lifespan)
+app = FastAPI(title="FINMA Comply API", version="0.3.0", lifespan=lifespan)
 
 add_cors(app)
 
@@ -60,6 +65,7 @@ v1_router.include_router(clients_router)
 v1_router.include_router(kb_router)
 v1_router.include_router(consult_router)
 v1_router.include_router(client_documents_router)
+v1_router.include_router(ehp_router)
 app.include_router(v1_router)
 
 # Backwards-compatible unversioned routes (also require API key)
@@ -69,4 +75,5 @@ compat_router.include_router(clients_router)
 compat_router.include_router(kb_router)
 compat_router.include_router(consult_router)
 compat_router.include_router(client_documents_router)
+compat_router.include_router(ehp_router)
 app.include_router(compat_router)

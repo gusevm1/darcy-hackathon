@@ -46,18 +46,28 @@ export function useRoadmapState({ role }: UseRoadmapStateOptions) {
   )
 
   const clientContext = useMemo((): ClientContext => {
-    if (!client) return { name: '', company: '', licenseType: 'banking', currentStageName: '', documentSummary: '' }
-    const stageName = definition?.stages[client.currentStageIndex]?.name ?? 'Unknown'
-    const approved = client.documentStates.filter((d) => d.status === 'approved').length
+    if (!client)
+      return {
+        name: '',
+        company: '',
+        licenseType: 'banking',
+        currentStageName: '',
+        documentSummary: '',
+      }
+    const selectedStageName =
+      definition?.stages[activeStageIndex]?.name ?? 'Unknown'
+    const approved = client.documentStates.filter(
+      (d) => d.status === 'approved',
+    ).length
     const total = client.documentStates.length
     return {
       name: client.name,
       company: client.company,
       licenseType: client.licenseType,
-      currentStageName: stageName,
+      currentStageName: selectedStageName,
       documentSummary: `${approved} of ${total} documents approved`,
     }
-  }, [client, definition])
+  }, [client, definition, activeStageIndex])
 
   const { chats, activeChatId, messages, createNewChat, switchChat, sendMessage, isLoading } =
     useChatSessions(client?.id ?? '', clientContext)

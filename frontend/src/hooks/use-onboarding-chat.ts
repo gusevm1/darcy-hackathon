@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 import { toast } from 'sonner'
 
@@ -13,11 +13,13 @@ function generateId() {
   return crypto.randomUUID()
 }
 
+const STORAGE_KEY = 'onboarding-client-id'
+
 const welcomeMessage: ChatMessage = {
   id: 'onboard-welcome',
   role: 'assistant',
   content:
-    "Welcome to the FINMA license onboarding process! I'm DarcyAI, your regulatory intake specialist.\n\nI'll guide you through determining which Swiss financial license you need and set up your personalized application roadmap. I have deep knowledge of all FINMA license types including **Banking**, **FinTech**, **Securities Firm**, **Fund Management**, and **Insurance** licenses.\n\nTo get started, please tell me:\n1. **Your company name** and planned legal structure\n2. **What financial services** you plan to offer in Switzerland",
+    "Welcome to the FINMA license onboarding process! I'm your regulatory intake specialist.\n\nI'll guide you through determining which Swiss financial license you need and set up your personalized application roadmap. I have deep knowledge of all FINMA license types including **Banking**, **FinTech**, **Securities Firm**, **Fund Management**, and **Insurance** licenses.\n\nTo get started, please tell me:\n1. **Your company name** and planned legal structure\n2. **What financial services** you plan to offer in Switzerland",
   citations: [],
   timestamp: new Date(),
 }
@@ -25,8 +27,27 @@ const welcomeMessage: ChatMessage = {
 export function useOnboardingChat() {
   const [messages, setMessages] = useState<ChatMessage[]>([welcomeMessage])
   const [isLoading, setIsLoading] = useState(false)
+  const [onboardingComplete, setOnboardingComplete] = useState(false)
+  const [clientId, setClientId] = useState<string | null>(null)
   const sessionIdRef = useRef<string | null>(null)
   const abortRef = useRef<AbortController | null>(null)
+
+  // Resume session from localStorage on mount
+  useEffect(() => {
+    const storedId = localStorage.getItem(STORAGE_KEY)
+    if (storedId) {
+      sessionIdRef.current = storedId
+      setClientId(storedId)
+    }
+  }, [])
+
+  const startNew = useCallback(() => {
+    localStorage.removeItem(STORAGE_KEY)
+    sessionIdRef.current = null
+    setClientId(null)
+    setOnboardingComplete(false)
+    setMessages([welcomeMessage])
+  }, [])
 
   const sendMessage = useCallback(
     async (content: string) => {
@@ -63,6 +84,8 @@ export function useOnboardingChat() {
         if (!sessionIdRef.current) {
           const { sessionId } = await startOnboarding()
           sessionIdRef.current = sessionId
+          setClientId(sessionId)
+          localStorage.setItem(STORAGE_KEY, sessionId)
         }
 
         abortRef.current = new AbortController()
@@ -72,11 +95,23 @@ export function useOnboardingChat() {
           (updater) =>
             setMessages((prev) =>
               prev.map((m) =>
-                m.id === placeholderId ? { ...m, content: updater(m.content) } : m,
+                m.id === placeholderId
+                  ? { ...m, content: updater(m.content) }
+                  : m,
               ),
             ),
           'Onboarding',
         )
+
+        // Detect mark_intake_complete tool call
+        const originalOnToolUse = callbacks.onToolUse
+        callbacks.onToolUse = (tool, input) => {
+          originalOnToolUse?.(tool, input)
+          if (tool === 'mark_intake_complete') {
+            setOnboardingComplete(true)
+            localStorage.removeItem(STORAGE_KEY)
+          }
+        }
 
         await streamOnboardingChat(
           sessionIdRef.current,
@@ -90,7 +125,9 @@ export function useOnboardingChat() {
             m.id === placeholderId
               ? {
                   ...m,
-                  content: m.content || 'Sorry, I encountered an error. Please try again.',
+                  content:
+                    m.content ||
+                    'Sorry, I encountered an error. Please try again.',
                 }
               : m,
           ),
@@ -103,5 +140,12 @@ export function useOnboardingChat() {
     [isLoading],
   )
 
-  return { messages, sendMessage, isLoading }
+  return {
+    messages,
+    sendMessage,
+    isLoading,
+    onboardingComplete,
+    clientId,
+    startNew,
+  }
 }

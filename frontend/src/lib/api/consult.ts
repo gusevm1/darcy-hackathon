@@ -1,7 +1,91 @@
+import type { ChatSession } from '@/types/assistant'
+
 import { type SSECallbacks, resolveUrl, streamSSE } from './sse-client'
 import type { GapAnalysis, NextStep } from './types'
 
 const API_URL = process.env.NEXT_PUBLIC_API_URL
+
+// ── Chat session persistence ──────────────────────────────
+
+export async function createChatSession(
+  clientId?: string,
+): Promise<{ session_id: string }> {
+  const res = await fetch(resolveUrl('/api/consult/sessions'), {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(clientId ? { client_id: clientId } : {}),
+  })
+  if (!res.ok) throw new Error('Failed to create session')
+  return res.json()
+}
+
+export async function listChatSessions(
+  clientId?: string,
+): Promise<ChatSession[]> {
+  const url = clientId
+    ? `/api/consult/sessions?client_id=${clientId}`
+    : '/api/consult/sessions'
+  const res = await fetch(resolveUrl(url))
+  if (!res.ok) return []
+  const data = (await res.json()) as Array<{
+    id: string
+    client_id: string | null
+    title: string
+    messages: Array<{ role: string; content: string }>
+    created_at: string
+    updated_at: string
+  }>
+  return data.map((s) => ({
+    id: s.id,
+    title: s.title,
+    messages: s.messages.map((m) => ({
+      id: crypto.randomUUID(),
+      role: m.role as 'user' | 'assistant',
+      content: m.content,
+      citations: [],
+      timestamp: new Date(s.updated_at),
+    })),
+    createdAt: new Date(s.created_at),
+    updatedAt: new Date(s.updated_at),
+  }))
+}
+
+export async function getChatSession(
+  sessionId: string,
+): Promise<ChatSession | null> {
+  const res = await fetch(
+    resolveUrl(`/api/consult/sessions/${sessionId}`),
+  )
+  if (!res.ok) return null
+  const s = (await res.json()) as {
+    id: string
+    title: string
+    messages: Array<{ role: string; content: string }>
+    created_at: string
+    updated_at: string
+  }
+  return {
+    id: s.id,
+    title: s.title,
+    messages: s.messages.map((m) => ({
+      id: crypto.randomUUID(),
+      role: m.role as 'user' | 'assistant',
+      content: m.content,
+      citations: [],
+      timestamp: new Date(s.updated_at),
+    })),
+    createdAt: new Date(s.created_at),
+    updatedAt: new Date(s.updated_at),
+  }
+}
+
+export async function deleteChatSession(
+  sessionId: string,
+): Promise<void> {
+  await fetch(resolveUrl(`/api/consult/sessions/${sessionId}`), {
+    method: 'DELETE',
+  })
+}
 
 export async function analyzeGaps(clientId: string): Promise<GapAnalysis> {
   if (!API_URL) {
@@ -73,7 +157,8 @@ export function streamConsultChat(
   clientId?: string,
   clientContext?: ClientContext,
   signal?: AbortSignal,
-  conversationHistory?: Array<{ role: string; content: string }>
+  conversationHistory?: Array<{ role: string; content: string }>,
+  sessionId?: string,
 ) {
   return streamSSE(
     '/api/consult/chat',
@@ -81,9 +166,12 @@ export function streamConsultChat(
       message,
       ...(clientId ? { client_id: clientId } : {}),
       ...(clientContext ? { client_context: clientContext } : {}),
-      ...(conversationHistory?.length ? { conversation_history: conversationHistory } : {}),
+      ...(conversationHistory?.length
+        ? { conversation_history: conversationHistory }
+        : {}),
+      ...(sessionId ? { session_id: sessionId } : {}),
     },
     callbacks,
-    signal
+    signal,
   )
 }

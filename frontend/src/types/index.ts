@@ -53,9 +53,12 @@ export interface Client {
 export interface EHPComment {
   id: string
   documentId: string
+  client_id?: string
+  document_id?: string
   author: string
   role: 'finma-reviewer' | 'applicant' | 'consultant' | 'auditor'
   content: string
   timestamp: string
   resolved: boolean
+  ai_generated?: boolean
 }

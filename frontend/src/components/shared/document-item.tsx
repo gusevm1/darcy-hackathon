@@ -1,6 +1,7 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import dynamic from 'next/dynamic'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import {
   CheckCircle2,
   ChevronDown,
@@ -11,6 +12,11 @@ import {
   Upload,
   XCircle,
 } from 'lucide-react'
+
+const PdfViewer = dynamic(
+  () => import('./pdf-viewer').then((mod) => mod.PdfViewer),
+  { ssr: false, loading: () => <Loader2 className="h-6 w-6 animate-spin" /> },
+)
 
 import { EHPCommentThread } from '@/components/shared/ehp-comment-thread'
 import { Badge } from '@/components/ui/badge'
@@ -23,11 +29,11 @@ import {
   DialogTitle,
 } from '@/components/ui/dialog'
 import { ScrollArea } from '@/components/ui/scroll-area'
-import { getCommentsForDocument, getUnresolvedCount } from '@/data/ehp-comments'
+import { listComments } from '@/lib/api/ehp'
 import { downloadDocument } from '@/lib/api/client-documents'
 import { statusConfig } from '@/lib/constants/status'
 import { cn } from '@/lib/utils'
-import type { ClientDocumentState, DocumentStatus, RequiredDocument } from '@/types'
+import type { ClientDocumentState, DocumentStatus, EHPComment, RequiredDocument } from '@/types'
 
 interface DocumentItemProps {
   document: RequiredDocument
@@ -50,10 +56,57 @@ export function DocumentItem({
   const [viewerOpen, setViewerOpen] = useState(false)
   const [viewerContent, setViewerContent] = useState<string | null>(null)
   const [viewerLoading, setViewerLoading] = useState(false)
+  const [pdfUrl, setPdfUrl] = useState<string | null>(null)
   const [commentsOpen, setCommentsOpen] = useState(false)
+  const [comments, setComments] = useState<EHPComment[]>([])
+  const [commentsLoading, setCommentsLoading] = useState(true)
+
   const rawStatus = state?.status ?? 'not-started'
-  const comments = getCommentsForDocument(document.id)
-  const unresolvedCount = getUnresolvedCount(document.id)
+
+  // Fetch comments from backend
+  useEffect(() => {
+    let cancelled = false
+    setCommentsLoading(true)
+    listComments(clientId, document.id)
+      .then((data) => {
+        if (!cancelled) {
+          // Map backend field names to frontend
+          setComments(
+            data.map((c) => ({
+              ...c,
+              documentId: c.document_id ?? c.documentId ?? document.id,
+            })),
+          )
+        }
+      })
+      .catch(() => {
+        // Backend unavailable — empty comments
+      })
+      .finally(() => {
+        if (!cancelled) setCommentsLoading(false)
+      })
+    return () => {
+      cancelled = true
+    }
+  }, [clientId, document.id])
+
+  const handleCommentAdded = useCallback((comment: EHPComment) => {
+    setComments((prev) => [
+      ...prev,
+      { ...comment, documentId: comment.document_id ?? comment.documentId },
+    ])
+  }, [])
+
+  const handleCommentToggled = useCallback(
+    (commentId: string, resolved: boolean) => {
+      setComments((prev) =>
+        prev.map((c) => (c.id === commentId ? { ...c, resolved } : c)),
+      )
+    },
+    [],
+  )
+
+  const unresolvedCount = comments.filter((c) => !c.resolved).length
   const hasComments = comments.length > 0
 
   // Derive display status from EHP comment feedback
@@ -65,14 +118,22 @@ export function DocumentItem({
         : rawStatus
   const config = statusConfig[status]
 
+  const isPdf = state?.fileName?.toLowerCase().endsWith('.pdf')
+
   const handleView = async () => {
     setViewerOpen(true)
     setViewerLoading(true)
     setViewerContent(null)
+    setPdfUrl(null)
     try {
       const blob = await downloadDocument(clientId, document.id)
-      const text = await blob.text()
-      setViewerContent(text)
+      if (isPdf) {
+        const url = URL.createObjectURL(blob)
+        setPdfUrl(url)
+      } else {
+        const text = await blob.text()
+        setViewerContent(text)
+      }
     } catch {
       setViewerContent('Failed to load document.')
     } finally {
@@ -85,7 +146,6 @@ export function DocumentItem({
     if (file) {
       onUpload(document.id, file)
     }
-    // Reset input so same file can be re-selected
     if (fileInputRef.current) fileInputRef.current.value = ''
   }
 
@@ -114,7 +174,6 @@ export function DocumentItem({
             )}
           </div>
           <div className="flex shrink-0 items-center gap-2">
-            {/* Status icon for verified/rejected/error */}
             {status === 'verified' && (
               <CheckCircle2 className="h-4 w-4 text-emerald-600" />
             )}
@@ -139,7 +198,6 @@ export function DocumentItem({
               )}
             </Badge>
 
-            {/* Hidden file input */}
             <input
               ref={fileInputRef}
               type="file"
@@ -149,14 +207,14 @@ export function DocumentItem({
             />
 
             {/* Comments toggle button */}
-            {hasComments && (
+            {!commentsLoading && hasComments && (
               <Button
                 variant="outline"
                 size="sm"
                 onClick={() => setCommentsOpen(!commentsOpen)}
                 className={cn(
                   'relative',
-                  unresolvedCount > 0 && 'border-amber-300'
+                  unresolvedCount > 0 && 'border-amber-300',
                 )}
               >
                 <MessageSquare className="mr-1 h-3 w-3" />
@@ -187,7 +245,7 @@ export function DocumentItem({
               onClick={triggerFilePicker}
               disabled={isUploading || status === 'approved'}
               className={cn(
-                status === 'approved' && 'opacity-50 cursor-not-allowed'
+                status === 'approved' && 'cursor-not-allowed opacity-50',
               )}
             >
               <Upload className="mr-1 h-3 w-3" />
@@ -202,6 +260,10 @@ export function DocumentItem({
             <EHPCommentThread
               comments={comments}
               documentName={document.name}
+              clientId={clientId}
+              documentId={document.id}
+              onCommentAdded={handleCommentAdded}
+              onCommentToggled={handleCommentToggled}
             />
           </div>
         )}
@@ -218,6 +280,8 @@ export function DocumentItem({
               <div className="flex items-center justify-center py-12">
                 <Loader2 className="text-muted-foreground h-6 w-6 animate-spin" />
               </div>
+            ) : pdfUrl ? (
+              <PdfViewer url={pdfUrl} />
             ) : (
               <pre className="bg-muted/50 whitespace-pre-wrap break-words rounded-md p-4 font-mono text-sm leading-relaxed">
                 {viewerContent}

@@ -1,5 +1,6 @@
 'use client'
 
+import { GapAnalysisPanel } from '@/components/shared/roadmap/gap-analysis-panel'
 import { StageDetail } from '@/components/shared/stage-detail'
 import { TimelineStepper } from '@/components/shared/timeline-stepper'
 import { ScrollArea } from '@/components/ui/scroll-area'
@@ -54,6 +55,7 @@ export function RoadmapVisualization() {
             {definition.label} — {definition.legalBasis}
           </p>
         </div>
+        <GapAnalysisPanel clientId={client.id} />
         <TimelineStepper
           stages={definition.stages}
           currentStageIndex={client.currentStageIndex}

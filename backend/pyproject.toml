@@ -1,7 +1,7 @@
 [project]
 name = "darcy-hackathon-backend"
 version = "0.1.0"
-description = "Darcy Hackathon — FastAPI backend"
+description = "FINMA Comply — FastAPI backend"
 requires-python = ">=3.12"
 dependencies = [
     "fastapi>=0.115.0",
@@ -36,6 +36,8 @@ select = ["E", "F", "I", "N", "UP", "B", "SIM"]
 [tool.ruff.lint.per-file-ignores]
 "src/services/claude_agent.py" = ["E501"]
 "src/services/consultant_agent.py" = ["E501"]
+"src/services/ehp_store.py" = ["E501"]
+"src/services/ehp_generator.py" = ["E501"]
 "src/routes/*.py" = ["B008"]  # FastAPI uses Depends/Query in default args
 
 [tool.mypy]
