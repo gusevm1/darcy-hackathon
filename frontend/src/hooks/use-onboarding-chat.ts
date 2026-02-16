@@ -2,6 +2,8 @@
 
 import { useCallback, useRef, useState } from 'react'
 
+import { toast } from 'sonner'
+
 import { startOnboarding, streamOnboardingChat } from '@/lib/api/onboard'
 import type { ChatMessage } from '@/types/assistant'
 
@@ -77,6 +79,7 @@ export function useOnboardingChat() {
                 ),
               )
               console.error('Onboarding SSE error:', err)
+              toast.error('Chat connection error. Please try again.')
             },
           },
           abortRef.current.signal,

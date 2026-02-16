@@ -1,10 +1,11 @@
 """AI-powered document verification using Anthropic Claude."""
 
 import logging
-from datetime import datetime
+from datetime import UTC, datetime
 from pathlib import Path
 
 import anthropic
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.config import settings
 from src.models.client import ClientDocument
@@ -52,26 +53,41 @@ async def verify_document(doc: ClientDocument, expected_name: str) -> ClientDocu
 
     # Call Claude for verification
     try:
-        api_client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
-        response = await api_client.messages.create(
-            model="claude-sonnet-4-5-20250929",
-            max_tokens=512,
-            system=VERIFY_SYSTEM,
-            messages=[
-                {
-                    "role": "user",
-                    "content": (
-                        f"Document purpose: {expected_name}\n"
-                        f"Document ID: {doc.document_id}\n"
-                        f"File name: {doc.file_name}\n\n"
-                        f"--- Extracted text (first {MAX_TEXT_CHARS} chars) ---\n"
-                        f"{text[:MAX_TEXT_CHARS]}"
-                    ),
-                }
-            ],
+        api_client = anthropic.AsyncAnthropic(
+            api_key=settings.anthropic_api_key, timeout=60.0
         )
+
+        @retry(
+            stop=stop_after_attempt(2),
+            wait=wait_exponential(multiplier=1, min=2, max=8),
+            reraise=True,
+        )
+        async def _verify_with_claude() -> anthropic.types.Message:
+            return await api_client.messages.create(
+                model="claude-sonnet-4-5-20250929",
+                max_tokens=512,
+                system=VERIFY_SYSTEM,
+                messages=[
+                    {
+                        "role": "user",
+                        "content": (
+                            f"Document purpose: {expected_name}\n"
+                            f"Document ID: {doc.document_id}\n"
+                            f"File name: {doc.file_name}\n\n"
+                            f"--- Extracted text (first {MAX_TEXT_CHARS} chars) ---\n"
+                            f"{text[:MAX_TEXT_CHARS]}"
+                        ),
+                    }
+                ],
+            )
+
+        response = await _verify_with_claude()
         first_block = response.content[0] if response.content else None
-        result_text = first_block.text if first_block and hasattr(first_block, "text") else ""
+        result_text = (
+            first_block.text
+            if first_block and hasattr(first_block, "text")
+            else ""
+        )
 
         import json
 
@@ -85,7 +101,7 @@ async def verify_document(doc: ClientDocument, expected_name: str) -> ClientDocu
             status = "error"
             reason = result_text
 
-        now = datetime.utcnow().isoformat()
+        now = datetime.now(UTC).isoformat()
         updated = await document_store.update_status(
             doc.client_id,
             doc.document_id,

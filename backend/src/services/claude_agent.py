@@ -3,10 +3,11 @@
 import json
 import logging
 from collections.abc import AsyncIterator
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any
 
 import anthropic
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.config import settings
 from src.models.client import Client
@@ -332,7 +333,7 @@ async def _execute_tool(
         data = client.model_dump()
         if field in data:
             data[field] = value
-            data["updated_at"] = datetime.utcnow()
+            data["updated_at"] = datetime.now(UTC)
             client = Client.model_validate(data)
             await client_store.save_client(client)
             return client, f"Updated {field} successfully."
@@ -350,7 +351,7 @@ async def _execute_tool(
             severity=tool_input["severity"],
         )
         client.flags.append(flag)
-        client.updated_at = datetime.utcnow()
+        client.updated_at = datetime.now(UTC)
         await client_store.save_client(client)
         return (
             client,
@@ -377,7 +378,7 @@ async def _execute_tool(
             if len(parts) > 1:
                 client.finma_license_type = parts[1]
         client.status = "in_progress"
-        client.updated_at = datetime.utcnow()
+        client.updated_at = datetime.now(UTC)
         await client_store.save_client(client)
         return (
             client,
@@ -388,7 +389,7 @@ async def _execute_tool(
 
     if tool_name == "mark_intake_complete":
         client.status = "under_review"
-        client.updated_at = datetime.utcnow()
+        client.updated_at = datetime.now(UTC)
         await client_store.save_client(client)
         return client, f"Intake marked complete. Summary: {tool_input['summary']}"
 
@@ -406,18 +407,30 @@ async def run_onboarding_turn(client: Client, user_message: str) -> AsyncIterato
     for msg in client.conversation_history:
         messages.append({"role": msg["role"], "content": msg["content"]})  # type: ignore[typeddict-item]
 
-    api_client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
+    api_client = anthropic.AsyncAnthropic(
+        api_key=settings.anthropic_api_key, timeout=120.0
+    )
 
-    # Tool-use loop
-    max_iterations = 10
-    for _ in range(max_iterations):
-        response = await api_client.messages.create(
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_exponential(multiplier=1, min=2, max=8),
+        reraise=True,
+    )
+    async def _call_claude(
+        msgs: list[anthropic.types.MessageParam],
+    ) -> anthropic.types.Message:
+        return await api_client.messages.create(
             model="claude-sonnet-4-5-20250929",
             max_tokens=2048,
             system=SYSTEM_PROMPT,
             tools=TOOLS,
-            messages=messages,
+            messages=msgs,
         )
+
+    # Tool-use loop
+    max_iterations = 10
+    for _ in range(max_iterations):
+        response = await _call_claude(messages)
 
         # Process response content
         assistant_text = ""

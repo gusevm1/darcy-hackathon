@@ -3,10 +3,11 @@
 import json
 import logging
 from collections.abc import AsyncIterator
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any
 
 import anthropic
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.config import settings
 from src.models.client import Client, FlaggedItem
@@ -275,7 +276,7 @@ async def _execute_tool(tool_name: str, tool_input: dict[str, Any]) -> str:
         field = tool_input["field"]
         if field in data:
             data[field] = tool_input["value"]
-            data["updated_at"] = datetime.utcnow()
+            data["updated_at"] = datetime.now(UTC)
             updated = Client.model_validate(data)
             await client_store.save_client(updated)
             return f"Updated {field} successfully."
@@ -290,7 +291,7 @@ async def _execute_tool(tool_name: str, tool_input: dict[str, Any]) -> str:
                 item.status = tool_input["status"]
                 if "notes" in tool_input:
                     item.notes = tool_input["notes"]
-                client.updated_at = datetime.utcnow()
+                client.updated_at = datetime.now(UTC)
                 await client_store.save_client(client)
                 return (
                     f"Updated checklist item"
@@ -312,7 +313,7 @@ async def _execute_tool(tool_name: str, tool_input: dict[str, Any]) -> str:
             severity=tool_input["severity"],
         )
         client.flags.append(flag)
-        client.updated_at = datetime.utcnow()
+        client.updated_at = datetime.now(UTC)
         await client_store.save_client(client)
         return f"Flag added: {tool_input['field']} ({tool_input['severity']})"
 
@@ -324,7 +325,7 @@ async def _execute_tool(tool_name: str, tool_input: dict[str, Any]) -> str:
             if flag.id == tool_input["flag_id"]:
                 flag.resolved = True
                 flag.resolution_notes = tool_input["resolution_notes"]
-                client.updated_at = datetime.utcnow()
+                client.updated_at = datetime.now(UTC)
                 await client_store.save_client(client)
                 return f"Flag {flag.id} resolved: {tool_input['resolution_notes']}"
         return f"Flag {tool_input['flag_id']} not found."
@@ -400,18 +401,30 @@ async def run_consultant_turn(
     messages: list[anthropic.types.MessageParam] = list(conversation_history)  # type: ignore[arg-type]
     messages.append({"role": "user", "content": user_message})
 
-    api_client = anthropic.AsyncAnthropic(api_key=settings.anthropic_api_key)
+    api_client = anthropic.AsyncAnthropic(
+        api_key=settings.anthropic_api_key, timeout=120.0
+    )
 
-    # Tool-use loop
-    max_iterations = 10
-    for _ in range(max_iterations):
-        response = await api_client.messages.create(
+    @retry(
+        stop=stop_after_attempt(2),
+        wait=wait_exponential(multiplier=1, min=2, max=8),
+        reraise=True,
+    )
+    async def _call_claude(
+        msgs: list[anthropic.types.MessageParam],
+    ) -> anthropic.types.Message:
+        return await api_client.messages.create(
             model="claude-sonnet-4-5-20250929",
             max_tokens=4096,
             system=system,
             tools=TOOLS,
-            messages=messages,
+            messages=msgs,
         )
+
+    # Tool-use loop
+    max_iterations = 10
+    for _ in range(max_iterations):
+        response = await _call_claude(messages)
 
         assistant_text = ""
         tool_calls: list[tuple[str, str, dict[str, Any]]] = []

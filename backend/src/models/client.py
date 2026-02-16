@@ -1,6 +1,6 @@
 """Client models for Swiss financial licensing applications."""
 
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Literal
 
 from pydantic import BaseModel, Field
@@ -34,8 +34,8 @@ class Client(BaseModel):
     contact_name: str = ""
     contact_email: str = ""
     current_stage_index: int = 0
-    created_at: datetime = Field(default_factory=datetime.utcnow)
-    updated_at: datetime = Field(default_factory=datetime.utcnow)
+    created_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
+    updated_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     status: Literal["intake", "in_progress", "under_review", "approved", "blocked"] = (
         "intake"
     )
@@ -134,5 +134,5 @@ class ClientDocument(BaseModel):
     file_size: int = 0
     status: Literal["pending", "verified", "rejected", "error"] = "pending"
     verification_result: str | None = None
-    uploaded_at: datetime = Field(default_factory=datetime.utcnow)
+    uploaded_at: datetime = Field(default_factory=lambda: datetime.now(UTC))
     verified_at: datetime | None = None

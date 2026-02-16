@@ -18,6 +18,7 @@ from qdrant_client.models import (
     VectorParams,
 )
 from rank_bm25 import BM25Okapi
+from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.config import settings
 
@@ -26,6 +27,28 @@ logger = logging.getLogger(__name__)
 _qdrant: AsyncQdrantClient | None = None
 _openai: AsyncOpenAI | None = None
 _bm25_corpus: list[dict[str, str]] = []
+
+
+class RAGServiceNotInitializedError(RuntimeError):
+    """Raised when RAG service is used before init() is called."""
+
+    def __init__(self, component: str = "RAG service") -> None:
+        super().__init__(
+            f"{component} is not initialized. "
+            "Ensure init() has been called and Qdrant is running."
+        )
+
+
+def _require_qdrant() -> AsyncQdrantClient:
+    if _qdrant is None:
+        raise RAGServiceNotInitializedError("Qdrant client")
+    return _qdrant
+
+
+def _require_openai() -> AsyncOpenAI:
+    if _openai is None:
+        raise RAGServiceNotInitializedError("OpenAI client")
+    return _openai
 
 
 async def init() -> None:
@@ -47,13 +70,19 @@ async def init() -> None:
         logger.info("Created Qdrant collection: %s", settings.qdrant_collection)
 
 
+@retry(
+    stop=stop_after_attempt(3),
+    wait=wait_exponential(multiplier=1, min=1, max=10),
+    reraise=True,
+)
 async def embed(text: str) -> list[float]:
     """Generate embedding via OpenAI API."""
-    assert _openai is not None
-    resp = await _openai.embeddings.create(
+    openai = _require_openai()
+    resp = await openai.embeddings.create(
         model=settings.embedding_model,
         input=text,
         dimensions=settings.embedding_dimensions,
+        timeout=30,
     )
     return resp.data[0].embedding
 
@@ -107,7 +136,7 @@ async def ingest_document(
     client_id: str | None = None,
 ) -> int:
     """Chunk, embed, and store a document. Returns number of chunks."""
-    assert _qdrant is not None
+    qdrant = _require_qdrant()
     chunks = _chunk_text(text)
     points: list[PointStruct] = []
 
@@ -131,7 +160,7 @@ async def ingest_document(
         )
 
     if points:
-        await _qdrant.upsert(collection_name=settings.qdrant_collection, points=points)
+        await qdrant.upsert(collection_name=settings.qdrant_collection, points=points)
         # Update BM25 corpus
         for p in points:
             if p.payload is not None:
@@ -143,11 +172,11 @@ async def ingest_document(
 
 async def search(query: str, top_k: int = 5) -> list[dict[str, object]]:
     """Hybrid search: Qdrant vector + BM25 lexical with reciprocal rank fusion."""
-    assert _qdrant is not None
+    qdrant = _require_qdrant()
     query_vector = await embed(query)
 
     # Vector search
-    vector_results = await _qdrant.query_points(
+    vector_results = await qdrant.query_points(
         collection_name=settings.qdrant_collection,
         query=query_vector,
         limit=top_k * 2,
@@ -205,8 +234,8 @@ async def search(query: str, top_k: int = 5) -> list[dict[str, object]]:
 
 async def delete_document(doc_id: str) -> int:
     """Delete all chunks for a document. Returns count of deleted points."""
-    assert _qdrant is not None
-    await _qdrant.delete(
+    qdrant = _require_qdrant()
+    await qdrant.delete(
         collection_name=settings.qdrant_collection,
         points_selector=Filter(
             must=[FieldCondition(key="doc_id", match=MatchValue(value=doc_id))]
@@ -221,12 +250,12 @@ async def delete_document(doc_id: str) -> int:
 
 async def list_documents() -> list[dict[str, str]]:
     """List all unique documents in the collection."""
-    assert _qdrant is not None
+    qdrant = _require_qdrant()
     docs: dict[str, dict[str, str]] = {}
 
     offset = None
     while True:
-        result = await _qdrant.scroll(
+        result = await qdrant.scroll(
             collection_name=settings.qdrant_collection,
             limit=100,
             offset=offset,
@@ -251,13 +280,13 @@ async def list_documents() -> list[dict[str, str]]:
 
 async def rebuild_bm25_corpus() -> None:
     """Rebuild in-memory BM25 corpus from Qdrant."""
-    assert _qdrant is not None
+    qdrant = _require_qdrant()
     global _bm25_corpus
     _bm25_corpus = []
 
     offset = None
     while True:
-        result = await _qdrant.scroll(
+        result = await qdrant.scroll(
             collection_name=settings.qdrant_collection,
             limit=100,
             offset=offset,

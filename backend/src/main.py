@@ -4,6 +4,7 @@ from contextlib import asynccontextmanager
 
 from fastapi import APIRouter, FastAPI
 
+from src.middleware.auth import require_api_key
 from src.middleware.cors import add_cors
 from src.routes.client_documents import router as client_documents_router
 from src.routes.clients import router as clients_router
@@ -49,8 +50,8 @@ add_cors(app)
 # Health check at root (no versioning)
 app.include_router(health_router)
 
-# API v1
-v1_router = APIRouter(prefix="/v1")
+# API v1 (all require API key when configured)
+v1_router = APIRouter(prefix="/v1", dependencies=[require_api_key])
 v1_router.include_router(onboard_router)
 v1_router.include_router(clients_router)
 v1_router.include_router(kb_router)
@@ -58,9 +59,11 @@ v1_router.include_router(consult_router)
 v1_router.include_router(client_documents_router)
 app.include_router(v1_router)
 
-# Backwards-compatible unversioned routes
-app.include_router(onboard_router)
-app.include_router(clients_router)
-app.include_router(kb_router)
-app.include_router(consult_router)
-app.include_router(client_documents_router)
+# Backwards-compatible unversioned routes (also require API key)
+compat_router = APIRouter(dependencies=[require_api_key])
+compat_router.include_router(onboard_router)
+compat_router.include_router(clients_router)
+compat_router.include_router(kb_router)
+compat_router.include_router(consult_router)
+compat_router.include_router(client_documents_router)
+app.include_router(compat_router)

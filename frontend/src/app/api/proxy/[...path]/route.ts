@@ -1,6 +1,11 @@
 import { type NextRequest, NextResponse } from 'next/server'
 
 const BACKEND_URL = process.env.BACKEND_URL ?? process.env.NEXT_PUBLIC_API_URL ?? ''
+const BACKEND_API_KEY = process.env.BACKEND_API_KEY ?? ''
+
+function authHeaders(): Record<string, string> {
+  return BACKEND_API_KEY ? { 'X-API-Key': BACKEND_API_KEY } : {}
+}
 
 export async function GET(req: NextRequest, { params }: { params: Promise<{ path: string[] }> }) {
   const { path } = await params
@@ -8,7 +13,7 @@ export async function GET(req: NextRequest, { params }: { params: Promise<{ path
   const url = new URL(backendPath, BACKEND_URL)
   url.search = req.nextUrl.search
 
-  const res = await fetch(url.toString())
+  const res = await fetch(url.toString(), { headers: authHeaders() })
   const contentType = res.headers.get('content-type') ?? ''
 
   // Non-JSON responses (file downloads, etc.) — pass through as-is
@@ -49,7 +54,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ pat
 
   const backendRes = await fetch(url.toString(), {
     method: 'POST',
-    headers,
+    headers: { ...headers, ...authHeaders() },
     body,
   })
 
@@ -82,7 +87,7 @@ export async function DELETE(
   const url = new URL(backendPath, BACKEND_URL)
   url.search = req.nextUrl.search
 
-  const res = await fetch(url.toString(), { method: 'DELETE' })
+  const res = await fetch(url.toString(), { method: 'DELETE', headers: authHeaders() })
   const data = await res.json()
   return NextResponse.json(data, { status: res.status })
 }

@@ -1,7 +1,7 @@
 """Client CRUD endpoints."""
 
 import uuid
-from datetime import datetime
+from datetime import UTC, datetime
 from typing import Any, Literal
 
 from fastapi import APIRouter, HTTPException, Query
@@ -158,7 +158,7 @@ async def update_checklist_item(
             item.status = body.status
             if body.notes is not None:
                 item.notes = body.notes
-            client.updated_at = datetime.utcnow()
+            client.updated_at = datetime.now(UTC)
             await client_store.save_client(client)
             return client
     raise HTTPException(status_code=404, detail="Checklist item not found")

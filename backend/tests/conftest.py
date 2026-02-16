@@ -2,6 +2,7 @@ import os
 
 os.environ.setdefault("ANTHROPIC_API_KEY", "test-key")
 os.environ.setdefault("OPENAI_API_KEY", "test-key")
+os.environ.setdefault("API_KEY", "")  # Disable auth in tests
 os.environ.setdefault("APP_ENV", "test")
 
 import pytest  # noqa: E402

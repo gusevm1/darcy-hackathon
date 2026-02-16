@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useMemo, useRef, useState } from 'react'
 
+import { toast } from 'sonner'
+
 import { type ClientContext, streamConsultChat } from '@/lib/api/consult'
 import type { ChatMessage, ChatSession } from '@/types/assistant'
 
@@ -191,6 +193,7 @@ export function useChatSessions(clientId?: string, clientContext?: ClientContext
                 })
               )
               console.error('Consult SSE error:', err)
+              toast.error('Chat connection error. Please try again.')
             },
           },
           clientId,

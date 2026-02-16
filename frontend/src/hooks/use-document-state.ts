@@ -2,6 +2,8 @@
 
 import { useCallback, useEffect, useState } from 'react'
 
+import { toast } from 'sonner'
+
 import {
   type BackendDocument,
   listDocuments,
@@ -104,6 +106,7 @@ export function useDocumentState(initialStates: ClientDocumentState[], clientId:
                   : s
               )
             )
+            toast.error('Document verification failed. The file was uploaded but could not be verified.')
           })
 
         // Update with upload response immediately
@@ -126,6 +129,7 @@ export function useDocumentState(initialStates: ClientDocumentState[], clientId:
             s.documentId === docId ? { documentId: s.documentId, status: 'not-started' as const } : s
           )
         )
+        toast.error('Document upload failed. Please try again.')
       } finally {
         setUploading((prev) => {
           const next = new Set(prev)

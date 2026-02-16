@@ -73,9 +73,9 @@ async def update_client(client_id: str, updates: dict[str, Any]) -> Client | Non
     for key, value in updates.items():
         if key in data:
             data[key] = value
-    from datetime import datetime
+    from datetime import UTC, datetime
 
-    data["updated_at"] = datetime.utcnow()
+    data["updated_at"] = datetime.now(UTC)
     updated = Client.model_validate(data)
     await save_client(updated)
     return updated

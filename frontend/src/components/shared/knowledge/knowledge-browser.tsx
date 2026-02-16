@@ -3,6 +3,7 @@
 import { useCallback, useState } from 'react'
 
 import { Search } from 'lucide-react'
+import { toast } from 'sonner'
 
 import { DocumentPreviewSheet } from '@/components/shared/assistant/document-preview-sheet'
 import { FileTree } from '@/components/shared/assistant/file-tree'
@@ -45,6 +46,7 @@ export function KnowledgeBrowser() {
         setSearchResults(results)
       } catch (err) {
         console.error('Search failed:', err)
+        toast.error('Search failed. Please check your connection and try again.')
       } finally {
         setIsSearching(false)
       }

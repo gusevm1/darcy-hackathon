@@ -8,6 +8,7 @@ class Settings(BaseSettings):
     host: str = "0.0.0.0"
     port: int = 8000
     frontend_url: str = "http://localhost:3000"
+    api_key: str = ""  # If set, all non-health endpoints require this key
     anthropic_api_key: str = Field(min_length=1)
 
     # Qdrant
