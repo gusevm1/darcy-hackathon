@@ -214,6 +214,9 @@ TOOLS: list[anthropic.types.ToolParam] = [
                         " boolean for yes/no, integer for"
                         " numbers, array of strings for"
                         " list fields."
+                        " IMPORTANT: for legal_structure,"
+                        " use ONLY one of: 'AG', 'GmbH',"
+                        " 'other' — no extra text."
                     ),
                 },
             },
@@ -328,6 +331,12 @@ async def _execute_tool(
     if tool_name == "update_client_field":
         field = tool_input["field"]
         value = tool_input["value"]
+        # Normalize enum fields — LLM sometimes adds commentary
+        if field == "legal_structure" and isinstance(value, str):
+            for opt in ("AG", "GmbH", "other"):
+                if opt.lower() in value.lower():
+                    value = opt
+                    break
         data = client.model_dump()
         if field in data:
             data[field] = value
