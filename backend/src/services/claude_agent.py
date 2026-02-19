@@ -14,6 +14,56 @@ from src.services.checklist_templates import get_checklist_for_pathway
 
 logger = logging.getLogger(__name__)
 
+# Maps field names to valid Literal options for input sanitization.
+_ENUM_FIELDS: dict[str, list[str]] = {
+    "legal_structure": ["AG", "GmbH", "other"],
+    "status": ["intake", "in_progress", "under_review", "approved", "blocked"],
+    "pathway": [
+        "sro",
+        "finma_banking",
+        "finma_fintech",
+        "finma_securities",
+        "finma_fund_management",
+        "finma_insurance",
+        "undetermined",
+    ],
+    "finma_license_type": [
+        "banking",
+        "fintech",
+        "securities_firm",
+        "fund_management",
+        "insurance",
+    ],
+    "severity": ["info", "warning", "critical"],
+    "checklist_status": [
+        "not_started",
+        "in_progress",
+        "complete",
+        "blocked",
+        "not_applicable",
+    ],
+}
+
+
+def _sanitize_field_value(field: str, value: Any) -> Any:
+    """Normalize a value for a constrained Literal field.
+
+    LLMs sometimes add extra commentary (e.g. "AG (stock corporation)").
+    This extracts the valid option when possible.
+    """
+    options = _ENUM_FIELDS.get(field)
+    if options is None or not isinstance(value, str):
+        return value
+    # Exact match first (case-insensitive)
+    for opt in options:
+        if value.strip().lower() == opt.lower():
+            return opt
+    # Substring match (e.g. "AG" in "AG — stock corporation")
+    for opt in options:
+        if opt.lower() in value.lower():
+            return opt
+    return value
+
 SYSTEM_PROMPT = """\
 You are the FINMA Comply onboarding assistant, a senior regulatory intake \
 specialist with deep expertise in Swiss financial regulation and FINMA \
@@ -329,83 +379,98 @@ async def _execute_tool(
 ) -> tuple[Client, str]:
     """Execute a tool call and return updated client + result string."""
     if tool_name == "update_client_field":
-        field = tool_input["field"]
-        value = tool_input["value"]
-        # Normalize enum fields — LLM sometimes adds commentary
-        if field == "legal_structure" and isinstance(value, str):
-            for opt in ("AG", "GmbH", "other"):
-                if opt.lower() in value.lower():
-                    value = opt
-                    break
-        data = client.model_dump()
-        if field in data:
-            data[field] = value
-            data["updated_at"] = datetime.now(UTC)
-            client = Client.model_validate(data)
-            await client_store.save_client(client)
-            return client, f"Updated {field} successfully."
-        return client, f"Unknown field: {field}"
+        try:
+            field = tool_input["field"]
+            value = _sanitize_field_value(field, tool_input["value"])
+            data = client.model_dump()
+            if field in data:
+                data[field] = value
+                data["updated_at"] = datetime.now(UTC)
+                client = Client.model_validate(data)
+                await client_store.save_client(client)
+                return client, f"Updated {field} successfully."
+            return client, f"Unknown field: {field}"
+        except Exception as exc:
+            logger.warning("update_client_field failed: %s", exc)
+            return client, f"Failed to update {tool_input.get('field', '?')}: {exc}"
 
     if tool_name == "flag_item":
-        import uuid
+        try:
+            import uuid
 
-        from src.models.client import FlaggedItem
+            from src.models.client import FlaggedItem
 
-        flag = FlaggedItem(
-            id=str(uuid.uuid4())[:8],
-            field=tool_input["field"],
-            reason=tool_input["reason"],
-            severity=tool_input["severity"],
-        )
-        client.flags.append(flag)
-        client.updated_at = datetime.now(UTC)
-        await client_store.save_client(client)
-        return (
-            client,
-            f"Flagged {tool_input['field']}"
-            f" ({tool_input['severity']}):"
-            f" {tool_input['reason']}",
-        )
+            severity = _sanitize_field_value("severity", tool_input["severity"])
+            flag = FlaggedItem(
+                id=str(uuid.uuid4())[:8],
+                field=tool_input["field"],
+                reason=tool_input["reason"],
+                severity=severity,
+            )
+            client.flags.append(flag)
+            client.updated_at = datetime.now(UTC)
+            await client_store.save_client(client)
+            return (
+                client,
+                f"Flagged {tool_input['field']}"
+                f" ({severity}):"
+                f" {tool_input['reason']}",
+            )
+        except Exception as exc:
+            logger.warning("flag_item failed: %s", exc)
+            return client, f"Failed to flag item: {exc}"
 
     if tool_name == "search_knowledge_base":
-        results = await rag_service.search(tool_input["query"], top_k=3)
-        if not results:
-            return client, "No relevant results found in the knowledge base."
-        texts = []
-        for r in results:
-            texts.append(f"[{r.get('title', 'Unknown')}]: {r.get('text', '')}")
-        return client, "\n\n---\n\n".join(texts)
+        try:
+            results = await rag_service.search(tool_input["query"], top_k=3)
+            if not results:
+                return client, "No relevant results found in the knowledge base."
+            texts = []
+            for r in results:
+                texts.append(f"[{r.get('title', 'Unknown')}]: {r.get('text', '')}")
+            return client, "\n\n---\n\n".join(texts)
+        except Exception as exc:
+            logger.warning("search_knowledge_base failed: %s", exc)
+            return client, f"Knowledge base search failed: {exc}"
 
     if tool_name == "set_pathway":
-        pathway = tool_input["pathway"]
-        client.pathway = pathway
-        client.checklist = get_checklist_for_pathway(pathway)
-        if pathway.startswith("finma"):
-            license_map = {
-                "finma_banking": "banking",
-                "finma_fintech": "fintech",
-                "finma_securities": "securities_firm",
-                "finma_fund_management": "fund_management",
-                "finma_insurance": "insurance",
-            }
-            lt = license_map.get(pathway)
-            if lt is not None:
-                client.finma_license_type = lt  # type: ignore[assignment]
-        client.status = "in_progress"
-        client.updated_at = datetime.now(UTC)
-        await client_store.save_client(client)
-        return (
-            client,
-            f"Pathway set to {pathway}. Checklist generated"
-            f" with {len(client.checklist)} items."
-            f" Reason: {tool_input['reason']}",
-        )
+        try:
+            pathway = _sanitize_field_value("pathway", tool_input["pathway"])
+            client.pathway = pathway
+            client.checklist = get_checklist_for_pathway(pathway)
+            if pathway.startswith("finma"):
+                license_map = {
+                    "finma_banking": "banking",
+                    "finma_fintech": "fintech",
+                    "finma_securities": "securities_firm",
+                    "finma_fund_management": "fund_management",
+                    "finma_insurance": "insurance",
+                }
+                lt = license_map.get(pathway)
+                if lt is not None:
+                    client.finma_license_type = lt  # type: ignore[assignment]
+            client.status = "in_progress"
+            client.updated_at = datetime.now(UTC)
+            await client_store.save_client(client)
+            return (
+                client,
+                f"Pathway set to {pathway}. Checklist generated"
+                f" with {len(client.checklist)} items."
+                f" Reason: {tool_input['reason']}",
+            )
+        except Exception as exc:
+            logger.warning("set_pathway failed: %s", exc)
+            return client, f"Failed to set pathway: {exc}"
 
     if tool_name == "mark_intake_complete":
-        client.status = "under_review"
-        client.updated_at = datetime.now(UTC)
-        await client_store.save_client(client)
-        return client, f"Intake marked complete. Summary: {tool_input['summary']}"
+        try:
+            client.status = "under_review"
+            client.updated_at = datetime.now(UTC)
+            await client_store.save_client(client)
+            return client, f"Intake marked complete. Summary: {tool_input['summary']}"
+        except Exception as exc:
+            logger.warning("mark_intake_complete failed: %s", exc)
+            return client, f"Failed to mark intake complete: {exc}"
 
     return client, f"Unknown tool: {tool_name}"
 
@@ -414,7 +479,10 @@ async def run_onboarding_turn(client: Client, user_message: str) -> AsyncIterato
     """Run one turn of the onboarding conversation. Yields SSE JSON events."""
     # Save user message to history
     client.conversation_history.append({"role": "user", "content": user_message})
-    await client_store.save_client(client)
+    try:
+        await client_store.save_client(client)
+    except Exception as exc:
+        logger.warning("Failed to persist user message to history: %s", exc)
 
     # Build messages for Claude
     messages: list[anthropic.types.MessageParam] = []
@@ -454,4 +522,7 @@ async def run_onboarding_turn(client: Client, user_message: str) -> AsyncIterato
         client_ref[0].conversation_history.append(
             {"role": "assistant", "content": assistant_text}
         )
-        await client_store.save_client(client_ref[0])
+        try:
+            await client_store.save_client(client_ref[0])
+        except Exception as exc:
+            logger.warning("Failed to persist assistant reply to history: %s", exc)

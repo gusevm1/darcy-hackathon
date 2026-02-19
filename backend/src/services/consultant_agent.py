@@ -11,6 +11,7 @@ import anthropic
 from src.models.client import Client, FlaggedItem
 from src.services import client_store, document_store, rag_service
 from src.services.agent_tool_loop import run_tool_loop
+from src.services.claude_agent import _sanitize_field_value
 from src.services.gap_analyzer import analyze_gaps
 
 logger = logging.getLogger(__name__)
@@ -242,122 +243,161 @@ TOOLS: list[anthropic.types.ToolParam] = [
 async def _execute_tool(tool_name: str, tool_input: dict[str, Any]) -> str:
     """Execute a tool call and return result string."""
     if tool_name == "search_knowledge_base":
-        results = await rag_service.search(tool_input["query"], top_k=5)
-        if not results:
-            return "No relevant results found in the knowledge base."
-        texts = []
-        for r in results:
-            texts.append(
-                f"[Source: {r.get('title', 'Unknown')}"
-                f" — {r.get('source', '')}]"
-                f"\n{r.get('text', '')}"
-            )
-        return "\n\n---\n\n".join(texts)
+        try:
+            results = await rag_service.search(tool_input["query"], top_k=5)
+            if not results:
+                return "No relevant results found in the knowledge base."
+            texts = []
+            for r in results:
+                texts.append(
+                    f"[Source: {r.get('title', 'Unknown')}"
+                    f" — {r.get('source', '')}]"
+                    f"\n{r.get('text', '')}"
+                )
+            return "\n\n---\n\n".join(texts)
+        except Exception as exc:
+            logger.warning("search_knowledge_base failed: %s", exc)
+            return f"Knowledge base search failed: {exc}"
 
     if tool_name == "get_client":
-        client = await client_store.get_client(tool_input["client_id"])
-        if client is None:
-            return f"Client {tool_input['client_id']} not found."
-        return client.model_dump_json(indent=2)
+        try:
+            client = await client_store.get_client(tool_input["client_id"])
+            if client is None:
+                return f"Client {tool_input['client_id']} not found."
+            return client.model_dump_json(indent=2)
+        except Exception as exc:
+            logger.warning("get_client failed: %s", exc)
+            return f"Failed to fetch client: {exc}"
 
     if tool_name == "analyze_gaps":
-        client = await client_store.get_client(tool_input["client_id"])
-        if client is None:
-            return f"Client {tool_input['client_id']} not found."
-        analysis = analyze_gaps(client)
-        return analysis.model_dump_json(indent=2)
+        try:
+            client = await client_store.get_client(tool_input["client_id"])
+            if client is None:
+                return f"Client {tool_input['client_id']} not found."
+            analysis = analyze_gaps(client)
+            return analysis.model_dump_json(indent=2)
+        except Exception as exc:
+            logger.warning("analyze_gaps failed: %s", exc)
+            return f"Gap analysis failed: {exc}"
 
     if tool_name == "update_client_field":
-        client = await client_store.get_client(tool_input["client_id"])
-        if client is None:
-            return f"Client {tool_input['client_id']} not found."
-        data = client.model_dump()
-        field = tool_input["field"]
-        if field in data:
-            data[field] = tool_input["value"]
-            data["updated_at"] = datetime.now(UTC)
-            updated = Client.model_validate(data)
-            await client_store.save_client(updated)
-            return f"Updated {field} successfully."
-        return f"Unknown field: {field}"
+        try:
+            client = await client_store.get_client(tool_input["client_id"])
+            if client is None:
+                return f"Client {tool_input['client_id']} not found."
+            data = client.model_dump()
+            field = tool_input["field"]
+            value = _sanitize_field_value(field, tool_input["value"])
+            if field in data:
+                data[field] = value
+                data["updated_at"] = datetime.now(UTC)
+                updated = Client.model_validate(data)
+                await client_store.save_client(updated)
+                return f"Updated {field} successfully."
+            return f"Unknown field: {field}"
+        except Exception as exc:
+            logger.warning("update_client_field failed: %s", exc)
+            return f"Failed to update {tool_input.get('field', '?')}: {exc}"
 
     if tool_name == "update_checklist_item":
-        client = await client_store.get_client(tool_input["client_id"])
-        if client is None:
-            return f"Client {tool_input['client_id']} not found."
-        for item in client.checklist:
-            if item.id == tool_input["item_id"]:
-                item.status = tool_input["status"]
-                if "notes" in tool_input:
-                    item.notes = tool_input["notes"]
-                client.updated_at = datetime.now(UTC)
-                await client_store.save_client(client)
-                return (
-                    f"Updated checklist item"
-                    f" {item.id}: {item.item}"
-                    f" → {tool_input['status']}"
-                )
-        return f"Checklist item {tool_input['item_id']} not found."
+        try:
+            client = await client_store.get_client(tool_input["client_id"])
+            if client is None:
+                return f"Client {tool_input['client_id']} not found."
+            status = _sanitize_field_value("checklist_status", tool_input["status"])
+            for item in client.checklist:
+                if item.id == tool_input["item_id"]:
+                    item.status = status
+                    if "notes" in tool_input:
+                        item.notes = tool_input["notes"]
+                    client.updated_at = datetime.now(UTC)
+                    await client_store.save_client(client)
+                    return (
+                        f"Updated checklist item"
+                        f" {item.id}: {item.item}"
+                        f" → {status}"
+                    )
+            return f"Checklist item {tool_input['item_id']} not found."
+        except Exception as exc:
+            logger.warning("update_checklist_item failed: %s", exc)
+            return f"Failed to update checklist item: {exc}"
 
     if tool_name == "flag_item":
-        client = await client_store.get_client(tool_input["client_id"])
-        if client is None:
-            return f"Client {tool_input['client_id']} not found."
-        import uuid
+        try:
+            client = await client_store.get_client(tool_input["client_id"])
+            if client is None:
+                return f"Client {tool_input['client_id']} not found."
+            import uuid
 
-        flag = FlaggedItem(
-            id=str(uuid.uuid4())[:8],
-            field=tool_input["field"],
-            reason=tool_input["reason"],
-            severity=tool_input["severity"],
-        )
-        client.flags.append(flag)
-        client.updated_at = datetime.now(UTC)
-        await client_store.save_client(client)
-        return f"Flag added: {tool_input['field']} ({tool_input['severity']})"
+            severity = _sanitize_field_value("severity", tool_input["severity"])
+            flag = FlaggedItem(
+                id=str(uuid.uuid4())[:8],
+                field=tool_input["field"],
+                reason=tool_input["reason"],
+                severity=severity,
+            )
+            client.flags.append(flag)
+            client.updated_at = datetime.now(UTC)
+            await client_store.save_client(client)
+            return f"Flag added: {tool_input['field']} ({severity})"
+        except Exception as exc:
+            logger.warning("flag_item failed: %s", exc)
+            return f"Failed to flag item: {exc}"
 
     if tool_name == "resolve_flag":
-        client = await client_store.get_client(tool_input["client_id"])
-        if client is None:
-            return f"Client {tool_input['client_id']} not found."
-        for flag in client.flags:
-            if flag.id == tool_input["flag_id"]:
-                flag.resolved = True
-                flag.resolution_notes = tool_input["resolution_notes"]
-                client.updated_at = datetime.now(UTC)
-                await client_store.save_client(client)
-                return f"Flag {flag.id} resolved: {tool_input['resolution_notes']}"
-        return f"Flag {tool_input['flag_id']} not found."
+        try:
+            client = await client_store.get_client(tool_input["client_id"])
+            if client is None:
+                return f"Client {tool_input['client_id']} not found."
+            for flag in client.flags:
+                if flag.id == tool_input["flag_id"]:
+                    flag.resolved = True
+                    flag.resolution_notes = tool_input["resolution_notes"]
+                    client.updated_at = datetime.now(UTC)
+                    await client_store.save_client(client)
+                    return f"Flag {flag.id} resolved: {tool_input['resolution_notes']}"
+            return f"Flag {tool_input['flag_id']} not found."
+        except Exception as exc:
+            logger.warning("resolve_flag failed: %s", exc)
+            return f"Failed to resolve flag: {exc}"
 
     if tool_name == "list_client_documents":
-        docs = await document_store.list_documents(tool_input["client_id"])
-        return json.dumps(
-            [
-                {
-                    "document_id": d.document_id,
-                    "file_name": d.file_name,
-                    "status": d.status,
-                    "file_size": d.file_size,
-                }
-                for d in docs
-            ]
-        )
+        try:
+            docs = await document_store.list_documents(tool_input["client_id"])
+            return json.dumps(
+                [
+                    {
+                        "document_id": d.document_id,
+                        "file_name": d.file_name,
+                        "status": d.status,
+                        "file_size": d.file_size,
+                    }
+                    for d in docs
+                ]
+            )
+        except Exception as exc:
+            logger.warning("list_client_documents failed: %s", exc)
+            return f"Failed to list documents: {exc}"
 
     if tool_name == "get_client_document":
-        doc = await document_store.get_document(
-            tool_input["client_id"], tool_input["document_id"]
-        )
-        if doc is None:
-            return f"Document {tool_input['document_id']} not found."
-        from pathlib import Path
+        try:
+            doc = await document_store.get_document(
+                tool_input["client_id"], tool_input["document_id"]
+            )
+            if doc is None:
+                return f"Document {tool_input['document_id']} not found."
+            from pathlib import Path
 
-        file_path = Path(doc.file_path)
-        if not file_path.exists():
-            return "Document file not found on disk."
-        text = file_path.read_text(encoding="utf-8")
-        if len(text) > 10000:
-            text = text[:10000] + "\n\n[... truncated — document continues ...]"
-        return text
+            file_path = Path(doc.file_path)
+            if not file_path.exists():
+                return "Document file not found on disk."
+            text = file_path.read_text(encoding="utf-8")
+            if len(text) > 10000:
+                text = text[:10000] + "\n\n[... truncated — document continues ...]"
+            return text
+        except Exception as exc:
+            logger.warning("get_client_document failed: %s", exc)
+            return f"Failed to read document: {exc}"
 
     return f"Unknown tool: {tool_name}"
 

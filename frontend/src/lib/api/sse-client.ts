@@ -86,6 +86,7 @@ export async function streamSSE(
           const event = JSON.parse(data) as {
             type: string
             content?: string
+            message?: string
             tool?: string
             input?: Record<string, unknown>
           }
@@ -95,6 +96,11 @@ export async function streamSSE(
               break
             case 'tool_use':
               callbacks.onToolUse?.(event.tool ?? '', event.input ?? {})
+              break
+            case 'error':
+              callbacks.onError?.(
+                new Error(event.message ?? 'Unknown error'),
+              )
               break
             case 'done':
               callbacks.onDone?.()

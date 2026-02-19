@@ -24,9 +24,10 @@ export function createSSECallbacks(
       updateMessage((prev) => prev + chunk)
     },
     onError(err) {
-      updateMessage(() => SSE_ERROR_MESSAGE)
+      const msg = err.message || SSE_ERROR_MESSAGE
+      updateMessage(() => msg)
       console.error(`${label} SSE error:`, err)
-      toast.error('Chat connection error. Please try again.')
+      toast.error(msg)
     },
   }
 }

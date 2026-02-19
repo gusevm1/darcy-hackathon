@@ -1,6 +1,7 @@
 """Shared tool-use loop for Claude agents (onboarding & consultant)."""
 
 import json
+import logging
 from collections.abc import AsyncIterator, Awaitable, Callable
 from typing import Any
 
@@ -8,6 +9,8 @@ import anthropic
 from tenacity import retry, stop_after_attempt, wait_exponential
 
 from src.config import settings
+
+logger = logging.getLogger(__name__)
 
 
 async def run_tool_loop(
@@ -59,7 +62,21 @@ async def run_tool_loop(
         )
 
     for _ in range(max_iterations):
-        response = await _call_claude(messages)
+        try:
+            response = await _call_claude(messages)
+        except Exception as exc:
+            logger.error("Claude API call failed: %s", exc)
+            yield json.dumps(
+                {
+                    "type": "error",
+                    "message": (
+                        "Our AI service is temporarily unavailable."
+                        " Please try again in a moment."
+                    ),
+                    "code": "api_error",
+                }
+            )
+            return
 
         assistant_text = ""
         tool_calls: list[tuple[str, str, dict[str, Any]]] = []
@@ -102,7 +119,15 @@ async def run_tool_loop(
 
         tool_results: list[dict[str, Any]] = []
         for tool_id, tool_name, tool_input in tool_calls:
-            result = await execute_tool(tool_name, tool_input)
+            try:
+                result = await execute_tool(tool_name, tool_input)
+            except Exception as exc:
+                logger.warning("Tool %s failed: %s", tool_name, exc)
+                result = (
+                    f"[TOOL ERROR] {tool_name} failed: "
+                    f"{type(exc).__name__}: {exc}. "
+                    "Please acknowledge this error to the user and continue."
+                )
             tool_results.append(
                 {
                     "type": "tool_result",

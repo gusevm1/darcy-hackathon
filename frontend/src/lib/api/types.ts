@@ -15,7 +15,13 @@ export interface SSEDoneEvent {
   type: 'done'
 }
 
-export type SSEEvent = SSETextEvent | SSEToolUseEvent | SSEDoneEvent
+export interface SSEErrorEvent {
+  type: 'error'
+  message: string
+  code?: string
+}
+
+export type SSEEvent = SSETextEvent | SSEToolUseEvent | SSEDoneEvent | SSEErrorEvent
 
 // --- Knowledge Base (matching backend kb.py models) ---
 
